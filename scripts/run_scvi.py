@@ -25,17 +25,16 @@ import scvi
 from docopt import docopt
 from utils.random import set_seed
 from utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
+from utils.hvg_utils import select_hvgs
 
 
 def run_scvi(adata, batch_keys, use_hvg, hvg_method, seed):
-    if use_hvg:
-        if hvg_method is not None:
-            layer = 'counts' if 'v3' in hvg_method else None
-            sc.pp.highly_variable_genes(adata, flavor=hvg_method, layer=layer, n_top_genes=2000)
-        adata = adata[:, adata.var.highly_variable].copy()
+    adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method)
 
-    scvi.model.SCVI.setup_anndata(adata, layer='counts', categorical_covariate_keys=batch_keys)
-    model = scvi.model.SCVI(adata)
+    scvi.model.SCVI.setup_anndata(
+        adata_copy, layer="counts", categorical_covariate_keys=batch_keys
+    )
+    model = scvi.model.SCVI(adata_copy)
     model.train()
 
     adata.obsm[EMB_KEY] = model.get_latent_representation()
@@ -46,8 +45,8 @@ def main():
     args = docopt(__doc__)
     file = args["<file>"]
     out_dir = args["--out-dir"]
-    batch_keys = args['--batch-key']
-    cell_type_key = args['--cell-type-key']
+    batch_keys = args["--batch-key"]
+    cell_type_key = args["--cell-type-key"]
     seed = int(args["--seed"])
     use_hvg = not args["--use-hvg"]
     hvg_method = args["--hvg-method"]
@@ -61,7 +60,10 @@ def main():
     print("Adding UMAP")
     add_umap(adata)
     print("Saving data")
-    output = minimise_anndata(adata, obs=batch_keys+[cell_type_key], obsm=[EMB_KEY, 'X_umap'])
+    output = minimise_anndata(
+        adata, obs=batch_keys + [cell_type_key], obsm=[EMB_KEY, "X_umap"],
+        uns=['neighbors'], obsp=['connectivities', 'distances']
+    )
     output.write(join(out_dir, "adata.h5ad"))
     print("Done!")
 

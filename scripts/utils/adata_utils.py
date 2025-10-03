@@ -1,6 +1,7 @@
 import scanpy as sc
 import anndata as ad
-
+import numpy as np
+import pandas as pd
 
 EMB_KEY = 'X_integration'
 
@@ -84,3 +85,32 @@ def minimise_anndata(
     adata_min = adata_min.copy()
 
     return adata_min
+
+
+def _dense_counts(adata: ad.AnnData, counts_layer: str = "counts") -> np.ndarray:
+    X = adata.layers[counts_layer]
+    if hasattr(X, "toarray"):
+        X = X.toarray()
+    return X.astype(np.float32, copy=False)
+
+
+def get_unique_colname(df, base_name="combined_batch"):
+    name = base_name
+    i = 1
+    while name in df.columns:
+        name = f"{base_name}_{i}"
+        i += 1
+    return name
+
+
+#  Batch helper 
+def combine_batch(
+    adata: ad.AnnData,
+    batch_keys,
+):
+    keys = [batch_keys] if isinstance(batch_keys, str) else list(batch_keys)
+    if len(keys) == 1:
+        return adata.obs[keys[0]], keys[0]
+    new_col = get_unique_colname(adata.obs)
+    adata.obs[new_col] = adata.obs[keys].apply(tuple, axis=1).astype('category')
+    return adata.obs[new_col], new_col
