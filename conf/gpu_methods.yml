@@ -1,0 +1,24 @@
+experiment: gpu_methods
+datasets:
+  - name: human_pancreas
+    batch_col: ["tech"]
+    label_col: celltype
+    organism: human
+  - name: neurips_bmmc
+    batch_col: ["batch"]
+    label_col: cell_type
+    organism: human
+integration:
+  - name: scvi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+    params: {}
+seeds: [1, 2]
+metrics:
+  - name: ARI
+    params: {}
+  - name: NMI
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: ILISI
+    params: {}

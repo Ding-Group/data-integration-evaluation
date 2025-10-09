@@ -1,0 +1,20 @@
+experiment: cpu_methods
+datasets:
+  - name: human_pancreas
+    batch_col: ["tech"]
+    label_col: celltype
+    organism: human
+integration:
+  - name: harmony
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+seeds: [1]
+metrics:
+  - name: ARI
+    params: {}
+  - name: NMI
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: ILISI
+    params: {}
