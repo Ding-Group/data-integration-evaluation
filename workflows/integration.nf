@@ -10,7 +10,7 @@ process RUN_INTEGRATE {
         pattern: "save_dir",
         saveAs: { pathname -> pathname + "-${seed}" }
 
-    // label "process_medium"
+    label params.use_gpu ? 'gpu_process' : null
 
     memory { get_memory(data.size(), "6.GB", task.attempt) }
 

@@ -4,11 +4,15 @@ datasets:
     batch_col: ["tech"]
     label_col: celltype
     organism: human
+  - name: neurips_bmmc
+    batch_col: ["batch"]
+    label_col: cell_type
+    organism: human
 integration:
   - name: harmony
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
     params: {}
-seeds: [1]
+seeds: [1, 2]
 metrics:
   - name: ARI
     params: {}
@@ -18,3 +22,4 @@ metrics:
     params: {}
   - name: ILISI
     params: {}
+use_gpu: false

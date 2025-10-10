@@ -5,10 +5,10 @@ process RUN_METRIC {
         pattern: "*.csv",
         saveAs: { filename -> "${metric}.csv" }
 
-    memory { get_memory(integrated_file.size(), "3.GB", task.attempt) }
+    memory { get_memory(integrated_file.size(), "2.GB", task.attempt, "4.GB") }
 
     input:
-        tuple val(dataset), val(integration), val(batch_col), val(label_col), val(integrated_file), val(raw_file), val(organism), val(metric), val(metric_params)
+        tuple val(dataset), val(integration), val(batch_col), val(label_col), path(integrated_file), path(raw_file), val(organism), val(metric), val(metric_params)
 
     output:
         tuple val(dataset), val(integration), path("${dataset}-${integration}-${metric}.csv")
