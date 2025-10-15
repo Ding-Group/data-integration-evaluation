@@ -8,8 +8,11 @@ integration:
   # - name: scvi
   #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
   #   params: {}
-  - name: harmony
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  # - name: harmony
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  #   params: {}
+  - name: mnn
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
     params: {}
 seeds: [1]
 metrics:
@@ -21,3 +24,4 @@ metrics:
     params: {}
   - name: ILISI
     params: {}
+use_gpu: false

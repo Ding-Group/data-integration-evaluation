@@ -22,4 +22,44 @@ metrics:
     params: {}
   - name: ILISI
     params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: PCR
+    params: {}
+  - name: BPS
+    params: {}
+  - name: BCENTROPY
+    params: {}
+  - name: BNENTROPY
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: PROBE
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: CBE
+    params: {}
+  - name: BATCHARI
+    params: {}
+  - name: CSMC
+    params: {}
+  - name: SV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: ADGBD
+    params: {}
+  - name: MIX
+    params: {}
 use_gpu: false

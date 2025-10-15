@@ -4,21 +4,20 @@
 Run scVI on a dataset
 
 Usage:
-    run_scvi.py --out-dir=<path> --batch-key=<key>... --cell-type-key=<key> [options] <file>
+    run_scvi.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.
-    --out-dir=<path>       Path to output directory.
-    --batch-key=<key>...   One or more batch keys.
-    --cell-type-key=<key>  Cell type label key.
-    --no-use-hvg           Do not use HVG selection.
+    -o <path>              Path to output directory.
+    -b <batch>             One or more batch keys.
+    -c <key>               Cell type label key.
+    --no-use-hvg           Do not use HVG selection. [Default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
-    --seed=<int>           Random seed.
+    --seed=<int>           Random seed. [Default: 0]
 """
 
 from os.path import join
 
-import scanpy as sc
 import anndata as ad
 import scvi
 
@@ -29,10 +28,15 @@ from utils.hvg_utils import select_hvgs
 
 
 def run_scvi(adata, batch_keys, use_hvg, hvg_method, seed):
-    adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method)
+    scvi.settings.seed = seed
+
+    adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True)
 
     scvi.model.SCVI.setup_anndata(
-        adata_copy, layer="counts", categorical_covariate_keys=batch_keys
+        adata_copy,
+        layer="counts",
+        batch_key=batch_keys[0],
+        categorical_covariate_keys=batch_keys[1:],
     )
     model = scvi.model.SCVI(adata_copy)
     model.train()
@@ -44,11 +48,11 @@ def run_scvi(adata, batch_keys, use_hvg, hvg_method, seed):
 def main():
     args = docopt(__doc__)
     file = args["<file>"]
-    out_dir = args["--out-dir"]
-    batch_keys = args["--batch-key"]
-    cell_type_key = args["--cell-type-key"]
+    out_dir = args["-o"]
+    batch_keys = args["-b"]
+    cell_type_key = args["-c"]
     seed = int(args["--seed"])
-    use_hvg = not args["--use-hvg"]
+    use_hvg = not args["--no-use-hvg"]
     hvg_method = args["--hvg-method"]
 
     set_seed(seed)
@@ -61,8 +65,11 @@ def main():
     add_umap(adata)
     print("Saving data")
     output = minimise_anndata(
-        adata, obs=batch_keys + [cell_type_key], obsm=[EMB_KEY, "X_umap"],
-        uns=['neighbors'], obsp=['connectivities', 'distances']
+        adata,
+        obs=batch_keys + [cell_type_key],
+        obsm=[EMB_KEY, "X_umap"],
+        uns=["neighbors"],
+        obsp=["connectivities", "distances"],
     )
     output.write(join(out_dir, "adata.h5ad"))
     print("Done!")
