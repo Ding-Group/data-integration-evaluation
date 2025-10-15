@@ -12,6 +12,12 @@ integration:
   - name: harmony
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
     params: {}
+  - name: mnn
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+  - name: oneBigBlob
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
 seeds: [1, 2]
 metrics:
   - name: ARI

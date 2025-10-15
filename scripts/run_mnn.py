@@ -11,7 +11,7 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection.
+    --no-use-hvg           Do not use HVG selection. [Default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
     --n-pcs=<int>          Number of PCs after MNN [default: 50].
     --seed=<int>           Random seed [default: 0].
@@ -65,6 +65,7 @@ def main():
             r = ro.r
             r.assign("sce", adata_copy)
             r.assign("n_pcs", n_pcs)
+            r(f'set.seed({seed})')
             r('logcounts(sce) <- assays(sce)[["X"]]')
             r("sce_pre_list <- list()")
             r(f"""

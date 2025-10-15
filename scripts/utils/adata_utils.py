@@ -87,7 +87,7 @@ def minimise_anndata(
     return adata_min
 
 
-def _dense_counts(adata: ad.AnnData, counts_layer: str = "counts") -> np.ndarray:
+def dense_counts(adata: ad.AnnData, counts_layer: str = "counts") -> np.ndarray:
     X = adata.layers[counts_layer]
     if hasattr(X, "toarray"):
         X = X.toarray()

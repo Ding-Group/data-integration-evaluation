@@ -11,17 +11,34 @@ integration:
   # - name: harmony
   #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
   #   params: {}
-  - name: mnn
+  # - name: mnn
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  # - name: oneBigBlob
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  #   params: {}
+  # - name: scanorama
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  # - name: scphere
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  #   params:
+  #     - epochs: 1
+  - name: equidistant
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
     params: {}
 seeds: [1]
 metrics:
   - name: ARI
     params: {}
-  - name: NMI
-    params: {}
-  - name: CLISI
-    params: {}
-  - name: ILISI
-    params: {}
-use_gpu: false
+  # - name: CCENTROPY
+  #   params: {}
+  # - name: CNENTROPY
+  #   params: {}
+  # - name: BNENTROPY
+  #   params: {}
+  # - name: BCENTROPY
+  #   params: {}
+  # - name: CSMC
+  #   params: {}
+use_gpu: true

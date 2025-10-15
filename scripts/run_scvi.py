@@ -69,7 +69,7 @@ def main():
         obs=batch_keys + [cell_type_key],
         obsm=[EMB_KEY, "X_umap"],
         uns=["neighbors"],
-        obsp=["connectivities", "distances"],
+        obsp=["connectivities", "distances"]
     )
     output.write(join(out_dir, "adata.h5ad"))
     print("Done!")

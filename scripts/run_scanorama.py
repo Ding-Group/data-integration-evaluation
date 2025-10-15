@@ -4,14 +4,14 @@
 Run Scanorama on a dataset
 
 Usage:
-    run_scanorama.py --out-dir=<path> --batch-key=<key>... --cell-type-key=<key> [options] <file>
+    run_scanorama.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.
-    --out-dir=<path>       Path to output directory.
-    --batch-key=<key>...   One or more batch keys.
-    --cell-type-key=<key>  Cell type label key.
-    --no-use-hvg           Do not use HVG selection.
+    -o <path>              Path to output directory.
+    -b <batch>             One or more batch keys.
+    -c <key>               Cell type label key.
+    --no-use-hvg           Do not use HVG selection. [Default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
     --dimred=<int>         Latent dimension for Scanorama [default: 50].
     --seed=<int>           Random seed [default: 0].
@@ -22,23 +22,11 @@ from typing import List
 
 import numpy as np
 import anndata as ad
-import scanpy as sc
 import scanorama
 from docopt import docopt
 
-from utils.random import set_seed
-from utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
-
-
-def _ensure_combined_batch(adata: ad.AnnData, batch_keys: List[str]) -> str:
-    """Combine multiple batch columns into a single categorical column if needed."""
-    if isinstance(batch_keys, (list, tuple)) and len(batch_keys) > 1:
-        combo = "_batch_combined"
-        adata.obs[combo] = (
-            adata.obs[batch_keys].astype(str).agg("|".join, axis=1).astype("category")
-        )
-        return combo
-    return batch_keys[0]
+from utils.adata_utils import add_umap, combine_batch, minimise_anndata, EMB_KEY
+from utils.hvg_utils import select_hvgs
 
 
 def _split_by_batch(adata: ad.AnnData, batch_key: str) -> List[ad.AnnData]:
@@ -58,24 +46,21 @@ def run_scanorama(
     seed: int,
 ) -> ad.AnnData:
     # Optional HVG
-    if use_hvg:
-        if hvg_method is not None:
-            layer = "counts" if ("v3" in hvg_method) else None
-            sc.pp.highly_variable_genes(adata, flavor=hvg_method, layer=layer, n_top_genes=2000)
-        adata = adata[:, adata.var.highly_variable]
+    adata = select_hvgs(adata, use_hvg, hvg_method, subset=True, copy=True)
 
-    
-    batch_key = _ensure_combined_batch(adata, batch_keys)
+    _, batch_key_final = combine_batch(adata, batch_keys)
 
-    
-    parts = _split_by_batch(adata, batch_key)
+    parts = _split_by_batch(adata, batch_key_final)
 
     scanorama.integrate_scanpy(parts, dimred=int(dimred), seed=seed)
 
-    keys = [p.obs[batch_key].unique()[0] for p in parts]
-    adata_out = ad.concat(parts, join="inner", label=batch_key, keys=keys)
+    keys = [p.obs[batch_key_final].unique()[0] for p in parts]
+    adata_out = ad.concat(parts, join="inner", label=batch_key_final, keys=keys)
 
     adata_out.obsm[EMB_KEY] = np.concatenate([p.obsm["X_scanorama"] for p in parts], axis=0)
+
+    # Reorder cells back to original order
+    adata_out = adata_out[adata.obs_names].copy()
 
     return adata_out
 
@@ -83,15 +68,13 @@ def run_scanorama(
 def main():
     args = docopt(__doc__)
     file = args["<file>"]
-    out_dir = args["--out-dir"]
-    batch_keys = args["--batch-key"]
-    cell_type_key = args["--cell-type-key"]
+    out_dir = args["-o"]
+    batch_keys = args["-b"]
+    cell_type_key = args["-c"]
     seed = int(args["--seed"])
-    use_hvg = not args["--use-hvg"]
+    use_hvg = not args["--no-use-hvg"]
     hvg_method = args["--hvg-method"]
     dimred = int(args["--dimred"])
-
-    set_seed(seed)
 
     print("Loading data")
     adata = ad.read_h5ad(file)
@@ -114,6 +97,8 @@ def main():
         adata,
         obs=batch_keys + [cell_type_key],
         obsm=[EMB_KEY, "X_umap"],
+        uns=["neighbors"],
+        obsp=["connectivities", "distances"],
     )
     output.write(join(out_dir, "adata.h5ad"))
     print("Done!")

@@ -11,7 +11,7 @@ def select_hvgs(
     hvg_method: Optional[str] = None,  # e.g. "seurat" / "seurat_v3"
     hvg_n: int = 2000,
     counts_layer: str = "counts",
-    subset: bool = True,
+    subset: bool = False,
     copy: bool = False,
 ) -> ad.AnnData:
     """
