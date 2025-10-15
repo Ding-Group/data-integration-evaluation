@@ -35,6 +35,8 @@ process RUN_METRIC {
 }
 
 process COMBINE_METRICS {
+    cache false
+
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
     publishDir "$params.outdir/metrics/"
