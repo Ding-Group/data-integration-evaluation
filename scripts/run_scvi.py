@@ -22,7 +22,6 @@ import anndata as ad
 import scvi
 
 from docopt import docopt
-from utils.random import set_seed
 from utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
 from utils.hvg_utils import select_hvgs
 
@@ -51,11 +50,9 @@ def main():
     out_dir = args["-o"]
     batch_keys = args["-b"]
     cell_type_key = args["-c"]
-    seed = int(args["--seed"])
     use_hvg = not args["--no-use-hvg"]
     hvg_method = args["--hvg-method"]
-
-    set_seed(seed)
+    seed = int(args["--seed"])
 
     print("Loading data")
     adata = ad.read_h5ad(file)

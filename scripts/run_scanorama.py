@@ -25,16 +25,9 @@ import anndata as ad
 import scanorama
 from docopt import docopt
 
-from utils.adata_utils import add_umap, combine_batch, minimise_anndata, EMB_KEY
+from utils.adata_utils import add_umap, combine_batch, minimise_anndata, split_by_batch, EMB_KEY
 from utils.hvg_utils import select_hvgs
 
-
-def _split_by_batch(adata: ad.AnnData, batch_key: str) -> List[ad.AnnData]:
-    """Split AnnData into a list of views/copies per batch level."""
-    adatas = []
-    for b in adata.obs[batch_key].unique():
-        adatas.append(adata[adata.obs[batch_key] == b].copy())
-    return adatas
 
 
 def run_scanorama(
@@ -50,7 +43,7 @@ def run_scanorama(
 
     _, batch_key_final = combine_batch(adata, batch_keys)
 
-    parts = _split_by_batch(adata, batch_key_final)
+    parts = split_by_batch(adata, batch_key_final)
 
     scanorama.integrate_scanpy(parts, dimred=int(dimred), seed=seed)
 

@@ -12,11 +12,84 @@ integration:
   - name: scvi
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
     params: {}
-seeds: [1, 2]
+  # - name: scphere
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  #   params: {}
+seeds: [1]
 metrics:
   - name: ARI
     params: {}
   - name: NMI
+    params: {}
+  - name: AMI
+    params: {}
+  - name: VM
+    params: {}
+  - name: HOMO
+    params: {}
+  - name: COMP
+    params: {}
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: FMI
+    params: {}
+  - name: JACC
+    params: {}
+  - name: CLUSTACC
+    params: {}
+  - name: PURITY
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CCENTROPY
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: BARI
+    params: {}
+  - name: BAMI
+    params: {}
+  - name: BVM
+    params: {}
+  - name: MCC
+    params: {}
+  - name: MODULARITY
+    params: {}
+  - name: AGREE
+    params: {}
+  - name: COMPACT
+    params: {}
+  - name: SEPARATION
+    params: {}
+  - name: CH
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: LDFDIFF
+    params: {}
+  - name: AWC
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: VI
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: RKNN
     params: {}
   - name: CLISI
     params: {}

@@ -114,3 +114,11 @@ def combine_batch(
     new_col = get_unique_colname(adata.obs)
     adata.obs[new_col] = adata.obs[keys].apply(tuple, axis=1).astype('category')
     return adata.obs[new_col], new_col
+
+
+def split_by_batch(adata: ad.AnnData, batch_key: str):
+    """Split AnnData into a list of views/copies per batch level."""
+    adatas = []
+    for b in adata.obs[batch_key].unique():
+        adatas.append(adata[adata.obs[batch_key] == b].copy())
+    return adatas
