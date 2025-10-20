@@ -1,7 +1,6 @@
 import scanpy as sc
 import anndata as ad
 import numpy as np
-import pandas as pd
 
 EMB_KEY = 'X_integration'
 
@@ -120,5 +119,7 @@ def split_by_batch(adata: ad.AnnData, batch_key: str):
     """Split AnnData into a list of views/copies per batch level."""
     adatas = []
     for b in adata.obs[batch_key].unique():
-        adatas.append(adata[adata.obs[batch_key] == b].copy())
+        a = adata[adata.obs[batch_key] == b].copy()
+        a.uns['sample_name'] = b
+        adatas.append(a)
     return adatas

@@ -11,8 +11,6 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
-    --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
     --k=<int>              Number of factors for LIGER [default: 20].
     --seed=<int>           Random seed [default: 0].
 """
@@ -30,11 +28,17 @@ from utils.adata_utils import (
     minimise_anndata,
     split_by_batch,
 )
-from utils.hvg_utils import select_hvgs
 
 
-def run_liger(adata: ad.AnnData, batch_keys: List[str], use_hvg: bool, hvg_method: str, k: int, seed: int) -> ad.AnnData:
-    adata = select_hvgs(adata, use_hvg, hvg_method, subset=True)
+def run_liger(
+    adata: ad.AnnData,
+    batch_keys: List[str],
+    k: int,
+    seed: int,
+) -> ad.AnnData:
+    adata.X = adata.layers['counts'].copy()
+    adata.obs_names_make_unique()
+    adata.var_names_make_unique()
 
     _, batch_key = combine_batch(adata, batch_keys)
     parts = split_by_batch(adata, batch_key)
@@ -49,7 +53,7 @@ def run_liger(adata: ad.AnnData, batch_keys: List[str], use_hvg: bool, hvg_metho
 
     concat = ad.concat(obj.adata_list)
     concat = concat[adata.obs_names]
-    embs = concat.obsm['H_norm']
+    embs = concat.obsm["H_norm"]
 
     adata.obsm[EMB_KEY] = embs
 
@@ -63,15 +67,21 @@ def main():
     batch_keys = args["-b"]
     cell_type_key = args["-c"]
     seed = int(args["--seed"])
-    use_hvg = not args["--no-use-hvg"]
-    hvg_method = args["--hvg-method"]
     k = int(args["--k"])
 
     print("Loading data")
     adata = ad.read_h5ad(file)
 
+    adata.obs.index.name = "barcode"
+    adata.var.index.name = "gene"
+
     print("Running LIGER")
-    adata = run_liger(adata, batch_keys=batch_keys, use_hvg=use_hvg, hvg_method=hvg_method, k=k, seed=seed)
+    adata = run_liger(
+        adata,
+        batch_keys=batch_keys,
+        k=k,
+        seed=seed,
+    )
 
     print("Adding UMAP")
     add_umap(adata)
@@ -82,7 +92,7 @@ def main():
         obs=list(batch_keys) + [cell_type_key],
         obsm=[EMB_KEY, "X_umap"],
         uns=["neighbors"],
-        obsp=["connectivities", "distances"]
+        obsp=["connectivities", "distances"],
     )
     output.write(join(out_dir, "adata.h5ad"))
     print("Done!")
