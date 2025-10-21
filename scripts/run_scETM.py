@@ -40,7 +40,7 @@ def run_scetm(
 ) -> ad.AnnData: 
     adata = select_hvgs(adata, use_hvg, hvg_method, subset=True)
 
-    batches, batch_key = combine_batch(adata, batch_keys)
+    _, batch_key = combine_batch(adata, batch_keys)
     adata.obs['batch_indices'] = adata.obs[batch_key].cat.codes
     adata.obs['cell_types'] = adata.obs[cell_type_key]
 
@@ -55,12 +55,12 @@ def run_scetm(
     model = SCETM(
         n_trainable_genes=adata.n_vars,
         n_batches=adata.obs['batch_indices'].nunique(),
-        q_topics=int(topics),
+        n_topics=int(topics),
         device=device,
     )
 
     trainer = UnsupervisedTrainer(model, adata)
-    trainer.train(n_epochs=int(epochs), save_model_ckpt=False)
+    trainer.train(n_epochs=int(epochs), save_model_ckpt=False, eval=False)
     
     model.get_all_embeddings_and_nll(adata)
 

@@ -22,14 +22,18 @@ process RUN_INTEGRATE {
         tuple val(dataset), val(integration), val(seed), val(batch_col), val(label_col), path(data), path("save_dir"), val(organism)
 
     script:
+        def params_map = integration_params as Map
+        def param_str = params_map.collect { k, v -> "--${k}=${v}" }.join(' ')
         """
         source /ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh
         conda activate ${conda_env}
         mkdir save_dir
+        echo ${param_str}
         python ${run_script} \\
             -o save_dir \\
             -b ${batch_col.join(' -b')} \\
             -c ${label_col} \\
+            ${param_str} \\
             --seed ${seed} \\
             ${data}
         """
