@@ -25,8 +25,10 @@ process RUN_INTEGRATE {
         def params_map = integration_params as Map
         def param_str = params_map.collect { k, v -> "--${k}=${v}" }.join(' ')
         """
-        source /ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh
+        source ${params.conda_location}
         conda activate ${conda_env}
+        export LD_LIBRARY_PATH=\${CONDA_PREFIX}/lib/R/lib:\${CONDA_PREFIX}/lib:\$LD_LIBRARY_PATH
+        export PATH="\${CONDA_PREFIX}/bin:$PATH"
         mkdir save_dir
         echo ${param_str}
         python ${run_script} \\
