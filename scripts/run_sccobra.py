@@ -40,7 +40,7 @@ def run_sccobra(adata, batch_keys, use_hvg, hvg_method, max_iteration, seed):
 
     _, batch_key_final = combine_batch(adata_copy, batch_keys)
     adata_copy = scCobra(
-        adata,
+        adata_copy,
         batch_name=batch_key_final,
         min_features=0,
         min_cells=3,
