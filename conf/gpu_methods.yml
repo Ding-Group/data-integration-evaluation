@@ -9,11 +9,14 @@ datasets:
     label_col: cell_type
     organism: human
 integration:
-  - name: scvi
-    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
-    params: {}
+  # - name: scvi
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+  #   params: {}
   # - name: scphere
   #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  #   params: {}
+  # - name: scalex
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scalex"
   #   params: {}
 seeds: [1]
 metrics:

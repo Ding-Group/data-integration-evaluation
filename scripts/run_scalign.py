@@ -26,7 +26,6 @@ os.environ["R_HOME"] = (
     "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scalign-env/lib/R"
 )
 
-import anndata as ad
 import scanpy as sc
 import pandas as pd
 from docopt import docopt
@@ -136,9 +135,6 @@ scAlignObj = scAlignMulti(scAlignObj,
 
         adata.obsm[EMB_KEY] = mat.to_numpy()
 
-    import threading
-    print(threading.enumerate())
-
     print("Adding UMAP")
     add_umap(adata)
 
@@ -159,4 +155,3 @@ scAlignObj = scAlignMulti(scAlignObj,
 
 if __name__ == "__main__":
     main()
-

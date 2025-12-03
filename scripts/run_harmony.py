@@ -31,11 +31,12 @@ def run_harmony(adata, batch_keys, use_hvg, hvg_method, seed):
             sc.pp.highly_variable_genes(
                 adata, flavor=hvg_method, layer=layer, n_top_genes=2000
             )
-        adata = adata[:, adata.var.highly_variable]
-    sc.tl.pca(adata)
+        adata_copy = adata[:, adata.var.highly_variable].copy()
+    sc.tl.pca(adata_copy)
     sc.external.pp.harmony_integrate(
-        adata, batch_keys, random_state=seed, adjusted_basis=EMB_KEY
+        adata_copy, batch_keys, random_state=seed, adjusted_basis=EMB_KEY
     )
+    adata.obsm[EMB_KEY] = adata_copy.obsm[EMB_KEY]
     return adata
 
 

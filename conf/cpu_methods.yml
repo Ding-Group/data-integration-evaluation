@@ -1,4 +1,5 @@
 experiment: cpu_methods
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
 datasets:
   - name: human_pancreas
     batch_col: ["tech"]
@@ -8,6 +9,54 @@ datasets:
     batch_col: ["batch"]
     label_col: cell_type
     organism: human
+  - name: human_lung
+    batch_col: ["batch"]
+    label_col: cell_type
+  - name: scib_sim1
+    batch_col: ["Batch"]
+    label_col: Group
+  - name: scib_sim2
+    batch_col: ["Batch"]
+    label_col: Group
+  - name: seurat_pbmc
+    batch_col: ["donor"]
+    label_col: "celltype.l2"
+  # - name: human_brain_cell_atlas
+  #   batch_col: ["donor_id", "ROIGroup"]
+  #   label_col: cell_type
+  - name: human_fetal_gut
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+  - name: human_liver_time
+    batch_col: ["batch"]
+    label_col: time
+  - name: pan_cancer_dc
+    batch_col: ["dataset_id", "cancer_type"]
+    label_col: celltype
+  - name: human_eoe
+    batch_col: ["donor_id"]
+    label_col: cell_type_anno
+  - name: pan_cancer_b
+    batch_col: ["study"]
+    label_col: clusters
+  - name: human_retina_organoid_tissue
+    batch_col: ["sample_id", "tissue"]
+    label_col: cell_type
+  - name: mouse_regulatory_T
+    batch_col: ["method", "orig.ident"]
+    label_col: "cell.type"
+  - name: human_adipose
+    batch_col: ["technology", "individual"]
+    label_col: cell_type
+  - name: tian_multitech
+    batch_col: ["tech"]
+    label_col: cell_line
+  - name: nph_liver
+    batch_col: ["Sample"]
+    label_col: Celltype
+  - name: nph_cerebellum
+    batch_col: ["Sample"]
+    label_col: Celltype
 integration:
   - name: harmony
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
@@ -18,11 +67,96 @@ integration:
   - name: oneBigBlob
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
     params: {}
-seeds: [1, 2]
+  - name: scanorama
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+  - name: equidistant
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+  - name: cca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+  - name: liger
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/benchmarking"
+    params: {}
+  - name: rpca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+seeds: [1]
 metrics:
   - name: ARI
     params: {}
   - name: NMI
+    params: {}
+  - name: AMI
+    params: {}
+  - name: VM
+    params: {}
+  - name: HOMO
+    params: {}
+  - name: COMP
+    params: {}
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: FMI
+    params: {}
+  - name: JACC
+    params: {}
+  - name: CLUSTACC
+    params: {}
+  - name: PURITY
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CCENTROPY
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: BARI
+    params: {}
+  - name: BAMI
+    params: {}
+  - name: BVM
+    params: {}
+  - name: MCC
+    params: {}
+  - name: MODULARITY
+    params: {}
+  - name: AGREE
+    params: {}
+  - name: COMPACT
+    params: {}
+  - name: SEPARATION
+    params: {}
+  - name: CH
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: LDFDIFF
+    params: {}
+  - name: AWC
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: VI
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: RKNN
     params: {}
   - name: CLISI
     params: {}

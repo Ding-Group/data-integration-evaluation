@@ -5,6 +5,9 @@
 */
 
 process RUN_INTEGRATE {
+    errorStrategy 'ignore'
+
+    tag "RUN_INTEGRATE_${integration}_${dataset}_${seed}"
 
     publishDir "$params.outdir/integration-models/${dataset}/${integration}",
         pattern: "save_dir",
@@ -12,7 +15,7 @@ process RUN_INTEGRATE {
 
     label params.use_gpu ? 'gpu_process' : null
 
-    memory { get_memory(data.size(), "6.GB", task.attempt) }
+    memory { get_memory(data.size(), "2.GB", task.attempt) }
 
     input:
         tuple val(dataset), val(batch_col), val(label_col), val(organism), path(data), val(seed),
@@ -33,7 +36,7 @@ process RUN_INTEGRATE {
         echo ${param_str}
         python ${run_script} \\
             -o save_dir \\
-            -b ${batch_col.join(' -b')} \\
+            -b ${batch_col.join(' -b ')} \\
             -c ${label_col} \\
             ${param_str} \\
             --seed ${seed} \\

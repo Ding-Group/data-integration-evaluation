@@ -15,13 +15,13 @@ Options:
     --seed=<int>           Random seed [default: 0].
 """
 
+import random
 from os.path import join
-import numpy as np
-import anndata as ad
-from docopt import docopt
 
-from utils.random import set_seed
-from utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
+import anndata as ad
+import numpy as np
+from docopt import docopt
+from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 
 def run_blob(adata, dim, seed):
@@ -41,7 +41,9 @@ def main():
     dim = int(args["--dim"])
     seed = int(args["--seed"])
 
-    set_seed(seed)
+    # set_seed(seed)
+    np.random.seed(seed)
+    random.seed(seed)
 
     print("Loading data")
     adata = ad.read_h5ad(file)

@@ -39,7 +39,7 @@ def main():
     n_pcs = int(args["--n-pcs"])
 
     adata = sc.read(file)
-    _, batch_key_final = combine_batch(adata, batch_keys)
+    batch, batch_key_final = combine_batch(adata, batch_keys)
 
     adata_copy = select_hvgs(adata, use_hvg, hvg_method, subset=True, copy=True)
 
@@ -61,16 +61,19 @@ def main():
             importr("scran")
             importr("scater")
             importr("batchelor")
+            importr("anndataR")
 
             r = ro.r
-            r.assign("sce", adata_copy)
+            r(f'sce <- read_h5ad("{file}", as = "SingleCellExperiment")')
             r.assign("n_pcs", n_pcs)
+            r.assign("batch_vec", batch)
+            r("sce$batch_vec <- batch_vec")
             r(f'set.seed({seed})')
             r('logcounts(sce) <- assays(sce)[["X"]]')
             r("sce_pre_list <- list()")
-            r(f"""
-for (s in unique(colData(sce)${batch_key_final})) {{
-    sce_pre_list[[s]] <- sce[, colData(sce)${batch_key_final} == s]
+            r("""
+for (s in unique(colData(sce)$batch_vec)) {{
+    sce_pre_list[[s]] <- sce[, colData(sce)$batch_vec == s]
 }}""")
             # Don't need to subset because the subset is done above.
             r("mnn_out <- fastMNN(sce_pre_list, d = n_pcs, BNPARAM = BiocNeighbors::AnnoyParam())")

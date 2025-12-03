@@ -1,11 +1,15 @@
 process RUN_METRIC {
+    errorStrategy 'ignore'
+
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
+
+    tag "RUN_METRIC_${integration}_${dataset}_${metric}"
 
     publishDir "$params.outdir/metrics/${dataset}/${integration}",
         pattern: "*.csv",
         saveAs: { filename -> "${metric}.csv" }
 
-    memory { get_memory(integrated_file.size(), "2.GB", task.attempt, "4.GB") }
+    memory { get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB") }
 
     input:
         tuple val(dataset), val(integration), val(batch_col), val(label_col), path(integrated_file), path(raw_file), val(organism), val(metric), val(metric_params)
@@ -24,7 +28,12 @@ process RUN_METRIC {
             ${raw_file} \\
             ${integrated_file} \\
             "${dataset}-${integration}-${metric}.csv" \\
-            ${metric_params.collect { k, v -> "--${k} ${v}" }.join(' ')}
+            ${metric_params.collect { k, v -> "--${k} ${v}" }.join(' ')} \\
+        || python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/handle_metric_failure.py \\
+            -d "${dataset}" \\
+            -m "${integration}" \\
+            ${metric} \\
+            "${dataset}-${integration}-${metric}.csv"
         echo "Publishing to: $params.outdir/metrics/${dataset}/${integration}" >&2
         """
 

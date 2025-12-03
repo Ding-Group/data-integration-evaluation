@@ -1,4 +1,5 @@
 experiment: minimal_example
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
 datasets:
   - name: human_pancreas
     batch_col: ["tech"]
@@ -23,10 +24,96 @@ integration:
   # - name: scphere
   #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
   #   params:
-  #     - epochs: 1
-  - name: equidistant
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
-    params: {}
+  #     epochs: 1
+  # - name: equidistant
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  # - name: cca
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  # - name: liger
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/benchmarking"
+  #   params: {}
+  # - name: scETM
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scetm_env_py310"
+  #   params:
+  #     epochs: 1
+  # - name: scalex
+    # conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scalex"
+    # params:
+    #   max_iterations: 10
+  # - name: rpca
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  # - name: imap
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/imap-env"
+  #   params:
+  #     n-epochs: 5
+  # - name: simba
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/simba-env"
+  #   params: {}
+  # - name: scalign
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scalign-env"
+  #   params:
+  #     steps: 100
+  # - name: scmerge
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmerge-env"
+  #   params: {}
+  # - name: portal
+  #   conda:  "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/portal-env"
+  #   params:
+  #     training-steps: 200
+  # - name: clear
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/clear-env"
+  #   params: {}
+  # - name: gedi
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/gedi-env"
+  #   params:
+  #     iterations: 1
+  # - name: sccobra
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sccobra-env"
+  #   params: {}
+  # - name: scdreamer
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/dreamer-env"
+  #   params: {}
+  # - name: sccraft
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sccraft-env"
+  #   params:
+  #     epochs: 10
+  # - name: cyclone
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/cyclone-env"
+  #   params:
+  #     epochs: 10
+  # - name: insct
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
+  #   params:
+  #     epochs: 10
+  #     embedding-dims: 10
+  # - name: pca
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  # - name: scanvi
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+  #   params: {}
+  # - name: lognorm
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  # - name: ocat
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/ocat-env"
+  #   params: {}
+  # - name: scDML
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scDML"
+  #   params:
+  #     resolution: 3.0
+  #     merge-rule: rule2
+  # - name: sysvi
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sysvi-env"
+  #   params: {}
+  - name: ResPAN
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/respan_env_py38"
+    params:
+      hvg-method: seurat_v3
+      hvg-n: 2000
 seeds: [1]
 metrics:
   - name: ARI

@@ -40,7 +40,7 @@ def run_liger(
     adata.obs_names_make_unique()
     adata.var_names_make_unique()
 
-    _, batch_key = combine_batch(adata, batch_keys)
+    batch_info, batch_key = combine_batch(adata, batch_keys)
     parts = split_by_batch(adata, batch_key)
 
     obj = pyliger.create_liger(parts)
@@ -48,8 +48,9 @@ def run_liger(
     pyliger.select_genes(obj)
     pyliger.scale_not_center(obj)
 
+    k = min(k, batch_info.value_counts().min() - 1)
     pyliger.optimize_ALS(obj, k=int(k), rand_seed=seed)
-    pyliger.quantile_norm(obj)
+    pyliger.quantile_norm(obj, knn_k=k)
 
     concat = ad.concat(obj.adata_list)
     concat = concat[adata.obs_names]

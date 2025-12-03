@@ -111,7 +111,12 @@ def combine_batch(
     if len(keys) == 1:
         return adata.obs[keys[0]], keys[0]
     new_col = get_unique_colname(adata.obs)
-    adata.obs[new_col] = adata.obs[keys].apply(tuple, axis=1).astype('category')
+    adata.obs[new_col] = (
+        adata.obs[keys]
+        .astype(str)
+        .apply(lambda row: "_".join(row), axis=1)
+        .astype("category")
+    )
     return adata.obs[new_col], new_col
 
 

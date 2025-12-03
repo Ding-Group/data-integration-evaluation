@@ -19,6 +19,7 @@ Options:
 
 import sys
 import os
+import numpy as np
 
 sys.path.insert(
     0, "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scib/"
@@ -52,8 +53,24 @@ def main():
             k, v = token[2:].split("=")
             metric_kwargs[k] = v
 
-    adata = sc.read(file)
+    try:
+        adata = sc.read(file)
+    except FileNotFoundError as e:
+        sys.stderr.write(f'Metric {metric} failed on dataset {dataset} and integration {method}\n')
+        raise e
+
     adata_int = sc.read(file_int)
+
+    if '.' in batch_key:
+        new_batch_key = batch_key.replace('.', '_')
+        adata.obs[new_batch_key] = adata.obs[batch_key]
+        adata_int.obs[new_batch_key] = adata_int.obs[batch_key]
+        batch_key = new_batch_key
+    if '.' in label_key:
+        new_label_key = label_key.replace('.', '_')
+        adata.obs[new_label_key] = adata.obs[label_key]
+        adata_int.obs[new_label_key] = adata_int.obs[label_key]
+        label_key = new_label_key
 
     kwargs = {metric + '_': True}
 

@@ -4,7 +4,7 @@
 Run RPCA on a dataset
 
 Usage:
-    run_cca.py -o <path> (-b <batch>)...  -c <key> [options] <file>
+    run_rpca.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.
@@ -40,6 +40,8 @@ def main():
     batch, batch_key_final = combine_batch(adata, batch_keys)
     batch = batch.cat.codes
 
+    k_weight = min(100, batch.value_counts().min() // 10 - 1)
+
     import anndata2ri
     import rpy2.robjects as ro
     from rpy2.robjects import conversion, default_converter, numpy2ri
@@ -70,7 +72,7 @@ obj.list <- lapply(X = obj.list, FUN = function(x) {
 })
           """)
         r('anchors <- FindIntegrationAnchors(object.list = obj.list, anchor.features = features, reduction = "rpca")')
-        r("combined <- IntegrateData(anchorset = anchors)")
+        r(f"combined <- IntegrateData(anchorset = anchors, k.weight = {k_weight})")
 
         mat = r('combined[["integrated"]]@data')
         obs_names = r("colnames(combined)")
