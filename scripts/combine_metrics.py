@@ -53,28 +53,30 @@ def combine_metrics(files):
             is_value_missing = metric_data["Value"].isna().any()
 
             if is_value_missing:
-                integration = metric_data["Integration"].iloc[0]
-                metric = metric_data["Metric"].iloc[0]
-                existing_row = missing_values[
-                    (missing_values["Integration"] == integration)
-                    & (missing_values["Metric"] == metric)
-                ]
+                missing_metric_data = metric_data[metric_data["Value"].isna()]
+                for k in range(len(missing_metric_data)):
+                    integration = metric_data["Integration"].iloc[k]
+                    metric = metric_data["Metric"].iloc[k]
+                    existing_row = missing_values[
+                        (missing_values["Integration"] == integration)
+                        & (missing_values["Metric"] == metric)
+                    ]
 
-                if not existing_row.empty:
-                    missing_values.loc[existing_row.index, "Missing"] += 1
-                else:
-                    new_row = DataFrame(
-                        {
-                            "Integration": [integration],
-                            "Metric": [metric],
-                            "Missing": [1],
-                        }
-                    )
-                    missing_values = concat(
-                        [missing_values, new_row], ignore_index=True
-                    )
+                    if not existing_row.empty:
+                        missing_values.loc[existing_row.index, "Missing"] += 1
+                    else:
+                        new_row = DataFrame(
+                            {
+                                "Integration": [integration],
+                                "Metric": [metric],
+                                "Missing": [1],
+                            }
+                        )
+                        missing_values = concat(
+                            [missing_values, new_row], ignore_index=True
+                        )
 
-                missing_files.append(file_path)
+                    missing_files.append(file_path)
 
             # Add to combined metrics
             metrics = concat([metrics, metric_data], ignore_index=True)

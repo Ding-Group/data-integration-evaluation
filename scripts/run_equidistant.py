@@ -11,15 +11,14 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --radius=<float>       Center norm r [default: 5.0].
-    --sigma=<float>        Gaussian noise std around centers [default: 0.0].
+    --radius=<float>       Center norm r [default: 10.0].
+    --sigma=<float>        Gaussian noise std around centers [default: 1.0].
     --seed=<int>           Random seed [default: 0].
 """
 
 from os.path import join
 import numpy as np
 import anndata as ad
-import scanpy as sc
 from scipy import linalg as la
 from docopt import docopt
 

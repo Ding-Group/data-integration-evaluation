@@ -1,6 +1,4 @@
 process RUN_METRIC {
-    errorStrategy 'ignore'
-
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
     tag "RUN_METRIC_${integration}_${dataset}_${metric}"
@@ -9,7 +7,10 @@ process RUN_METRIC {
         pattern: "*.csv",
         saveAs: { filename -> "${metric}.csv" }
 
-    memory { get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB") }
+    // Never use up all that memory, on retry no need to add memory.
+    memory { get_memory(raw_file.size(), "2.GB", 1, "4.GB") }
+
+    label "error_retry"
 
     input:
         tuple val(dataset), val(integration), val(batch_col), val(label_col), path(integrated_file), path(raw_file), val(organism), val(metric), val(metric_params)
@@ -28,13 +29,21 @@ process RUN_METRIC {
             ${raw_file} \\
             ${integrated_file} \\
             "${dataset}-${integration}-${metric}.csv" \\
-            ${metric_params.collect { k, v -> "--${k} ${v}" }.join(' ')} \\
-        || python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/handle_metric_failure.py \\
-            -d "${dataset}" \\
-            -m "${integration}" \\
-            ${metric} \\
-            "${dataset}-${integration}-${metric}.csv"
+            ${metric_params.collect { k, v -> "--${k} ${v}" }.join(' ')}
+        
+        exit_code=\$?
+
+        if [\$exit_code -eq 1 ]; then
+            python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/handle_metric_failure.py \\
+                -d "${dataset}" \\
+                -m "${integration}" \\
+                ${metric} \\
+                "${dataset}-${integration}-${metric}.csv"
+            exit 0
+        fi
+
         echo "Publishing to: $params.outdir/metrics/${dataset}/${integration}" >&2
+        exit \$exit_code
         """
 
     stub:

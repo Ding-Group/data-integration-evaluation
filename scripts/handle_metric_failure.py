@@ -19,6 +19,18 @@ import pandas as pd
 from docopt import docopt
 
 
+CLUSTER_METRICS = [
+    'nmi', 'ari', 'clustasw',
+    'batchari', 'bps', 'bcentropy',
+    'ccentropy', 'bari', 'bami',
+    'bvm', 'ch', 'clustacc',
+    'f1', 'compact', 'homo',
+    'fmi', 'jacc', 'mcc',
+    'modularity', 'awc', 'ami',
+    'cbe', 'comp', 'purity',
+    'separation', 'vm', 'vi'
+]
+
 def main():
     args = docopt(__doc__, options_first=True)
     metric = args["<metric>"].lower()
@@ -28,15 +40,25 @@ def main():
 
     sys.stderr.write(f"Error in {metric}, {method}, {dataset}\n")
 
-    results = pd.DataFrame(
-        [
+    if metric == 'all_cluster':
+        results = pd.DataFrame([
             {
                 "Dataset": dataset,
                 "Integration": method,
-                "Metric": metric,
-                "Value": np.nan,
-            }
-        ]
+                "Metric": m,
+                "Value": np.nan
+            } for m in CLUSTER_METRICS
+        ])
+    else:
+        results = pd.DataFrame(
+            [
+                {
+                    "Dataset": dataset,
+                    "Integration": method,
+                    "Metric": metric,
+                    "Value": np.nan,
+                }
+            ]
     )
     results.to_csv(outfile, index=False)
     raise ValueError('Metric failure')

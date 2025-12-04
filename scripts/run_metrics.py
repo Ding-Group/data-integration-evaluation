@@ -84,16 +84,11 @@ def main():
         **kwargs,
     )
 
-    results = pd.DataFrame(
-        [
-            {
-                "Dataset": dataset,
-                "Integration": method,
-                "Metric": metric,
-                "Value": result.loc[metric.upper()].to_numpy()[0],
-            }
-        ]
-    )
+    results = result.reset_index()
+    results = results.rename({0: "Value", "index": "Metric"}, axis=1)
+    results["Dataset"] = dataset
+    results["Integration"] = method
+    results = results[['Dataset', 'Integration', 'Metric', 'Value']].dropna()
     results.to_csv(outfile, index=False)
 
 

@@ -84,18 +84,6 @@ integration:
     params: {}
 seeds: [1]
 metrics:
-  - name: ARI
-    params: {}
-  - name: NMI
-    params: {}
-  - name: AMI
-    params: {}
-  - name: VM
-    params: {}
-  - name: HOMO
-    params: {}
-  - name: COMP
-    params: {}
   - name: FKNN
     params: {}
   - name: FLOGREG
@@ -106,37 +94,11 @@ metrics:
     params: {}
   - name: ISOF1
     params: {}
-  - name: FMI
-    params: {}
-  - name: JACC
-    params: {}
-  - name: CLUSTACC
-    params: {}
-  - name: PURITY
-    params: {}
   - name: MORANI
-    params: {}
-  - name: CCENTROPY
     params: {}
   - name: CNENTROPY
     params: {}
-  - name: BARI
-    params: {}
-  - name: BAMI
-    params: {}
-  - name: BVM
-    params: {}
-  - name: MCC
-    params: {}
-  - name: MODULARITY
-    params: {}
   - name: AGREE
-    params: {}
-  - name: COMPACT
-    params: {}
-  - name: SEPARATION
-    params: {}
-  - name: CH
     params: {}
   - name: OCS
     params: {}
@@ -144,11 +106,7 @@ metrics:
     params: {}
   - name: LDFDIFF
     params: {}
-  - name: AWC
-    params: {}
   - name: BRAS
-    params: {}
-  - name: VI
     params: {}
   - name: DBI
     params: {}
@@ -174,10 +132,6 @@ metrics:
     params: {}
   - name: PCR
     params: {}
-  - name: BPS
-    params: {}
-  - name: BCENTROPY
-    params: {}
   - name: BNENTROPY
     params: {}
   - name: KLDIV
@@ -188,10 +142,6 @@ metrics:
     params: {}
   - name: KNNDIV
     params: {}
-  - name: CBE
-    params: {}
-  - name: BATCHARI
-    params: {}
   - name: CSMC
     params: {}
   - name: SV
@@ -201,5 +151,13 @@ metrics:
   - name: ADGBD
     params: {}
   - name: MIX
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
     params: {}
 use_gpu: false
