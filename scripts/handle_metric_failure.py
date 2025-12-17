@@ -33,7 +33,7 @@ CLUSTER_METRICS = [
 
 def main():
     args = docopt(__doc__, options_first=True)
-    metric = args["<metric>"].lower()
+    metric = args["<metric>"]
     outfile = args["<outfile>"]
     dataset = args["--dataset"]
     method = args["--method"]

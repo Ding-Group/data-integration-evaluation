@@ -43,6 +43,7 @@ integrations_ch = Channel
             integration.name,    // Method name
             integration.conda,   // Location of Conda environment
             integration.params,  // Method hyperparameters
+            integration.memory,  // Whether high or low memory usage
             file(params.bindir + '/run_' + integration.name + '.py')  // Script to run method
         )
     }

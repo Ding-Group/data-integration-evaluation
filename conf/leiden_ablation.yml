@@ -1,0 +1,106 @@
+experiment: leiden_ablation
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: human_pancreas
+    batch_col: ["tech"]
+    label_col: celltype
+  # - name: neurips_bmmc
+  #   batch_col: ["batch"]
+  #   label_col: cell_type
+  # - name: human_lung
+  #   batch_col: ["batch"]
+  #   label_col: cell_type
+  - name: scib_sim1
+    batch_col: ["Batch"]
+    label_col: Group
+  # - name: scib_sim2
+  #   batch_col: ["Batch"]
+  #   label_col: Group
+  - name: seurat_pbmc
+    batch_col: ["donor"]
+    label_col: "celltype.l2"
+  # # - name: human_brain_cell_atlas
+  # #   batch_col: ["donor_id", "ROIGroup"]
+  # #   label_col: cell_type
+  # - name: human_fetal_gut
+  #   batch_col: ["Donor_id", "Organ", "Sample"]
+  #   label_col: cell_name_detailed
+  # - name: human_liver_time
+  #   batch_col: ["batch"]
+  #   label_col: time
+  # - name: pan_cancer_dc
+  #   batch_col: ["dataset_id", "cancer_type"]
+  #   label_col: celltype
+  # - name: human_eoe
+  #   batch_col: ["donor_id"]
+  #   label_col: cell_type_anno
+  # - name: pan_cancer_b
+  #   batch_col: ["study"]
+  #   label_col: clusters
+  # - name: human_retina_organoid_tissue
+  #   batch_col: ["sample_id", "tissue"]
+  #   label_col: cell_type
+  # - name: mouse_regulatory_T
+  #   batch_col: ["method", "orig.ident"]
+  #   label_col: "cell.type"
+  # - name: human_adipose
+  #   batch_col: ["technology", "individual"]
+  #   label_col: cell_type
+  # - name: tian_multitech
+  #   batch_col: ["tech"]
+  #   label_col: cell_line
+  # - name: nph_liver
+  #   batch_col: ["Sample"]
+  #   label_col: Celltype
+  # - name: nph_cerebellum
+  #   batch_col: ["Sample"]
+  #   label_col: Celltype
+  # - name: tabula_muris_lung
+  #   batch_col: ["mouse.id", "tech"]
+  #   label_col: cell_ontology_id
+  - name: human_pbmc_sequencing_techs
+    batch_col: ["Method", "Experiment"]
+    label_col: CellType
+  # - name: mouse_cortex_sequencing_techs
+  #   batch_col: ["Method", "Experiment"]
+  #   label_col: CellType
+  # - name: mouse_retina
+  #   batch_col: ["dataset"]
+  #   label_col: CellType
+  # - name: mouse_mammary
+  #   batch_col: ["BATCH"]
+  #   label_col: celltype
+  # - name: macaque_retina
+  #   batch_col: ["BATCH"]
+  #   label_col: celltype
+  # - name: human_heart
+  #   batch_col: ["DonorID", "Tissue"]
+  #   label_col: celltype
+  # - name: jurkat_293t
+  #   batch_col: ["dataset"]
+  #   label_col: cell_type
+  # - name: 3_5_pbmc
+  #   batch_col: ["batch"]
+  #   label_col: cell_type
+integration:
+  - name: harmony
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    memory: low
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [5, 10, 15, 20, 25]
+        seed: [1, 2, 3, 4, 5]
+  - name: other_neighbors
+    params:
+      - radius: [5]
+        seed: [1]
+leiden_params:
+  - seed: [1, 2, 3, 4, 5]
+    flavor: ["leidenalg", "igraph"]
+use_gpu: false

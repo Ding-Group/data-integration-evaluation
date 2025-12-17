@@ -1,0 +1,345 @@
+import java.security.MessageDigest
+import java.math.BigInteger
+
+include { INTEGRATION } from './integration'
+
+
+/*
+ * Channel that streams in all the datasets from the 
+ * YAML configuration file.
+ */
+
+
+process RUN_DEFAULT_NEIGHBORS {
+    conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
+
+    errorStrategy 'terminate'
+
+    memory { get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB") }
+
+    tag "${dataset}-${integration}_${neighbors_name}" 
+
+    input:
+    tuple val(dataset),
+        val(integration),
+        val(batch_col),
+        val(label_col),
+        path(integrated_data),
+        path(raw_file),  
+        val(neighbors_name),
+        val(neighbors_params)
+
+    output:
+    tuple val(dataset), // Dataset name
+        val(integration), // Integration name
+        val(batch_col),  // Batch column, needed to transfer to metrics
+        val(label_col),  // Label column, needed to transfer to metrics
+        path("neighbors_adata.h5ad"), // Path to the data with neighbors computed
+        path(raw_file)  // Path to the raw file
+
+    script:
+        """
+        python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/metric_ablation/compute_default_neighbors.py \\
+            -o ./ \\
+            -k ${neighbors_params.k} \\
+            -s ${neighbors_params.seed} \\
+            ${integrated_data}
+        """
+
+    stub:
+        """
+        touch neighbors_adata.h5ad
+        """
+}
+
+
+process RUN_LEIDEN {
+    conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
+
+    errorStrategy 'terminate'
+
+    publishDir "$params.outdir/adata/${dataset}/${integration}",
+        pattern: "*.h5ad"
+
+    memory { get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB") }
+
+    tag "${dataset}_${integration}_leiden"
+
+    input:
+    tuple val(dataset), val(integration), val(batch_col), val(label_col), path(neighbors_adata), path(raw_file), val(leiden_params), val(hex)
+    output:
+    tuple val(dataset), val(integration), val(batch_col), val(label_col), path("clustered-${hex}.h5ad"), path(raw_file), val(hex)
+
+    script:
+        """
+        python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/metric_ablation/compute_leiden.py \\
+            -o "clustered-${hex}.h5ad" \\
+            -s ${leiden_params.seed} \\
+            -f ${leiden_params.flavor} \\
+            ${neighbors_adata}
+        """
+    
+    stub:
+        """
+        touch clustered-${hex}.h5ad
+        """
+}
+
+
+process RUN_METRIC {
+    conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
+
+    tag "RUN_METRIC_${integration}_${dataset}_${metric}"
+
+    publishDir "$params.outdir/metrics/${dataset}/${integration}",
+        pattern: "*.csv",
+        saveAs: { filename -> "${metric}.csv" }
+
+    memory {
+        metric == "ALL_CLUSTER" ? 
+            get_memory(raw_file.size(), "4.GB", task.attempt, "4.GB") :
+        metric == "KBET" ?
+            get_memory(raw_file.size(), "4.GB", task.attempt, "8.GB") :
+            get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB")
+    }
+
+    label "error_retry"
+
+    input:
+        tuple val(dataset), val(integration), val(batch_col), val(label_col), path(integrated_file),
+            path(raw_file), val(hex), val(metric), val(metric_params)
+
+    output:
+        tuple val(dataset), val(integration), path(integrated_file), path("${dataset}-${integration}-${metric}-${hex}.csv"), val(hex)
+
+    script:
+        """
+        set +e
+
+        python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/run_metrics.py \\
+            -b "${batch_col[0]}" \\
+            -c "${label_col}" \\
+            -d "${dataset}" \\
+            -m "${integration}" \\
+            ${metric} \\
+            ${raw_file} \\
+            ${integrated_file} \\
+            "${dataset}-${integration}-${metric}-${hex}.csv" \\
+            ${metric_params.collect { k, v -> "--${k} ${v}" }.join(' ')}
+        
+        exit_code=\$?
+
+        if [ -e "${dataset}-${integration}-${metric}.csv" ]; then
+            exit 0
+        fi
+
+        if [ \$exit_code -eq 1 ]; then
+            python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/handle_metric_failure.py \\
+                -d "${dataset}" \\
+                -m "${integration}" \\
+                ${metric} \\
+                "${dataset}-${integration}-${metric}-${hex}.csv"
+            exit 0
+        fi
+
+        echo "Publishing to: $params.outdir/metrics/${dataset}/${integration}" >&2
+        exit \$exit_code
+        """
+
+    stub:
+        """
+        touch "${dataset}-${integration}-${metric}-${hex}.csv"
+        """
+}
+
+process ORGANIZE_METRICS {
+    conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
+    publishDir "$params.outdir/metrics/"
+
+    memory { get_memory("1.GB", "2.GB", task.attempt, "4.GB") }
+
+    input:
+        path files
+
+    output:
+        path("all-metrics.csv")
+
+    script:
+        """
+        python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/metric_ablation/organize_clustering_metrics.py \\
+            --out-file "all-metrics.csv" \\
+            ${files.join(' ')}
+        """
+    
+    stub:
+        """
+        touch all-metrics.csv
+        """
+}
+
+
+workflow LEIDEN_ABLATION {
+    datasets_ch = Channel
+        .fromList(params.datasets)
+        .map { dataset ->
+            tuple(
+                dataset.name,
+                dataset.batch_col,
+                dataset.label_col,
+                dataset.organism,
+                file(params.datadir + dataset.name + ".h5ad")
+            )
+        }
+
+    integrations_ch = Channel
+        .fromList(params.integration)
+        .map { integration -> 
+            tuple(
+                integration.name,    // Method name
+                integration.conda,   // Location of Conda environment
+                integration.params,  // Method hyperparameters
+                integration.memory,  // Whether high or low memory usage
+                file(params.bindir + '/run_' + integration.name + '.py')  // Script to run method
+            )
+        }
+
+    metrics_ch = Channel
+        .fromList(params.metrics)
+        .map { metric ->
+            tuple(
+                metric.name,
+                metric.params
+            )
+        }
+
+    // Create a Channel of all parameter combinations
+    neighbor_channels = Channel.fromList(params.neighbor_params)
+        // Emit each method definition as (name, list_of_param_maps)
+        .map { method -> 
+            [ method.name, method.params ] 
+        }
+        // Emit each specific param map within the method definition and calculate combinations
+        .map { name, param_maps -> 
+            param_maps.collect { param_map -> 
+                
+                // --- THIS IS THE CORE LOGIC THAT HANDLES ANY PARAMETER NAME ---
+                def combinations = param_map.values()
+                    .stream()
+                    .collect { it } // Get all value lists (e.g., [[5, 10], [1, 2]])
+                    .combinations() // Get the Cartesian product
+                    .collect { combination ->
+                        // Recreate a single map for this specific run
+                        def run_params = [:]
+                        def keys = param_map.keySet().asList() // Gets keys: [k, seed] or [radius, metric]
+                        keys.eachWithIndex { key, i ->
+                            run_params[key] = combination[i]
+                        }
+                        return run_params // Returns [k:5, seed:1] OR [radius:0.1, metric:'euclidean']
+                    }
+                    .toList()
+                    
+                return [ name, combinations ]
+            }
+        }
+        .map { it -> it[0] }
+
+    // Flatten the results to get one channel for each run (name, params)
+    neighbor_channels
+        .flatMap { name, runs -> 
+            runs.collect { run_params -> 
+                [ name, run_params]
+            }
+        }
+        .set { neighbor_runs_ch }
+
+    neighbor_runs_ch
+        .branch { method_name, params ->
+            default_neighbors: method_name == "default_neighbors"
+                return [method_name, params]
+            other_neighbors: method_name == 'other_neighbors'
+                return [method_name, params]
+        }
+        .set { branched_neighbor_runs }
+
+    leiden_ch = Channel.fromList(params.leiden_params)
+        .flatMap { param_map -> 
+            def combinations = param_map.values()
+                .stream()
+                .collect { it }
+                .combinations()
+                .collect { combination ->
+                    // Recreate a single map for this specific run
+                    def run_params = [:]
+                    def keys = param_map.keySet().asList()
+                    keys.eachWithIndex { key, i ->
+                        run_params[key] = combination[i]
+                    }
+                    return run_params
+                }
+                .toList()
+            
+            return combinations
+        }
+
+    INTEGRATION(datasets_ch, integrations_ch)
+
+    // Just remove the organism
+    integrated_ch = INTEGRATION.out.map{ it -> 
+        tuple(
+            it[0],
+            it[1],
+            it[2],
+            it[3],
+            it[4],
+            it[5]
+        )
+    }
+
+    default_neighbors_runs_ch = integrated_ch.combine(branched_neighbor_runs.default_neighbors)
+    // other_neighbors_runs_ch = integrated_ch.combine(branched_neighbor_runs.other_neighbors)
+
+    RUN_DEFAULT_NEIGHBORS(default_neighbors_runs_ch)
+    // RUN_OTHER_NEIGHBORS(other_neighbors_runs_ch)
+
+    leiden_input_ch = Channel.empty()
+        .mix(
+            RUN_DEFAULT_NEIGHBORS.out
+        )
+        .combine(leiden_ch)
+        .map { dataset, integration, batch_col, label_col, neighbors_adata, raw_file, leiden_params ->
+            def deterministic_key = "${dataset}_${integration}_${batch_col}_${label_col}_${neighbors_adata}_${raw_file}_${leiden_params}"
+            MessageDigest md = MessageDigest.getInstance("SHA-1")
+            md.update(deterministic_key.getBytes('UTF-8'))
+            def hex = new BigInteger(1, md.digest()).toString(16).padLeft(40, '0')
+            [ dataset, integration, batch_col, label_col, neighbors_adata, raw_file, leiden_params , hex ]
+        }    
+    RUN_LEIDEN(leiden_input_ch)
+
+    all_ch = RUN_LEIDEN.out
+        .combine(metrics_ch)
+
+    RUN_METRIC(all_ch)
+
+    collected_files_ch = RUN_METRIC.out
+        .collect { it -> tuple(file(it[2]), file(it[3]))}
+
+    ORGANIZE_METRICS(collected_files_ch)
+}
+
+
+def get_memory(file_size, mem_per_gb = "1.GB", attempt = 1, overhead = "8.GB") {
+    file_mem = new nextflow.util.MemoryUnit(file_size)
+    mem_per_gb = new nextflow.util.MemoryUnit(mem_per_gb)
+    overhead = new nextflow.util.MemoryUnit(overhead)
+    max_mem = new nextflow.util.MemoryUnit(params.max_memory)
+
+    file_gb = file_mem.toGiga()
+    file_gb = file_gb > 0 ? file_gb : 1
+    mem_use = (mem_per_gb * file_gb * attempt) + overhead
+
+    if (mem_use > max_mem) {
+        mem_use = max_mem
+    }
+
+    return mem_use
+}

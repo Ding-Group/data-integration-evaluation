@@ -1,25 +1,35 @@
 process RUN_METRIC {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
+    errorStrategy {
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= maxRetries) ? 'retry' : 'ignore'
+    }
+
     tag "RUN_METRIC_${integration}_${dataset}_${metric}"
 
     publishDir "$params.outdir/metrics/${dataset}/${integration}",
         pattern: "*.csv",
         saveAs: { filename -> "${metric}.csv" }
 
-    // Never use up all that memory, on retry no need to add memory.
-    memory { get_memory(raw_file.size(), "2.GB", 1, "4.GB") }
-
-    label "error_retry"
+    memory {
+        metric == "ALL_CLUSTER" ? 
+            get_memory(raw_file.size(), "4.GB", task.attempt, "16.GB") :
+        metric == "KBET" ?
+            get_memory(raw_file.size(), "4.GB", task.attempt, "8.GB") :
+            get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB")
+    }
 
     input:
-        tuple val(dataset), val(integration), val(batch_col), val(label_col), path(integrated_file), path(raw_file), val(organism), val(metric), val(metric_params)
+        tuple val(dataset), val(integration), val(batch_col), val(label_col), path(integrated_file),
+            path(raw_file), val(organism), val(metric), val(metric_params)
 
     output:
         tuple val(dataset), val(integration), path("${dataset}-${integration}-${metric}.csv")
 
     script:
         """
+        set +e
+
         python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/run_metrics.py \\
             -b "${batch_col[0]}" \\
             -c "${label_col}" \\
@@ -33,7 +43,11 @@ process RUN_METRIC {
         
         exit_code=\$?
 
-        if [\$exit_code -eq 1 ]; then
+        if [ -e "${dataset}-${integration}-${metric}.csv" ]; then
+            exit 0
+        fi
+
+        if [ \$exit_code -eq 1 ]; then
             python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/handle_metric_failure.py \\
                 -d "${dataset}" \\
                 -m "${integration}" \\

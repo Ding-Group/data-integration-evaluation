@@ -5,7 +5,9 @@
 */
 
 process RUN_INTEGRATE {
-    errorStrategy 'ignore'
+    errorStrategy {
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= maxRetries) ? 'retry' : 'ignore'
+    }
 
     tag "RUN_INTEGRATE_${integration}_${dataset}_${seed}"
 
@@ -15,11 +17,19 @@ process RUN_INTEGRATE {
 
     label params.use_gpu ? 'gpu_process' : null
 
-    memory { get_memory(data.size(), "2.GB", task.attempt) }
+    memory { 
+        memory_usage == 'low' ?
+            get_memory(data.size(), "2.GB", task.attempt, "4.GB") :
+        memory_usage == 'medium' ?
+            get_memory(data.size(), "4.GB", task.attempt, "8.GB") :
+            get_memory(data.size(), "10.GB", task.attempt, "12.GB")
+    }
+
+    resourceLimits memory: "256.GB"
 
     input:
         tuple val(dataset), val(batch_col), val(label_col), val(organism), path(data), val(seed),
-            val(integration), val(conda_env), val(integration_params), path(run_script)
+            val(integration), val(conda_env), val(integration_params), val(memory_usage), path(run_script)
 
     output:
         tuple val(dataset), val(integration), val(seed), val(batch_col), val(label_col), path(data), path("save_dir"), val(organism)
@@ -78,7 +88,7 @@ workflow INTEGRATION {
                     it[1] + "-" + it[2],         // Integration name
                     it[3],                       // Batch columns
                     it[4],                       // Cell type label column
-                    file(it[6] + "/adata.h5ad"), // Path to reference H5AD
+                    file(it[6] + "/adata.h5ad"), // Path to integrated H5AD
                     it[5],                       // Path to reference expression H5AD
                     it[7]                        // Organism
                 )

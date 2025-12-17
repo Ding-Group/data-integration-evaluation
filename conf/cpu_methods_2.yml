@@ -1,4 +1,4 @@
-experiment: cpu_methods
+experiment: cpu_methods_2
 conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
 datasets:
   - name: human_pancreas
@@ -57,31 +57,47 @@ datasets:
   - name: nph_cerebellum
     batch_col: ["Sample"]
     label_col: Celltype
+  - name: tabula_muris_lung
+    batch_col: ["mouse.id", "tech"]
+    label_col: cell_ontology_id
+  - name: human_pbmc_sequencing_techs
+    batch_col: ["Method", "Experiment"]
+    label_col: CellType
+  - name: mouse_cortex_sequencing_techs
+    batch_col: ["Method", "Experiment"]
+    label_col: CellType
+  - name: mouse_retina
+    batch_col: ["dataset"]
+    label_col: CellType
+  - name: mouse_mammary
+    batch_col: ["BATCH"]
+    label_col: celltype
+  - name: macaque_retina
+    batch_col: ["BATCH"]
+    label_col: celltype
+  - name: human_heart
+    batch_col: ["DonorID", "Tissue"]
+    label_col: celltype
+  # - name: jurkat_293t
+  #   batch_col: ["dataset"]
+  #   label_col: cell_type
 integration:
-  - name: harmony
+  - name: pca
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
     params: {}
-  - name: mnn
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    memory: low
+  - name: scmerge
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmerge-env"
     params: {}
-  - name: oneBigBlob
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    memory: low
+  - name: gedi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/gedi-env"
     params: {}
-  - name: scanorama
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
-    params: {}
-  - name: equidistant
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
-    params: {}
-  - name: cca
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
-    params: {}
-  - name: liger
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/benchmarking"
-    params: {}
-  - name: rpca
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
-    params: {}
+    memory: high
+  # - name: lognorm
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  #   params: {}
+  #   memory: low
 seeds: [1]
 metrics:
   - name: FKNN
@@ -159,5 +175,7 @@ metrics:
   - name: PSTDB
     params: {}
   - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
     params: {}
 use_gpu: false
