@@ -40,7 +40,7 @@ def run_ocat(adata, batch_keys, use_hvg, hvg_method, n_ghosts, dim, seed):
     ]
     data_list = [i.layers["counts"] for i in ref_list]
     m_list = [n_ghosts] * len(data_list)
-    ZW = OCAT.run_OCAT(data_list, dim=dim, m_list=m_list)
+    ZW = OCAT.run_OCAT(data_list, dim=dim, m_list=m_list, random_seed=seed)
 
     query_latent = ad.AnnData(ZW)
     query_latent.obs = pd.concat([a.obs for a in ref_list])

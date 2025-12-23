@@ -49,6 +49,7 @@ def run_clear(
     seed,
 ):
     tmpdir = os.environ['TMPDIR']
+    adata.X = adata.X.astype('float32')
     # tmpdir = './'
     if use_hvg:
         adata = select_hvgs(adata, use_hvg, hvg_method, subset=True)

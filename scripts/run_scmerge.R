@@ -27,7 +27,7 @@ library(docopt)
 combine_batch <- function(sce, batch_keys) {
     # Ensure input is a vector of column names
     if (is.character(batch_keys) && length(batch_keys) == 1) {
-        return(list(colData(sce)[[batch_keys]], batch_keys))
+        return(list(sce, colData(sce)[[batch_keys]], batch_keys))
     }
 
     keys <- as.character(batch_keys)
@@ -48,7 +48,7 @@ combine_batch <- function(sce, batch_keys) {
 
     colData(sce)[[new_col]] <- as.factor(combined)
 
-    return(list(colData(sce)[[new_col]], new_col))
+    return(list(sce, colData(sce)[[new_col]], new_col))
 }
 
 # Helper function to generate a unique column name
@@ -80,7 +80,9 @@ main <- function() {
     print("Loading data")
     obj <- read_h5ad(file, as = 'SingleCellExperiment')
     logcounts(obj) <- assays(obj)$X
-    batch_col <- combine_batch(obj, batch_keys)[[2]]
+    result <- combine_batch(obj, batch_keys)
+    obj <- result[[1]]
+    batch_col <- result[[3]]
 
     print(batch_col)
 

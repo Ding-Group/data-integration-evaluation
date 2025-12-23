@@ -42,6 +42,10 @@ def run_insct(
     adata_copy = select_hvgs(adata, use_hvg, hvg_method, subset=True, copy=True)
     _, final_batch_key = combine_batch(adata_copy, batch_keys)
 
+    if k > adata_copy.obs[final_batch_key].value_counts().min() - 1:
+        k = adata_copy.obs[final_batch_key].value_counts().min() - 1
+        print(f"Setting k to size of smallest batch, {k}")
+
     model = TNN(
         embedding_dims=embedding_dims, epochs=epochs, k=k, batch_size=batch_size
     )

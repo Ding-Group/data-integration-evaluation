@@ -32,6 +32,7 @@ def run_imap(adata, batch_keys, use_hvg, hvg_method, n_epochs, latent_dim, seed)
     adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True)
 
     _, batch_key_final = combine_batch(adata_copy, batch_keys)
+    adata_copy.X = adata_copy.X.toarray()
 
     EC, ec_data = imap.stage1.iMAP_fast(adata_copy, key=batch_key_final, n_epochs=n_epochs, latent_dim=latent_dim, seed=seed)
     output_results = imap.stage2.integrate_data(adata_copy, ec_data, key=batch_key_final, n_epochs=n_epochs, seed=seed)

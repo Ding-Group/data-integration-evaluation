@@ -37,7 +37,7 @@ def main():
     print(len(pdf_text.split()))
 
     response = client.models.generate_content(
-        model="gemini-2.5-pro",
+        model="gemini-2.5-flash",
         config=types.GenerateContentConfig(
             system_instruction="""
 You are assisting a researcher in extracting information from the main text of academic papers.

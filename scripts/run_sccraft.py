@@ -50,14 +50,16 @@ def run_sccraft(
 
     # Their seed is pre-determined by themselves for training
     multi_resolution_cluster(
-        adata, resolution1=resolution1, resolution2=resolution2, method=method
+        adata_copy, resolution1=resolution1, resolution2=resolution2, method=method
     )
     VAE = train_integration_model(
-        adata, batch_key=batch_key_final, epochs=epochs, d_coef=d_coef, kl_coef=kl_coef
+        adata_copy, batch_key=batch_key_final, epochs=epochs, d_coef=d_coef, kl_coef=kl_coef
     )
-    obtain_embeddings(adata, VAE, seed=seed)
+    obtain_embeddings(adata_copy, VAE, seed=seed)
 
-    adata.obsm[EMB_KEY] = adata.obsm["X_scCRAFT"]
+    adata_copy = adata_copy[adata.obs_names]
+
+    adata.obsm[EMB_KEY] = adata_copy.obsm["X_scCRAFT"]
     return adata
 
 

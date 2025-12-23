@@ -31,11 +31,16 @@ def run_scvi(adata, batch_keys, use_hvg, hvg_method, seed):
 
     adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True)
 
+    new_batch_keys= []
+    for b in batch_keys:
+        adata_copy.obs.rename({b: b.replace(".", "_")}, axis=1, inplace=True)
+        new_batch_keys.append(b.replace(".", "_"))
+
     scvi.model.SCVI.setup_anndata(
         adata_copy,
         layer="counts",
-        batch_key=batch_keys[0],
-        categorical_covariate_keys=batch_keys[1:],
+        batch_key=new_batch_keys[0],
+        categorical_covariate_keys=new_batch_keys[1:],
     )
     model = scvi.model.SCVI(adata_copy)
     model.train()

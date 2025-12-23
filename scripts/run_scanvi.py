@@ -29,7 +29,16 @@ from utils.hvg_utils import select_hvgs
 def run_scanvi(adata, batch_keys, cell_type_key, use_hvg, hvg_method, seed):
     scvi.settings.seed = seed
 
-    adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True)
+    adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True, copy=True)
+
+    new_batch_keys= []
+    for b in batch_keys:
+        adata_copy.obs.rename({b: b.replace(".", "_")}, axis=1, inplace=True)
+        new_batch_keys.append(b.replace(".", "_"))
+    adata_copy.obs.rename(
+        {cell_type_key: cell_type_key.replace(".", "_")}, axis=1, inplace=True
+    )
+    cell_type_key = cell_type_key.replace(".", "_")
 
     arches_params = dict(
         use_layer_norm="both",
@@ -42,14 +51,16 @@ def run_scanvi(adata, batch_keys, cell_type_key, use_hvg, hvg_method, seed):
     scvi.model.SCVI.setup_anndata(
         adata_copy,
         layer="counts",
-        batch_key=batch_keys[0],
-        categorical_covariate_keys=batch_keys[1:],
-        labels_key=cell_type_key
+        batch_key=new_batch_keys[0],
+        categorical_covariate_keys=new_batch_keys[1:],
+        labels_key=cell_type_key,
     )
     model = scvi.model.SCVI(adata_copy, **arches_params)
     model.train()
 
-    scanvi_model = scvi.model.SCANVI.from_scvi_model(model, unlabeled_category='Unknown')
+    scanvi_model = scvi.model.SCANVI.from_scvi_model(
+        model, unlabeled_category="Unknown"
+    )
     scanvi_model.train()
 
     adata.obsm[EMB_KEY] = scanvi_model.get_latent_representation()
@@ -78,7 +89,7 @@ def main():
         obs=batch_keys + [cell_type_key],
         obsm=[EMB_KEY, "X_umap"],
         uns=["neighbors"],
-        obsp=["connectivities", "distances"]
+        obsp=["connectivities", "distances"],
     )
     output.write(join(out_dir, "adata.h5ad"))
     print("Done!")

@@ -40,12 +40,13 @@ from util import preprocess_datasets as portal_preprocess
 
 
 def run_portal(adata, batch_keys, hvg_num, search_cos, lambda_cos, training_steps):
-    adata.X = adata.layers['counts'].copy()
+    adata_copy = adata.copy()
+    adata_copy.X = adata_copy.layers['counts'].copy()
 
-    _, batch_key_final = combine_batch(adata, batch_keys)
-    adatas = split_by_batch(adata, batch_key_final)
+    _, batch_key_final = combine_batch(adata_copy, batch_keys)
+    adatas = split_by_batch(adata_copy, batch_key_final)
     lowdim_list = portal_preprocess(adatas)
-    outs = portal_integrate(lowdim_list, training_steps=20)
+    outs = portal_integrate(lowdim_list)
     new_adata = ad.AnnData(X = outs, obs= ad.concat(adatas).obs)
     new_adata = new_adata[adata.obs_names]
     adata.obsm[EMB_KEY] = new_adata.X
