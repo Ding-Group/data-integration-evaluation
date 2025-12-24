@@ -25,14 +25,12 @@ def select_hvgs(
     A = adata.copy() if copy else adata
     if not use_hvg:
         return A
-    # 计算 HVGs
     if hvg_method is not None:
         layer = counts_layer if "v3" in hvg_method else None
         sc.pp.highly_variable_genes(
             A, flavor=hvg_method, layer=layer, n_top_genes=int(hvg_n),
             subset=False, inplace=True
         )
-    # 没有 HVG 信息 → 抛错，避免 silent fail
     if "highly_variable" not in A.var:
         raise ValueError(
             "HVG selection requested but no 'highly_variable' column is present. "
