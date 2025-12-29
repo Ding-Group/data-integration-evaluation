@@ -35,11 +35,11 @@ from utils.hvg_utils import select_hvgs
 
 
 def run_simba(adata, batch_keys, use_hvg, hvg_method, n_bins, n_components, k, seed):
-    # adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True)
-    si.pp.filter_genes(adata,min_n_cells=3)
-    _, batch_key_final = combine_batch(adata, batch_keys)
+    adata_copy = adata.copy()
+    si.pp.filter_genes(adata_copy, min_n_cells=3)
+    _, batch_key_final = combine_batch(adata_copy, batch_keys)
 
-    adatas = split_by_batch(adata, batch_key_final)
+    adatas = split_by_batch(adata_copy, batch_key_final)
     for a in adatas:
         si.tl.discretize(a, n_bins=n_bins)
 

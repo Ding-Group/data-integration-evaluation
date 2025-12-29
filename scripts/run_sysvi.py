@@ -12,6 +12,8 @@ Options:
     -o <path>                      Path to output directory.
     -b <batch>                     One or more batch keys.
     -c <key>                       Cell type label key.
+    --no-use-hvg                   Do not use HVG selection.
+    --hvg-method=<method>          HVG selection method. Default uses the pre-computed HVGs.
     --n-latent=<int>               Latent dim [default: 20].
     --n-prior-components=<int>     Number of VampPrior pseudo-inputs.
     --cycle-weight=<float>         Cycle-consistency weight [default: 6.0].
@@ -29,14 +31,14 @@ import scvi
 from scvi.external import SysVI
 from docopt import docopt
 
-# utils in your repo
-from utils.random import set_seed
 from utils.adata_utils import EMB_KEY, minimise_anndata, add_umap
-
+from utils.hvg_utils import select_hvgs
 
 def run_sysvi(
     adata: ad.AnnData,
     batch_keys: list[str],
+    use_hvg: bool,
+    hvg_method: str,
     n_latent: int,
     n_prior_components: int | None,
     cycle_weight: float,
@@ -44,16 +46,22 @@ def run_sysvi(
     max_epochs: int,
     embed_cat: bool,
 ):
+    adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True)
+
+    new_batch_keys= []
+    for b in batch_keys:
+        adata_copy.obs.rename({b: b.replace(".", "_")}, axis=1, inplace=True)
+        new_batch_keys.append(b.replace(".", "_"))
     # register anndata
     SysVI.setup_anndata(
-        adata=adata,
-        batch_key=batch_keys[0],
+        adata=adata_copy,
+        batch_key=new_batch_keys[0],
         layer="counts",
-        categorical_covariate_keys=batch_keys[1:],
+        categorical_covariate_keys=new_batch_keys[1:],
     )
 
     # VampPrior pseudo-inputs
-    n_cells = adata.n_obs
+    n_cells = adata_copy.n_obs
     n_pseudo = n_prior_components if n_prior_components else min(64, n_cells)
     n_pseudo = min(n_pseudo, n_cells)
 
@@ -61,7 +69,7 @@ def run_sysvi(
 
     # build model
     model = SysVI(
-        adata=adata,
+        adata=adata_copy,
         n_latent=n_latent,
         n_prior_components=n_pseudo,
         pseudoinputs_data_indices=pseudo_idx,
@@ -91,6 +99,8 @@ def main():
     out_dir = args["-o"]
     batch_keys = args["-b"]
     cell_type_key = args["-c"]
+    use_hvg = not args["--no-use-hvg"]
+    hvg_method = args["--hvg-method"]
     n_latent = int(args["--n-latent"])
     n_prior_components = (
         int(args["--n-prior-components"]) if args["--n-prior-components"] else None
@@ -102,7 +112,6 @@ def main():
     embed_cat = not args["--no-embed-cat"]
 
     # seeds
-    set_seed(seed)
     scvi.settings.seed = seed
 
     print("Loading data")
@@ -112,6 +121,8 @@ def main():
     adata = run_sysvi(
         adata=adata,
         batch_keys=batch_keys,
+        use_hvg=use_hvg,
+        hvg_method=hvg_method,
         n_latent=n_latent,
         n_prior_components=n_prior_components,
         cycle_weight=cycle_weight,
@@ -120,7 +131,7 @@ def main():
         embed_cat=embed_cat,
     )
 
-    print("Adding UMAP & neighbors")
+    print("Adding UMAP")
     add_umap(adata)
 
     print("Saving data")
