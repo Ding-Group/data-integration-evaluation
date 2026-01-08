@@ -8,7 +8,6 @@ Options:
     -h --help              Show this screen.
     -k <neighbors>         Number of nearest neighbors to use.
     -s <seed>              Random seed to use.
-    -m <metric>            Distance metric to use. [default: euclidean]
     -o <path>              Path to output directory.
 """
 
@@ -32,10 +31,10 @@ def main():
 
     print("Computing neighbors")
     sc.pp.neighbors(
-        adata, n_neighbors=k, metric=metric, random_state=seed, use_rep="X_integration"
+        adata, n_neighbors=k, random_state=seed, use_rep="X_integration"
     )
     # Metadata about the neighbors is stored in adata.uns
-    adata.uns['neighbors_params'] = {'type': 'default', 'random_state': seed, 'metric': metric, 'k': k}
+    adata.uns['neighbors_params'] = {'type': 'default', 'random_state': seed, 'k': k}
     print("Saving data")
     adata.write("neighbors_adata.h5ad")
     print("Done!")
