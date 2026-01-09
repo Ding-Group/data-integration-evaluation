@@ -24,7 +24,6 @@ def main():
     out_dir = args["-o"]
     k = int(args["-k"])
     seed = int(args["-s"])
-    metric = args["-m"]
 
     print("Loading data")
     adata = ad.read_h5ad(file)

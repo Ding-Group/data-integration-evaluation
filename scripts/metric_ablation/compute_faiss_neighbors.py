@@ -37,7 +37,7 @@ def main():
     )
     # Metadata about the neighbors is stored in adata.uns
     adata.uns["neighbors_params"] = {
-        "type": "flann",
+        "type": "faiss",
         "random_state": seed,
         "k": k,
     }
