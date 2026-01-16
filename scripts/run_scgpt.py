@@ -23,12 +23,10 @@ from pathlib import Path
 sys.path.insert(0, "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/scGPT")
 
 import anndata as ad
-import numpy as np
-import pandas as pd
 import scgpt as scg
 from docopt import docopt
 from scgpt.utils import set_seed
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
+from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 from utils.hvg_utils import select_hvgs
 
 

@@ -16,27 +16,27 @@ Options:
 
 import os
 from os.path import join
-from pathlib import Path
 
 import anndata as ad
-import numpy as np
 import pandas as pd
 from docopt import docopt
 from geneformer import EmbExtractor, TranscriptomeTokenizer
 from transformers import set_seed
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
-from utils.hvg_utils import select_hvgs
+from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 
 def run_geneformer(adata, seed):
     set_seed(seed)
 
-    mart = pd.read_csv(
-        "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/data/gene_name_to_ensembl.csv",
-        index_col=0,
-    )
-    adata_copy = adata[:, mart.index.intersection(adata.var_names)].copy()
-    adata_copy.var["ensembl_id"] = mart.loc[adata_copy.var_names]["Gene stable ID"]
+    if 'ensembl_id' not in adata.var.columns:
+        mart = pd.read_csv(
+            "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/data/gene_name_to_ensembl.csv",
+            index_col=0,
+        )
+        adata_copy = adata[:, mart.index.intersection(adata.var_names)].copy()
+        adata_copy.var["ensembl_id"] = mart.loc[adata_copy.var_names]["Gene stable ID"]
+    else:
+        adata_copy = adata.copy()
 
     adata_copy.X = adata_copy.layers["counts"].copy()
     adata_copy.obs["n_counts"] = adata_copy.X.sum(-1).astype(int)
