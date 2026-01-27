@@ -14,21 +14,24 @@ Options:
     --seed=<int>           Random seed. [Default: 0]
 """
 
-import os
 import subprocess
 from os.path import join
-
+import sys
 import anndata as ad
 from docopt import docopt
 from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 
 def run_uce(adata, adata_path):
-    tmpdir = os.environ["TMPDIR"]
-    adata_copy = adata.copy()
+    if 'gene_name' in adata.var.columns:
+        adata_copy = adata[:, ~adata.var['gene_name'].isna()].copy()
+        adata_copy.var = adata_copy.var.set_index('gene_name')
+    else:
+        adata_copy = adata.copy()
+
     adata_copy.X = adata_copy.layers['counts'].copy()
 
-    adata_copy.write(join(tmpdir, 'adata.h5ad'))
+    adata_copy.write('./adata.h5ad')
     # Create symlink to where the model files are to avoid that bug
     subprocess.run(
         [
@@ -48,24 +51,24 @@ def run_uce(adata, adata_path):
     )
     subprocess.run(
         [
-            "python",
+            sys.executable,
             "eval_single_anndata.py",
             "--adata_path",
-            join(tmpdir, 'adata.h5ad'),
+            './adata.h5ad',
             "--dir",
-            tmpdir,
+            './',
             "--batch_size",
-            16,
+            '16',
             "--model_loc",
             "model_files/33l_8ep_1024t_1280.torch",
             "--nlayers",
             "33",
-        ]
+        ],
+        capture_output=True, # Captures stdout and stderr
+        text=True
     )
     result = ad.read_h5ad(
-        join(
-            tmpdir, 'adata_uce_adata.h5ad'
-        )
+        './adata_uce_adata.h5ad'
     )
     adata.obsm[EMB_KEY] = result.obsm['X_uce']
     return adata

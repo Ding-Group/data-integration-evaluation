@@ -32,8 +32,16 @@ from utils.hvg_utils import select_hvgs
 
 def run_scgpt(adata, use_hvg, hvg_method, seed):
     set_seed(seed)
+    if 'gene_name' in adata.var.columns:
+        adata_copy = adata[:, ~adata.var['gene_name'].isna()].copy()
+        adata_copy.var = adata_copy.var.set_index('gene_name')
+        adata_copy.var_names = adata_copy.var_names.astype('object')
+        adata_copy.var_names_make_unique()
+    else:
+        adata_copy = adata.copy()
+
     adata_copy = select_hvgs(
-        adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True, copy=True
+        adata_copy, use_hvg=use_hvg, hvg_method=hvg_method, subset=True, copy=False
     )
     adata_copy.var["Gene Symbol"] = adata_copy.var_names
     model_dir = Path("/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/scGPT/scgpt_models/")

@@ -19,6 +19,7 @@ from os.path import join
 
 import anndata as ad
 import pandas as pd
+import scipy
 from docopt import docopt
 from geneformer import EmbExtractor, TranscriptomeTokenizer
 from transformers import set_seed
@@ -28,7 +29,7 @@ from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 def run_geneformer(adata, seed):
     set_seed(seed)
 
-    if 'ensembl_id' not in adata.var.columns:
+    if "ensembl_id" not in adata.var.columns:
         mart = pd.read_csv(
             "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/data/gene_name_to_ensembl.csv",
             index_col=0,
@@ -39,6 +40,7 @@ def run_geneformer(adata, seed):
         adata_copy = adata.copy()
 
     adata_copy.X = adata_copy.layers["counts"].copy()
+    adata_copy.X = scipy.sparse.csr_matrix(adata_copy.X)
     adata_copy.obs["n_counts"] = adata_copy.X.sum(-1).astype(int)
 
     adata_copy.obs["barcode"] = adata.obs_names
@@ -67,7 +69,7 @@ def run_geneformer(adata, seed):
         os.environ["TMPDIR"],
         "geneformer_result",
     )
-    embs = embs.set_index('barcode')
+    embs = embs.set_index("barcode")
     embs = embs.loc[adata.obs_names]
     adata.obsm[EMB_KEY] = embs.to_numpy()
     return adata
