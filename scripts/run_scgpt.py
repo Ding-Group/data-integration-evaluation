@@ -26,7 +26,7 @@ import anndata as ad
 import scgpt as scg
 from docopt import docopt
 from scgpt.utils import set_seed
-from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 from utils.hvg_utils import select_hvgs
 
 

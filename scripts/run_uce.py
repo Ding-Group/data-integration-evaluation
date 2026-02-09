@@ -19,13 +19,15 @@ from os.path import join
 import sys
 import anndata as ad
 from docopt import docopt
-from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 
 def run_uce(adata, adata_path):
     if 'gene_name' in adata.var.columns:
         adata_copy = adata[:, ~adata.var['gene_name'].isna()].copy()
         adata_copy.var = adata_copy.var.set_index('gene_name')
+        adata_copy.var_names = adata_copy.var_names.astype('object')
+        adata_copy.var_names_make_unique()
     else:
         adata_copy = adata.copy()
 

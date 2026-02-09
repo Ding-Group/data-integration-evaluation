@@ -24,7 +24,7 @@ from os.path import join
 import anndata as ad
 import simba as si
 from docopt import docopt
-from utils.adata_utils import (
+from project_utils.adata_utils import (
     EMB_KEY,
     add_umap,
     combine_batch,

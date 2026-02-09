@@ -25,7 +25,7 @@ import numpy as np
 import scanpy as sc
 from docopt import docopt
 from scDML import scDMLModel
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
 
 
 def run_scdml(

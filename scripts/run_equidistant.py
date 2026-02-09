@@ -22,7 +22,7 @@ import anndata as ad
 from scipy import linalg as la
 from docopt import docopt
 
-from utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
+from project_utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
 
 
 def _simplex_centers(num_classes: int, radius: float) -> np.ndarray:

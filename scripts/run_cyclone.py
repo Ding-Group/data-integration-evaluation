@@ -34,7 +34,7 @@ import numpy as np
 from cyclone.train import cyclone
 
 from docopt import docopt
-from utils.adata_utils import add_umap, minimise_anndata, EMB_KEY, combine_batch
+from project_utils.adata_utils import add_umap, minimise_anndata, EMB_KEY, combine_batch
 from utils.hvg_utils import select_hvgs
 
 

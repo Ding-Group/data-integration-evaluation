@@ -25,7 +25,7 @@ import numpy as np
 import OCAT
 import pandas as pd
 from docopt import docopt
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
 from utils.hvg_utils import select_hvgs
 
 

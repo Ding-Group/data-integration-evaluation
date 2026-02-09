@@ -29,7 +29,7 @@ os.environ["R_HOME"] = (
 import scanpy as sc
 import pandas as pd
 from docopt import docopt
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
 
 
 def main():

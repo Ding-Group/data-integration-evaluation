@@ -31,7 +31,7 @@ import scvi
 from scvi.external import SysVI
 from docopt import docopt
 
-from utils.adata_utils import EMB_KEY, minimise_anndata, add_umap
+from project_utils.adata_utils import EMB_KEY, minimise_anndata, add_umap
 from utils.hvg_utils import select_hvgs
 
 def run_sysvi(

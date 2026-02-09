@@ -19,7 +19,7 @@ from os.path import join
 import anndata as ad
 
 from docopt import docopt
-from utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
+from project_utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
 
 
 def main():

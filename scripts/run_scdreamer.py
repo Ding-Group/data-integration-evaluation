@@ -26,7 +26,7 @@ import scDREAMER.scDREAMER as model
 import tensorflow as tf2
 import tensorflow.compat.v1 as tf
 from docopt import docopt
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
 
 tf.disable_v2_behavior()
 

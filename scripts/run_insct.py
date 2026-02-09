@@ -28,7 +28,7 @@ import numpy as np
 import tensorflow as tf2
 from docopt import docopt
 from tnn import TNN
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
 from utils.hvg_utils import select_hvgs
 
 

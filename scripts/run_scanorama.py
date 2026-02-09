@@ -25,7 +25,7 @@ import anndata as ad
 import scanorama
 from docopt import docopt
 
-from utils.adata_utils import add_umap, combine_batch, minimise_anndata, split_by_batch, EMB_KEY
+from project_utils.adata_utils import add_umap, combine_batch, minimise_anndata, split_by_batch, EMB_KEY
 from utils.hvg_utils import select_hvgs
 
 

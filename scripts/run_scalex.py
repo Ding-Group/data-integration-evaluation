@@ -26,7 +26,7 @@ import anndata as ad
 from docopt import docopt
 from scalex.function import SCALEX
 
-from utils.adata_utils import add_umap, minimise_anndata, combine_batch, EMB_KEY
+from project_utils.adata_utils import add_umap, minimise_anndata, combine_batch, EMB_KEY
 
 
 def run_scalex(

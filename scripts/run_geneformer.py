@@ -23,7 +23,7 @@ import scipy
 from docopt import docopt
 from geneformer import EmbExtractor, TranscriptomeTokenizer
 from transformers import set_seed
-from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 
 def run_geneformer(adata, seed):

@@ -20,7 +20,7 @@ from os.path import join
 import anndata as ad
 
 from docopt import docopt
-from utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
+from project_utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
 
 
 def main():
@@ -34,8 +34,8 @@ def main():
     print("Loading data")
     adata = ad.read_h5ad(file)
 
-    # X stores lognorm counts
-    adata.obsm[EMB_KEY] = adata.X
+    # X stores lognorm counts, take highly variable
+    adata.obsm[EMB_KEY] = adata[:, adata.var.highly_variable].X
 
     print("Adding UMAP")
     add_umap(adata)

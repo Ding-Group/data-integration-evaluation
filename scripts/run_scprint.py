@@ -23,7 +23,7 @@ from scdataloader import Preprocessor
 from scdataloader.utils import load_genes
 from scprint import scPrint
 from scprint.tasks import Embedder
-from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 torch.set_float32_matmul_precision("medium")
 
@@ -34,7 +34,13 @@ def run_scprint(adata, seed):
     torch.backends.cudnn.deterministic = True
     torch.manual_seed(seed)
 
-    adata_copy = adata.copy()
+    if 'gene_name' in adata.var.columns:
+        adata_copy = adata[:, ~adata.var['gene_name'].isna()].copy()
+        adata_copy.var = adata_copy.var.set_index('gene_name')
+        adata_copy.var_names = adata_copy.var_names.astype('object')
+        adata_copy.var_names_make_unique()
+    else:
+        adata_copy = adata.copy()
     adata_copy.X = adata_copy.layers['counts'].copy()
 
     adata_copy.obs['organism_ontology_term_id'] = 'NCBITaxon:9606'
@@ -46,7 +52,7 @@ def run_scprint(adata, seed):
     adata_copy.obs['tissue_ontology_term_id'] = 'unknown'
     adata_copy.obs['assay_ontology_term_id'] = 'unknown'
 
-    preprocessor = Preprocessor(do_postp=False)
+    preprocessor = Preprocessor(do_postp=False, min_nnz_genes=0)
     adata_copy = preprocessor(adata_copy)
 
     model_checkpoint_file = "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/scPRINT/medium-v1.5.ckpt"

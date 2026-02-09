@@ -21,7 +21,7 @@ import anndata as ad
 import pandas as pd
 from docopt import docopt
 from sklearn.preprocessing import normalize
-from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 
 def run_genept(adata):

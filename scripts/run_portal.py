@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 """
-Run scVI on a dataset
+Run Portal on a dataset
 
 Usage:
-    run_scvi.py -o <path> (-b <batch>)...  -c <key> [options] <file>
+    run_portal.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.
@@ -29,7 +29,7 @@ import numpy as np
 import torch
 from docopt import docopt
 
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata, split_by_batch
+from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata, split_by_batch
 from utils.hvg_utils import select_hvgs
 
 sys.path.insert(0, "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/Portal/portal/")

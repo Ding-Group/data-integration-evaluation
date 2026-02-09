@@ -33,7 +33,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from docopt import docopt
 from torch.utils.data import DataLoader, Dataset
-from utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
 from utils.hvg_utils import select_hvgs
 
 
@@ -94,7 +94,6 @@ def run_islander(
     y = adata_copy.obs[cell_type_key].astype('category').cat.codes.to_numpy()
     X = torch.from_numpy(X)
     y = torch.from_numpy(y).to(torch.long)
-    print(y)
     classes = np.unique(y)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"

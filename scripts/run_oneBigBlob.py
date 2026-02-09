@@ -21,7 +21,7 @@ from os.path import join
 import anndata as ad
 import numpy as np
 from docopt import docopt
-from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 
 def run_blob(adata, dim, seed):

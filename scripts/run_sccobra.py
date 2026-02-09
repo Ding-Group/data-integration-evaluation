@@ -29,7 +29,7 @@ import anndata as ad
 from scCobra import scCobra
 
 from docopt import docopt
-from utils.adata_utils import add_umap, minimise_anndata, combine_batch, EMB_KEY
+from project_utils.adata_utils import add_umap, minimise_anndata, combine_batch, EMB_KEY
 from utils.hvg_utils import select_hvgs
 
 

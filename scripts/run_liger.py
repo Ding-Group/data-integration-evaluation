@@ -21,7 +21,7 @@ from typing import List
 import anndata as ad
 import pyliger as pyliger
 from docopt import docopt
-from utils.adata_utils import (
+from project_utils.adata_utils import (
     EMB_KEY,
     add_umap,
     combine_batch,

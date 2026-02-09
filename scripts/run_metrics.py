@@ -32,7 +32,7 @@ from docopt import docopt
 import scanpy as sc
 import pandas as pd
 from scib.metrics import metrics
-from utils.adata_utils import EMB_KEY
+from project_utils.adata_utils import EMB_KEY
 
 
 def main():

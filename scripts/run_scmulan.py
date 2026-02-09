@@ -28,9 +28,10 @@ import numpy as np
 import scanpy as sc
 import scMulan
 import torch
+import scipy
 from docopt import docopt
 from scMulan import GeneSymbolUniform
-from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 
 
 def run_scmulan(adata, seed):
@@ -39,10 +40,16 @@ def run_scmulan(adata, seed):
     torch.backends.cudnn.deterministic = True
     torch.manual_seed(seed)
 
-    adata_copy = adata.copy()
-    adata_copy.X = adata_copy.layers["counts"].copy()
+    if 'gene_name' in adata.var.columns:
+        adata_copy = adata[:, ~adata.var['gene_name'].isna()].copy()
+        adata_copy.var = adata_copy.var.set_index('gene_name')
+        adata_copy.var_names = adata_copy.var_names.astype('object')
+        adata_copy.var_names_make_unique()
+    else:
+        adata_copy = adata.copy()
+    adata_copy.X = scipy.sparse.csr_matrix(adata_copy.layers["counts"])
     adata_GS_uniformed = GeneSymbolUniform(
-        input_adata=adata, output_dir=os.environ["TMPDIR"], output_prefix="data"
+        input_adata=adata_copy, output_dir=os.environ["TMPDIR"], output_prefix="data"
     )
 
     sc.pp.normalize_total(adata_GS_uniformed, target_sum=1e4)
@@ -53,7 +60,7 @@ def run_scmulan(adata, seed):
     scml = scMulan.model_inference(ckp_path, adata_GS_uniformed)
     base_process = scml.cuda_count()
     scml.get_cell_types_and_embds_for_adata(
-        parallel=True, n_process=base_process
+        parallel=False, n_process=base_process
     )  # set parallel = False to use single GPU
 
     adata.obsm[EMB_KEY] = scml.adata.obsm["X_scMulan"]

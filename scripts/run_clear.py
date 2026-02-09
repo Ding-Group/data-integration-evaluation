@@ -30,7 +30,7 @@ from os.path import join
 import anndata as ad
 import numpy as np
 from docopt import docopt
-from utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
+from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
 from utils.hvg_utils import select_hvgs
 
 
