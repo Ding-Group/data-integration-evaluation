@@ -34,11 +34,11 @@ def run_scvaeit(rna, atac, batch_keys, n_latent, seed):
     tf.random.set_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
-    chr_list = [i for i in range(1, 20 if rna.uns["species"] == "mouse" else 23)] + [
-        "X"
+    chr_list = [f'chr{i}' for i in range(1, 20 if rna.uns["species"] == "mouse" else 23)] + [
+        "chrX"
     ]
     if "chrY" in atac.var["chr"]:
-        chr_list.append("Y")
+        chr_list.append("chrY")
 
     rna_copy = rna[:, rna.var.highly_variable].copy()
     atac = atac[:, atac.var.chr.isin(chr_list)]
