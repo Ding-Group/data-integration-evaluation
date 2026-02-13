@@ -6,7 +6,7 @@
 
 process RUN_INTEGRATE {
     errorStrategy {
-        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= maxRetries) ? 'retry' : 'ignore'
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= params.maxRetries) ? 'retry' : 'ignore'
     }
 
     tag "RUN_INTEGRATE_${integration}_${dataset}_${seed}"
@@ -22,7 +22,9 @@ process RUN_INTEGRATE {
             get_memory(data.size(), "2.GB", task.attempt, "4.GB") :
         memory_usage == 'medium' ?
             get_memory(data.size(), "4.GB", task.attempt, "8.GB") :
-            get_memory(data.size(), "10.GB", task.attempt, "12.GB")
+        memory_usage == 'high' ?
+            get_memory(data.size(), "10.GB", task.attempt, "12.GB") :
+            get_memory(data.size(), "12.GB", task.attempt, "48.GB")
     }
 
     resourceLimits memory: "256.GB"
@@ -60,6 +62,69 @@ process RUN_INTEGRATE {
         """
 }
 
+
+process RUN_INTEGRATE_MULTIOME {
+    errorStrategy {
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= params.maxRetries) ? 'retry' : 'ignore'
+    }
+
+    tag "RUN_INTEGRATE_${integration}_${dataset}_${seed}"
+
+    publishDir "$params.outdir/integration-models/${dataset}/${integration}",
+        pattern: "save_dir",
+        saveAs: { pathname -> pathname + "-${seed}" }
+
+    label params.use_gpu ? 'gpu_process' : null
+
+    memory {
+        def mem = memory_usage == 'low' ?
+            get_memory(atac_data.size(), "2.GB", task.attempt, "4.GB") :
+        memory_usage == 'medium' ?
+            get_memory(atac_data.size(), "4.GB", task.attempt, "8.GB") :
+        memory_usage == 'high' ?
+            get_memory(atac_data.size(), "8.GB", task.attempt, "8.GB") :
+            get_memory(atac_data.size(), "16.GB", task.attempt, "16.GB")
+
+        println "[${task.process}] Memory requested: ${mem}"
+        return mem
+    }
+
+    resourceLimits memory: "256.GB"
+
+    input:
+        tuple val(dataset), val(batch_col), val(label_col), val(organism), path(rna_data), path(atac_data), val(seed),
+            val(integration), val(conda_env), val(integration_params), val(memory_usage), path(run_script)
+
+    output:
+        tuple val(dataset), val(integration), val(seed), val(batch_col), val(label_col), path(rna_data), path("save_dir"), val(organism)
+
+    script:
+        def params_map = integration_params as Map
+        def param_str = params_map.collect { k, v -> "--${k}=${v}" }.join(' ')
+        """
+        source ${params.conda_location}
+        conda activate ${conda_env}
+        export LD_LIBRARY_PATH=\${CONDA_PREFIX}/lib/R/lib:\${CONDA_PREFIX}/lib:\$LD_LIBRARY_PATH
+        export PATH="\${CONDA_PREFIX}/bin:$PATH"
+        mkdir save_dir
+        echo ${param_str}
+        python ${run_script} \\
+            -o save_dir \\
+            -b ${batch_col.join(' -b ')} \\
+            -c ${label_col} \\
+            ${param_str} \\
+            --seed ${seed} \\
+            ${rna_data} \\
+            ${atac_data}
+        """
+
+    stub:
+        """
+        mkdir save_dir
+        touch save_dir/adata.h5ad
+        """
+}
+
 /*
 ========================================================================================
     WORKFLOW
@@ -82,6 +147,36 @@ workflow INTEGRATION {
 
     emit:
         integrated_ch = RUN_INTEGRATE.out
+            .map { it ->
+                tuple(
+                    it[0],                       // Dataset name
+                    it[1] + "-" + it[2],         // Integration name
+                    it[3],                       // Batch columns
+                    it[4],                       // Cell type label column
+                    file(it[6] + "/adata.h5ad"), // Path to integrated H5AD
+                    it[5],                       // Path to reference expression H5AD
+                    it[7]                        // Organism
+                )
+            }
+}
+
+
+workflow INTEGRATION_MULTIOME {
+
+    take:
+        multiome_datasets_ch
+        integrations_ch
+
+    main:
+
+        all_integrations_ch = multiome_datasets_ch
+            .combine(Channel.fromList(params.seeds))
+            .combine(integrations_ch)
+
+        RUN_INTEGRATE_MULTIOME(all_integrations_ch)
+
+    emit:
+        integrated_ch = RUN_INTEGRATE_MULTIOME.out
             .map { it ->
                 tuple(
                     it[0],                       // Dataset name

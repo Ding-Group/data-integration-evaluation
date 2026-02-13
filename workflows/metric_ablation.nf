@@ -299,7 +299,7 @@ process RUN_LEIDEN {
 }
 
 
-process RUN_LOUVAN {
+process RUN_LOUVAIN {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
     errorStrategy 'terminate'
@@ -331,6 +331,39 @@ process RUN_LOUVAN {
         """
 }
 
+
+process RUN_KMEANS {
+    conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
+
+    errorStrategy 'terminate'
+
+    publishDir "$params.outdir/adata/${dataset}/${integration}",
+        pattern: "*.h5ad"
+
+    memory { get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB") }
+
+    tag "${dataset}_${integration}_kmeans"
+
+    input:
+    tuple val(dataset), val(integration), val(batch_col), val(label_col), path(neighbors_adata), path(raw_file), val(kmeans_params), val(hex)
+    output:
+    tuple val(dataset), val(integration), val(batch_col), val(label_col), path("clustered-${hex}.h5ad"), path(raw_file), val(hex)
+
+    script:
+        """
+        python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/metric_ablation/compute_kmeans.py \\
+            -o "clustered-${hex}.h5ad" \\
+            -t ${label_col} \\
+            -s ${kmeans_params.seed} \\
+            -i ${kmeans_params.init} \\
+            ${neighbors_adata}
+        """
+    
+    stub:
+        """
+        touch clustered-${hex}.h5ad
+        """
+}
 
 process RUN_METRIC {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
@@ -762,6 +795,98 @@ workflow LOUVAIN_ABLATION {
 
     ORGANIZE_METRICS(collected_files_ch)
 }
+
+
+workflow KMEANS_ABLATION {
+    datasets_ch = Channel
+        .fromList(params.datasets)
+        .map { dataset ->
+            tuple(
+                dataset.name,
+                dataset.batch_col,
+                dataset.label_col,
+                dataset.organism,
+                file(params.datadir + dataset.name + ".h5ad")
+            )
+        }
+
+    integrations_ch = Channel
+        .fromList(params.integration)
+        .map { integration -> 
+            tuple(
+                integration.name,    // Method name
+                integration.conda,   // Location of Conda environment
+                integration.params,  // Method hyperparameters
+                integration.memory,  // Whether high or low memory usage
+                file(params.bindir + '/run_' + integration.name + '.py')  // Script to run method
+            )
+        }
+
+    metrics_ch = Channel
+        .fromList(params.metrics)
+        .map { metric ->
+            tuple(
+                metric.name,
+                metric.params
+            )
+        }
+
+    kmeans_ch = Channel.fromList(params.kmeans_params)
+        .flatMap { param_map -> 
+            def combinations = param_map.values()
+                .stream()
+                .collect { it }
+                .combinations()
+                .collect { combination ->
+                    // Recreate a single map for this specific run
+                    def run_params = [:]
+                    def keys = param_map.keySet().asList()
+                    keys.eachWithIndex { key, i ->
+                        run_params[key] = combination[i]
+                    }
+                    return run_params
+                }
+                .toList()
+            
+            return combinations
+        }
+
+    INTEGRATION(datasets_ch, integrations_ch)
+
+    // Just remove the organism
+    integrated_ch = INTEGRATION.out.map{ it -> 
+        tuple(
+            it[0],
+            it[1],
+            it[2],
+            it[3],
+            it[4],
+            it[5]
+        )
+    }
+
+    kmeans_input_ch = integrated_ch
+        .combine(kmeans_ch)
+        .map { dataset, integration, batch_col, label_col, integrated_adata, raw_file, kmeans_params ->
+            def deterministic_key = "${dataset}_${integration}_${batch_col}_${label_col}_${neighbors_adata}_${raw_file}_${kmeans_params}"
+            MessageDigest md = MessageDigest.getInstance("SHA-1")
+            md.update(deterministic_key.getBytes('UTF-8'))
+            def hex = new BigInteger(1, md.digest()).toString(16).padLeft(40, '0')
+            [ dataset, integration, batch_col, label_col, neighbors_adata, raw_file, kmeans_params , hex ]
+        }    
+    RUN_KMEANS(kmeans_input_ch)
+
+    all_ch = RUN_KMEANS.out
+        .combine(metrics_ch)
+
+    RUN_METRIC(all_ch)
+
+    collected_files_ch = RUN_METRIC.out
+        .collect { it -> tuple(file(it[2]), file(it[3]))}
+
+    ORGANIZE_METRICS(collected_files_ch)
+}
+
 
 
 def get_memory(file_size, mem_per_gb = "1.GB", attempt = 1, overhead = "8.GB") {

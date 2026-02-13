@@ -2,7 +2,7 @@ process RUN_METRIC {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
     errorStrategy {
-        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= maxRetries) ? 'retry' : 'ignore'
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= params.maxRetries) ? 'retry' : 'ignore'
     }
 
     tag "RUN_METRIC_${integration}_${dataset}_${metric}"

@@ -17,6 +17,8 @@ nextflow.enable.dsl = 2
 */
 
 include { INTEGRATION } from './workflows/integration'
+include { INTEGRATION_MULTIOME } from './workflows/integration'
+
 include { METRICS } from './workflows/metrics'
 // include { REPORTS } from './workflows/reports'
 
@@ -33,6 +35,19 @@ datasets_ch = Channel
             dataset.label_col,
             dataset.organism,
             file(params.datadir + dataset.name + ".h5ad")
+        )
+    }
+
+multiome_datasets_ch = Channel
+    .fromList(params.datasets)
+    .map { dataset ->
+        tuple(
+            dataset.name,
+            dataset.batch_col,
+            dataset.label_col,
+            dataset.organism,
+            file(params.datadir + "multiome/" + dataset.name + "_rna.h5ad"),
+            file(params.datadir + "/multiome/" + dataset.name + "_atac.h5ad"),
         )
     }
 
@@ -60,6 +75,11 @@ metrics_ch = Channel
 workflow WF_ALL {
     INTEGRATION(datasets_ch, integrations_ch)
     METRICS(INTEGRATION.out.integrated_ch, metrics_ch)
+}
+
+workflow MULTIOME {
+    INTEGRATION_MULTIOME(multiome_datasets_ch, integrations_ch)
+    METRICS(INTEGRATION_MULTIOME.out.integrated_ch, metrics_ch)
 }
 
 /*
