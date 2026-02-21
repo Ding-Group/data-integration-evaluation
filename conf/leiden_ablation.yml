@@ -96,10 +96,6 @@ neighbor_params:
     params:
       - k: [5, 10, 15, 20, 25]
         seed: [1, 2, 3, 4, 5]
-  - name: other_neighbors
-    params:
-      - radius: [5]
-        seed: [1]
 leiden_params:
   - seed: [1, 2, 3, 4, 5]
     flavor: ["leidenalg", "igraph"]

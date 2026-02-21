@@ -1,11 +1,10 @@
-experiment: cpu_small
+experiment: gpu_small
 conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
 datasets:
   - name: human_pancreas
     batch_col: ["tech"]
     label_col: celltype
     organism: human
-  #   organism: human
   # - name: human_lung
   #   batch_col: ["batch"]
   #   label_col: cell_type
@@ -30,20 +29,12 @@ datasets:
   - name: mouse_regulatory_T
     batch_col: ["method", "orig.ident"]
     label_col: "cell.type"
-  - name: pan_cancer_dc
-    batch_col: ["dataset_id", "cancer_type"]
-    label_col: celltype
+  - name: human_pbmc_sequencing_techs
+    batch_col: ["Method", "Experiment"]
+    label_col: CellType
 integration:
-  - name: scanvi
-    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
-    params: {}
-    memory: low
-  - name: scphere
-    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
-    params: {}
-    memory: low
-  - name: scvi
-    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+  - name: saucie
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
     params: {}
     memory: low
 seeds: [1]
