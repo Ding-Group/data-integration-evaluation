@@ -17,6 +17,7 @@ Options:
     --seed=<int>           Random seed. [Default: 0]
 """
 
+import os
 from os.path import join
 import sys
 
@@ -30,7 +31,7 @@ from scCobra import scCobra
 
 from docopt import docopt
 from project_utils.adata_utils import add_umap, minimise_anndata, combine_batch, EMB_KEY
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_sccobra(adata, batch_keys, use_hvg, hvg_method, max_iteration, seed):
@@ -44,7 +45,7 @@ def run_sccobra(adata, batch_keys, use_hvg, hvg_method, max_iteration, seed):
         batch_name=batch_key_final,
         min_features=0,
         min_cells=3,
-        outdir=None,
+        outdir=os.environ['TMPDIR'],
         show=False,
         processed=True,
         max_iteration=max_iteration,

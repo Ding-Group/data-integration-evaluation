@@ -26,7 +26,7 @@ import OCAT
 import pandas as pd
 from docopt import docopt
 from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_ocat(adata, batch_keys, use_hvg, hvg_method, n_ghosts, dim, seed):

@@ -26,8 +26,7 @@ import scanorama
 from docopt import docopt
 
 from project_utils.adata_utils import add_umap, combine_batch, minimise_anndata, split_by_batch, EMB_KEY
-from utils.hvg_utils import select_hvgs
-
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_scanorama(

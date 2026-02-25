@@ -11,7 +11,7 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --n_epochs=<int>       Number of epochs. [Default: 500]
+    --n_epochs=<int>       Number of epochs. [Default: 200]
     --n_topics=<int>       Numbre of topics. [Default: 20]
     --n_latent=<int>       Number of latent dimensions. [Default: 400]
     --seed=<int>           Random seed. [Default: 0]

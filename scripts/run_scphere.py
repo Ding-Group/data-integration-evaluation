@@ -45,7 +45,7 @@ from scphere.model.vae import SCPHERE
 from scphere.util.trainer import Trainer
 from torch.utils.data import DataLoader, TensorDataset
 from project_utils.adata_utils import EMB_KEY, add_umap, dense_counts, minimise_anndata
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 # run_scphere

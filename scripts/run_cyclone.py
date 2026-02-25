@@ -35,7 +35,7 @@ from cyclone.train import cyclone
 
 from docopt import docopt
 from project_utils.adata_utils import add_umap, minimise_anndata, EMB_KEY, combine_batch
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_cyclone(adata, batch_keys, cell_type_key, use_hvg, hvg_method, vae_z_dim, h_dim, epochs, seed):

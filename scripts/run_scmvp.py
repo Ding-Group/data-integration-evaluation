@@ -91,7 +91,9 @@ def run_scmvp(rna, atac, cell_type_key, latent_dim, epochs, seed):
     )
     trainer.train(n_epochs=epochs, lr=lr)
     full = trainer.create_posterior(trainer.model, dataset, indices=np.arange(len(dataset)),type_class=MultiPosterior)
-    latent, latent_rna, latent_atac, cluster_gamma, cluster_index, batch_indices, labels = full.sequential().get_latent()
+
+    size = 64 if rna.n_obs % 64 != 1 else 65
+    latent, latent_rna, latent_atac, cluster_gamma, cluster_index, batch_indices, labels = full.sequential(batch_size=size).get_latent()
 
     latent = pd.DataFrame(latent, index=dataset.barcodes)
     latent = latent.loc[rna.obs.index]

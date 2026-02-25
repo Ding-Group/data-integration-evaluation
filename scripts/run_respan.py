@@ -31,7 +31,7 @@ from docopt import docopt
 from ResPAN import run_respan
 from scipy import sparse
 from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_respan_pipeline(

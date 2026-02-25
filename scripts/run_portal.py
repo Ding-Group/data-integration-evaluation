@@ -30,7 +30,7 @@ import torch
 from docopt import docopt
 
 from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata, split_by_batch
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 sys.path.insert(0, "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/Portal/portal/")
 

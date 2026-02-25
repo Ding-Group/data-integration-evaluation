@@ -34,7 +34,7 @@ import torch.nn.functional as F
 from docopt import docopt
 from torch.utils.data import DataLoader, Dataset
 from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 class NPDataset(Dataset):

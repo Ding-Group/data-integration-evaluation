@@ -31,7 +31,7 @@ from project_utils.adata_utils import (
     minimise_anndata,
     split_by_batch,
 )
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_simba(adata, batch_keys, use_hvg, hvg_method, n_bins, n_components, k, seed):

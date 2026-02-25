@@ -35,7 +35,7 @@ import desc as DESC
 import numpy as np
 from docopt import docopt
 from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_desc(

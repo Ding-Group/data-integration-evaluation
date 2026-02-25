@@ -23,7 +23,7 @@ import scvi
 
 from docopt import docopt
 from project_utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_scanvi(adata, batch_keys, cell_type_key, use_hvg, hvg_method, seed):

@@ -25,7 +25,7 @@ import imap
 import scanpy as sc
 from docopt import docopt
 from project_utils.adata_utils import EMB_KEY, add_umap, minimise_anndata, combine_batch
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 
 def run_imap(adata, batch_keys, use_hvg, hvg_method, n_epochs, latent_dim, seed):

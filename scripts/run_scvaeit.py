@@ -34,9 +34,9 @@ def run_scvaeit(rna, atac, batch_keys, n_latent, seed):
     tf.random.set_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
-    chr_list = [f'chr{i}' for i in range(1, 20 if rna.uns["species"] == "mouse" else 23)] + [
-        "chrX"
-    ]
+    chr_list = [
+        f"chr{i}" for i in range(1, 20 if rna.uns["species"] == "mouse" else 23)
+    ] + ["chrX"]
     if "chrY" in atac.var["chr"]:
         chr_list.append("chrY")
 
@@ -60,7 +60,7 @@ def run_scvaeit(rna, atac, batch_keys, n_latent, seed):
     rna_copy = rna_copy[reorder]
     atac = atac[reorder]
 
-    batches = rna_copy.obs[final_batch_key].cat.codes.to_numpy()
+    batches = rna_copy.obs[final_batch_key].astype('category').cat.codes.to_numpy()
     id_datasets = batches
 
     X = rna_copy.layers["counts"].copy()
@@ -75,10 +75,7 @@ def run_scvaeit(rna, atac, batch_keys, n_latent, seed):
     data = np.c_[X, Y]
 
     chunk_atac = np.array(
-        [
-            np.sum(np.char.startswith(peak_names, f"chr{i}-"))
-            for i in list(range(1, 20)) + ["X", "Y"]
-        ],
+        [np.sum(np.char.startswith(peak_names, f'{i}-')) for i in chr_list],
         dtype=np.int32,
     )
     dim_input_arr = np.array([len(gene_names), len(peak_names)])
@@ -86,45 +83,61 @@ def run_scvaeit(rna, atac, batch_keys, n_latent, seed):
     assert dim_input_arr[1] == np.sum(chunk_atac)
     batches = batches[:, None]
     masks = np.zeros((len(np.unique(batches)), np.sum(dim_input_arr)), dtype=np.float32)
-    sample_sizes = np.array([np.sum(batches == b) for b in np.unique(batches)], dtype=np.int32)
+    sample_sizes = np.array(
+        [np.sum(batches == b) for b in np.unique(batches)], dtype=np.int32
+    )
 
     config = {
-    # Dimension of input features for [RNA, ADT, peaks]
-        'dim_input_arr': dim_input_arr,
-
+        # Dimension of input features for [RNA, ADT, peaks]
+        "dim_input_arr": dim_input_arr,
         # Blocks for [RNA, ADT, peaks at chr1, ... peaks at chr22]
-        'dim_block': np.append([len(gene_names)], chunk_atac), # input dimension of blocks
-        'dist_block':['NB'] + ['Bernoulli' for _ in chunk_atac], # distributions of blocks
-        'dim_block_enc':np.array([256] + [16 for _ in chunk_atac]), # dimension of first layer of the encoder
-        'dim_block_dec':np.array([256] + [16 for _ in chunk_atac]), # dimension of first layer of the decoder
-        'block_names':np.array(['rna'] + ['atac' for _ in range(len(chunk_atac))]), # names of blocks
-        'uni_block_names':np.array(['rna','atac']), # names for modalities
-        'dim_block_embed':np.array([16] + [1 for _ in range(len(chunk_atac))])*2, # mask embedding dimension
-
+        "dim_block": np.append(
+            [len(gene_names)], chunk_atac
+        ),  # input dimension of blocks
+        "dist_block": ["NB"]
+        + ["Bernoulli" for _ in chunk_atac],  # distributions of blocks
+        "dim_block_enc": np.array(
+            [256] + [16 for _ in chunk_atac]
+        ),  # dimension of first layer of the encoder
+        "dim_block_dec": np.array(
+            [256] + [16 for _ in chunk_atac]
+        ),  # dimension of first layer of the decoder
+        "block_names": np.array(
+            ["rna"] + ["atac" for _ in range(len(chunk_atac))]
+        ),  # names of blocks
+        "uni_block_names": np.array(["rna", "atac"]),  # names for modalities
+        "dim_block_embed": np.array([16] + [1 for _ in range(len(chunk_atac))])
+        * 2,  # mask embedding dimension
         # Internal network structure
-        'dimensions':[256], # dimension of latent layers of encoder; the reversed is used for decoder
-        'dim_latent':n_latent, # the latent dimension between the encoder and decoder
-        
+        "dimensions": [
+            256
+        ],  # dimension of latent layers of encoder; the reversed is used for decoder
+        "dim_latent": n_latent,  # the latent dimension between the encoder and decoder
         # Weights
-        'beta_unobs':2./3., # weight for masked out observation; weight for observed values will be 1-beta_unobs.
-        'beta_modal':np.array([1/3,1/3,1/3]), # weights for 3 modalities
-
+        "beta_unobs": 2.0
+        / 3.0,  # weight for masked out observation; weight for observed values will be 1-beta_unobs.
+        "beta_modal": np.array([1 / 3, 1 / 3, 1 / 3]),  # weights for 3 modalities
         # Masking probability
-        "p_feat" : 0.2, # probability of randomly masking out an entry
-        "p_modal" : np.ones(3)/3, # probability of masking out the 3 modalities
-        
-        'gamma':lambda epoch: 2 * 0.8 ** (epoch / 50) # MMD loss to correct strong batch effects of multiple datasets
+        "p_feat": 0.2,  # probability of randomly masking out an entry
+        "p_modal": np.ones(3) / 3,  # probability of masking out the 3 modalities
+        "gamma": lambda epoch: (
+            2 * 0.8 ** (epoch / 50)
+        ),  # MMD loss to correct strong batch effects of multiple datasets
     }
 
     batches_cate = batches
     batches_cont = None
 
-
-    model = VAEIT(config, data, 
-                    masks, id_datasets, batches)
+    model = VAEIT(config, data, masks, id_datasets, batches)
     hist = model.train(
-        num_epoch=300, batch_size=512, save_every_epoch=150,
-        verbose=True, checkpoint_dir=join(os.environ['TMPDIR'], ''.join(random.choices(['a', 'b', 'c', 'd', 'e'], k=20)))
+        num_epoch=300,
+        batch_size=512,
+        save_every_epoch=150,
+        verbose=True,
+        checkpoint_dir=join(
+            os.environ["TMPDIR"],
+            "".join(random.choices(["a", "b", "c", "d", "e"], k=20)),
+        ),
     )
     model.update_z()
     rna.obsm[EMB_KEY] = model.adata.X
@@ -138,7 +151,7 @@ def main():
     out_dir = args["-o"]
     batch_keys = args["-b"]
     cell_type_key = args["-c"]
-    n_latent = int(args['--n_latent'])
+    n_latent = int(args["--n_latent"])
     seed = int(args["--seed"])
 
     print("Loading data")

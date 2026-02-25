@@ -64,7 +64,8 @@ def run_cobolt(rna, atac, batch_keys, n_latent, n_epochs, seed):
         datas.append(atac_data)
     
     multi_dt = MultiomicDataset.from_singledata(*datas)
-    model = Cobolt(dataset=multi_dt, lr=1e-4, n_latent=n_latent)
+    batch_size = 128 if rna.n_obs % 128 != 1 else 129
+    model = Cobolt(dataset=multi_dt, lr=1e-4, n_latent=n_latent, batch_size=batch_size)
     model.train(num_epochs=n_epochs)
 
     model.calc_all_latent()

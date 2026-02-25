@@ -25,7 +25,7 @@ import anndata as ad
 from docopt import docopt
 
 from project_utils.adata_utils import add_umap, minimise_anndata, combine_batch, EMB_KEY
-from utils.hvg_utils import select_hvgs
+from project_utils.hvg_utils import select_hvgs
 
 from scETM import scETM as SCETM, UnsupervisedTrainer
 from scETM.trainers import set_seed
