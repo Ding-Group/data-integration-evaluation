@@ -2,7 +2,7 @@ process RUN_METRIC {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
     errorStrategy {
-        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= params.maxRetries) ? 'retry' : 'ignore'
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
     }
 
     tag "RUN_METRIC_${integration}_${dataset}_${metric}"
@@ -14,8 +14,8 @@ process RUN_METRIC {
     memory {
         metric == "ALL_CLUSTER" ? 
             get_memory(raw_file.size(), "4.GB", task.attempt, "16.GB") :
-        metric == "KBET" ?
-            get_memory(raw_file.size(), "4.GB", task.attempt, "8.GB") :
+        (metric == "CSMC" || metric == "KBET" || metric == "BRAS") ?
+            get_memory(raw_file.size(), "8.GB", task.attempt, "24.GB") :
             get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB")
     }
 
@@ -39,7 +39,7 @@ process RUN_METRIC {
             ${raw_file} \\
             ${integrated_file} \\
             "${dataset}-${integration}-${metric}.csv" \\
-            ${metric_params.collect { k, v -> "--${k} ${v}" }.join(' ')}
+            ${metric_params.collect { k, v -> "--${k}=${v}" }.join(' ')}
         
         exit_code=\$?
 

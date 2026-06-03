@@ -6,8 +6,9 @@
 
 process RUN_INTEGRATE {
     errorStrategy {
-        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= params.maxRetries) ? 'retry' : 'ignore'
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
     }
+    // errorStrategy 'retry'
 
     tag "RUN_INTEGRATE_${integration}_${dataset}_${seed}"
 
@@ -18,13 +19,15 @@ process RUN_INTEGRATE {
     label params.use_gpu ? 'gpu_process' : null
 
     memory { 
-        memory_usage == 'low' ?
-            get_memory(data.size(), "2.GB", task.attempt, "4.GB") :
+        def mem = memory_usage == 'low' ?
+            get_memory(data.size(), "2.GB", task.attempt, "8.GB") :
         memory_usage == 'medium' ?
-            get_memory(data.size(), "4.GB", task.attempt, "8.GB") :
+            get_memory(data.size(), "4.GB", task.attempt, "12.GB") :
         memory_usage == 'high' ?
-            get_memory(data.size(), "10.GB", task.attempt, "12.GB") :
-            get_memory(data.size(), "12.GB", task.attempt, "48.GB")
+            get_memory(data.size(), "10.GB", task.attempt, "24.GB") :
+            get_memory(data.size(), "16.GB", task.attempt, "48.GB")
+        println "[${task.process}] Memory requested: ${mem}"
+        return mem
     }
 
     resourceLimits memory: "256.GB"
@@ -82,8 +85,8 @@ process RUN_INTEGRATE_MULTIOME {
         memory_usage == 'medium' ?
             get_memory(atac_data.size(), "4.GB", task.attempt, "8.GB") :
         memory_usage == 'high' ?
-            get_memory(atac_data.size(), "8.GB", task.attempt, "8.GB") :
-            get_memory(atac_data.size(), "16.GB", task.attempt, "16.GB")
+            get_memory(atac_data.size(), "16.GB", task.attempt, "16.GB") :
+            get_memory(atac_data.size(), "24.GB", task.attempt, "48.GB")
 
         println "[${task.process}] Memory requested: ${mem}"
         return mem
@@ -205,7 +208,7 @@ def get_memory(file_size, mem_per_gb = "1.GB", attempt = 1, overhead = "8.GB") {
 
     file_gb = file_mem.toGiga()
     file_gb = file_gb > 0 ? file_gb : 1
-    mem_use = (mem_per_gb * file_gb * attempt) + overhead
+    mem_use = (mem_per_gb * file_gb * attempt) + overhead * attempt
 
     if (mem_use > max_mem) {
         mem_use = max_mem
