@@ -1,0 +1,257 @@
+experiment: clustering_ablation/louvain_seurat_pbmc
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: seurat_pbmc
+    dir: 36/949092fe56b8dd2ef9d1333bfaa744
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: clear-1
+    dataset: seurat_pbmc
+    dir: 3e/71614dce4e344442a03bbc5ea0cdb4
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: cyclone-1
+    dataset: seurat_pbmc
+    dir: 3e/ad887dd8306d076c9de07aad8e422e
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: equidistant-1
+    dataset: seurat_pbmc
+    dir: 18/1d76dfd79c746ac22d334b27ae0baa
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: gedi-1
+    dataset: seurat_pbmc
+    dir: 23/49b135388223ab80a9acb22c7ffc1c
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: geneptw-1
+    dataset: seurat_pbmc
+    dir: a5/d1eb7e598705c9648175323625acff
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: harmony-1
+    dataset: seurat_pbmc
+    dir: 45/6f7c4685bf702b82ab24f760d9b08d
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: imap-1
+    dataset: seurat_pbmc
+    dir: da/5691c0addf9f7b4435ce936feba81b
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: insct-1
+    dataset: seurat_pbmc
+    dir: 45/c45a0e77e6e5b372ebfc2018b41669
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: islander-1
+    dataset: seurat_pbmc
+    dir: 6f/bdf772425b84f8cc8953acf0e0f268
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: langcell-1
+    dataset: seurat_pbmc
+    dir: 7c/bb07e14e3fac128f76f969c4602338
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: liger-1
+    dataset: seurat_pbmc
+    dir: 18/a1df9338a6468fa68d1be4f31cdab5
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: mnn-1
+    dataset: seurat_pbmc
+    dir: cb/65052af18fe3a4092a5ea4d2ed72d7
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: ocat-1
+    dataset: seurat_pbmc
+    dir: 7b/fcb1473f4ed07110e2aad64a527fdf
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: oneBigBlob-1
+    dataset: seurat_pbmc
+    dir: ab/888ff831464b60430be6ec7b74d3ec
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: pca-1
+    dataset: seurat_pbmc
+    dir: b4/97fe76b989f6df6c577e3d9b61590b
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: portal-1
+    dataset: seurat_pbmc
+    dir: c0/542e079afefc3bb48708d458cd46d0
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: respan-1
+    dataset: seurat_pbmc
+    dir: d7/823b9d49506bd4a67b445046a8a1bf
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: rpca-1
+    dataset: seurat_pbmc
+    dir: ac/d909fbb06c44c1cd71717052e9cf82
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: saucie-1
+    dataset: seurat_pbmc
+    dir: ff/ea8bad8e53e3f9006fddfc610e3521
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scalex-1
+    dataset: seurat_pbmc
+    dir: 92/4ef170528069d2dd31394ffb263a0e
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scalign-1
+    dataset: seurat_pbmc
+    dir: b3/1a75173f0b5385f2187c09a222524e
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scanorama-1
+    dataset: seurat_pbmc
+    dir: d3/23750caacd11bee88330c634b13875
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scanvi-1
+    dataset: seurat_pbmc
+    dir: 82/c4469a00e9f43a4566023da6be0cbe
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: sccobra-1
+    dataset: seurat_pbmc
+    dir: 59/7950f38d42cf8bef1651fb8f0b13ba
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: sccraft-1
+    dataset: seurat_pbmc
+    dir: 06/7df221c2d7cdcd4a9d0d1f6bc5b9da
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scdml-1
+    dataset: seurat_pbmc
+    dir: 3f/cb4e531ff5a043173589b5b1082e0a
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scdreamer-1
+    dataset: seurat_pbmc
+    dir: 86/f228f51800cce4fb7bb4e4292dbd5d
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scetm-1
+    dataset: seurat_pbmc
+    dir: 84/67dc9be66383e5fb802dec9c7c42a1
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scgpt-1
+    dataset: seurat_pbmc
+    dir: 02/d302d828486f8bd62023fc06ad016d
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scmerge-1
+    dataset: seurat_pbmc
+    dir: 25/cfa854357d8d15664b230aa1dc3571
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scmulan-1
+    dataset: seurat_pbmc
+    dir: d4/7e702be1f8c38ddcd91e7fd212e99d
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scphere-1
+    dataset: seurat_pbmc
+    dir: d6/24397e318b65f808d45acb40bbae87
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: scvi-1
+    dataset: seurat_pbmc
+    dir: df/6e9620a7f3f4103844c545fec54dec
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: simba-1
+    dataset: seurat_pbmc
+    dir: 77/aae438e8cf4f27ac596d32ddf6e9d4
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: sysvi-1
+    dataset: seurat_pbmc
+    dir: 03/2409cff23c0ab74270e563e9b1379c
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: uce-1
+    dataset: seurat_pbmc
+    dir: 51/baf933bfa550753a56ff1fae932680
+    batch_col: ["donor"]
+    label_col: "celltype.l2"
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [5, 10, 15, 20, 25]
+        seed: [1]
+  - name: exact
+    params:
+      - k: [15]
+        seed: [1]
+  - name: annoy
+    params:
+      - k: [15]
+        seed: [1]
+  - name: faiss
+    params:
+      - k: [15]
+        seed: [1]
+  - name: flann
+    params:
+      - k: [15]
+        seed: [1]
+  - name: hnswlib
+    params:
+      - k: [15]
+        seed: [1]
+louvain_params:
+  - seed: [1]
+    flavor: ["vtraag"]
+use_gpu: false

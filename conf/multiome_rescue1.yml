@@ -1,0 +1,176 @@
+experiment: multiome_rescue1
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  # - name: neurips_bmmc_multiome
+  #   batch_col: ["batch"]
+  #   label_col: cell_type
+  # - name: mouse_cortex
+  #   batch_col: ["DonorID"]
+  #   label_col: "celltype"
+  # - name: human_pbmc_dogma
+  #   batch_col: ["stim"]
+  #   label_col: celltype
+  # - name: human_pbmc_tea
+  #   batch_col: ["batch"]
+  #   label_col: celltype
+  # - name: mouse_organogenesis
+  #   batch_col: ["sample"]
+  #   label_col: celltype
+  # - name: human_cortex
+  #   batch_col: ["dataset"]
+  #   label_col: type_updated
+  # - name: human_breast
+  #   batch_col: ["donor_id"]
+  #   label_col: cell_type
+  # - name: human_retina_35000
+  #   batch_col: ["donor_id"]
+  #   label_col: cell_type
+  # - name: human_retina_6donor
+  #   batch_col: ["donor_id"]
+  #   label_col: cell_type
+  # - name: human_renal_cortex
+  #   batch_col: ["donor_id"]
+  #   label_col: cell_type
+  - name: mouse_kidney
+    batch_col: ["batch"]
+    label_col: celltype
+integration:
+  # - name: moetm
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
+  #   params: {}
+  #   memory: high
+  # - name: cobolt
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/cobolt_env/"
+  #   params: {}
+  #   memory: high
+  # - name: scmomat
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmomat-env/"
+  #   params: {}
+  #   memory: high
+  - name: scvaeit
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvaeit-env/"
+    params: {}
+    memory: massive
+  # - name: mira
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
+  #   params: {}
+  #   memory: high
+  # - name: pca_concat
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  #   memory: low
+  # - name: harmony_concat
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  #   memory: low
+  # - name: multigrate
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/multigrate-env"
+  #   params: {}
+  #   memory: high
+  # - name: mofa
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
+  #   params: {}
+  #   memory: massive
+  # - name: scmm
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
+  #   params: {}
+  #   memory: high
+  # - name: scmvp
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmvp-env"
+  #   params: {}
+  #   memory: high
+  # - name: unitednet
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/unitednet-env"
+  #   params: {}
+  #   memory: massive
+  # - name: scpairing
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
+  #   params: {}
+  #   memory: medium
+  # - name: mojitoo
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/mojitoo-env"
+  #   params: {}
+  #   memory: medium
+  # - name: schema
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/schema-env"
+  #   params: {}
+  #   memory: medium
+seeds: [1]
+metrics:
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: AGREE
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: LDFDIFF
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: RKNN
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: ILISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: PCR
+    params: {}
+  - name: BNENTROPY
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: PROBE
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: CSMC
+    params: {}
+  - name: SV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: ADGBD
+    params: {}
+  - name: MIX
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+use_gpu: true

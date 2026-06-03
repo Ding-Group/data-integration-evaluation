@@ -1,0 +1,221 @@
+experiment: clustering_ablation/leiden_nph_cerebellum
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: nph_cerebellum
+    dir: 7f/e0c17b893089a706686e4e67afb4fa
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: clear-1
+    dataset: nph_cerebellum
+    dir: 81/97b4091d30a8e243e3f603915f7383
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: cyclone-1
+    dataset: nph_cerebellum
+    dir: 4b/4e3412b6a1010e4854a0d7edd49f4c
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: equidistant-1
+    dataset: nph_cerebellum
+    dir: f3/2b6879c77890094b4639007a463b52
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: gedi-1
+    dataset: nph_cerebellum
+    dir: b0/a189be3e3737a66fa02d5ef96be045
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: harmony-1
+    dataset: nph_cerebellum
+    dir: 72/d4177947d2c9130cf5a493ffec446f
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: imap-1
+    dataset: nph_cerebellum
+    dir: 87/c52be0d5ca9e895cc30c240eac6363
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: insct-1
+    dataset: nph_cerebellum
+    dir: 53/0b930cc7e35d30f65b644aba933f16
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: islander-1
+    dataset: nph_cerebellum
+    dir: 3a/c39408ec7692923a6f10c3d03445dd
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: liger-1
+    dataset: nph_cerebellum
+    dir: 62/ce7c7da3198e2036037b78e767e1a1
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: mnn-1
+    dataset: nph_cerebellum
+    dir: 93/7639bded6a57be53204f3fe45982f1
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: ocat-1
+    dataset: nph_cerebellum
+    dir: 57/2a748dfb97f3a2560b138a838dcbb1
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: oneBigBlob-1
+    dataset: nph_cerebellum
+    dir: 7e/9a1cdd4557e36e949e6e3edef39725
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: pca-1
+    dataset: nph_cerebellum
+    dir: b9/9b3e1fb44949aedd40129e86383191
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: portal-1
+    dataset: nph_cerebellum
+    dir: 8d/21f46918195985989c395436a08faa
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: respan-1
+    dataset: nph_cerebellum
+    dir: 6e/164715bcc7f77b8e7a6e2dc7ea11ab
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: rpca-1
+    dataset: nph_cerebellum
+    dir: 09/f4d81b6fa2fb43f6bdba6aa1361042
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: saucie-1
+    dataset: nph_cerebellum
+    dir: 7b/71e0c4705d11aa3896aa4ad80dc947
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scalex-1
+    dataset: nph_cerebellum
+    dir: f8/28ff52f0d82c8f3b771572bf1f01e9
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scanorama-1
+    dataset: nph_cerebellum
+    dir: 4a/f0194ac769b1afbc1b80593e07a4f4
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scanvi-1
+    dataset: nph_cerebellum
+    dir: 9a/00a03f8ed698f281ada4665ccfa49f
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: sccobra-1
+    dataset: nph_cerebellum
+    dir: 6f/94109d1965ae7a676f45765ba6d03d
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: sccraft-1
+    dataset: nph_cerebellum
+    dir: e3/28a0b916213c22c727b651285140a2
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scdml-1
+    dataset: nph_cerebellum
+    dir: 5a/62c0749b8178c2196d479ef2f224f0
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scdreamer-1
+    dataset: nph_cerebellum
+    dir: b0/a6fc06e70d2a4a5b2926e58c20bdd8
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scetm-1
+    dataset: nph_cerebellum
+    dir: 2a/63335daf6a83e5348b333caf7bc5b4
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scmerge-1
+    dataset: nph_cerebellum
+    dir: df/5da9cdd1195dcce3574ff261ba1cfb
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scphere-1
+    dataset: nph_cerebellum
+    dir: 81/09c6b2c77ff30042697e22c19e4ec8
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: scvi-1
+    dataset: nph_cerebellum
+    dir: bf/301cee3250891b6082d91d71f07b4f
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: simba-1
+    dataset: nph_cerebellum
+    dir: 37/1d2885813a529a5e333a6f9fb7ef77
+    batch_col: ["Sample"]
+    label_col: Celltype 
+
+  - integration: sysvi-1
+    dataset: nph_cerebellum
+    dir: e2/c971fb0e33628a67b9060048b99060
+    batch_col: ["Sample"]
+    label_col: Celltype 
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [5, 10, 15, 20, 25]
+        seed: [1]
+  - name: exact
+    params:
+      - k: [15]
+        seed: [1]
+  - name: annoy
+    params:
+      - k: [15]
+        seed: [1]
+  - name: faiss
+    params:
+      - k: [15]
+        seed: [1]
+  - name: flann
+    params:
+      - k: [15]
+        seed: [1]
+  - name: hnswlib
+    params:
+      - k: [15]
+        seed: [1]
+leiden_params:
+  - seed: [1]
+    flavor: ["leidenalg"]
+use_gpu: false

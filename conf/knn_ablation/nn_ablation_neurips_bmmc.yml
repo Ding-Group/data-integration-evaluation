@@ -1,0 +1,282 @@
+experiment: knn_ablation/neurips_bmmc
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: neurips_bmmc
+    dir: b1/8d7fb13591c5ba5ddb0a7537d2a783
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: neurips_bmmc
+    dir: 1c/ec1581b5d98592d84f2b2cba93607d
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: cyclone-1
+    dataset: neurips_bmmc
+    dir: fb/e83406f3a290196d0120127802ca4f
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: neurips_bmmc
+    dir: 2a/715921be30a504b6b7ea2e2d52b896
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: neurips_bmmc
+    dir: 54/18aa8867576989b11d061f1137ffdf
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: geneformer-1
+    dataset: neurips_bmmc
+    dir: 60/707bd947340c3be84962068e5fca0a
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: geneptw-1
+    dataset: neurips_bmmc
+    dir: b6/b541101f3a0b20589a66472bf22a1a
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: neurips_bmmc
+    dir: cd/7b236d646f426e38d2735701dead4e
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: neurips_bmmc
+    dir: 1f/b750c17e5397ef32f27afadfb34dbe
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: neurips_bmmc
+    dir: 33/bf470f588e705296f5d67243af0a69
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: langcell-1
+    dataset: neurips_bmmc
+    dir: 7a/98e5fd7e62e3fb47c7e96be83c29fb
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: neurips_bmmc
+    dir: 12/3a32d9d47e006f9a688c5d1c9d2733
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: neurips_bmmc
+    dir: 8c/e006b47c8710cc522b859c974a0e09
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: neurips_bmmc
+    dir: a2/3a52b91a9194323eb337b226a52c30
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: neurips_bmmc
+    dir: 80/e4aaab2b9b46dd77542cf4367abb32
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: neurips_bmmc
+    dir: 93/805b9201d4d47e49e03c0238716ada
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: neurips_bmmc
+    dir: 63/2427188225d7febd34524abe22a855
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: neurips_bmmc
+    dir: 79/2d1809bc9d3b5adca9391ae72c3481
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: neurips_bmmc
+    dir: b7/221c3a5295b18be36acc4d3dc3f672
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: neurips_bmmc
+    dir: 7b/26986d926ee65a6421b091a36ae9e8
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: neurips_bmmc
+    dir: 45/a92181a73c77171e7fd7e5f8952344
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scalign-1
+    dataset: neurips_bmmc
+    dir: ec/b32d462fe0bd7d409372369b381d08
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: neurips_bmmc
+    dir: 93/4e7891c9480fccb9ad0710aa89f141
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: neurips_bmmc
+    dir: 20/60c96dab860da298f66c03cc18c41d
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: neurips_bmmc
+    dir: cc/0bc9acaae9a72cc4fe3b8407e61034
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: neurips_bmmc
+    dir: d3/8e11610d2bfcc774c4c4f595dea6bb
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: neurips_bmmc
+    dir: ec/a75938cca818b12701559096c6df68
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: neurips_bmmc
+    dir: 78/32a7706daba22f3f6f536e91b62b08
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: neurips_bmmc
+    dir: d8/768419cd56a700001e05b82deaf329
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scgpt-1
+    dataset: neurips_bmmc
+    dir: 62/2a45a0fe3a714ac0314db571398533
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: neurips_bmmc
+    dir: 1c/1cb5b99e870c836cd1e891c4d99347
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scmulan-1
+    dataset: neurips_bmmc
+    dir: cd/bd375f3d42a6e5efe9a592ffe61500
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: neurips_bmmc
+    dir: 09/a12fa41c3611c058eeba6d4366c712
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: neurips_bmmc
+    dir: a1/1caab6721e63fa5e3899618868d577
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: neurips_bmmc
+    dir: ea/9ef7b8fa842800819c2f2f0a5b556e
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: neurips_bmmc
+    dir: 72/18124c08919fc64b92dbae44343d73
+    batch_col: ["batch"]
+    label_col: cell_type
+
+  - integration: uce-1
+    dataset: neurips_bmmc
+    dir: 78/2a6ac2b7e4a6480c1d3a1a469a0598
+    batch_col: ["batch"]
+    label_col: cell_type
+metrics:
+  - name: CLISI
+    params:
+      - k0: [15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180]
+  - name: ILISI
+    params:
+      - k0: [15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180]
+  - name: KBET
+    params:
+      - k: [30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140]
+  - name: FKNN
+    params:
+      - n_neighbors: [1, 11, 21, 31, 41, 51, 61, 71, 81, 91]
+  - name: CNENTROPY
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: LDFDIFF
+    params:
+      - k: [30, 45, 60, 75, 90, 105, 120, 135, 150]
+  - name: RKNN
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: AGREE
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: KSIM
+    params:
+      - k: [15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115]
+  - name: BKNN
+    params:
+      - n_neighbors: [1, 11, 21, 31, 41, 51, 61, 71, 81, 91]
+  - name: BNENTROPY
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: KLDIV # CHANGE
+    params:
+      - k: [10, 20, 30, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600]
+  - name: ALIGN  # CHANGE
+    params:
+      - n_neighbors: [25, 50,71,100, 121, 150, 171,221,271,321,371,421,471, 521, 571, 621, 671]
+  - name: CSMC
+    params:
+      - k: [20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140]
+  - name: PPTPC
+    params:
+      - n_neighbors: [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
+  - name: ADGBD
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: MIX
+    params:
+      - k: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  - name: PSTDB
+    params:
+      - k: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: NNMAP
+    params:
+      - k : [0.001, 0.005, 0.0075, 0.009, 0.01, 0.02, 0.03, 0.04, 0.05]

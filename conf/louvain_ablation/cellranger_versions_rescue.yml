@@ -1,0 +1,34 @@
+experiment: clustering_ablation/louvain_cellranger_versions_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: scdml-1
+    dataset: cellranger_versions
+    dir: ad/2260ad40e7b3b23367dd077c52fefc
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scetm-1
+    dataset: cellranger_versions
+    dir: 21/d21821d3138945e1ee9ad14eea1765
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scprint-1
+    dataset: cellranger_versions
+    dir: 77/e124eaf7008503060434846fdfbfba
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [15]
+        seed: [1]
+louvain_params:
+  - seed: [1]
+    flavor: ["vtraag"]
+use_gpu: false

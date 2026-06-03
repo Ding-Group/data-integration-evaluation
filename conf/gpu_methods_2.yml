@@ -107,6 +107,7 @@ integration:
   - name: simba
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/simba-env"
     params: {}
+    memory: medium
   - name: insct
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
     params: {}

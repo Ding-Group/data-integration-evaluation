@@ -1,0 +1,692 @@
+experiment: granularity_ablation/human_fetal_gut
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: human_fetal_gut
+    dir: e5/98a346dacd08747358fc0917d0c7a4
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: clear-1
+    dataset: human_fetal_gut
+    dir: 68/fd0b329e283f8ac5bd65f69fa1d0e6
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: cyclone-1
+    dataset: human_fetal_gut
+    dir: f2/25d2043adc34348ac1d2dfd1b90140
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: equidistant-1
+    dataset: human_fetal_gut
+    dir: 98/fa29c800737dc7d6d810acbec4682b
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: gedi-1
+    dataset: human_fetal_gut
+    dir: 41/2403049311adcd695db3fd0db93ba8
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: geneptw-1
+    dataset: human_fetal_gut
+    dir: f2/43fa1b932d2f8cf8b2be0335363f10
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: harmony-1
+    dataset: human_fetal_gut
+    dir: 49/1689f33cc0a8939fe7f39b9e7c1a9e
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: imap-1
+    dataset: human_fetal_gut
+    dir: e9/37c766662f27237ebc848cae4cee73
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: islander-1
+    dataset: human_fetal_gut
+    dir: 5e/3dac9de7d8a505d9a4645f1385052f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: langcell-1
+    dataset: human_fetal_gut
+    dir: c3/262594f97be47b1fa548dd07b13665
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: liger-1
+    dataset: human_fetal_gut
+    dir: ad/ce486f9139562f304d1ce39b3cabee
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: mnn-1
+    dataset: human_fetal_gut
+    dir: 30/9b91262a38a99c491d8d354af0c9c5
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: ocat-1
+    dataset: human_fetal_gut
+    dir: 10/c476ef3d1456d11a4a13bd6173fa64
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: oneBigBlob-1
+    dataset: human_fetal_gut
+    dir: d2/8ffc54b76ae5ad2de076eaa647979a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: pca-1
+    dataset: human_fetal_gut
+    dir: f7/b682bab18f60b93d248de93d9bee57
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: portal-1
+    dataset: human_fetal_gut
+    dir: 1b/4d10dfc21070bf5527d8d7067fcdf1
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: respan-1
+    dataset: human_fetal_gut
+    dir: 2d/c5bacf246b167645d2548d07b0eae6
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: rpca-1
+    dataset: human_fetal_gut
+    dir: 96/f849a0f46af4a942af0b8a30bcc74a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: saucie-1
+    dataset: human_fetal_gut
+    dir: d3/62b94cec183f711da27e318f5e9c29
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scalex-1
+    dataset: human_fetal_gut
+    dir: a0/88f39c91ab5d9ddfce0c09798a729a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scanorama-1
+    dataset: human_fetal_gut
+    dir: 86/65633e2efa02cc94be417ca9aab28e
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scanvi-1
+    dataset: human_fetal_gut
+    dir: 90/754872ff80cafbc0ac28d3343d3c48
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: sccobra-1
+    dataset: human_fetal_gut
+    dir: cb/3499154525a45d46b88ee0a638295c
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: sccraft-1
+    dataset: human_fetal_gut
+    dir: 57/513ba0383a4affb048d993c9379ad9
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scdml-1
+    dataset: human_fetal_gut
+    dir: cf/fe83d509563168c887d28019bed66f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scdreamer-1
+    dataset: human_fetal_gut
+    dir: 37/deecfe289d07401ca3aec3f08cfebf
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scetm-1
+    dataset: human_fetal_gut
+    dir: 3e/b54511dafe7f67f1609f70495db994
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scgpt-1
+    dataset: human_fetal_gut
+    dir: e2/4f6c3ef98ff5054c59e4f7e6334520
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scmerge-1
+    dataset: human_fetal_gut
+    dir: 7e/8a6d83a70a05a2bc253c3014588fe9
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scmulan-1
+    dataset: human_fetal_gut
+    dir: 21/db48dcf900cac0ff5c24a1f3d5f96f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scphere-1
+    dataset: human_fetal_gut
+    dir: 1c/834937ae2cbc3c651f01067be9a9bb
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: scvi-1
+    dataset: human_fetal_gut
+    dir: ba/08840016d299ecaabd752c4659cfb5
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: simba-1
+    dataset: human_fetal_gut
+    dir: c7/0496c658470c1db6fce21feea91d5d
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: sysvi-1
+    dataset: human_fetal_gut
+    dir: 6a/8dd9a2690fcb1ca48deb161249e052
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: uce-1
+    dataset: human_fetal_gut
+    dir: 6c/3fcc97528fee262816951e268c2f48
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_type_group
+
+  - integration: cca-1
+    dataset: human_fetal_gut
+    dir: e5/98a346dacd08747358fc0917d0c7a4
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: clear-1
+    dataset: human_fetal_gut
+    dir: 68/fd0b329e283f8ac5bd65f69fa1d0e6
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: cyclone-1
+    dataset: human_fetal_gut
+    dir: f2/25d2043adc34348ac1d2dfd1b90140
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: equidistant-1
+    dataset: human_fetal_gut
+    dir: 98/fa29c800737dc7d6d810acbec4682b
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: gedi-1
+    dataset: human_fetal_gut
+    dir: 41/2403049311adcd695db3fd0db93ba8
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: geneptw-1
+    dataset: human_fetal_gut
+    dir: f2/43fa1b932d2f8cf8b2be0335363f10
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: harmony-1
+    dataset: human_fetal_gut
+    dir: 49/1689f33cc0a8939fe7f39b9e7c1a9e
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: imap-1
+    dataset: human_fetal_gut
+    dir: e9/37c766662f27237ebc848cae4cee73
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: islander-1
+    dataset: human_fetal_gut
+    dir: 5e/3dac9de7d8a505d9a4645f1385052f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: langcell-1
+    dataset: human_fetal_gut
+    dir: c3/262594f97be47b1fa548dd07b13665
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: liger-1
+    dataset: human_fetal_gut
+    dir: ad/ce486f9139562f304d1ce39b3cabee
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: mnn-1
+    dataset: human_fetal_gut
+    dir: 30/9b91262a38a99c491d8d354af0c9c5
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: ocat-1
+    dataset: human_fetal_gut
+    dir: 10/c476ef3d1456d11a4a13bd6173fa64
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: oneBigBlob-1
+    dataset: human_fetal_gut
+    dir: d2/8ffc54b76ae5ad2de076eaa647979a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: pca-1
+    dataset: human_fetal_gut
+    dir: f7/b682bab18f60b93d248de93d9bee57
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: portal-1
+    dataset: human_fetal_gut
+    dir: 1b/4d10dfc21070bf5527d8d7067fcdf1
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: respan-1
+    dataset: human_fetal_gut
+    dir: 2d/c5bacf246b167645d2548d07b0eae6
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: rpca-1
+    dataset: human_fetal_gut
+    dir: 96/f849a0f46af4a942af0b8a30bcc74a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: saucie-1
+    dataset: human_fetal_gut
+    dir: d3/62b94cec183f711da27e318f5e9c29
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scalex-1
+    dataset: human_fetal_gut
+    dir: a0/88f39c91ab5d9ddfce0c09798a729a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scanorama-1
+    dataset: human_fetal_gut
+    dir: 86/65633e2efa02cc94be417ca9aab28e
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scanvi-1
+    dataset: human_fetal_gut
+    dir: 90/754872ff80cafbc0ac28d3343d3c48
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: sccobra-1
+    dataset: human_fetal_gut
+    dir: cb/3499154525a45d46b88ee0a638295c
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: sccraft-1
+    dataset: human_fetal_gut
+    dir: 57/513ba0383a4affb048d993c9379ad9
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scdml-1
+    dataset: human_fetal_gut
+    dir: cf/fe83d509563168c887d28019bed66f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scdreamer-1
+    dataset: human_fetal_gut
+    dir: 37/deecfe289d07401ca3aec3f08cfebf
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scetm-1
+    dataset: human_fetal_gut
+    dir: 3e/b54511dafe7f67f1609f70495db994
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scgpt-1
+    dataset: human_fetal_gut
+    dir: e2/4f6c3ef98ff5054c59e4f7e6334520
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scmerge-1
+    dataset: human_fetal_gut
+    dir: 7e/8a6d83a70a05a2bc253c3014588fe9
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scmulan-1
+    dataset: human_fetal_gut
+    dir: 21/db48dcf900cac0ff5c24a1f3d5f96f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scphere-1
+    dataset: human_fetal_gut
+    dir: 1c/834937ae2cbc3c651f01067be9a9bb
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: scvi-1
+    dataset: human_fetal_gut
+    dir: ba/08840016d299ecaabd752c4659cfb5
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: simba-1
+    dataset: human_fetal_gut
+    dir: c7/0496c658470c1db6fce21feea91d5d
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: sysvi-1
+    dataset: human_fetal_gut
+    dir: 6a/8dd9a2690fcb1ca48deb161249e052
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+  - integration: uce-1
+    dataset: human_fetal_gut
+    dir: 6c/3fcc97528fee262816951e268c2f48
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name
+
+
+  - integration: cca-1
+    dataset: human_fetal_gut
+    dir: e5/98a346dacd08747358fc0917d0c7a4
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: clear-1
+    dataset: human_fetal_gut
+    dir: 68/fd0b329e283f8ac5bd65f69fa1d0e6
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: cyclone-1
+    dataset: human_fetal_gut
+    dir: f2/25d2043adc34348ac1d2dfd1b90140
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: equidistant-1
+    dataset: human_fetal_gut
+    dir: 98/fa29c800737dc7d6d810acbec4682b
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: gedi-1
+    dataset: human_fetal_gut
+    dir: 41/2403049311adcd695db3fd0db93ba8
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: geneptw-1
+    dataset: human_fetal_gut
+    dir: f2/43fa1b932d2f8cf8b2be0335363f10
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: harmony-1
+    dataset: human_fetal_gut
+    dir: 49/1689f33cc0a8939fe7f39b9e7c1a9e
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: imap-1
+    dataset: human_fetal_gut
+    dir: e9/37c766662f27237ebc848cae4cee73
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: islander-1
+    dataset: human_fetal_gut
+    dir: 5e/3dac9de7d8a505d9a4645f1385052f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: langcell-1
+    dataset: human_fetal_gut
+    dir: c3/262594f97be47b1fa548dd07b13665
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: liger-1
+    dataset: human_fetal_gut
+    dir: ad/ce486f9139562f304d1ce39b3cabee
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: mnn-1
+    dataset: human_fetal_gut
+    dir: 30/9b91262a38a99c491d8d354af0c9c5
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: ocat-1
+    dataset: human_fetal_gut
+    dir: 10/c476ef3d1456d11a4a13bd6173fa64
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: oneBigBlob-1
+    dataset: human_fetal_gut
+    dir: d2/8ffc54b76ae5ad2de076eaa647979a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: pca-1
+    dataset: human_fetal_gut
+    dir: f7/b682bab18f60b93d248de93d9bee57
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: portal-1
+    dataset: human_fetal_gut
+    dir: 1b/4d10dfc21070bf5527d8d7067fcdf1
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: respan-1
+    dataset: human_fetal_gut
+    dir: 2d/c5bacf246b167645d2548d07b0eae6
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: rpca-1
+    dataset: human_fetal_gut
+    dir: 96/f849a0f46af4a942af0b8a30bcc74a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: saucie-1
+    dataset: human_fetal_gut
+    dir: d3/62b94cec183f711da27e318f5e9c29
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scalex-1
+    dataset: human_fetal_gut
+    dir: a0/88f39c91ab5d9ddfce0c09798a729a
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scanorama-1
+    dataset: human_fetal_gut
+    dir: 86/65633e2efa02cc94be417ca9aab28e
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scanvi-1
+    dataset: human_fetal_gut
+    dir: 90/754872ff80cafbc0ac28d3343d3c48
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: sccobra-1
+    dataset: human_fetal_gut
+    dir: cb/3499154525a45d46b88ee0a638295c
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: sccraft-1
+    dataset: human_fetal_gut
+    dir: 57/513ba0383a4affb048d993c9379ad9
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scdml-1
+    dataset: human_fetal_gut
+    dir: cf/fe83d509563168c887d28019bed66f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scdreamer-1
+    dataset: human_fetal_gut
+    dir: 37/deecfe289d07401ca3aec3f08cfebf
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scetm-1
+    dataset: human_fetal_gut
+    dir: 3e/b54511dafe7f67f1609f70495db994
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scgpt-1
+    dataset: human_fetal_gut
+    dir: e2/4f6c3ef98ff5054c59e4f7e6334520
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scmerge-1
+    dataset: human_fetal_gut
+    dir: 7e/8a6d83a70a05a2bc253c3014588fe9
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scmulan-1
+    dataset: human_fetal_gut
+    dir: 21/db48dcf900cac0ff5c24a1f3d5f96f
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scphere-1
+    dataset: human_fetal_gut
+    dir: 1c/834937ae2cbc3c651f01067be9a9bb
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: scvi-1
+    dataset: human_fetal_gut
+    dir: ba/08840016d299ecaabd752c4659cfb5
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: simba-1
+    dataset: human_fetal_gut
+    dir: c7/0496c658470c1db6fce21feea91d5d
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: sysvi-1
+    dataset: human_fetal_gut
+    dir: 6a/8dd9a2690fcb1ca48deb161249e052
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+
+  - integration: uce-1
+    dataset: human_fetal_gut
+    dir: 6c/3fcc97528fee262816951e268c2f48
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+metrics:  # Removed ones that do not depend on cell type
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCH
+    params: {}
+  - name: CNENTROPYW
+    params: {}
+  - name: BNENTROPYW
+    params: {}

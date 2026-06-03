@@ -1,0 +1,215 @@
+experiment: clustering_ablation/leiden_mouse_mammary
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: mouse_mammary
+    dir: 5a/4730c3febd1d156d5fc3f66d5daaa7
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: clear-1
+    dataset: mouse_mammary
+    dir: b9/39a3b67d64656bfbaf9ec51e5acc3a
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: cyclone-1
+    dataset: mouse_mammary
+    dir: b4/b435df84a8c914c2446d2f636f4936
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: equidistant-1
+    dataset: mouse_mammary
+    dir: 50/6581440e344541b245df48b38f88d8
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: gedi-1
+    dataset: mouse_mammary
+    dir: 06/dea69fdd086f3154cb229c841e9d93
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: harmony-1
+    dataset: mouse_mammary
+    dir: 51/d1b469751f003b8d3a5b50f473b064
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: imap-1
+    dataset: mouse_mammary
+    dir: 37/2a01c5b85bca36ea1b9ecd2e236458
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: insct-1
+    dataset: mouse_mammary
+    dir: 7c/2fbaf92134c1b194b67e801440f632
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: islander-1
+    dataset: mouse_mammary
+    dir: 09/73614d423ac386775633ddd30b6dc5
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: liger-1
+    dataset: mouse_mammary
+    dir: ea/35d416a2dc4f93c5563b342806aca1
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: mnn-1
+    dataset: mouse_mammary
+    dir: 27/b7e15045cec62e14360f06554d9f96
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: ocat-1
+    dataset: mouse_mammary
+    dir: 04/831b1abea7cdfc64f1dbed9372cecc
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: oneBigBlob-1
+    dataset: mouse_mammary
+    dir: 6a/22ea31e12c9dd9de7853e351eec6fb
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: pca-1
+    dataset: mouse_mammary
+    dir: 57/ccb532774ff34b86d799a800466613
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: portal-1
+    dataset: mouse_mammary
+    dir: 9e/4b42fd2ca2c833b8c4fffd6cfa1267
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: rpca-1
+    dataset: mouse_mammary
+    dir: f7/5602f652fecaf0fc77188b28e8c7a4
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: saucie-1
+    dataset: mouse_mammary
+    dir: c7/6a9d5831c6e298bbad0f2d18ad6df2
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scalex-1
+    dataset: mouse_mammary
+    dir: c8/0012d108f7da3acfa85e2a850493ef
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scalign-1
+    dataset: mouse_mammary
+    dir: 6e/f9f6c14e26f19b1c6c738189332f65
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scanorama-1
+    dataset: mouse_mammary
+    dir: 87/d0389310699183c5fbcae0923dd596
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scanvi-1
+    dataset: mouse_mammary
+    dir: 3b/12216d125b8f8ecf42a7d3ef3c3ada
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: sccobra-1
+    dataset: mouse_mammary
+    dir: b3/1582208d6a9e4abc3abfa05c16cba1
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: sccraft-1
+    dataset: mouse_mammary
+    dir: c5/4d52e52fe2a882602d4419073129f1
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scdml-1
+    dataset: mouse_mammary
+    dir: 73/81bffd9fc99172b7dca7d931ce0d47
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scetm-1
+    dataset: mouse_mammary
+    dir: 84/a3be1aef4b1247df0a6be2609f5873
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scmerge-1
+    dataset: mouse_mammary
+    dir: c9/3f6b59a8cf6b75281a411ca1cbcf96
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scphere-1
+    dataset: mouse_mammary
+    dir: d7/d551d85949f6dc46d32f1166764be0
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scvi-1
+    dataset: mouse_mammary
+    dir: 5e/1d2fa3345fda5960a3913bc9a43116
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: simba-1
+    dataset: mouse_mammary
+    dir: 20/30e89061b3422ed5c015f34c10b5f6
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: sysvi-1
+    dataset: mouse_mammary
+    dir: c4/2423cccbfdf8e74b8a042e7620d548
+    batch_col: ["BATCH"]
+    label_col: celltype
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [5, 10, 15, 20, 25]
+        seed: [1]
+  - name: exact
+    params:
+      - k: [15]
+        seed: [1]
+  - name: annoy
+    params:
+      - k: [15]
+        seed: [1]
+  - name: faiss
+    params:
+      - k: [15]
+        seed: [1]
+  - name: flann
+    params:
+      - k: [15]
+        seed: [1]
+  - name: hnswlib
+    params:
+      - k: [15]
+        seed: [1]
+leiden_params:
+  - seed: [1]
+    flavor: ["leidenalg"]
+use_gpu: false

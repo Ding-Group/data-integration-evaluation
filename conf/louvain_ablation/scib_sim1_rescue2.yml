@@ -1,0 +1,37 @@
+experiment: clustering_ablation/louvain_scib_sim1_rescue2
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: equidistant-1
+    dataset: scib_sim1
+    dir: 56/f99cb5d7e2cbb4eed603eb28c03112
+    batch_col: ["Batch"]
+    label_col: Group
+    
+  - integration: insct-1
+    dataset: scib_sim1
+    dir: da/2eeeca7d50fff7980b64b6942e83fa
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: sccraft-1
+    dataset: scib_sim1
+    dir: 14/4d3d6a2b9bde517c80ee9c9e88cc15
+    batch_col: ["Batch"]
+    label_col: Group
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: faiss
+    params:
+      - k: [15]
+        seed: [1]
+  - name: hnswlib
+    params:
+      - k: [15]
+        seed: [1]
+louvain_params:
+  - seed: [1]
+    flavor: ["vtraag"]
+use_gpu: false

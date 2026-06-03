@@ -1,0 +1,222 @@
+experiment: knn_ablation/human_pbmc_seq_techs_gc
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 02/9c5bc0a7abfeb576a68beb45569ec0
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: clear-1
+    dataset: human_pbmc_sequencing_techs
+    dir: ea/dfa8b966115c3c3b1b64d92f9ac004
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: cyclone-1
+    dataset: human_pbmc_sequencing_techs
+    dir: d7/74a563895da9779d2078d0ac0ca533
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: equidistant-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 38/2f49e5795ec9df187aa0abf02419b8
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: gedi-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 3b/0fb51d63087ff3cd6c79f36d57b202
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: geneformer-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 1a/eaa4de5ed4a82f27bc1248e65920cc
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: geneptw-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 7a/14a3cb01784b31a87089e749b90ebb
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: harmony-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 33/9327c9b6605728f39d1a53603a83a9
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: imap-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 81/467b972537fb56b28530d14b09aa3e
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: insct-1
+    dataset: human_pbmc_sequencing_techs
+    dir: da/7c5549d02c5cb051fc516d9f4fdcb2
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: islander-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 64/f38186977e3989d9a6b8c1aa677cbc
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: langcell-1
+    dataset: human_pbmc_sequencing_techs
+    dir: e3/946f1deaad6a9c8538192256216c7c
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: liger-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 9f/450575ecf3670b740a59a41a59f975
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: mnn-1
+    dataset: human_pbmc_sequencing_techs
+    dir: bf/f6883439193739696a8e395e00664d
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: ocat-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 7e/2c94e359f8bc2b619899aff7a21277
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: oneBigBlob-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 27/ced11d4b6254df02e41d6e45f6e583
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: pca-1
+    dataset: human_pbmc_sequencing_techs
+    dir: a3/baea44f83b9410addc630255b00cf9
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: respan-1
+    dataset: human_pbmc_sequencing_techs
+    dir: a4/6c4dbe289c52b659510e9201efb1a3
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: rpca-1
+    dataset: human_pbmc_sequencing_techs
+    dir: ec/cd005fc15a613dac537d7fc022d78a
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: saucie-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 27/63f063561f895aa3ae97e26ec29c91
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scalex-1
+    dataset: human_pbmc_sequencing_techs
+    dir: b4/be4b60cbdf4fa5f71fab9a85141981
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scanorama-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 7f/c47b7dc1b2743bcede065250a3b726
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scanvi-1
+    dataset: human_pbmc_sequencing_techs
+    dir: b0/c126bd8b8216acd0c21796e3b4fcc4
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: sccobra-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 11/2b9dc06340214a8e61a5077aff4285
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: sccraft-1
+    dataset: human_pbmc_sequencing_techs
+    dir: f8/5f9631bf2d90182e3061e5c2aaff43
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scdml-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 0c/53e2647b276d718ebef3c6f764e5cf
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scdreamer-1
+    dataset: human_pbmc_sequencing_techs
+    dir: b8/2932a04ea5b285f38abe93de89c597
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scetm-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 33/0269d1160c08b7ecb1430766c1e3cb
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scgpt-1
+    dataset: human_pbmc_sequencing_techs
+    dir: ef/c8b121723ebf1ab14adcfeecf4e0bc
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scmerge-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 9e/ca62ff53b50db9eccc76c08774bc68
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scmulan-1
+    dataset: human_pbmc_sequencing_techs
+    dir: b5/33892bd242458700e15c3369d335a9
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scphere-1
+    dataset: human_pbmc_sequencing_techs
+    dir: df/b59da14fee725c20b872398defb47e
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scprint-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 57/b577ac18ae7eacabac8153120f9f56
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: scvi-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 91/cf9f1077654ab5542f94081146d5cb
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: simba-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 19/0868f30327534a3dd4fbe2f618f51a
+    batch_col: ["Method"]
+    label_col: CellType
+
+  - integration: sysvi-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 13/6eb2377ad1b4a03ced90668b3f8242
+    batch_col: ["Method"]
+    label_col: CellType
+metrics:
+  - name: GC
+    params:
+      - k: [5, 10, 15, 20, 25, 30, 35, 40, 50]

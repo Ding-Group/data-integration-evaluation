@@ -100,10 +100,6 @@ integration:
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/gedi-env"
     params: {}
     memory: high
-  # - name: lognorm
-  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
-  #   params: {}
-  #   memory: low
 seeds: [1]
 metrics:
   - name: FKNN

@@ -1,0 +1,29 @@
+experiment: clustering_ablation/louvain_mouse_mammary_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+
+
+  - integration: insct-1
+    dataset: mouse_mammary
+    dir: 7c/2fbaf92134c1b194b67e801440f632
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: saucie-1
+    dataset: mouse_mammary
+    dir: c7/6a9d5831c6e298bbad0f2d18ad6df2
+    batch_col: ["BATCH"]
+    label_col: celltype
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [10]
+        seed: [1]
+louvain_params:
+  - seed: [1]
+    flavor: ["vtraag"]
+use_gpu: false

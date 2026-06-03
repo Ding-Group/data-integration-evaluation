@@ -1,0 +1,22 @@
+experiment: clustering_ablation/louvain_human_pbmc_seq_techs_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: sysvi-1
+    dataset: human_pbmc_sequencing_techs
+    dir: 13/6eb2377ad1b4a03ced90668b3f8242
+    batch_col: ["Method"]
+    label_col: CellType
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [10]
+        seed: [1]
+  
+louvain_params:
+  - seed: [1]
+    flavor: ["vtraag"]
+use_gpu: false

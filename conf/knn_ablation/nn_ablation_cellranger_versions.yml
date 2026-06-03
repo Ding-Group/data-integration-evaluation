@@ -1,0 +1,288 @@
+experiment: knn_ablation/cellranger_versions
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: cellranger_versions
+    dir: 6f/49153e2cafcdcf1cb04b17397bad2d
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: clear-1
+    dataset: cellranger_versions
+    dir: ab/76245506f59e0fa48e7f3fa912d6b1
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: cyclone-1
+    dataset: cellranger_versions
+    dir: 4f/b3a33896b4359e52e2f2972206f886
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: equidistant-1
+    dataset: cellranger_versions
+    dir: 79/017d21ba417f8f3ade452538757d49
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: gedi-1
+    dataset: cellranger_versions
+    dir: 7b/4c96aa1925992f967ed96d5d6dbeea
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: geneformer-1
+    dataset: cellranger_versions
+    dir: da/1bc9ddce4e198ce6e2024758dbbb94
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: geneptw-1
+    dataset: cellranger_versions
+    dir: b5/fa7dff1e99bd2c41a565fc3c5dd33b
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: harmony-1
+    dataset: cellranger_versions
+    dir: 6d/4b4daadec2207f7c0b8402146e05bb
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: imap-1
+    dataset: cellranger_versions
+    dir: 0c/399dda51aa5961c98e691cc921af3d
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: insct-1
+    dataset: cellranger_versions
+    dir: 88/e9f2af976989e7980c4242c93a8775
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: islander-1
+    dataset: cellranger_versions
+    dir: 3d/5e845b52801840d7aba08a37da726d
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: langcell-1
+    dataset: cellranger_versions
+    dir: 8a/c6fc232f692632d8b8f5a6ca282526
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: liger-1
+    dataset: cellranger_versions
+    dir: 17/327370d033c012ad3695c02b1f9c37
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: mnn-1
+    dataset: cellranger_versions
+    dir: ed/e3ecdfccfb7a04215c23543a176bb6
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: ocat-1
+    dataset: cellranger_versions
+    dir: 12/9b0d4594c9e1c0cfa51b1272df6119
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: oneBigBlob-1
+    dataset: cellranger_versions
+    dir: 60/2638051fafe22fcf429d2d3dee1866
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: pca-1
+    dataset: cellranger_versions
+    dir: 32/9c5bcb8291d70e9e39cac16d891f56
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: portal-1
+    dataset: cellranger_versions
+    dir: a9/d1532ab31186127cb2ee0714f2a0ce
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: respan-1
+    dataset: cellranger_versions
+    dir: 70/852b73c6c32f0c99eedd11f04f31fc
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: rpca-1
+    dataset: cellranger_versions
+    dir: be/f7e068ff9c23738d8ee97c955a0b35
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: saucie-1
+    dataset: cellranger_versions
+    dir: 53/8dfee18aee39f981bdfc32564e1f09
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scalex-1
+    dataset: cellranger_versions
+    dir: 06/a0c279638d0ffff566ec865ab8bc2d
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scanorama-1
+    dataset: cellranger_versions
+    dir: 63/511965fd844a31c0e6c6d064c9e2d9
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scanvi-1
+    dataset: cellranger_versions
+    dir: 6b/7d26ef0dde741281417df0c7d7fc8e
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: sccobra-1
+    dataset: cellranger_versions
+    dir: 35/6f10e4e99e8cee16645455c5e1fc10
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: sccraft-1
+    dataset: cellranger_versions
+    dir: fc/27c4c88546da9a6a9f974e173f7f8c
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scdml-1
+    dataset: cellranger_versions
+    dir: ad/2260ad40e7b3b23367dd077c52fefc
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scdreamer-1
+    dataset: cellranger_versions
+    dir: 21/782c2eadc93706c92e91ed9d9b813b
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scetm-1
+    dataset: cellranger_versions
+    dir: 21/d21821d3138945e1ee9ad14eea1765
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scgpt-1
+    dataset: cellranger_versions
+    dir: 48/ac485b295c55be82f4c098aded66da
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scmerge-1
+    dataset: cellranger_versions
+    dir: 66/51046e3e6147bb89b3fd50414473ab
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scmulan-1
+    dataset: cellranger_versions
+    dir: 8e/9515ef7c744217f13b3b9ff3fd7792
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scphere-1
+    dataset: cellranger_versions
+    dir: fc/ccb49580c2ca0c740f4ba4143c561f
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scprint-1
+    dataset: cellranger_versions
+    dir: 77/e124eaf7008503060434846fdfbfba
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scvi-1
+    dataset: cellranger_versions
+    dir: f5/301b0ee145b633cac8afee3d5065ba
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: simba-1
+    dataset: cellranger_versions
+    dir: b1/45ad474b3aa3b08d9aa1e73f196d1e
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: sysvi-1
+    dataset: cellranger_versions
+    dir: 73/28dec6637ff41d6986b3f14e0f74b6
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: uce-1
+    dataset: cellranger_versions
+    dir: 5e/41d67e4c0b72a5dc107792567c4df8
+    batch_col: ["batch"]
+    label_col: cell_type
+metrics:
+  - name: CLISI
+    params:
+      - k0: [15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180]
+  - name: ILISI
+    params:
+      - k0: [15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180]
+  - name: KBET
+    params:
+      - k: [30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140]
+  - name: FKNN
+    params:
+      - n_neighbors: [1, 11, 21, 31, 41, 51, 61, 71, 81, 91]
+  - name: CNENTROPY
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: LDFDIFF
+    params:
+      - k: [30, 45, 60, 75, 90, 105, 120, 135, 150]
+  - name: RKNN
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: AGREE
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: KSIM
+    params:
+      - k: [15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115]
+  - name: BKNN
+    params:
+      - n_neighbors: [1, 11, 21, 31, 41, 51, 61, 71, 81, 91]
+  - name: BNENTROPY
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: KLDIV # CHANGE
+    params:
+      - k: [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
+  - name: ALIGN # CHANGE
+    params:
+      - n_neighbors: [25, 50, 60, 75, 90, 100, 125, 150, 175, 192, 225]
+  - name: CSMC
+    params:
+      - k: [20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140]
+  - name: PPTPC
+    params:
+      - n_neighbors: [20, 40, 60, 80, 100, 120, 140, 160, 180, 200]
+  - name: ADGBD
+    params:
+      - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: MIX
+    params:
+      - k: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  - name: PSTDB
+    params:
+      - k: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  - name: NNMAP
+    params:
+      - k : [0.001, 0.005, 0.0075, 0.009, 0.01, 0.02, 0.03, 0.04, 0.05]

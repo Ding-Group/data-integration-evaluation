@@ -1,0 +1,74 @@
+experiment: clustering_ablation/leiden_mouse_mammary_rescue2
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+
+  - integration: mnn-1
+    dataset: mouse_mammary
+    dir: 27/b7e15045cec62e14360f06554d9f96
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scalex-1
+    dataset: mouse_mammary
+    dir: c8/0012d108f7da3acfa85e2a850493ef
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scalign-1
+    dataset: mouse_mammary
+    dir: 6e/f9f6c14e26f19b1c6c738189332f65
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: sccobra-1
+    dataset: mouse_mammary
+    dir: b3/1582208d6a9e4abc3abfa05c16cba1
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scphere-1
+    dataset: mouse_mammary
+    dir: d7/d551d85949f6dc46d32f1166764be0
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scvi-1
+    dataset: mouse_mammary
+    dir: 5e/1d2fa3345fda5960a3913bc9a43116
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: sysvi-1
+    dataset: mouse_mammary
+    dir: c4/2423cccbfdf8e74b8a042e7620d548
+    batch_col: ["BATCH"]
+    label_col: celltype
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: exact
+    params:
+      - k: [15]
+        seed: [1]
+  - name: annoy
+    params:
+      - k: [15]
+        seed: [1]
+  - name: faiss
+    params:
+      - k: [15]
+        seed: [1]
+  - name: flann
+    params:
+      - k: [15]
+        seed: [1]
+  - name: hnswlib
+    params:
+      - k: [15]
+        seed: [1]
+leiden_params:
+  - seed: [1]
+    flavor: ["leidenalg"]
+use_gpu: false

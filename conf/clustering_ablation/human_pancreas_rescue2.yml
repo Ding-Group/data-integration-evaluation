@@ -1,0 +1,42 @@
+experiment: clustering_ablation/leiden_human_pancreas_rescue2
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: liger-1
+    dataset: human_pancreas
+    dir: 2d/891b53929f0d5d198ca78dad24f495
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: mnn-1
+    dataset: human_pancreas
+    dir: c9/b3ace1b3d829b9b95a9db9f960ea63
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: saucie-1
+    dataset: human_pancreas
+    dir: 63/4a681f73e14f581874d4cfec6c7737
+    batch_col: ["tech"]
+    label_col: celltype
+
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: exact
+    params:
+      - k: [15]
+        seed: [1]
+  - name: annoy
+    params:
+      - k: [15]
+        seed: [1]
+  - name: hnswlib
+    params:
+      - k: [15]
+        seed: [1]
+leiden_params:
+  - seed: [1]
+    flavor: ["leidenalg"]
+use_gpu: false
