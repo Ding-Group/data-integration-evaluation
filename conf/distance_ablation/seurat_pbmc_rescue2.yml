@@ -1,0 +1,26 @@
+experiment: distance_ablation/seurat_pbmc_rescue2
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations: 
+  - integration: scmulan-1
+    dataset: seurat_pbmc
+    dir: d4/7e702be1f8c38ddcd91e7fd212e99d
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+  - integration: simba-1
+    dataset: seurat_pbmc
+    dir: 77/aae438e8cf4f27ac596d32ddf6e9d4
+    batch_col: ["donor"]
+    label_col: "celltype.l2" 
+
+
+metrics:
+  - name: RKNN
+    params:
+      - metric: ["euclidean", "l1", "cosine"]
+  - name: ARIF
+    params:
+      - metric: ["euclidean", "l1", "cosine"]
+  - name: KBET
+    params:
+      - metric: ["euclidean", "l1", "cosine"]

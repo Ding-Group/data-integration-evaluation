@@ -1,0 +1,207 @@
+experiment: louvain_seed_ablation/scib_sim1
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: scib_sim1
+    dir: 6d/c196694f1bbed3005454d02d66db96
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: clear-1
+    dataset: scib_sim1
+    dir: 45/dce89f48edd0f25b0ca6b164cc1b21
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: cyclone-1
+    dataset: scib_sim1
+    dir: 46/aa3c03923685fa072ed174076c9cb4
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: equidistant-1
+    dataset: scib_sim1
+    dir: 56/f99cb5d7e2cbb4eed603eb28c03112
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: gedi-1
+    dataset: scib_sim1
+    dir: 47/351eef9afb5a3b7f30c1ede555d74c
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: harmony-1
+    dataset: scib_sim1
+    dir: da/c61c8027af94b7ddac3650c2ce45a2
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: imap-1
+    dataset: scib_sim1
+    dir: b8/82de6516cbdedbc509bc135642e5bf
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: insct-1
+    dataset: scib_sim1
+    dir: da/2eeeca7d50fff7980b64b6942e83fa
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: islander-1
+    dataset: scib_sim1
+    dir: 4e/727cc1c95db4bdc744d73f34daeca9
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: liger-1
+    dataset: scib_sim1
+    dir: 0c/692baed13a794f7e2973c5c2f7e033
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: mnn-1
+    dataset: scib_sim1
+    dir: 88/e8e0d992054e02ea0dd389d572a3c3
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: ocat-1
+    dataset: scib_sim1
+    dir: 72/95b15f4ad97b89535af24ce6e494e5
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: oneBigBlob-1
+    dataset: scib_sim1
+    dir: 0c/09d48eef4a0b9a53df13e760992de3
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: pca-1
+    dataset: scib_sim1
+    dir: 1b/7fc9d81d55496ca892f3b7594d2e23
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: portal-1
+    dataset: scib_sim1
+    dir: 0a/9a91d9bb917850ac3287beed627f9a
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: respan-1
+    dataset: scib_sim1
+    dir: 0d/cce565c2936a8a5a49d1f71e12d99d
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: rpca-1
+    dataset: scib_sim1
+    dir: 5d/585387f7d9df64cb4df01ac344a2ba
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: saucie-1
+    dataset: scib_sim1
+    dir: dd/bf95f5ae3cbcb20408e0dc504a5884
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scalex-1
+    dataset: scib_sim1
+    dir: 81/edc92a24d56be2aec2cd841f9bf0c9
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scalign-1
+    dataset: scib_sim1
+    dir: f0/4f0b5c16c7be7a20bce53fcd737c6f
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scanorama-1
+    dataset: scib_sim1
+    dir: 71/1669fd0065c1fe017a3f9dfb3fa00e
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scanvi-1
+    dataset: scib_sim1
+    dir: d6/54c330a4ab7917595e6fdc0a21e36c
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: sccobra-1
+    dataset: scib_sim1
+    dir: ef/eed96b5960d81ffb641b46f40a6b46
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: sccraft-1
+    dataset: scib_sim1
+    dir: 14/4d3d6a2b9bde517c80ee9c9e88cc15
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scdml-1
+    dataset: scib_sim1
+    dir: e8/161b538d380fa9036fdde831af1007
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scdreamer-1
+    dataset: scib_sim1
+    dir: 06/78043c7bc26f691cd9983ca59c839a
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scetm-1
+    dataset: scib_sim1
+    dir: 31/47eb44de32449cf33992ae78a5c58f
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scmerge-1
+    dataset: scib_sim1
+    dir: ef/f018c410705b72f8353f0018aa854b
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scphere-1
+    dataset: scib_sim1
+    dir: 9f/e99d58a46380dcb3b426909fb3ced4
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: scvi-1
+    dataset: scib_sim1
+    dir: 43/032797b060df53841ac6cc39ee1a91
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: simba-1
+    dataset: scib_sim1
+    dir: ba/50d8b63e27528e4d056779af64835e
+    batch_col: ["Batch"]
+    label_col: Group
+
+  - integration: sysvi-1
+    dataset: scib_sim1
+    dir: be/69e54f823705fe82de2ff3aa5f266c
+    batch_col: ["Batch"]
+    label_col: Group
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [15]
+        seed: [1]
+louvain_params:
+  - seed: [2, 3, 4, 5]
+    flavor: ["vtraag"]
+use_gpu: false

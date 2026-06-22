@@ -1,0 +1,33 @@
+experiment: louvain_seed_ablation/human_pancreas_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: portal-1
+    dataset: human_pancreas
+    dir: ad/54d35d42dbb81bde55240d71c8e0be
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: sccobra-1
+    dataset: human_pancreas
+    dir: 8e/fa5b5b33e7741793ea30ecdcb95138
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scetm-1
+    dataset: human_pancreas
+    dir: 82/f8fef0ec65d0d0cba2752c4ec4ce94
+    batch_col: ["tech"]
+    label_col: celltype
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [15]
+        seed: [1]
+louvain_params:
+  - seed: [3, 4]
+    flavor: ["vtraag"]
+use_gpu: false

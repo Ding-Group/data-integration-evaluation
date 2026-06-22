@@ -1,0 +1,27 @@
+experiment: leiden_seed_ablation/cellranger_versions_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: scalex-1
+    dataset: cellranger_versions
+    dir: 06/a0c279638d0ffff566ec865ab8bc2d
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scprint-1
+    dataset: cellranger_versions
+    dir: 77/e124eaf7008503060434846fdfbfba
+    batch_col: ["batch"]
+    label_col: cell_type 
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [15]
+        seed: [1]
+leiden_params:
+  - seed: [3,5]
+    flavor: ["leidenalg"]
+use_gpu: false

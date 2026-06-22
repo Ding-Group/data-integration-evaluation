@@ -1,0 +1,45 @@
+experiment: leiden_seed_ablation/mouse_mammary_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: equidistant-1
+    dataset: mouse_mammary
+    dir: 50/6581440e344541b245df48b38f88d8
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: gedi-1
+    dataset: mouse_mammary
+    dir: 06/dea69fdd086f3154cb229c841e9d93
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: saucie-1
+    dataset: mouse_mammary
+    dir: c7/6a9d5831c6e298bbad0f2d18ad6df2
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: sccobra-1
+    dataset: mouse_mammary
+    dir: b3/1582208d6a9e4abc3abfa05c16cba1
+    batch_col: ["BATCH"]
+    label_col: celltype
+
+  - integration: scphere-1
+    dataset: mouse_mammary
+    dir: d7/d551d85949f6dc46d32f1166764be0
+    batch_col: ["BATCH"]
+    label_col: celltype
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [15]
+        seed: [1]
+leiden_params:
+  - seed: [3, 4, 5]
+    flavor: ["leidenalg"]
+use_gpu: false

@@ -1,0 +1,239 @@
+experiment: knn_ablation/human_pancreas_cilisi
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: human_pancreas
+    dir: d5/196fa708e14a48883b7965f73b4ab7
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: clear-1
+    dataset: human_pancreas
+    dir: e8/10c76e3d4b47503edf8b3816b3dedb
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: cyclone-1
+    dataset: human_pancreas
+    dir: 08/b9a2d9fce3e82d850b84d0cffcd022
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: equidistant-1
+    dataset: human_pancreas
+    dir: c3/0a1d43278b712fe37ae2627a8ff396
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: gedi-1
+    dataset: human_pancreas
+    dir: 57/7678f186fa87ad2a5a6e737a9859ba
+    batch_col: ["tech"]
+    label_col: celltype
+  - integration: geneformer-1
+    dataset: human_pancreas
+    dir: 06/2470e9d68ec8ab8fe51506dd0af274
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: geneptw-1
+    dataset: human_pancreas
+    dir: ef/d992d7249f8ea1d3beaacf77007cdf
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: harmony-1
+    dataset: human_pancreas
+    dir: 6b/93cf5228e01aefb0ced5731605bf30
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: imap-1
+    dataset: human_pancreas
+    dir: 6c/2a7e01b549a73e97e1e49d0c08cfc4
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: insct-1
+    dataset: human_pancreas
+    dir: 93/aefbce29674ae9c219038999b70678
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: islander-1
+    dataset: human_pancreas
+    dir: bc/583e3d840838ed68f6d72b0cb2a26a
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: langcell-1
+    dataset: human_pancreas
+    dir: b5/b1cf39b628439d5dc12725d5a3b6e7
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: liger-1
+    dataset: human_pancreas
+    dir: 2d/891b53929f0d5d198ca78dad24f495
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: mnn-1
+    dataset: human_pancreas
+    dir: c9/b3ace1b3d829b9b95a9db9f960ea63
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: ocat-1
+    dataset: human_pancreas
+    dir: 6b/78714deadbaee86de24577c6e2b728
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: oneBigBlob-1
+    dataset: human_pancreas
+    dir: 9d/0b75c05677853ae6f00b18bc6e079c
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: pca-1
+    dataset: human_pancreas
+    dir: 87/520f884f07344be52ce71c5b9802be
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: portal-1
+    dataset: human_pancreas
+    dir: ad/54d35d42dbb81bde55240d71c8e0be
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: respan-1
+    dataset: human_pancreas
+    dir: b1/59f7dc605e76689426ac068c457605
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: rpca-1
+    dataset: human_pancreas
+    dir: 9c/baec329cf51696464cc1c4b1c0cf3b
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: saucie-1
+    dataset: human_pancreas
+    dir: 63/4a681f73e14f581874d4cfec6c7737
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scalex-1
+    dataset: human_pancreas
+    dir: 95/99ea48e474f2ff4bb9fb6c6277d95b
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scalign-1
+    dataset: human_pancreas
+    dir: 86/87421b17d10407e935e079b9330d97
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scanorama-1
+    dataset: human_pancreas
+    dir: 14/f1948e8ed8da3a86d90b630713300f
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scanvi-1
+    dataset: human_pancreas
+    dir: 0a/0959457b58241ae5d89e5bc390e292
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: sccobra-1
+    dataset: human_pancreas
+    dir: 8e/fa5b5b33e7741793ea30ecdcb95138
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: sccraft-1
+    dataset: human_pancreas
+    dir: c6/4e6f45c4f05a1dc96066b94bcf9112
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scdml-1
+    dataset: human_pancreas
+    dir: f6/49dafad449eda09f56ea025a81cbb0
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scdreamer-1
+    dataset: human_pancreas
+    dir: be/1b01831afbdb40e9f44f95567add04
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scetm-1
+    dataset: human_pancreas
+    dir: 82/f8fef0ec65d0d0cba2752c4ec4ce94
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scgpt-1
+    dataset: human_pancreas
+    dir: 28/4127fc7509b1430a351e0025041833
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scmerge-1
+    dataset: human_pancreas
+    dir: 09/e2f65b7b82fdf84d36f4915ede4f54
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scmulan-1
+    dataset: human_pancreas
+    dir: 4c/4103476bd42ce32eef619c3dc6f0dc
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scphere-1
+    dataset: human_pancreas
+    dir: 62/1884fa5412d787533fb7ed67193c84
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scprint-1
+    dataset: human_pancreas
+    dir: de/7a3c3465af0fb6af4ef1f79e297e22
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scvi-1
+    dataset: human_pancreas
+    dir: cb/6bd4b737dc470587d2a7ff828bc456
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: simba-1
+    dataset: human_pancreas
+    dir: c1/7bfabb6d5bfd073c62e8798d1c9f61
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: sysvi-1
+    dataset: human_pancreas
+    dir: 14/b27636a2a48a858709d830e04be609
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: uce-1
+    dataset: human_pancreas
+    dir: 18/e6804ecdf9020e1c9fb780460371be
+    batch_col: ["tech"]
+    label_col: celltype
+metrics:
+  - name: CILISI
+    params:
+      - k0: [15, 30, 45, 60, 75, 90, 105, 120, 135]

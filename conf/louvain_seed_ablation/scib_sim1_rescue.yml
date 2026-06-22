@@ -1,0 +1,21 @@
+experiment: louvain_seed_ablation/scib_sim1_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: saucie-1
+    dataset: scib_sim1
+    dir: dd/bf95f5ae3cbcb20408e0dc504a5884
+    batch_col: ["Batch"]
+    label_col: Group
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [15]
+        seed: [1]
+louvain_params:
+  - seed: [4]
+    flavor: ["vtraag"]
+use_gpu: false

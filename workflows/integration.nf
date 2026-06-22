@@ -85,7 +85,7 @@ process RUN_INTEGRATE_MULTIOME {
         memory_usage == 'medium' ?
             get_memory(atac_data.size(), "4.GB", task.attempt, "8.GB") :
         memory_usage == 'high' ?
-            get_memory(atac_data.size(), "16.GB", task.attempt, "16.GB") :
+            get_memory(atac_data.size(), "10.GB", task.attempt, "16.GB") :
             get_memory(atac_data.size(), "24.GB", task.attempt, "48.GB")
 
         println "[${task.process}] Memory requested: ${mem}"

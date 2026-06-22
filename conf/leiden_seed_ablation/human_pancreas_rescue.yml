@@ -1,0 +1,27 @@
+experiment: leiden_seed_ablation/human_pancreas_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: scetm-1
+    dataset: human_pancreas
+    dir: 82/f8fef0ec65d0d0cba2752c4ec4ce94
+    batch_col: ["tech"]
+    label_col: celltype
+
+  - integration: scprint-1
+    dataset: human_pancreas
+    dir: de/7a3c3465af0fb6af4ef1f79e297e22
+    batch_col: ["tech"]
+    label_col: celltype
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [15]
+        seed: [1]
+leiden_params:
+  - seed: [3]
+    flavor: ["leidenalg"]
+use_gpu: false

@@ -1,0 +1,22 @@
+experiment: leiden_seed_ablation/scib_sim1_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: respan-1
+    dataset: scib_sim1
+    dir: 0d/cce565c2936a8a5a49d1f71e12d99d
+    batch_col: ["Batch"]
+    label_col: Group
+
+seeds: [1]
+metrics:
+  - name: ALL_CLUSTER
+    params: {}
+neighbor_params:
+  - name: default_neighbors
+    params:
+      - k: [15]
+        seed: [1]
+leiden_params:
+  - seed: [3]
+    flavor: ["leidenalg"]
+use_gpu: false
