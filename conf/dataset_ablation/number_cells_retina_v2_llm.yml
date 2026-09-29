@@ -1,0 +1,67 @@
+experiment: dataset_ablation/number_cells_retina_v2_llm
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: human_retina_1000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_3000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_5000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_10000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_25000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_50000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_75000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_100000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_300000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+integration:
+  - name: scgpt
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scgpt"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: geneformer
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: uce
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: geneptw
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: scprint
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scprint_env"
+    params: {}
+    memory: high
+  - name: scmulan
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmulan_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: langcell
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/langcell_env"
+    params: {}
+    metric_params: {}
+    memory: high
+seeds: [1]
+use_gpu: true

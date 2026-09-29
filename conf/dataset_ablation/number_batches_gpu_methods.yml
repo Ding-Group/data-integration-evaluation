@@ -86,11 +86,11 @@ integration:
   - name: imap
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/imap-env"
     params: {}
-    memory: low
+    memory: high
   - name: scalign
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scalign-env"
     params: {}
-    memory: low
+    memory: high
   - name: ocat
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/ocat-env"
     params: {}

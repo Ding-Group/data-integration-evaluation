@@ -31,6 +31,11 @@ CLUSTER_METRICS = [
     'separation', 'vm', 'vi'
 ]
 
+FINAL_METRICS = [
+    'bami', 'casw', 'scgraphm', 'traj',
+    'isolisi', 'kbet', 'cpcr', 'bras'
+]
+
 def main():
     args = docopt(__doc__, options_first=True)
     metric = args["<metric>"]
@@ -48,6 +53,15 @@ def main():
                 "Metric": m,
                 "Value": np.nan
             } for m in CLUSTER_METRICS
+        ])
+    elif metric == 'final':
+        results = pd.DataFrame([
+            {
+                "Dataset": dataset,
+                "Integration": method,
+                "Metric": m,
+                "Value": np.nan
+            } for m in FINAL_METRICS
         ])
     else:
         results = pd.DataFrame(

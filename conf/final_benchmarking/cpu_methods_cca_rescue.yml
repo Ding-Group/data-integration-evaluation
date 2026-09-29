@@ -1,0 +1,110 @@
+experiment: final_benchmark/cpu_methods_cca_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  # - name: human_pancreas_full
+  #   batch_col: ["tech"]
+  #   label_col: celltype
+  # - name: human_dkd
+  #   batch_col: ["batch", "assay"]  # Main batch column first
+  #   label_col: cell_type
+  # - name: mouse_pancreatic_islet
+  #   batch_col: ["batch", "disease", "assay"]
+  #   label_col: cell_type
+  # - name: immune_cell_atlas
+  #   batch_col: ["batch", "assay"]
+  #   label_col: cell_type
+  - name: gtex_v9
+    batch_col: ["batch"]
+    label_col: cell_type
+  # - name: tabula_sapiens
+  #   batch_col: ["batch", "assay"]
+  #   label_col: cell_type
+  # - name: snpatho_liver
+  #   batch_col: ["sample_id", "processing_method"]
+  #   label_col: major_annotation
+  # - name: mouse_hsc_prog
+  #   batch_col: ["tech"]
+  #   label_col: CellType
+  # - name: villani_dcs
+  #   batch_col: ["batch"]
+  #   label_col: cell_type
+  # - name: haniffa_covid_2samples
+  #   batch_col: ["sample_id"]
+  #   label_col: initial_clustering
+  # - name: haniffa_covid_imbalance
+  #   batch_col: ["sample_id"]
+  #   label_col: initial_clustering
+  - name: pan_cancer_t
+    batch_col: ["patient", "cancerType", "platform"]
+    label_col: meta_cluster
+  # - name: human_kidney
+  #   batch_col: ["donor_id", "suspension_type"]
+  #   label_col: cell_type
+  # - name: human_liver
+  #   batch_col: ["donor_id"]
+  #   label_col: cell_type
+  - name: human_bipolar
+    batch_col: ["donor_id", "assay"]
+    label_col: cell_type
+  # - name: mouse_intestine
+  #   batch_col: ["sample_name", "condition", "location"]
+  #   label_col: cell_type
+integration:
+  # - name: harmony
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: low
+  # - name: mnn
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: high
+  # - name: oneBigBlob
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: low
+  # - name: scanorama
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: low
+  # - name: equidistant
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: low
+  - name: cca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    metric_params: {}
+    memory: high
+  # - name: liger
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/benchmarking"
+  #   params: {}
+  #   metric_params:
+  #     - SCGRAPHM: {"metric": "cosine"}
+  #   memory: high
+  # - name: rpca
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: massive
+  # - name: pca
+  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: low
+  # - name: scmerge
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmerge-env"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: high
+  # - name: gedi
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/gedi-env"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: massive
+seeds: [1]
+use_gpu: false

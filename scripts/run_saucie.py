@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run SAUCIE on a single-cell dataset
 
@@ -14,6 +12,7 @@ Options:
     --no-use-hvg                   Do not use HVG selection. [Default: False]
     --hvg-method=<method>          HVG selection method. Default uses the pre-computed HVGs.
     --lambda-b=<float>             Lambda B. [default: 0.1]
+    --learning-rate=<float>        Adam learning rate. [default: 0.001]
     --steps=<int>                  Number of steps. [default: 2000]
     --seed=<int>                   Random seed. [default: 0]
 """
@@ -63,15 +62,18 @@ def run_saucie(
     lambda_b: float = 0.1,
     steps: int = 2000,
     seed: int = 0,
+    learning_rate: float = 0.001,
 ) -> ad.AnnData:
     """
-    Run SAUCIE embedding on the input AnnData object and store 2D embedding in adata.obsm['X_saucie'].
+    Run SAUCIE embedding on the input AnnData object and store it in adata.obsm[EMB_KEY].
     """
 
     # Enable TensorFlow v1 compatibility mode
     import tensorflow.compat.v1 as tf
 
-    tf.compat.v1.set_random_seed(seed)
+    tf.disable_v2_behavior()
+    tf.reset_default_graph()
+    tf.set_random_seed(seed)
     np.random.seed(seed)
 
     adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True)
@@ -84,9 +86,19 @@ def run_saucie(
     loader_eval = Loader(adata_copy.X, labels=labels, shuffle=False)
 
     # Train SAUCIE and extract embeddings
-    model = SAUCIE(adata_copy.X.shape[1], lambda_b=lambda_b)
-    _ = model.train(loader_train, steps=int(steps))
-    embedding = model.get_embedding(loader_eval)
+    model = None
+    try:
+        model = SAUCIE(
+            adata_copy.X.shape[1],
+            lambda_b=lambda_b,
+            learning_rate=float(learning_rate),
+        )
+        _ = model.train(loader_train, steps=int(steps))
+        embedding = model.get_embedding(loader_eval)
+    finally:
+        if model is not None and getattr(model, "sess", None) is not None:
+            model.sess.close()
+        tf.reset_default_graph()
 
     adata.obsm[EMB_KEY] = embedding[0]
     if np.isnan(np.sum(embedding[0])):
@@ -103,6 +115,7 @@ def main():
     use_hvg = not args["--no-use-hvg"]
     hvg_method = args["--hvg-method"]
     lambda_b = float(args["--lambda-b"])
+    learning_rate = float(args["--learning-rate"])
     steps = int(args["--steps"])
     seed = int(args["--seed"])
 
@@ -110,7 +123,16 @@ def main():
     adata = ad.read_h5ad(file)
 
     print("Running SAUCIE...")
-    adata = run_saucie(adata, batch_keys, use_hvg, hvg_method, lambda_b, steps, seed)
+    adata = run_saucie(
+        adata,
+        batch_keys,
+        use_hvg,
+        hvg_method,
+        lambda_b=lambda_b,
+        steps=steps,
+        seed=seed,
+        learning_rate=learning_rate,
+    )
 
     print("Adding UMAP")
     add_umap(adata)

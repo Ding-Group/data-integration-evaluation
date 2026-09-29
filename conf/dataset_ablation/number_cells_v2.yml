@@ -1,0 +1,1991 @@
+experiment: dataset_ablation/number_cells_v2
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/84/a524725db539588624471acca10fcc
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cca-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/b4/fdea277b92893e26df709bb53a0796
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cca-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/ee/df1ba2c93545f4dafab0cff7df9de9
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cca-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/a0/46c15a30f905db2eb12bb29f1b0050
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cca-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/e8/99d7ac6f109f098a83f1a4032beec7
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cca-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/0b/2525b9b00322ad7f3623139c68334d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cca-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/fb/d3db0f9141c898cf29dc4a225681d1
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: clear-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/21/88585b9745062ac4eaf49134285ffd
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: clear-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/4a/9667732644718a24eb9d7210baaa45
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: clear-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/5e/9333c5ccd862e923337ad6131ad723
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: clear-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/45/7cf2c47d0660c6f8861f76f4dd9240
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: clear-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/43/1034fc4fe61d0ea0668543a9586a92
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: clear-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/04/e704a98183547bb16c77e46aaaeec8
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: clear-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/02/f2961d96a272d42109b3326b0133f9
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: clear-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/55/c8d21bdfb41e8a0d7c324161294451
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cyclone-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/85/61aeaa7bd2f66d71094ce3b13bdf65
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cyclone-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/ce/46b15bc0c10d62ace8d32aeff16847
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cyclone-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/24/3d73246230bce54bc2e7b7207e0e2b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cyclone-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/6d/ceeaa02c2888e2fb19b76df4798dd2
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cyclone-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/92/fbe6fb1b7287cb7e58077db24e26f2
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cyclone-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/b8/ca9b51e75fdb2bd1aacc2dbf050971
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cyclone-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/64/53e08dd73981f0302475cda0717604
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: cyclone-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/fa/34714e3f108e4564ab503a3f091c4b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: equidistant-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/91/2141c13b766864e22243afe2919ebe
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: equidistant-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/e8/b4940b446e3b41a3ac43746926da8a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: equidistant-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/b1/6969f2e76615973e92840be6e6bf46
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: equidistant-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/6f/af5ada83225878cf02c1d49df19a36
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: equidistant-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/08/e2d6cd4b8afa7b7697509532a5551f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: equidistant-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/a0/1e7120301a3ed18e4b110b89e63c95
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: equidistant-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/5e/baf941c33614bc8447b598bc9719d6
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: equidistant-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/da/dfe7770bb165de9f9db2f26a8c43f0
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: gedi-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/90/37a65c100132204307e0b96e4da507
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: gedi-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/97/471f94b1b30d2134fe596aa14bc813
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: gedi-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/be/de18742e7df6ddf9378e2738545320
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: gedi-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/1d/3c058661c083a3226dae1065c6a723
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: gedi-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/a7/0566ec03b7895531c785b451baa8e8
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: gedi-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/1b/5cce034d15f9786b3cae88b449058d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: gedi-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/3e/a1c29ac3352be4a4b7fb114c9f3931
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: gedi-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/75/bc9cdc469a21f6752df9a963bfb663
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneformer-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/30/44537ea86ab875644a5677cb4b5ad0
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneformer-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/54/481dc80aa98b4ecd5c8902ec4bc45b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneformer-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/e0/cd2ae0cb758a8a558730035d5a7115
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneformer-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/c4/5ce82a0f6e568886de21b335ac59aa
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneformer-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/19/4ed36901ef1e5bcabbfd8fd2eb277f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneformer-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/eb/00bec4d6a49e239f0e78f52967ee61
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneformer-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/87/30dcc1bc8e3943762a686b722879cd
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneformer-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/bf/64836c84dd3003f08bdb7137c8b02d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneptw-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/43/22457cf73b3c0efc5985018244d5d9
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneptw-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/8e/d078f5017284bf4b2ab35c0de410ed
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneptw-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/c3/b44b8dbdc8e86bd7f6099b8480749a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneptw-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/7b/1f3ddbfd13b0742458afa581411c5f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneptw-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/26/15076c9a2656be3de8960de3adc4a4
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneptw-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/cb/4ee4dc46e95fddd3f0ca1f600a2fc7
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneptw-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/f7/04351b7110247978dc8231fdb2108d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: geneptw-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/8a/19454713cfe39573e5f397058833ee
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: harmony-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/31/928ff058cf1145b9972349f5ee0f60
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: harmony-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/bc/4de38332e815f9799f25174527e387
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: harmony-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/46/7c75c548e736d202468b5c25abac1c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: harmony-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/28/72446d8092ffee05d7ca2f676d0a7e
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: harmony-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/10/7bf3667961422ec6666ba95f70731b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: harmony-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/f4/fd7ce5f2a7659ace3f2a806beab942
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: harmony-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/9c/a636411de588dc8b7a613740298675
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: harmony-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/ca/890be9dfdeb3ac6ffd60afe15193f8
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: imap-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/14/08b41ab819456d7601fe4677b316a8
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: imap-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/b1/2ff7291cf944ef1a2319d33f711e77
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: imap-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/74/db99be9f80f7b4ca5d08dfdea9bc43
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: imap-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/3c/28822ea3f8b48a91da49e02ab808ba
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: imap-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/9c/5f109e6fc5e1fcf8ed33dd8dce2099
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: imap-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/b1/7c9e94fdaeddb67f55032caed591fa
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: imap-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/2e/af022bacd9f9e92063a5485c03b942
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: insct-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/68/4466392ce983987750c8913b08d819
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: insct-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/c2/945304d01e6c4e56359c16ae663007
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: insct-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/51/5a1d035f87f9a8da83fc4fd51014f4
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: insct-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/a7/6b26ec4b4c46a7b9ce5e2cfed9019c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: islander-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/89/17f5faa99c463272c7f97c6d24e298
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: islander-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/a2/521a4249d01ffa0be2616d90b17de3
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: islander-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/a8/eaae93ba7e3c8cd49bcf4d7447fa9d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: islander-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/a0/76204c5504556e9b96507947b95f76
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: islander-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/4a/21374a4088073fc7732a61df8d2388
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: islander-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/0d/168513c01c4b8ff8aeabefab249f9c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: islander-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/f5/14e66d15f992a747ff8cf543753421
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: islander-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/d0/2ddb215809d3fe528c2dede8f60f09
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: langcell-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/49/200adda756358a4941d01245ba03bf
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: langcell-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/4d/96087bce77140c6fff4f7c7bd5f38d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: langcell-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/a1/a5508439e4ad9f196c340223a435d9
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: langcell-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/a1/366b2954f3650c62b67312fa9206ea
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: langcell-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/3f/637d48e75805d1de7b514ab940e964
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: langcell-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/fb/693533c0e219a73601321d6ac163db
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: langcell-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/2c/163d95ac1a9af82301dbde05c4d40a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: langcell-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/f9/b4984f66941e0db435a29bda2d45e3
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: liger-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/89/15b53f7f428b5d702353645f2efb14
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: 
+        - SCGRAPHM: {"metric": "cosine"}
+
+  - integration: liger-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/d6/f8ff0ea182fb3e5211acf6fb85a009
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: 
+        - SCGRAPHM: {"metric": "cosine"}
+
+  - integration: liger-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/05/b34b6c3355487c3eb32cc75a1f2f99
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: 
+        - SCGRAPHM: {"metric": "cosine"}
+
+  - integration: liger-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/92/a1412fb95a375d7c95c92783a9d9a6
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: 
+        - SCGRAPHM: {"metric": "cosine"}
+
+  - integration: liger-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/61/58de5719042e8911595eed3edef096
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: 
+        - SCGRAPHM: {"metric": "cosine"}
+
+  - integration: liger-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/1d/aa0410ea734c6c0c96e9b8b676bc2b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: 
+        - SCGRAPHM: {"metric": "cosine"}
+
+  - integration: liger-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/5c/ed06d715e0fbc3e14cac4dcffba8db
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: 
+        - SCGRAPHM: {"metric": "cosine"}
+
+  - integration: liger-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/f0/c579b92c3190b33901fd7df1522a44
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: 
+        - SCGRAPHM: {"metric": "cosine"}
+
+  - integration: mnn-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/63/0430f0e2732887d29e8f2f6e29de13
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: mnn-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/a2/656e26149f1ca8c1321498af33bfda
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: mnn-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/5c/1f69905333786a51276f5c66093b3c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: mnn-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/8d/9c00b633ebbc2f3339a403ef2a6561
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: mnn-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/25/270fb495c3b18f9d53293886245581
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: mnn-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/e4/a7239f723d4df47e6d1fba3f334f58
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: mnn-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/93/33e8d3f4c22dd0ccc39f39056bd7ef
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: mnn-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/11/b9cb14a9f2f37e4615072ea598dd65
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: ocat-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/e0/100d698e186ce7a517cfcd2a837413
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: ocat-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/98/f59418d7f78793901ce96bbc39d59b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: ocat-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/df/d317094cd42b3400672f72bbf03f07
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: ocat-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/ac/be3c9dab8278c22a91c77bd28323a7
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: ocat-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/60/4be945103a39ce854428c66cd1066a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: ocat-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/02/ee76574cf735090b5ad21f0c542035
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: ocat-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/c9/78434138db03dfc398cec15a2cab1c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: oneBigBlob-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/d1/060c44a167733a4277cb211578da19
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: oneBigBlob-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/5c/17ecc2ae6947d78936e1280afa7145
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: oneBigBlob-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/0b/da69b0819154675a8d98053e9f73f3
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: oneBigBlob-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/dc/5763a9977adb356321f5a9ddd9d812
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: oneBigBlob-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/aa/e22a5e734269fb26db3006cc75fa1d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: oneBigBlob-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/96/02bb658adf09da0598ff7abd056729
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: oneBigBlob-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/c3/7efe8d0539e488545d4a73ee35fafa
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: oneBigBlob-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/fa/9307c0fa3f6b672cf6461a5862fa7d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: pca-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/87/e82e17e825a6b516b8ffacc160ad60
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: pca-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/4f/9c23f6e1f1a49c256dc0aa9eca3217
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: pca-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/79/6ca7f87b42376e46ddf6bba70c4d48
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: pca-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/87/d48aee0b64b7b566cba54d4808becb
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: pca-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/07/f7b63c143c3ac4eaa624e2a11dcd3b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: pca-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/d6/aced2bce1ef200cbd0f939589fbb2d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: pca-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/6d/c4a54796f62cbb979c2d90e325086a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: pca-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/78/678c93dcc2c18d2755a529e7f98f6e
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: portal-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/a1/e459907f7379bc4e1d5f0b369ae712
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: portal-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/48/3a78a5e108cf7b80121f58523d67aa
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: portal-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/09/47c58e411b7458a8e9825b8415ad56
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: portal-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/9d/5f3b72417a366dbad4bf6d817f2468
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: portal-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/5a/62143163e6f00c9f0e2229cc5315aa
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: portal-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/95/7426520acf218784085d62032f1428
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: respan-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/98/b08bcb7a66f04a8e6d305460ed86d2
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: respan-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/94/8721a6c2cbbce7e59d6b04564322df
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: respan-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/4a/778c7ee8d1465ebe0478c38b49d6f7
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: respan-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/74/8c3b1bc75b35df8a3591fa41c0346a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: respan-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/e8/ae8159c7c22ff919eb61839b380e71
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: respan-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/71/8d5fb575df9a67aaef0ca397af232f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: respan-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/24/5d46293ad4e9fd9ab71426dd84cefa
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: respan-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/b6/3c08ea07afd8e3cb2d51b31f688a47
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: rpca-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/2d/8de8f7f5050c5adad6f6a69395d082
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: rpca-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/2b/77965295c748151893d3819e749e3d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: rpca-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/b8/278e89fde4bc57531f2396087eafa5
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: rpca-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/9d/e0c39242d6b9339452b6223277082a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: rpca-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/59/acf3785760a3592f72d1ebc6360d2f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: rpca-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/88/5d4605ee642047fcba380f543d7d58
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: rpca-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/e0/8b2cbb1eccc3fb666fd6c249600c53
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: rpca-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/27/1739e4a4179ba34f0122141f1be7e5
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: saucie-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/d4/8b2c9e1e756ef11c538626d81102ed
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: saucie-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/e3/9f7473c770855c9213cb495004b3b4
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: saucie-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/8d/ca1827ccacd8c4e78ea54697bc8240
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: saucie-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/e2/181e9368b0945c375c9ad2902a86ce
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: saucie-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/00/8f2ae9869d01e5008b5720c8d07d32
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: saucie-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/c2/5bef260a9d1ef194e9271467786d09
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: saucie-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/d4/0180497b4bba1acc70ca9719b1b2c8
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: saucie-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/16/4294c2abd61a3e732a0b0d03237ee8
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scalex-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/bb/b6d1afcbb52b08747b96898521dd2e
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scalex-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/01/8f01a7aa095f4997400b3bd200ff48
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scalex-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/8b/175a54b386207484f52776dbe6e542
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scalex-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/23/cdb403b9fea1cb535eeb33948d86c2
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scalex-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/f3/43144b12811dfbcfe23a2680136f33
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scalex-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/c6/4cd6cbf82df9c5d71d1596fcc0a245
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scalex-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/2e/64b40783312d74fa1ea4b138b8514b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scalex-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/39/f76e23280dbf78df831b303b5e917c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanorama-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/8b/342cf9d9de0f1b7725b14ac4014d96
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanorama-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/94/ba87c56fb5728d5cf930a3cc541fe1
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanorama-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/33/bec5d39b68d17dabfb714dbcd1e8e7
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanorama-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/a8/4f257484ff12fa86c691a2cbce3a01
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanorama-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/3c/762546cc5b01de46aa28ce0627076f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanorama-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/e8/42963a9be48b3ea836e66d8f06d5cf
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanorama-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/60/70036fc13db9f81e69e20353d73dcd
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanorama-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/13/a44bc6f2ddbbeaa7bcf11bdd344129
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanvi-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/a3/3f988d8ba8c7c3a9068a6f9f5cc535
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanvi-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/2c/0eb69a9462eeffa73e620dc389062b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanvi-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/31/ed1cfc5d68de8fb5698041945deb00
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanvi-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/61/a37d15185adb6b94ede3ae983e2afd
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanvi-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/b3/0c60d430a90130cbc4dd98419d4b61
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanvi-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/8c/62143fe1414d8b87ac7e4586c5a4c8
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanvi-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/c1/d4f7ae3f9a128bb3e53cb31dbe8aff
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scanvi-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/5d/14b9e58c83acecc4936fa5aaca0c8f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccobra-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/ef/bf3f03386f79ded565587ba68926ce
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccobra-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/e8/58abf5d5e275bad901c984bd0c2856
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccobra-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/60/119a8c090fb00af9a2ca35afc9e5ee
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccobra-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/60/f8f1a946665e02623e79cf89ad9d27
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccobra-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/e3/c26a54bc5652ba52725b60e171b6fd
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccobra-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/c8/442f43c567a790eed3986c7ce4f13e
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccobra-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/e8/95892230e0dd135a2c8ebb5c761a43
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccobra-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/4e/2d48dae15f4f5ae3bda8d1d4f55db8
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccraft-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/ed/b862c02880c2494b25b397dd0a08c3
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccraft-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/3f/88e96ea3b9b3d0344479915541079b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccraft-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/9d/8265aec0dbe2e7961af3754914b4ce
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccraft-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/7f/6b4e4ed1f9d7d8af04969f3b1a1672
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccraft-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/7f/2554a41c9b050ab717b29ed345dc3a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccraft-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/45/5154575817005f0dd3ef9cb4a2b5da
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccraft-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/0d/fc8f3ca4d2827db7392b00f2baf670
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sccraft-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/d3/12e7279fe79fa8e55528606913827a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdml-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/b9/fea62e58b9120b25037aa31e35052a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdml-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/70/97dad75664ea59d4f1b39c4e1df582
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdml-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/e4/c43947bc3580da1ab16cfb3716eec5
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdml-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/4d/3b0023910e9d8a5e3515d0fbc04fc3
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdml-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/3b/c54294ce3496c28d214053c77ed728
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdml-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/18/04d0c1afcd7f3a6ae174c5b0594562
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdml-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/b1/1e5c412489d6b05b801da0f06112ef
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdml-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/49/2510dddd1d533b2e3d8b1169c62611
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdreamer-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/30/c60dbf81ff1a872ddc2f8fc759dd01
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdreamer-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/92/773b0e64d75382dcda728990aa28df
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdreamer-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/77/40a80281c7ac0d651016e886a8c1e2
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdreamer-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/b7/e3208a670afeb9c6ccfd443667c7da
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdreamer-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/79/ee354a06b96252b75292cfdd127912
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdreamer-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/44/b0e8563b5bf574ae71b29bb9e248ce
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdreamer-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/1d/b298177c92b26fb44677ff97537a1c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scdreamer-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/1c/6891fdf1d0bceeaea0ca472a0ba0d3
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scetm-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/98/e3d925f64927a2abaf03d5953a9806
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scetm-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/57/4459c6ed497be804a34a4759c007df
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scetm-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/23/38313527b92ebb2fa4f4234d0dd08d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scetm-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/5c/950013d8a59952ec090656d821ae85
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scetm-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/f5/35bdeaf128a003f39f7a6c720ff67f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scetm-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/98/ea4c3b392168122071c6c6d62e2ad7
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scetm-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/f3/4094c2e90f0e3326147a7a654953db
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scetm-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/30/22513932a47b63ae805418ac738247
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scgpt-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/46/0f416df599a287a7cf0a90702aac32
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scgpt-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/87/0acc0b7c86c7b00de84c935b6b2c99
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scgpt-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/64/0df26b62c360e9031d68d468d533b3
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scgpt-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/8f/916e684a6431d516dd34171a8b4f8d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scgpt-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/63/d168c63dcc58120d0915efb7b70eb1
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scgpt-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/f8/988efb6f521b42c2f6cbbc8a7b8ef5
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scgpt-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/6d/ac67dfc10f31a28e3f221f8853c1ff
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scgpt-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/50/b854f25982cc825cffa08db64b87f6
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmerge-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/9a/375842fa20d40e44eae83d2e075d32
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmerge-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/da/bc28244343adcda3689855532b282f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmerge-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/b7/e5a756ba5775429bab1e4282e3b898
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmerge-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/b8/be3ed7c772e064ce96714e36f8b6b0
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmerge-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/3b/9a9c4e45dd5726b5cc2a018bd15c10
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmerge-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/05/f18b45d8838fc372b2bbd5a7c430b9
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmerge-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/45/e2702efd7dcdedea6fba7aa95491bb
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmerge-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/da/86341064ba31787cfa94cab5aac9e6
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmulan-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/0b/848472aa4c2121b2395196d4c156e2
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmulan-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/2a/73eb46e976d5ab0821ff14c729cdc2
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmulan-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/34/b4d77c1952895cfb2da1c583a49964
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmulan-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/71/3d9f70ee1bc67d887414a938ebf064
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmulan-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/4d/9c32ae4e07df584b6a5170a6f5f04e
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmulan-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/c6/aec0111c8bb9f15850eaee72944538
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmulan-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/a9/3db965f906a4a90a870e00d2794016
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scmulan-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/57/af6c3d865c7a1ffb5eed87e57a51eb
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scphere-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/96/98e23f2d29396b4d160301ed1ff753
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scphere-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/af/8f26a62e467b0da1b41dc63aa4d07a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scphere-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/13/888ddf5a866b4bb75b43992e9814a5
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scphere-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/e0/5315b45ca6c3a59e6b1c6fab6efbfb
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scphere-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/a2/584512c4d2924f24a1179808c4e56f
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scphere-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/ea/7543b25bf404f2dcd6c38979da1c08
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scphere-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/81/0925fc7ed6201e569e84e9945d7dec
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scphere-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/99/b119f3c8a094fcb1b1ddc9c3ffcca9
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scvi-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/87/3088fcfe8d46ce23ac7fe66892426d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scvi-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/32/eccfd08de167d11190fbce6209896a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scvi-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/5b/7d3737f24f082df230fb1a1044df52
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scvi-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/50/ed43fd379e093b68aea481a78ff950
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scvi-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/d0/55bbc50b937ac0ba0a82a1abf274ed
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scvi-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/5b/e89ac8e9938b40ccbed8c9496be47a
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scvi-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/7f/98135fc6e02ba7207d30100d0c8f3e
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: scvi-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/8e/8e34aa803ef6e1015c5678e2eed629
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: simba-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/17/fcdcb179dd7ff97f3a1ee0c16d983b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: simba-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/2c/4c7e50a814e4e509b15094711eb8ab
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: simba-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/dd/b07c48cb3030976ecad88d18315d30
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: simba-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/0d/933aa63a69e3ad6c0cdaaa09dc7aec
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: simba-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/80/a3f7e7802402131b2fab12b8a02b40
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: simba-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/5c/159ed696fd6493866b33475a3d604c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: simba-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/20/0baae7aa78a888b48052a3b4a69d2b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: simba-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/eb/5bb2190adcd0fe268a63dbde3121e4
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sysvi-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/03/242bb78db277d71dcd150c32236544
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sysvi-1
+    dataset: desimone_pbmcs_25000
+    dir: ablation_work/dataset_ablation/6f/c00f161ffba47baf03d1ae2ce73b2b
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sysvi-1
+    dataset: desimone_pbmcs_50000
+    dir: ablation_work/dataset_ablation/39/93998e98f49489f92c779b4cc96360
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sysvi-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/e6/8b22b1c64884894a78b072c9d87272
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sysvi-1
+    dataset: desimone_pbmcs_75000
+    dir: ablation_work/dataset_ablation/f5/bffcc6812827c126c7dff996c6f96d
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sysvi-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/79/8f06fa899726f79bce8e7d6c5be683
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sysvi-1
+    dataset: desimone_pbmcs_100000
+    dir: ablation_work/dataset_ablation/3f/9fe9e625f7770c5b4cea3b7425b2cf
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: sysvi-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/b3/2a8e41baf746f1fb068145e6502a44
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: uce-1
+    dataset: desimone_pbmcs_3000
+    dir: ablation_work/dataset_ablation/74/999358efeccbd0835d163924f7950c
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: uce-1
+    dataset: desimone_pbmcs_5000
+    dir: ablation_work/dataset_ablation/83/5213275bf3fc61085d4c7b41384da6
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: uce-1
+    dataset: desimone_pbmcs_1000
+    dir: ablation_work/dataset_ablation/a4/1cff3bf0695f295d38d6752be5dfc7
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}
+
+  - integration: uce-1
+    dataset: desimone_pbmcs_10000
+    dir: ablation_work/dataset_ablation/0f/57ae34bed3e3cc0550297ed8641055
+    batch_col: ["assay"]
+    label_col: cell_type
+    metric_params: {}

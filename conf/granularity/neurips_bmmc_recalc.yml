@@ -1,0 +1,171 @@
+experiment: granularity_ablation/neurips_bmmc_recalc
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cyclone-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l2/33/b460ee42542e2c4d6d801cd6228a6e
+    batch_col: ["batch"]
+    label_col: coarse_cell_type
+
+  - integration: equidistant-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_cpu_l2/25/fe0ee67399d912a74de005de7a5d4d
+    batch_col: ["batch"]
+    label_col: coarse_cell_type
+
+  - integration: islander-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l2/65/444d3b6ca9750fefd3a7c218dc482c
+    batch_col: ["batch"]
+    label_col: coarse_cell_type
+
+  - integration: respan-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l2/19/3afee2a05b6aeaee4ebdb4ac25ebc1
+    batch_col: ["batch"]
+    label_col: coarse_cell_type
+  
+  - integration: scanvi-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l2/13/9db81888f61471a4514df58706c9c9	
+    batch_col: ["batch"]
+    label_col: coarse_cell_type
+
+  - integration: scdml-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l2/67/3c1bfafd204d8f6c87daf2e067c5e8	
+    batch_col: ["batch"]
+    label_col: coarse_cell_type
+
+  - integration: cyclone-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l3/0b/62657fb7a08d98464cbc4590191863
+    batch_col: ["batch"]
+    label_col: broad_cell_type
+
+  - integration: equidistant-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_cpu_l3/ba/0d0a08de08bbed2e6ce4ae5ca3a9d2
+    batch_col: ["batch"]
+    label_col: broad_cell_type
+
+  - integration: islander-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l3/31/a07571c539f998e5d6d7251e558fb7
+    batch_col: ["batch"]
+    label_col: broad_cell_type
+
+  - integration: respan-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l3/85/c64c01f2c64b1467cd12ad32ec54c3
+    batch_col: ["batch"]
+    label_col: broad_cell_type
+
+  - integration: scanvi-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l3/fc/f4894c365dbe2da80b872f982aeda5
+    batch_col: ["batch"]
+    label_col: broad_cell_type
+
+  - integration: scdml-1
+    dataset: neurips_bmmc
+    dir: ablation_work/granularity/neurips_bmmc_v2_gpu_l3/e6/1528cbc8f1460a2df44d43296715e0
+    batch_col: ["batch"]
+    label_col: broad_cell_type
+seeds: [1]
+metrics:
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: AGREE
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: LDFDIFF
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: RKNN
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: ILISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: PCR
+    params: {}
+  - name: BNENTROPY
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: PROBE
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: CSMC
+    params: {}
+  - name: SV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: ADGBD
+    params: {}
+  - name: MIX
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCC
+    params: {}
+  - name: CORRMSE
+    params: {}
+  - name: CCH
+    params: {}
+  - name: SCGRAPHP
+    params: {}
+  - name: SCGRAPHM
+    params: {}
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  - name: ISOLISI
+    params: {}
+  

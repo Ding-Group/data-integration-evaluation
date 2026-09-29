@@ -1,0 +1,984 @@
+experiment: label_ablation/3_5_pbmc_v1
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/4a/52c07e5dc09c0e66d34ed44860eabf
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/b4/3cffa7d655494cbd35fec4bc966821
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/6e/d10e11f516057518fb102c8adee74b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/02/a6a93b4f1cb8d0f5641c0aceb40caf
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/93/a147673e877109d02cc543c178383a
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: geneformer
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/93/d32532326c156665b3d269caacddb0
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: geneptw
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/31/139deb7bdc36f093734abc9fdacc5e
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/42/819537487779c879bd5323f71189f8
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/39/a2837b699ac97d399d226578048a48
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: insct
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/2f/07933197a9ae64db676c36140b3caf
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/81/ac381dfaefc22839473b5f2f7552cf
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: langcell
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/2b/fc4c46d1e46d1e78c33e37fc57a317
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/15/0d8eae6b030fc5e3574b5da65871cc
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/00/43dea47b8b6c4215d60ea1a66a447b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/46/04412ffd67283c26c66c46ba3f1b29
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/0b/1090ed3c729969e767d53399eb47d3
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/c2/df39f729e77faae167300b04f1f3de
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/00/932162b57dacdec5ba4b8cd15d33ad
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/f3/bdd5d1e692770f8996e58b0a4ffd14
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: rpca
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/2d/017d19898cbc6a1e19fbf038f27db1
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: saucie
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/49/21ebc5c56fbf08d781cbb05d9e8d6d
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/f9/24798924b34661cab27ee33722687c
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/46/3e134f78c561aff8652f6fdd154d3b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/3a/d15b09e7410ea6ac0bcf802045f6bb
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/9b/40c8590100abb8e084aafe8425f6e9
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/aa/6e4f84253620919fc96578247a103d
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/53/997732ed43115987258b16e82afecf
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/e5/fe6519e659aea2d38f0609974fc252
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/8e/08964225cca60582e82b634a8b8c7d
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scgpt
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/49/ec69cb7d0f4acc6b8abecfeef281a4
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/3f/9eff38e4ab75f5852a6cbfda792c7a
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scmulan
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/81/407b559a749f83796c988445e28f9c
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/5e/ad6a7b4a96ae0996a17a6c89b5ac6b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scprint
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/3c/e7d8184f1bed2933ebab87a0d0d131
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/b9/2db21cb2035ec5879410fd709aed26
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/c1/0c4cdf401232b8f97c5d1fe8ab5091
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/28/5373c08c3dc55ac22549bb1d4d84d8
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: uce
+    dataset: 3_5_pbmc_label_5
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/4f/824f80fb9199e6413c3a326e0d07c0
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: cca
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/ec/c85b2f4c3c21a94b3f99b016b27912
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/62/089a92785b711347af1adb35d2b361
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/56/0c0f66d7da05a7784678bad57db2c7
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/fc/f4ca9cc9eb1743f72258113098dd6e
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/4e/2a915e3e850cca9367b2305b8aabba
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: geneformer
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/39/00ca5923b3515b4c91452190846505
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: geneptw
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/5f/3d0a2de18dbfcd14cfeecdd0b02b72
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/01/6456afdef54ae2e6cef22f68a30cc5
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/41/cb8393ab9fb95c01e0ec5066789a38
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: insct
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/eb/f7357be0a14490fa64aa154360da6e
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/ce/e5fe077f4e6983da5e988c1cb073a5
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: langcell
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/8e/4046bb72431e8bbad699e23a042c19
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/c5/b7e8415409717751c87151097a9d59
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/7f/64b29649b67e684eaf688b38ee8489
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/3e/b61725b00d18de23b69cf5403a4c37
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/71/f14e94d1b86627f034b2b0a122ba4a
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/36/cc09fe232479a9aeb39d7adcc51471
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/74/6a6ca6bf23e777787499906dad5f34
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/98/fc9975e30e951d1a51494fcb3cb1b9
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: rpca
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/f4/c36cdc668d0a6a305d4c767da57b0d
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: saucie
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/01/8b81adc69d321c436ddcadd2c01792
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/14/d71bf870d8711912193c636b68a5b0
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/fb/8d0d97dd6164110904f576a9043903
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/74/c0299509bb8e4a30756c72e81c1171
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/64/8cdb813fa9697a5761f7bd7b717857
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/41/257ad58c636b87281e2608f32b6f86
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/27/1f259f4b71ca2c5bca1a6b222025b0
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/c1/d534754b4b8c5150f04868c52d6225
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/c5/fa650524f1416a2f42d5e5f632da1c
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scgpt
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/4c/d47d95cf589b214589fa0d0dc3d247
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/56/dcda0662fd6a950c2a6cf7f04c4552
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scmulan
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/68/bea16b8ead44c5bfa323d8932825f2
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/66/082efee976a8d81f1ec1fbf3907d6b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scprint
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/6e/b6e5158d244a03ba991f8168c9c010
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/44/c9e3913e7fa636bbe6ac7f84c93bc2
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/fe/ac1373ba4479ad391eb3278eca0daf
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/2e/6ef7b690bc8285cdc47679494e7611
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: uce
+    dataset: 3_5_pbmc_label_10
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/e2/09c397c53d7cd76f8bd0d5b2a18506
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: cca
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/f1/54f7d304f8ee70b5b908f635011365
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/da/e2a6e02eca8c9314ea03896e7d4a5b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/43/6e8a49ba2b9fa32ea2783456c531f2
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/49/71a8162bcac05a85a98198936d60a0
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/2c/43fecd8a8155df3d23b44a25e8b314
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: geneformer
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/a4/e00e080516761de99f97162a1bdf7c
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: geneptw
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/63/89d2702c5bf51c3b787aed59925db0
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/3e/da6e7f360aa99737fe0795ac304543
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/28/b93e0b14094b47af6bd32c44919aa1
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: insct
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/dd/894b623a31aa3f52007f6d4f9942ea
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/61/84d8500695a1908536b7dcdd512e6d
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: langcell
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/a5/b6c9ec731e5c5627b3363ff8b6a5a8
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/2a/520449ea3b7728611beab8f667745b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/90/9b0ee066177550e17527fd34053267
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/5d/123d4e0256d9c877aa5e996e307e7c
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/11/c210813157c99afff08f523bcdd37c
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/df/766eb639f54e9ef90de2a2ce3eb61b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/e4/5c721eba841e471f3d026e011effad
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/86/c9ca0206ce45c8249e687ff96eee62
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: rpca
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/bf/259c0ef8e9b24b6551323ab7f11904
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: saucie
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/ba/533a80c2aa73ba4c46123473dfb5a9
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/e4/2e25d9493c1e67a943676325628719
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/af/be7b266d13a63901d1af70edb5051f
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/73/09b94761683bad40b93ccaecfbf7d1
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/8d/aa758ce4be14c9a935aff14a223352
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/02/65ad704665c6bccbf152799b70d99b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/6b/4544892abadbe2cd3a9915863f7543
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/91/da314f58ab9cef697941aa74a0436a
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/e4/139b383236893763641f58ee92e84f
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scgpt
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/6e/d55420743c48595fffb88226880a44
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/9e/96d4961cf2bdf6dae6c91194a62f4e
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scmulan
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/eb/8e894025181c914dcf66f992019bfa
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/2b/712fd27dbc202a84bf3ad82791800e
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scprint
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/47/0c970cb7c01ba77e9f7ac6dbe4b438
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/e1/9e7a00acf88f40c26dbb8f0d3f7c3c
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/0c/c89668de69e87a3e02715a67435304
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/af/0d13738bfc50737d4bb4988802f47b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: uce
+    dataset: 3_5_pbmc_label_20
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/99/0e1c0471de5bf62f0498f057a9cc30
+    batch_col: ["batch"]
+    label_col: celltype_mutated
+
+  - integration: cca
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/7a/aeab59832f4e4ad3a8a4e7ccc809c8
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/16/9338e16db1f3362a36b0986c72b378
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/ff/30f4a0238e513d34e81d125156459d
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/85/60cb98a50b91fadde9dfbc260c309a
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/7a/cfb1392d5be69b59e3543af3bc0f72
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: geneformer
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/c3/e6a21ebae915dfde5f0c3ddcf02cdc
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: geneptw
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/59/2321795cb89ab477ef6ef0e11fa4b1
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/1c/d236c74d9b450f43a5a763e07f0297
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/87/739a71d0df91f44d7ee79b2d0009a9
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: insct
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/c9/2e606eb8f0f3d3b5d8589267385a5a
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/eb/3cdbacd9789b73a28130ae80b8b0ed
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: langcell
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/e1/623a28e6c19f4940e93742195a7a74
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/13/bbe2a3a59c70565a7fba213eaab41b
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/f5/251cac3e9951b877dc876154678813
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/c6/335c1391ca3fd20184ff1fae6c4651
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/49/f6bac607808111d82c07853ca4a982
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/4e/98b4e05d759d9ba84f4f6ac74640a1
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/67/7a5056db558af53b1d7abd062f466d
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/bb/34bc94eca75ee158ba79266de277fc
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: rpca
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/84/5ec82c42d8b8ff7e0fa9d2765ee227
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: saucie
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/b1/2889e54d04705c2871685021696bcc
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/05/16f7d698b9e1bff6ac3187e1730d90
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/c9/4eb899c69924ff2eba6a5118e4bad7
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/21/ea34d7e61271f10806ddc907571ac0
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/ff/9256561ee56c237a8f40a551a07ea4
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/63/541f6bd3ffade5414d4a8d2042c89f
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/51/6766f9c48918a0619e10aa74c9ea22
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/08/470c405d5ac5fd3687fd2fce28bb77
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/01/594782e7245cd176478d65cf6c81db
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scgpt
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/17/e9b3fbe183d59c2a854d9e93dacfb6
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_cpu/12/9f70f8bc92667eef11a7ca266b150c
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scmulan
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/65/29baa9660e7b6cf09e17cbd6ed02d0
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/fb/a8cb5d9805f7d96e77be8249990a45
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scprint
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/9b/4653395c4b3bfde0a0b34ff4af97bf
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/ff/e66052cf1d8ab57f7bac54bc36516f
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/e1/fedfec86839dd7a5f7a5cc9b12cb09
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_gpu/2b/432eedb286336ecdc39108081fd3f8
+    batch_col: ["batch"]
+    label_col: celltype_mutated 
+
+  - integration: uce
+    dataset: 3_5_pbmc_label_30
+    dir: ablation_work/label_ablation/3_5_pbmc_v2_llm/76/e4df8475a937128ea05cc98b812ccb
+    batch_col: ["batch"]
+    label_col: celltype_mutated
+metrics:
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCH
+    params: {}
+  - name: SCGRAPHP
+    params: {}
+  - name: SCGRAPHM
+    params: {}
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  - name: ISOLISI
+    params: {}
+  

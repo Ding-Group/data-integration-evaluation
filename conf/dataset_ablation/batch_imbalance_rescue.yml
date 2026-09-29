@@ -1,0 +1,2241 @@
+experiment: dataset_ablation/batch_imbalance_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/d4/c28fc98552e58ba061ecfe0ad4f1e6
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/ef/0d07fd0a54ad00efb4821f8876a482
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/d6/a76e26f4d2bb8628efde8974b60d59
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/c5/de60f7cb774f799f49b88ea51ad56c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/8d/110d8feb89fcb10656c1a7d05bcfb7
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/36/de2baf245e42f23b3837984301a940
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/48/91cb27be105f532568acda52ab2cfc
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/94/f376fb46690094a8c5c00d0c2e8bdd
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/39/cd92dbeef2066dddb1eb11fe74a3ac
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cca-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/f9/0db7c0771f77966524848aecddb85c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/33/62e5ec1c161de87cb50d5f6878549a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/16/8e2f6f921359171dec0df329f5f3f2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4f/9156d75139baddf90647c6669ee46e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ac/a06ee17e00993c153e147279f58e49
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ae/a3468a43f0edc0700cb5a739eb51d7
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/7f/b0a47a8dedb8033f1f4bf54b0009b8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/23/63d7c291818b42f84b88bec9516c2b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5a/b6e08d8e2ebdbb1adb92a099257ecc
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/36/9d3d6985bb3d0ed8379c35815c7d6b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: clear-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b0/bc49bc93dfc6761f58080b75561e28
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/52/4ab165a0e4abc6ee464c5a2c197fbf
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/94/dcb2c6701e31821f52b30770c094a3
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d5/157175d2a5f33fb5608ddcc125b543
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4f/d63498e1c5f350fcc2dd0abebe6a50
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/9b/48fe632dd39ad92d34bd42e9cb6c03
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/56/c0f6f878ed84f271c2b6ee7604249c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/a2/30ebb2b413692714356a8f820bd9fa
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b2/09b173144d8f46b578f370a017329e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/dd/d123e27d621a277360db0be4a9db49
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d6/70282e252423fa333c0554c1b73e3c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: cyclone-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/fb/e36f80352ed7d1d1dbcf891c5cd487
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/6f/09030f3bb524faf1d3b838385432a4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/35/382d91483791a208651546b627a0e0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/35/6812f2198c3a09b902c83eee977671
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/a8/6574874f72569423a2bca11811392f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/2f/a2095a41652e940a85276dd19173cc
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/df/87fe993020e40d52f7ae571d20beb1
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/22/16368eacb057959b959a627e60cb38
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/2c/c18f207ebe72abfd4d9d3e8b33a77b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/82/c904b3302599e99fb15c333221f4ee
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: equidistant-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/e2/369e3a09adcaf5f2e4ad5df14dd397
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/6a/6f287752ce9ad00986ab315f2492e3
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/06/4473eb5c07d4e0c373105e61d3dbe8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/cf/c1e0097947ab3ff0d4673b8a1ea9a2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/2f/393b714628bce18985a5ea4ea25ea4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/44/7916804548013f08bc5895c81968f6
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/36/6b2a544dc48a897bb592389b53fa2e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/13/a765119e2be5446d187c1229b8b931
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/68/e42f685d5ec1137e4328e023bcad67
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/c3/53cd9da94430fb82b786e24bfee346
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: gedi-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/20/af117c7d30d761089ef876bb56c3b2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/4d/b7fb43fb29cb489974d131dbc6bd81
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/b7/fe0b9ab29041c144890c3e31a04e6b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/18/d8f519d3e6a038b061f528bdf55ee2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/41/710a1e0a09226425c1997608217adb
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/2c/4e3a1f6c5a3fa34965ac1a12fdb319
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/e6/9b3528c21b8c892fe8edc55ef18b96
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/59/3e312c71cad2806fb5fe973d06629e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/b4/fbd075b994b134fa4af80b3c2c31bb
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/52/061595e71587c02dff3e117934bb7f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: harmony-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/ab/b0e0ae69f184f795af135e889d3af8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/6f/7618088db0d79bb7ca2534ae48e432
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b6/08648ecdb262e303ce27a69a315ecd
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5f/878e2362929c83f9f80844504432b1
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/e1/3749542588444307bc6e10b198839c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c3/30bea4438e9ff98b516378036f6fc7
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/9c/7c80b409ac149e3c182bdfd004dd9e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/fa/491f0ed7113b92ec0bf5af97b322b0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/96/3a7ecb759bdf1f3df439743ef745c5
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/01/c582297016ed6e36b67ea57739359c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: imap-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5a/fbcfe66b4101337d19592f92e6016b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/6e/ba6bb9056591d374250a8b6e3154d7
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ae/eec2928fae209bda7ddf430069c842
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/65/bfe4dc7abc5a406c7ef0c8c0e73b4e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b0/accfd2c3e610279242dad0d66b65db
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/81/b8be3546c2fab120ebfd80868168bb
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/96/cf38a2867d52161ec77de6a1799add
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/38/e857316f4105cf8c9ce9e6be0dc952
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/6c/da2c5b34cb5ddba8b4bd98394b3577
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f6/a79d7a21ee4822ec9ba003dad7ce19
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: insct-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f5/874c7f19f977eda6c05804fbd9d794
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ef/63ad8e51dbc0291d7280a29a782b70
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/25/6b6f0364df3895e341da0e71b72e2f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ee/490dd98a0f2c9642613643ea35f266
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/14/8b6c8d0ef43f614041d142fe462798
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/03/ff3fe177da2af249d457c835b3dcbf
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/58/85dd9510f9ab5868ee045afd577c5a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/74/2305ac5f445aba6a9a4a744e56e025
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/06/195e77c9b6c257377763dba4c44c75
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4e/5d098a4761ccc2856b5d678ab750bb
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: islander-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/77/7aca44e496dc9679566cf67503e125
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/83/10044eeaded1d1661479f5a109f7e9
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/74/6498b9cdd3ea7cfe97d8569041e569
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/b3/69a91a48364fd3d378b173524d189d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/32/76cb5903332bdd95e9701d15d3fa50
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/d5/3a1e8676e655ad1b4abf5142b246f8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/7e/c7f586715fc327156fb255c9a77f61
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/cd/611bf2c368c697a6c5548125f24664
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/a7/3318b14c3297d734d92fe7a4a2ecb8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/d5/1ebc5d977919cf7cc3fb5abc7635fe
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: liger-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/14/06f5e4d0c3c605bcfdaa471d2236a2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/95/6b695193ece40fc5ac606f36d4682f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/8c/4e8f3804cb77026a6d8f27e35d225d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/de/c5372dfad29e1c59379ae9c7f61d0a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/ca/929303a69098e1e441c6020b902849
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/ee/b8bbde4c201bde17025499ea072137
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/d4/4074401e4e969c410efe9ee8024bfa
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/6c/1587d707754c1392ead2e076be4f7b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/66/353cdf564c9fced514911c378ae814
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/2f/c46568430f3b191725dc49654673f5
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: mnn-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/e1/1ce6f985bfa353c7a29d4340931a1f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/8c/c48eccd96b980967d31563e22bab21
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c7/19f7bb161a56dd7371a78e0d1d0d1e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5c/d699ed7773e7ad1d8cbeec6583b1e0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/6a/6474be18326728f06624037f5fb0fa
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/56/34bd108250ddd522847b25a7314f9d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b8/5f10d92382f5200e42ab73930265ad
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/62/53fd57fc9c2822eae91df9c0635164
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/8f/8fdc2d285072c2df4bd32398dfaaaa
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/29/66d4018cbdca6838cc55acbdf5b080
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: ocat-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/47/935a765cc9379de3e828a4c8992ee9
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/ec/61068ba09de54b4b8a02d472ddd75e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/61/c0855767f3ffddf3f4609886489cb2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/9a/0644a53d42360a9d12eafd34a05e41
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/fc/79b4e571605f2737b227cf0da918e8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/e9/01042b67be7d9acc30fc011ca2169d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/40/53a9776e8df6eeed94d2da1c05d4c2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/48/49bbbce2e1cb63321114f02f6d0977
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/46/9f93ea581741224afe4cfd803880dc
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/8f/e1f87b807be62df17fda7e75fd118c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: oneBigBlob-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/f8/a340fc03e97f9173157e6e5d6ce402
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/0d/d19d81b49c0e47dfb717d84860bd7e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/10/9863660228f369bd03ac69d2862255
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/3f/fef9df49c1eb36c20f442669e930bd
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/57/0eab69b7ab18b51892ccd2d1455ee6
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/da/b00b5d8e86d102e2a7fde86705dc02
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/9d/8fd78eb771920911f62e2a149eaeff
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/7b/4bf0442022e2dc23712a07b95bd4f8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/20/b5d0785e9c2de63e166850075a705b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/cb/e666e7fd15c51000eb82c7ece196c9
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: pca-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/25/9784ae716434f4cc9ebe3598dcd8aa
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/0f/d6274a49e49076427d0af972b7f755
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/2d/633178c248c642caa21c8a3c8c3d3f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/3b/93c5aee3313a23e0f16845dfac1109
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d0/45a690cf4a2ff0ee24f315004e7795
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c0/f98bdd1cbcd57d5c80682abfdba0fc
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/9e/05618e22698e1439819a7875918d3d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4c/545915fe789ea8e3f31cd02cdc416a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/bd/3c9491c5f4d886b3c495888cac39f7
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/48/3eac6db426c4a33c1c67af1b8fe692
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: portal-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4b/e722a077c7e7cc2a0de7405bcd4ec3
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/25/da6ce7df234d70e23fea1dffda47d5
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b4/688526edf62728104da990e68932fa
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/1a/b098bc053542d6773f91f03ebe6b0f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/38/20aa4c19641d40cfc8d1c343c8ece7
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/74/d8138fab342b451699a5d6efb26dee
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/86/1893d0d622ff5784af4923a782ad0a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ac/c180bcaa92fc2da840393bdd86a1c3
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/70/d35f9b756c2313a1c6ebfa477996b2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b6/f017b4da52d86711157fb221f0fa85
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b0/50941c283f076cef85a0155bef4883
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/63/b19fb0ce4e5d74b32c78b6ee417f6d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/fc/64a6555eb6e33b0e4b129897ca7d93
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b5/e190c734f7acb717d3cf42d9be1fbd
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c3/01865d7001083611f2403d1287af28
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5c/332a7b901a8952df66291995ec45c3
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/cd/4d747dcd9115971fdee270115388b4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/04/a41e15eeb17440bd16d1a71b5a72c0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: respan-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/07/2803f4f664f32c1d82746d6cd199a4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/7b/8c883e18239044172df159bc70cba7
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/5c/8b9a718307b21567fd70c779a9347f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/76/761a4d62c2472452bdfc56c2a1d3b0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/42/d869a9e85c11e7160862a029d2e04f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/36/4652ff64457933a582e5fce0073911
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/28/69c553e8acd5d50541650b8df0e7f3
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/85/743079cf5d524964ccdfef98c2ca0a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/6d/d3b502521a2a17797115c2fd03ff1d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/fb/eb01239416e310ae60d155c0516a1d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: rpca-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/39/487226c142ab6435122030b12a1a9b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/a9/9a0b877a36e0e8dc0fb5cd92e6741d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/fc/6470791f588a72e791d38cba7c371f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/9e/c5306719e8a2b8f8e96b47727def47
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ef/4d12f36022ae7ff3551d43883f9561
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/63/b932219a5a7b5f657ebafba50ca9ed
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/e3/c23f2963ee26a918a0206496a1e97d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/26/97d25a172c6b833d0cbeaf950814e6
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b7/4f5b72a940cc2e7324409686bbee70
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c4/47a9b861e6fd60f2c8bee7f4ddd6ea
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: saucie-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/02/b1899dba06afcab3b8b64084cd848b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/25/1e647a6cadc53f01851b717790b9a0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/44/d7176d8e44c226d37b56a17a71698d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/41/f35c82878c29ae5e36827b778813e2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/9b/378fa4ac9087ef8dcc4a501dde5e58
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c8/6d5d32531fecb8f862cd1486fad005
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/2a/78209bb1eb5151a2883a584e3ac77c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ae/1c662f3ae115c64063afc6dacb6036
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/53/ff94667fa382ee41247c5fa569b95a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/63/8ea5427a63d96bbec9ce41d541b147
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scalex-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5a/6962f13b20d746282df38614d42650
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/12/a22643293efc9d58b108b0f4d10053
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/12/bec45770756808ea8a81abaf683cca
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/8d/6068d01933e47a8abca550e9ee417e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/0f/cdfd1aa05f16daebe1d954e500a6fd
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/4c/2802b970f11dfa338a388689d9d0a9
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/02/7752f76565a325e5a327a013e4e363
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/44/5a1692505fe2664b232f8b7da98541
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/d9/fad061e9dd7e2c1311d4293d0845f0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/dc/46d04fd5e3163a37b52455712a0f8f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanorama-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/89/7fda18b9780125eacd818c7c69d5b0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/23/5fb1c13d38430ff70f0da24013f514
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ce/fae7a81328fdac807b9085c4374ee0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/87/86fb8855a4dc34803e19cefdfd224d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/58/7d425937c0a4c825b183c580813237
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d3/b3f3929b8ce92e919168c5aec7d4f9
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/3c/64658b301f4cd818445cc748273c5a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/35/5ea4696e9ca830e46acdba3256d8cf
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f7/f10f90f24b21e3e1e783f282767d58
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/0f/ded7deb75af8f97383ae1e4a5f0d6b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scanvi-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/a9/ebe3289bd5d64ecb70a196739d2af1
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/a2/2602e48e83dc63c7f0270f69375996
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/2e/a28340886770ca258de2ac3401b61b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/3a/e9f642915d7241df526475bb228422
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/51/da8f853db090abe134fa7d2d1f922e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/83/33256d9e03b42da769bdf57450c316
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/28/8498d4ea13fc48eb48b6d77f1092aa
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/72/7284232b0315ab1f081004705787ce
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/db/7392ed5673c36396f952a0000da843
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/da/237189965d0baa829078ec0c6694f2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccobra-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c0/0f4f4038c34f8bfe831f9cd4dd0db9
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/3d/7bd787d09b207d7e673e0cc6d1c375
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d0/2608bd3ce0a677936cb534bfc631e1
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b6/c7a56c297053db7b8f2ab2b8ce52d0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/0e/aa221905e023090d5f379107f97ea0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/cb/77338b0c59f5c6d31989564515ceb0
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f3/f96bb760c1dc9af9e690631a1ac89d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4b/9c57d24d0a3e3211c5a7e9066f575f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/dd/0beaa8d0dcadb105a5ae76a01fe790
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/71/50a995ee74bc2ff2b5e006a22b8f52
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sccraft-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d1/32468949ae098db463d09bc1e40b71
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/9e/9f4e79ea1a853f70e44aa8648d1020
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/03/c1afc73564b85a456b081647d282af
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4b/ccf62b17bb94cfec8ca84a96157f1d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/2b/133855fe8ec876685ff3bdb20d9668
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/26/4ec1b035cfacd54f0e57607ced44a4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f2/97a0b95fe17010edc6eb8bdba39cfe
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/dd/26903195db3efa6bf456aff7eda6b4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/de/dec4954b5a98da6d66729b5f809b2e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/eb/234d04b3b35e1ddac5f76fb7757e7d
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdml-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/9c/9716bcfb412dbece243968f12b22cc
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/45/7fbeafd101366f5adfaf047fbea326
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/a0/31570e52c5759dc8a43a9a9de52575
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/58/d1d30e78eab6b177c426c108b9ab3a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d1/c088a6f7bc84761f66925b3a6c1895
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f8/cb3eddc42af716fad2d47f4c3971ba
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4a/526941c1c9c4c9fd949f60e3a3f7dd
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ba/583a4ff63e39de808a24b5e4d86b78
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/2d/8400deb5e54dd1b6009d83013f5218
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/50/7afaa6d1d84533d5e0c1eea53a71d8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scdreamer-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5e/504423dfad38860065a0401f839f25
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c6/c97fbb9595664c73f1fc7daf1abe88
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/6b/3cf6f20d6e183258b31bc76ee27c54
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/af/c4231db5fde33fa249ddb070b40cf6
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c9/27a3a9c8ae743dacd6ae91ad5a61f8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b8/3a1575bac5ac9d2c796937c5d73f1a
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/0b/584d89f1d3a22f3559c4ef7e853e10
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/c9/65f9905ba02a6c3797e16ca6660b61
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/99/18e5e468bd7caf4a7e7dce24e954d4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/cc/ffae40ddabe0db3007279f486b7bae
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scetm-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/96/ed6a10a78df2d79e6f3d4316fdf308
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/9c/1c9a37ae0d634f0bb37b0ff4acf2e9
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/db/7ac99e3ae5f8416d7e0243b378e8ae
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/88/5bb89deaed23ed82442400d5df6526
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/a7/829a3f6d43ce043e72001ee566369b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/a1/bf575add85a246f4084add6ee46010
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/9d/78657117c51896f50f8eccd9af482e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/b2/5eb35a3522241bc3631c268fdfbe69
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/0d/6ded41197de0f8fb357ee8a9bc81e8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/90/3e62bca945f93512d976542910fe81
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scmerge-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_cpu_methods/9b/05a6b962da44caf15f2afe776a1a77
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d4/c0704c2b9b4c724e0430e18111fd52
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ee/9f26cbe02231b0470e9cc87e0ddfcc
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/eb/76392413cca911b22fa34717410873
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f3/ee14bdafd0615152fb7b89201c73b6
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/97/ca1ca57f66222bf2af27f28322053b
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/92/23aa2e023c43491dbcfccc791fc842
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ec/ac85abd429e89a67d812997523beb4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/7d/d2d4c7050692c36fd9f97934afb7ec
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/ff/76005d440f24ad19b5bd7775e67f71
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scphere-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/4a/429e36e14bcfaf57d1d164f70df107
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/d6/0461bb78cf5ca513afe4c4cc2ee792
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/e1/bd2766831956e230df19cfb008ec61
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/73/f7e3850d17b757e00ab46e0f73ee85
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f9/f92ddb9efe367ec8095552ab5c9c82
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5c/3fb59a5b530e099154c28a46df01e4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/78/be0c05c39b1686d5ab3bcfea16687e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/a0/6fccb5eb104c25c422d72e880b599f
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/1d/559e87b0b275af4ab6ca6043695cba
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/e0/9bd1e5cc2f253dfd9ad12d1485ef07
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: scvi-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/7a/da208d7e710488405e2e52e75082a4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/bd/92f24f3f42fc047b312123fce67c9c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/5e/d3ffe84c28434beadf576b59c07b5e
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/25/bb5bc1506d0286cfceaa64bb3e1130
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f8/67e3659f298b541bb6299f93786841
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/71/2617decd14aa7bc526461c5f9ae1f8
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/08/6680c0de6693a32f3a920c00a8c2f7
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/93/71dab80ab324f4fb086d00bea4f3f1
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b3/c126d947147dda95e4a80b47e8d98c
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/35/977972f935959eafabe2923f430dd2
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: simba-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/e1/c3c8bbf072c2042ed8315d5651b500
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_7
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/00/662f8b9f7da7bd458a3dadf0dd6bea
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_5
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/b5/36cbbc9ce2b68b9b52be08828d8a03
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_6
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/87/298a7846150b904f283092a858df72
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_4
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/66/8ca8bd157814ea050c085dfbc43657
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_3
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/52/f4b7caff2be676290d6457512baf82
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_2
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/24/8f368203d1dc3c58788f9b8b141446
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_1
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/1d/4f846b46196ba63cfe35a6938ecca4
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_0
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/8f/e9c3acf9be5158275d87cbdc61f990
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_8
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/aa/1986c329b7e58c8363b720fb62cb43
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+
+  - integration: sysvi-1
+    dataset: epitome_batch_imbalance_9
+    dir: ablation_work/dataset_ablation/batch_imbalance_gpu_methods/f9/1cffc9dd3fed97ca006b4eaa5bb4ac
+    batch_col: ["sample"]
+    label_col: cell_type
+    
+metrics:
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  

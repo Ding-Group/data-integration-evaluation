@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run scCRAFT on a dataset
 
@@ -17,6 +15,7 @@ Options:
     --resolution2=<float>       Clustering resolution 2. [Default: 7]
     --method=<str>              Clustering method. [Default: Leiden]
     --epochs=<int>              Number of epochs. [Default: 150]
+    --z-dim=<int>               Embedding dimension. [Default: 256]
     --d-coef=<float>            d_coef. [Default: 0.2]
     --kl-coef=<float>           kl_coef. [Default: 0.005]
     --seed=<int>                Random seed. [Default: 0]
@@ -41,6 +40,7 @@ def run_sccraft(
     resolution2,
     method,
     epochs,
+    z_dim,
     d_coef,
     kl_coef,
     seed,
@@ -53,7 +53,7 @@ def run_sccraft(
         adata_copy, resolution1=resolution1, resolution2=resolution2, method=method
     )
     VAE = train_integration_model(
-        adata_copy, batch_key=batch_key_final, epochs=epochs, d_coef=d_coef, kl_coef=kl_coef
+        adata_copy, batch_key=batch_key_final, z_dim=z_dim, epochs=epochs, d_coef=d_coef, kl_coef=kl_coef
     )
     obtain_embeddings(adata_copy, VAE, seed=seed)
 
@@ -75,6 +75,7 @@ def main():
     resolution2 = float(args["--resolution2"])
     method = args["--method"]
     epochs = int(args["--epochs"])
+    z_dim = int(args['--z-dim'])
     d_coef = float(args["--d-coef"])
     kl_coef = float(args["--kl-coef"])
     seed = int(args["--seed"])
@@ -91,6 +92,7 @@ def main():
         resolution2,
         method,
         epochs,
+        z_dim,
         d_coef,
         kl_coef,
         seed,

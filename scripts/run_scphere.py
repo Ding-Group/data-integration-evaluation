@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-# 用 docstring 定义了命令行用法和参数
-# --batch-key 允许多次出现，后面我会把它们合并处理
-# 目标让同一条 pipeline 可以跑不同数据集无需改代码
 """
 Run scPhere (SCPHERE VAE) on a dataset
 
@@ -19,23 +13,19 @@ Options:
     --hvg-method=<method>       HVG selection method. Default uses the pre-computed HVGs.
     --hvg-n=<int>               Number of HVGs if computing [default: 2000].
     --epochs=<int>              Training epochs [default: 100].
-    --batch-size=<int>          Minibatch size [default: 512].
+    --batch-size=<int>          Minibatch size [default: 128].
     --lr=<float>                Learning rate [default: 1e-3].
     --emb-dim=<int>             Embedding dimension (latent dim) [default: 10].
+    --encoder-layer=<ints>      Comma-separated encoder hidden sizes.
+    --decoder-layer=<ints>      Comma-separated decoder hidden sizes.
     --seed=<int>                Random seed [default: 0].
 """
 
-# 导入 scPhere 的核心两个东西：模型和训练器
-#   - SCPHERE: 变分自编码器，用于训练 embedding
-#   - Trainer: 封装训练循环和优化过程
-# 但是考虑到可能环境里没有装好，所以 try 一下
-# 失败的话就会把报错信息留在 _IMPORT_ERROR
 import sys
-
 sys.path.append('/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/scPhere')
+
 import random
 from os.path import join
-from typing import List
 
 import anndata as ad
 import numpy as np
@@ -48,12 +38,20 @@ from project_utils.adata_utils import EMB_KEY, add_umap, dense_counts, minimise_
 from project_utils.hvg_utils import select_hvgs
 
 
-# run_scphere
-# 把 notebook 里那一大堆步骤收进来，打包成一个函数
-# 步骤：HVG -> counts -> batch -> build model -> train -> embedding
+def parse_layer_arg(value):
+    if value is None:
+        return None
+
+    text = str(value).strip()
+    if text == "":
+        return None
+
+    return [int(item.strip()) for item in text.split(",") if item.strip()]
+
+
 def run_scphere(
     adata: ad.AnnData,
-    batch_keys: List[str],
+    batch_keys: list[str],
     use_hvg: bool,
     hvg_method,
     hvg_n: int,
@@ -61,16 +59,22 @@ def run_scphere(
     batch_size: int,
     lr: float,
     emb_dim: int,
-    device=torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    encoder_layer,
+    decoder_layer,
+    device=torch.device('cuda:0' if torch.cuda.is_available() else 'cpu'),
+    seed: int = 0
 ) -> ad.AnnData:
-    # 先决定要不要裁到 HVG
-    # HVG
+    np.random.seed(seed)
+    random.seed(seed)
+
+    torch.backends.cudnn.benchmark = True
+    torch.backends.cudnn.deterministic = True
+    torch.manual_seed(seed)
+
     adata = select_hvgs(
         adata, use_hvg=use_hvg, hvg_method=hvg_method, hvg_n=hvg_n, subset=True
     )
 
-    # 取原始 counts 矩阵
-    # Use raw counts
     X = dense_counts(adata)  # (n_cells, n_genes)
 
     if len(batch_keys) >= 1:
@@ -86,26 +90,15 @@ def run_scphere(
         batch_vec = torch.zeros((adata.n_obs, 1))
         n_batch = 0
 
-    # 构建模型
-    # n_gene 基因数，n_batch 批次数，z_dim 潜在维度
-    # latent_dist="vmf" 表示球面分布
-    # observation_dist="nb" 用负二项分布建模 count 数据
-
-    # Train (align arg names)
-    # Build model (align with notebook/official names)
     model = SCPHERE(
         n_gene=X.shape[1],
         n_batch=n_batch,  # 0 (no batch) or K
         z_dim=int(emb_dim),  # latent dim
-        batch_invariant=True,
-        latent_dist="vmf",  # spherical
-        observation_dist="nb"  # counts ~ NB
+        encoder_layer=encoder_layer,
+        decoder_layer=decoder_layer
     )
     model.to(device)
     model.train()
-
-    # 创建 Trainer，传入模型、数据、batch
-    # 里面设置最大迭代数epochs、batch_size、lr等
 
     trainer = Trainer(
         model=model,
@@ -117,11 +110,6 @@ def run_scphere(
     )
     trainer.train()
 
-    # 训练好之后调用 model.encode 得到 embedding
-    # 把它存到 adata.obsm，方便后面统一评估
-
-    # 调用 scPhere 的 VAE 模型，
-    # 把输入的基因表达矩阵 X（dense counts）和批次信息 batch_vec 喂进 encoder 网络。
     model.eval()
     dataset = TensorDataset(torch.tensor(X), torch.tensor(batch_vec))
     loader = DataLoader(
@@ -142,7 +130,6 @@ def run_scphere(
     return adata
 
 
-# 解析命令行参数，跑 run_scphere，然后保存结果
 def main():
     args = docopt(__doc__)
     file = args["<file>"]
@@ -157,14 +144,9 @@ def main():
     batch_size = int(args["--batch-size"])
     lr = float(args["--lr"])
     emb_dim = int(args["--emb-dim"])
+    encoder_layer = parse_layer_arg(args["--encoder-layer"])
+    decoder_layer = parse_layer_arg(args["--decoder-layer"])
     seed = int(args["--seed"])
-
-    np.random.seed(seed)
-    random.seed(seed)
-
-    torch.backends.cudnn.benchmark = True
-    torch.backends.cudnn.deterministic = True
-    torch.manual_seed(seed)
 
     print(torch.cuda.is_available())
 
@@ -181,7 +163,10 @@ def main():
         epochs=epochs,
         batch_size=batch_size,
         lr=lr,
-        emb_dim=emb_dim
+        emb_dim=emb_dim,
+        encoder_layer=encoder_layer,
+        decoder_layer=decoder_layer,
+        seed=seed
     )
 
     print("Adding UMAP")

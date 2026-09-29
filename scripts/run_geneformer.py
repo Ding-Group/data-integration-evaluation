@@ -37,20 +37,25 @@ def run_geneformer(adata, seed):
         adata_copy = adata[:, mart.index.intersection(adata.var_names)].copy()
         adata_copy.var["ensembl_id"] = mart.loc[adata_copy.var_names]["Gene stable ID"]
     else:
-        adata_copy = adata.copy()
+        adata_copy = adata[:, ~adata.var['ensembl_id'].isna()].copy()
 
     adata_copy.X = adata_copy.layers["counts"].copy()
     adata_copy.X = scipy.sparse.csr_matrix(adata_copy.X)
     adata_copy.obs["n_counts"] = adata_copy.X.sum(-1).astype(int)
 
     adata_copy.obs["barcode"] = adata.obs_names
-    adata_copy.write(os.path.join(os.environ["TMPDIR"], "adata.h5ad"))
+
+    extension = os.urandom(4).hex()
+    os.makedirs(join(os.environ['TMPDIR'], extension), exist_ok=True)
+
+    tmpdir = join(os.environ['TMPDIR'], extension)
+    adata_copy.write(os.path.join(tmpdir, "adata.h5ad"))
 
     tk = TranscriptomeTokenizer(
         {"barcode": "barcode"}, nproc=1
     )  # for V1 model, set model_version="V1"
     tk.tokenize_data(
-        os.environ["TMPDIR"], os.environ["TMPDIR"], "geneformer_", file_format="h5ad"
+        tmpdir, tmpdir, "geneformer_", file_format="h5ad"
     )
 
     embex = EmbExtractor(
@@ -65,8 +70,8 @@ def run_geneformer(adata, seed):
     )
     embs = embex.extract_embs(
         "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/Geneformer/Geneformer-V2-104M/",  # example V1 fine-tuned model
-        os.path.join(os.environ["TMPDIR"], "geneformer_.dataset"),
-        os.environ["TMPDIR"],
+        os.path.join(tmpdir, "geneformer_.dataset"),
+        tmpdir,
         "geneformer_result",
     )
     embs = embs.set_index("barcode")

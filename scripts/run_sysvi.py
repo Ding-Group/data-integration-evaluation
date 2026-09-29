@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """
-Run sysVI (scvi-tools external) on a dataset
+Run sysVI on a dataset
 
 Usage:
   run_sysvi.py -o <path> (-b <batch>)... -c <key> [options] <file>

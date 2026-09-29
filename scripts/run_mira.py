@@ -63,7 +63,7 @@ def run_mira(rna, atac, batch_keys, n_topics, seed):
     model.predict(rna_copy)
 
     rna_copy, atac = mira.utils.make_joint_representation(rna_copy, atac)
-    rna.obsm[EMB_KEY] = rna_copy.obsm['X_joint_umap_features']
+    rna.obsm[EMB_KEY] = rna_copy[rna.obs_names].obsm['X_joint_umap_features']
     return rna
 
 

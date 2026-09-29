@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run Portal on a dataset
 
@@ -18,25 +16,26 @@ Options:
     --seed=<int>           Random seed. [Default: 0]
 """
 
+import random
 import sys
 from os.path import join
-
-
-import random
 
 import anndata as ad
 import numpy as np
 import torch
 from docopt import docopt
-
-from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise_anndata, split_by_batch
-from project_utils.hvg_utils import select_hvgs
+from project_utils.adata_utils import (
+    EMB_KEY,
+    add_umap,
+    combine_batch,
+    minimise_anndata,
+    split_by_batch,
+)
 
 sys.path.insert(0, "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/Portal/portal/")
 
 from util import integrate_datasets as portal_integrate
 from util import preprocess_datasets as portal_preprocess
-
 
 
 def run_portal(adata, batch_keys, hvg_num, search_cos, lambda_cos, training_steps):

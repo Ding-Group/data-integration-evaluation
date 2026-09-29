@@ -18,13 +18,17 @@ from os.path import join
 
 import scanpy as sc
 import anndata as ad
+import numpy as np
+import random
 
 from docopt import docopt
-from utils.random import set_seed
 from project_utils.adata_utils import add_umap, minimise_anndata, EMB_KEY
 
 
 def run_harmony(adata, batch_keys, use_hvg, hvg_method, seed):
+    np.random.seed(seed)
+    random.seed(seed)
+
     if use_hvg:
         if hvg_method is not None:
             layer = "counts" if "v3" in hvg_method else None
@@ -34,7 +38,7 @@ def run_harmony(adata, batch_keys, use_hvg, hvg_method, seed):
         adata_copy = adata[:, adata.var.highly_variable].copy()
     sc.tl.pca(adata_copy)
     sc.external.pp.harmony_integrate(
-        adata_copy, batch_keys, random_state=seed, adjusted_basis=EMB_KEY
+        adata_copy, batch_keys, random_state=seed, adjusted_basis=EMB_KEY,
     )
     adata.obsm[EMB_KEY] = adata_copy.obsm[EMB_KEY]
     return adata
@@ -49,8 +53,6 @@ def main():
     seed = int(args["--seed"])
     use_hvg = not args["--no-use-hvg"]
     hvg_method = args["--hvg-method"]
-
-    set_seed(seed)
 
     print("Loading data")
     adata = ad.read_h5ad(file)

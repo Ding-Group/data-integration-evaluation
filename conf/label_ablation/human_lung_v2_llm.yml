@@ -1,0 +1,46 @@
+experiment: label_ablation/human_lung_llm_v2
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: human_lung_label_5
+    batch_col: ["donor"]
+    label_col: celltype_mutated
+  - name: human_lung_label_10
+    batch_col: ["donor"]
+    label_col: celltype_mutated
+  - name: human_lung_label_20
+    batch_col: ["donor"]
+    label_col: celltype_mutated
+  - name: human_lung_label_30
+    batch_col: ["donor"]
+    label_col: celltype_mutated
+integration:
+  - name: scgpt
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scgpt"
+    params: {}
+    memory: low
+  - name: geneformer
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    memory: medium
+  - name: uce
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    memory: high
+  - name: geneptw
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    memory: medium
+  - name: scprint
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scprint_env"
+    params: {}
+    memory: high
+  - name: scmulan
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmulan_env"
+    params: {}
+    memory: high
+  - name: langcell
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/langcell_env"
+    params: {}
+    memory: high
+seeds: [1]
+use_gpu: true

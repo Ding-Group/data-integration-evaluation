@@ -1,0 +1,43 @@
+experiment: granularity_ablation/seurat_pbmc_final_metrics_llm_l2
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: seurat_pbmc
+    batch_col: ["donor"]
+    label_col: "celltype.l3"
+integration:
+  - name: scgpt
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scgpt"
+    params: {}
+    metric_params: {}
+    memory: medium
+  # - name: geneformer
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: medium
+  - name: uce
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: geneptw
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  # - name: scprint
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scprint_env"
+  #   params: {}
+  #   memory: high
+  - name: scmulan
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmulan_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: langcell
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/langcell_env"
+    params: {}
+    metric_params: {}
+    memory: high
+seeds: [1]
+use_gpu: true

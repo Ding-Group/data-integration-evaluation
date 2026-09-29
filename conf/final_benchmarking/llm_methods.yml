@@ -1,0 +1,79 @@
+experiment: final_benchmark/llm_methods
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: human_pancreas_full
+    batch_col: ["tech"]
+    label_col: celltype
+  - name: human_dkd
+    batch_col: ["batch", "assay"]  # Main batch column first
+    label_col: cell_type
+  - name: immune_cell_atlas
+    batch_col: ["batch", "assay"]
+    label_col: cell_type
+  - name: gtex_v9
+    batch_col: ["batch"]
+    label_col: cell_type
+  - name: tabula_sapiens
+    batch_col: ["batch", "assay"]
+    label_col: cell_type
+  - name: snpatho_liver
+    batch_col: ["sample_id", "processing_method"]
+    label_col: major_annotation
+  - name: villani_dcs
+    batch_col: ["batch"]
+    label_col: cell_type
+  - name: haniffa_covid_2samples
+    batch_col: ["sample_id"]
+    label_col: initial_clustering
+  - name: haniffa_covid_imbalance
+    batch_col: ["sample_id"]
+    label_col: initial_clustering
+  - name: pan_cancer_t
+    batch_col: ["patient", "cancerType", "platform"]
+    label_col: meta_cluster
+  - name: human_kidney
+    batch_col: ["donor_id", "suspension_type"]
+    label_col: cell_type
+  - name: human_liver
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_bipolar
+    batch_col: ["donor_id", "assay"]
+    label_col: cell_type
+integration:
+  - name: scgpt
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scgpt"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: geneformer
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: uce
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: geneptw
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: massive
+  # - name: scprint  # Do not run on gtex v9
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scprint_env"
+  #   params: {}
+  #   memory: high
+  - name: scmulan
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmulan_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: langcell
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/langcell_env"
+    params: {}
+    metric_params: {}
+    memory: high
+seeds: [1]
+use_gpu: true

@@ -72,6 +72,8 @@ def run_uce(adata, adata_path):
     result = ad.read_h5ad(
         './adata_uce_adata.h5ad'
     )
+
+    subprocess.run(['rm', '-f', 'adata.h5ad', 'adata_uce_adata.h5ad'])
     adata.obsm[EMB_KEY] = result.obsm['X_uce']
     return adata
 

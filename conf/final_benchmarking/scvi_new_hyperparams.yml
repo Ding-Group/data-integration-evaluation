@@ -1,0 +1,64 @@
+experiment: final_benchmark/scvi_new_hyperparams
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: mouse_pancreatic_islet
+    batch_col: ["batch", "disease", "assay"]
+    label_col: cell_type
+  - name: immune_cell_atlas
+    batch_col: ["batch", "assay"]
+    label_col: cell_type
+  - name: gtex_v9  # exclude for cyclone
+    batch_col: ["batch"]
+    label_col: cell_type
+  - name: tabula_sapiens
+    batch_col: ["batch", "assay"]
+    label_col: cell_type
+  - name: pan_cancer_t
+    batch_col: ["patient", "cancerType", "platform"]
+    label_col: meta_cluster
+  - name: human_kidney
+    batch_col: ["donor_id", "suspension_type"]
+    label_col: cell_type
+integration:
+  - name: scvi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+    params:
+      n_latent: 50
+      n_hidden: 256
+      n_layers: 2
+      dropout_rate: 0.06758354479513927
+      lr: 0.0015918894561184453
+    metric_params: {}
+    memory: low
+seeds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+use_gpu: true
+
+# experiment: final_benchmark/scvi_default_hyperparams
+# conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+# datasets:
+#   - name: mouse_pancreatic_islet
+#     batch_col: ["batch", "disease", "assay"]
+#     label_col: cell_type
+#   - name: immune_cell_atlas
+#     batch_col: ["batch", "assay"]
+#     label_col: cell_type
+#   - name: gtex_v9  # exclude for cyclone
+#     batch_col: ["batch"]
+#     label_col: cell_type
+#   - name: tabula_sapiens
+#     batch_col: ["batch", "assay"]
+#     label_col: cell_type
+#   - name: pan_cancer_t
+#     batch_col: ["patient", "cancerType", "platform"]
+#     label_col: meta_cluster
+#   - name: human_kidney
+#     batch_col: ["donor_id", "suspension_type"]
+#     label_col: cell_type
+# integration:
+#   - name: scvi
+#     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+#     params: {}
+#     metric_params: {}
+#     memory: low
+# seeds: [1]
+# use_gpu: true

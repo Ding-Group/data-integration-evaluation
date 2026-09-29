@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run scDREAMER on a dataset
 

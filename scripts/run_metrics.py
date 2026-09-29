@@ -52,27 +52,34 @@ def main():
         if token.startswith("--") and "=" in token:
             k, v = token[2:].split("=")
             metric_kwargs[k] = v
+    print(metric_kwargs)
 
     try:
         adata = sc.read(file)
     except FileNotFoundError as e:
-        sys.stderr.write(f'Metric {metric} failed on dataset {dataset} and integration {method}\n')
+        sys.stderr.write(
+            f"Metric {metric} failed on dataset {dataset} and integration {method}\n"
+        )
         raise e
 
     adata_int = sc.read(file_int)
 
-    if '.' in batch_key:
-        new_batch_key = batch_key.replace('.', '_')
+    # This is to post-hoc add in the new label keys for the granularity experiments
+    if label_key not in adata_int.obs.columns:
+        adata_int.obs[label_key] = adata.obs[label_key]
+
+    if "." in batch_key:
+        new_batch_key = batch_key.replace(".", "_")
         adata.obs[new_batch_key] = adata.obs[batch_key]
         adata_int.obs[new_batch_key] = adata_int.obs[batch_key]
         batch_key = new_batch_key
-    if '.' in label_key:
-        new_label_key = label_key.replace('.', '_')
+    if "." in label_key:
+        new_label_key = label_key.replace(".", "_")
         adata.obs[new_label_key] = adata.obs[label_key]
         adata_int.obs[new_label_key] = adata_int.obs[label_key]
         label_key = new_label_key
 
-    kwargs = {metric + '_': True}
+    kwargs = {metric + "_": True}
 
     result = metrics(
         adata,
@@ -80,7 +87,7 @@ def main():
         batch_key,
         label_key,
         EMB_KEY,
-        metric_kwargs=metric_kwargs,
+        metric_kwargs={f"{metric.lower()}_kwargs": metric_kwargs},
         **kwargs,
     )
 
@@ -88,7 +95,14 @@ def main():
     results = results.rename({0: "Value", "index": "Metric"}, axis=1)
     results["Dataset"] = dataset
     results["Integration"] = method
-    results = results[['Dataset', 'Integration', 'Metric', 'Value']].dropna()
+    results["BatchKey"] = batch_key
+    results["LabelKey"] = label_key
+    results = results[
+        ["Dataset", "Integration", "Metric", "BatchKey", "LabelKey", "Value"]
+    ].dropna()
+
+    if metric_kwargs:
+        results.insert(len(results.columns) - 1, "Params", str(metric_kwargs))
     results.to_csv(outfile, index=False)
 
 

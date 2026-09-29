@@ -1,0 +1,745 @@
+experiment: label_ablation/mouse_cortex_v1
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: clear
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/01/d1d838fd4a66d27834095ad727a758
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/96/2bccbf3d9d943fda49ffb0a24907fd
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/a5/3f6a83479b3b0988b15a3e759ffdd3
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/74/efafe487c7560a542121afa21a5a2b
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/0d/5fa523e5326d129f2d2e6298c89c76
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/b5/7fdd1bee639887b35cd5eeb3d072f0
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/f0/e99a1b7cc3e4a54a36070d748f2791
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/73/4fe2d056e9f581523b4bcac9d6368e
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/ef/ea312ff2e6c7d465e6e4442462d251
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/ba/06f247d723fd31448535ff67f0d5d7
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/4a/cdaa0a5278808e0f7ae94bfdab9f5f
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/15/0016d819d1dcc31f9c5e3ac666e678
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/03/4681a200e86ee9b8fcebf54b1f955c
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/b0/922ff1afd6695c4675b69de6c62531
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: saucie
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/68/5448c3d83600d87788b8afb710f5d1
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/26/0a6248e9533e9f0009c23571a2f131
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/7c/e805e3b8cbee2acca2f74226f18650
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/ff/f04b35615009d34ede97736afa5508
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/41/200e84455af67c669afcc94550d40b
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/d4/32efeff63491d228df2f0e47182a25
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/34/7dedf26bc8b55929264b219ba919a8
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/8a/65fa26ad26d8d68783a31a44904d23
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/9a/ed06729ca1548ed3e344b2f2d92d92
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/25/cd490ee334bdb0ee3026a6d27b8666
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/54/cf0c7178c98e627c13e1826a40b6b7
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/a4/4f028e67d66d21575d0b40bb165f9c
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/21/15688137956c49a3dbe9f205426d0c
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: mouse_cortex_seq_techs_label_5
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/0d/2b376e13988f08168b892fe1dc3ae9
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/ff/4fb4be2e68c0f6f1659a022179effc
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/1f/c113b23134a9c7dceedd8624f7a570
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/cb/6f74934fdc2fa0ef52872698194de8
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/58/5da0e8c635170d9d039517b9e31954
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/cd/50e8b26351beca7a0b338d20314cfb
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/a6/de6e001173c0c562e1d36b803466e5
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/31/ba18af23be85dbb70db4a75e1a20c1
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/9d/d824b144659f2288acafb4add56bf3
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/7c/28568298f08918da09ab01a6fd6014
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/59/b1015a1b7fbf39d7a2441dea72d9bc
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/c6/08e70c4a503d09de02517b0011ba49
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/72/46d07afeaf6755b93c8dab88473e3b
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/61/3eb088221bd75309e213624f14a10c
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/4e/26f7802a7775f7b3b6e701321556f0
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: saucie
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/1b/97d6bcd869ad9eee29b61664872c49
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/07/7d7fa6ac73b62095e4e33ae3396306
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/e0/243c266037e54f44e97cb152409c77
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/3d/04463cca82f4a71484132532bc2c27
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/c2/2bd77ea635269e0f262746ddd4fc1d
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/55/48845d2e54f6ea02187bd90b78d181
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/46/e583da9d8f3cd0c2c0e2f25646f63b
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/fe/53ec28c6b91d3649d5c20155df0e2f
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/8a/2356c34ca5e2dce88bdcdd534e471c
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/ce/f806870cf7c3e92e7bd70664d8850c
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/7a/20ce77317c300de932857da444f3d6
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/df/964aad2364635d33fc74bde13a70da
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/aa/125becd66ddb132909a2448fa4fc84
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: mouse_cortex_seq_techs_label_10
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/9a/f78639e1fb831e71ed23d89beaf8e7
+    batch_col: ["Method"]
+    label_col: celltype_mutated
+
+  - integration: clear
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/c6/10f2d19737cb2f7aa320921fc2b4b3
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/1c/558918d747a40691d8189a06d01a3f
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/f2/1ccef4bc4418d5c56ff018e7988cd2
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/0b/d3eb1af0b5a45fee83e50b2b7f6a3a
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/25/ae102f2e6b9934c1414228db71d45d
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/36/271dcdd37c0b970f03d5a137a2a587
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/b0/5a0b2c00781fc6d7b86d86e524a71e
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/e2/6687927611333853e5b23e64cbb362
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/b2/09225fe26acfa4546e5c4230f89b85
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/21/0c7937abbeafbb3e989f9b067ac8fa
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/e2/0c45ac394340f50214705881c435bb
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/b7/e8f50b9a801083a388c0687b840b34
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/2a/06268408d096ec2c0d9ff48ebe544a
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/38/ff9f9532d2811ef9ee513aa42b2b35
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: saucie
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/e0/e695c3f1b7bba16c8c527963a0aa27
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/82/9ec4db1821a950bb6bdde5e1dc9c21
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/db/2dd708568dad5b4a79ae90b83fbe1f
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/71/d2b798885570a4700e7d5b9d10605b
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/ba/e64fe4dfe48256546d2dc4c9b67145
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/d1/278ab595ea8fc1537d4a7acff94cb4
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/7e/16d077064f58848171833da2b0e485
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/1f/c1238901ce35ae89f797be80565521
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/84/5a7cabd3979c4d28ef3eb44712ec62
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/cc/90c4393bb4751bd6586c3dba4b475f
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/26/9255126f09853a45d725b62fbe7435
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/7c/665e735e289da6fb0026e18bfb0de5
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/2c/5e653fa72d05f6d32d093194bb6d8a
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: mouse_cortex_seq_techs_label_20
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/a5/5450309a9850a5c05a9c9e8b04a964
+    batch_col: ["Method"]
+    label_col: celltype_mutated
+
+  - integration: clear
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/b2/a250445508de284f364e036bc61c40
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/f5/7fedb33c3812c0812a778e86bb9712
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/98/88fb4fd76082968bbfb25b9f27172e
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/29/61f7ede2e7561e739e802a57fe45f6
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/f8/9bc2a5c885ca8680011219c51fd7e7
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/8a/0f09c4397be8268c59e5b943205298
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/9f/70f72085e33cc95f6bb1c2043cae5e
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/e7/ee4fc05683f9addefcf6fdc3df0e39
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/24/71aff8bba36afebc16fa7fce34d0b7
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/78/221b3a129cdd3c4dccf710782a7bbc
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/d5/efe2f0f16ffb333830f688352e614e
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/4b/77df80e859a06769977825268a10d7
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/ef/e07918986522e7eb4f057748d8bb98
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/61/e36383ab48d72a0ce8e3a0ca8e24a9
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: saucie
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/f9/e898ad4efe392d832765b5184153b6
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/a5/324535372df18ffa1d1afbf2d4c21c
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/44/90e69e9b48ecd14d9f9de5641105de
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/aa/e15953618802dbad93ec18d180a2ef
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/68/3fa4b84a527b351f64c0a4f4431be2
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/07/bbc09f07735e9b03c9deba057b3cd5
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/ef/afe3923085d4373fd0b54d23310b20
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/b0/943d6aaa484a6a773302d8eef5140a
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/88/1b3891ff3d8f55baa29371ac318c24
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_cpu/6f/0c4b5761f465ef3243c6b02b2b5551
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/fb/a14681a806e0f94ecd67db43cd67fe
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/1b/4192926fceca017adafb905417043f
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/65/8b930ff2a0d72ba7a430e0ae093d18
+    batch_col: ["Method"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: mouse_cortex_seq_techs_label_30
+    dir: ablation_work/label_ablation/mouse_cortex_v2_gpu/b3/735d787f2afe83a9a834bb3d8d30da
+    batch_col: ["Method"]
+    label_col: celltype_mutated
+
+metrics:
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCH
+    params: {}
+  - name: SCGRAPHP
+    params: {}
+  - name: SCGRAPHM
+    params: {}
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  - name: ISOLISI
+    params: {}
+  

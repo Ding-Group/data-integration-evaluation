@@ -1,0 +1,936 @@
+experiment: label_ablation/human_lung_v1
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/ae/06e89667e2c5c36c267018cb202901
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/d2/99f9b41997b74a975d488b4f74c72d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/21/66bead063189bc9e09cfc847e24b8b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/d7/9e6979566d29dd826ffec25de55b46
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/ce/9d4bf6c7e335a4e08ddd7317ef649e
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: geneformer
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_llm/4a/0a69bf1c2e347f2e4f461d0483cd0d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: geneptw
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_llm/28/37d95cbf2a3a08a2bfb51783c6678f
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/e3/a91817ad35b508b72fec3009dfa68d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/fc/9e02ce9edc820a487d4b9f3268416c
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/1a/be29f28aae7500e61a93d732979dcb
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: langcell
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_llm/fa/2b755141344c4c308d044b8d56e023
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/98/59999ec28266034e1bec1bb9e48211
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/cd/0fe342fb770e82117899f4c094c34d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/82/46b3772898550931e873f9aa4d7aac
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/9a/0ca5b4cb1f4f375d5b73a376c0fd90
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/0e/b351e83c6af45373afff1ec0cb1d44
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/0f/d4e1cfa543defc56f4670e816c6fff
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/94/654dfd7dad6aae82b814e58a5da956
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: rpca
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/3d/21f17276d2ec7ec8f2eeb3dcca15fa
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/d0/a5a0bc822b68133a25d4d228ab57eb
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/7e/fdd6f4ef949fa29a7f8807ee2f2431
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/84/17dc04a0c1bbe644e40d47f83fc77f
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/ce/5455e5b3888a89208befb7cfe6d445
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/48/fdbc3df30e37cd4cf11f0c674f048b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/0a/a1d313e38dd89cf069f4b4a7942c11
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/b8/3aa718592508d4a011c8450108859c
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/11/b7766b33e90934048f4c08edcc0609
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scgpt
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_llm/ca/1a87f08f7a966228e67a1a8ccabd9d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/61/1944d35cbca0a1a54465317796c1e5
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scmulan
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_llm/bc/4027a8cec84fd01a7756b2ecdd8435
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/cc/a8cfbbf32db0eb9c17e7688ed790e6
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scprint
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_llm/00/aecb95ba11ff21d75b1ddd1cde5d60
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/af/c93046f842a2971eec9dd43423cbee
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/e1/e8cd38e90958c8363d98b24a03753c
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/10/bdbea233eebf94b5a779b6a317fbb3
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: uce
+    dataset: human_lung_label_5
+    dir: ablation_work/label_ablation/human_lung_v2_llm/de/6fddd7ce8e34d6415f381af05110b1
+    batch_col: ["donor"]
+    label_col: celltype_mutated
+
+  - integration: cca
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/a0/ddc770c0fb65cce3142c3acecd665f
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/17/37500abafd8f7f4f8b070e5b6287b0
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/49/6332e657b045dee67289d60620d5a2
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/25/9404a4fc7f443b3ae8d9fc7b2a7d02
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/c9/5a4146650831ce55379c73ca7d374d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: geneformer
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_llm/a1/e5fb210547db458cdd414425d90c03
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: geneptw
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_llm/3f/2c6501e18fa1036941812e10f81fc6
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/e4/13e0a438ea4506f99c744977db91fb
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/f8/e16af2c60d343b1a518a805be68e28
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/33/505045360b01ca8a7d81bd20b80a3f
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: langcell
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_llm/47/8d2f09640bc2167641f94a8c3f5ecc
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/5c/97d3266988b212b46f6d4c3e8aad51
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/75/f2c9ba4f0da00e552f32713af7047e
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/ad/e46cc9af8fe16d5277f6b090081290
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/1e/8ad6f842d955f5ea96c908b4bf35ab
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/f3/0a7e56560d07d3f8a62b7f69cb21bb
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/ec/ddcfe99b99952bb28ca17dd255866a
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/65/24fbc35f1b6b4223ed8ebfe09414dc
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: rpca
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/09/e1181241a244662fe134c1dee3e804
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/c2/c86126d31de19835fde589b37aba33
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/74/1074375e3380ef35c829ad0c392f4a
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/fd/cf3232b78e08794b8c3f259c266e4b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/c7/de98fbff8cca485a124431badad08b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/72/a1b65f4bf4c4c1193b96ee05cf4a4a
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/af/de36581ba3862d48d9611af5838e2a
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/1d/ec4dd42804e6c17754afdc45d5827d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/9c/819ea8601b25c86785a62b86f31a62
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scgpt
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_llm/5f/32fd8673249b044e722215610b7197
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/80/b95ecd559107fcac717c6b1c086bbe
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scmulan
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_llm/60/e76c5f302c969c457fc96fb4e21430
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/13/8b4c3daf2db1ce7a245275d65813b5
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scprint
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_llm/a3/79045ec8ac9a507cb161655c9969f7
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/0a/0dd976aef030e47d3d49986dca611b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/ca/4874376ba2d0ff134f4326000d24bf
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/bc/e7c2840f9eaa5b22c9f16f58444b46
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: uce
+    dataset: human_lung_label_10
+    dir: ablation_work/label_ablation/human_lung_v2_llm/7a/25d5322a035d0aeac712d3a96efa6c
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+  
+  - integration: cca
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/d4/f75400df0b5740240d38df20a20ddb
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/cb/d963054f4eb7d2b421b48abbabf251
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/46/2dc9c3a66021f908930799228f82a5
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/78/5b7446d46bd8affe1270d1d0b4354f
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/2c/38fbedb9f8304464dd01bdfdc133bc
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: geneformer
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_llm/af/c1eeeb1add3150c63d10616c14f58b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: geneptw
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_llm/7a/da5e22f5f562b5a49b8c6f6eadb7fc
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/31/6e955b165ee0eb53b1c08d5ffe3e45
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/7d/09ee1459c1df0de47c9be80e7fc863
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/ac/998ba8b4a22f77b77bcc64a2c23695
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: langcell
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_llm/51/9ee7b21b3c517fcdbb9ab3159b7053
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/f6/d624f4c4d1860bc0a26d76f256236a
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/2a/e3171b8e16782c0ae8caddbba6db7e
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/59/de8fd3cd2789d3e584d76104eccecd
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/3c/0dca112017fdeca1477ed94b9447aa
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/82/11188984ebf8116cd57031346ce420
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/50/29856abd1de664e8b38657741b367a
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/93/717c269cc07b88d2d802849b05aa32
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: rpca
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/81/5af516769fef7617477967b16c0246
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/4a/0b3e7c7da73573c8cbd166f1e8a0d2
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/78/3ac6d540e9ef13d7fad6604f079a9f
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/ba/0fe4c2e3a0b7e8683cc4bb9d21b2c1
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/c7/9e612e2b5203a12baef8ddaf897b02
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/5a/51fb4c613a5fb2d9ba75aad1a2e6de
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/eb/429cb6827594d9d1caa09c52866706
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/bf/7075eb649e813a70ecfeb40e0cfdd2
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/88/1e65ac3290c9f134340acc5703b9d6
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scgpt
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_llm/77/f6ad744d07ccda12b573399935d15d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/2b/9d0b7be132d264139a1bd8e5aba08c
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scmulan
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_llm/bb/03c8e5b085137d9eb84c5d92478313
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/7d/cd489465995378e980e598f7107045
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scprint
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_llm/32/ef7cbb0131693a20051815a2539c32
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/f7/af0f182e07cd736a4df0ea5a69c776
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/36/63564b02c318d7503c074d653fb318
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/e6/3bb2be804f286c853a6d5ecf5e2e0b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: uce
+    dataset: human_lung_label_20
+    dir: ablation_work/label_ablation/human_lung_v2_llm/6c/18d9217106f060d84c99f2c0909a93
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+  
+  - integration: cca
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/15/ee8537892f5c46106cae178c7eac42
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: clear
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/e0/10a9b4774baa01aa4765ec9c206803
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: cyclone
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/ad/cf6d2eed5a92a3086551c9c10c4457
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: equidistant
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/26/8031031dae12245fce90212910ac76
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: gedi
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/3f/b1c23b79255c490f1df778e1c01243
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: geneformer
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_llm/10/7b960e2488f08ffc245c240c4f92e6
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: geneptw
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_llm/24/ff9b693f69423f97dec9acab6534fc
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: harmony
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/16/8f2ab5a231a967e1fa31338d0cdcda
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: imap
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/1c/a50cdddf496d46c7bd54db5b7eaed0
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: islander
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/f3/6c1531120c7af9df2cce6a94e786b6
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: langcell
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_llm/f1/d2ae2e62de8d25287b766d8e0ce87d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: liger
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/0b/806f6411ced3feb5affc83777ca110
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: mnn
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/db/fe7e4579f616635741c68a77be7f56
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: ocat
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/f8/ffbefb6abaff749f6a0e6fdb960e73
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: oneBigBlob
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/50/a1bdad2d205a42cbd605f9be1cdad8
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: pca
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/98/1d47699d4daadaf65ee3a6d447ce49
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: portal
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/0e/d7567e72ad681d68b1785a6f538a4c
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: respan
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/d3/2b2d5f2c09f2f8748187cc6d3ba781
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: rpca
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/bc/199990c030f0055cf84d0b2b31d697
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scalex
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/81/9659a056c38ce76be63349b8d1bce1
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scanorama
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/ec/0506a2c06e840aa7a9424fd723823a
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scanvi
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/88/44268ced2705e2e500cfb21506e50c
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sccobra
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/d4/a37b18d00e3a6c27a85c3cb2e9ad7f
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sccraft
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/4d/a7528c8a0141568cff37a79d6b3198
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scdml
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/ab/c8fbcb3bbed03308a8411a6d17ba86
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scdreamer
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/a7/7a103fa6903ac553ea36134b608877
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scetm
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/3c/3e99b01d0c0ed1afdd40c0517467cb
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scgpt
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_llm/4b/845faa8add5c59c7b52ff405dfeb8b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scmerge
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_cpu/dd/ce54384c7826d8a6e5daa05eaaf0f7
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scmulan
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_llm/6b/2fe814ffea732b9f5d232eb4d78f15
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scphere
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/44/2ad4c97bcb01b5984227259f0457ca
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scprint
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_llm/00/16d9ceeeb112f30524fcb5cef7c2bc
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: scvi
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/2a/d537ef2f2a52364f15918aff94a32b
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: simba
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/45/f8c80a6fca8e119d69ca89c31dc428
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: sysvi
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_gpu/53/f19a7a30ba82d1fff17dbb54f48d7f
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+
+  - integration: uce
+    dataset: human_lung_label_30
+    dir: ablation_work/label_ablation/human_lung_v2_llm/e8/0f0ab270e0f3dafcec30d42e17894d
+    batch_col: ["donor"]
+    label_col: celltype_mutated 
+metrics:
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCH
+    params: {}
+  - name: SCGRAPHP
+    params: {}
+  - name: SCGRAPHM
+    params: {}
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  - name: ISOLISI
+    params: {}
+  

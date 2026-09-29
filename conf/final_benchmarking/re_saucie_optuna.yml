@@ -1,0 +1,75 @@
+experiment: final_benchmark/re_saucie_optuna
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: human_pancreas
+    batch_col: ["tech"]
+    label_col: celltype
+  - name: neurips_bmmc
+    batch_col: ["batch"]
+    label_col: cell_type
+  # - name: human_lung
+  #   batch_col: ["batch"]
+  #   label_col: cell_type
+  - name: scib_sim1
+    batch_col: ["Batch"]
+    label_col: Group
+  - name: scib_sim2
+    batch_col: ["Batch"]
+    label_col: Group
+  - name: human_fetal_gut
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+  # - name: human_retina_organoid_tissue
+  #   batch_col: ["sample_id", "tissue"]
+  #   label_col: cell_type
+  - name: mouse_regulatory_T
+    batch_col: ["method", "orig.ident"]
+    label_col: "cell.type"
+  - name: human_adipose
+    batch_col: ["technology", "individual"]
+    label_col: cell_type
+  - name: tian_multitech
+    batch_col: ["tech"]
+    label_col: cell_line
+  - name: nph_liver
+    batch_col: ["Sample"]
+    label_col: Celltype
+  - name: nph_cerebellum
+    batch_col: ["Sample"]
+    label_col: Celltype
+  - name: tabula_muris_lung
+    batch_col: ["mouse.id", "tech"]
+    label_col: cell_ontology_id
+  - name: human_pbmc_sequencing_techs
+    batch_col: ["Method", "Experiment"]
+    label_col: CellType
+  - name: mouse_cortex_sequencing_techs
+    batch_col: ["Method", "Experiment"]
+    label_col: CellType
+  - name: mouse_retina
+    batch_col: ["dataset"]
+    label_col: CellType
+  - name: mouse_mammary
+    batch_col: ["BATCH"]
+    label_col: celltype
+  - name: macaque_retina
+    batch_col: ["BATCH"]
+    label_col: celltype
+  - name: jurkat_293t
+    batch_col: ["dataset"]
+    label_col: cell_type
+  - name: 3_5_pbmc
+    batch_col: ["batch"]
+    label_col: celltype
+  - name: cellranger_versions
+    batch_col: ["batch"]
+    label_col: cell_type
+integration:
+  - name: saucieoptuna
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
+    params: {}
+    metric_params: {}
+    memory: high
+seeds: [1]
+use_gpu: true
+n_trials: 100

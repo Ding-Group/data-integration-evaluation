@@ -1,0 +1,42 @@
+experiment: final_benchmark/saucie_optuna
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: human_pancreas_full
+    batch_col: ["tech"]
+    label_col: celltype
+  - name: human_dkd
+    batch_col: ["batch", "assay"]  # Main batch column first
+    label_col: cell_type
+  - name: snpatho_liver
+    batch_col: ["sample_id", "processing_method"]
+    label_col: major_annotation
+  - name: mouse_hsc_prog
+    batch_col: ["tech"]
+    label_col: CellType
+  - name: villani_dcs
+    batch_col: ["batch"]
+    label_col: cell_type
+  - name: haniffa_covid_2samples
+    batch_col: ["sample_id"]
+    label_col: initial_clustering
+  - name: haniffa_covid_imbalance
+    batch_col: ["sample_id"]
+    label_col: initial_clustering
+  - name: human_liver
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_bipolar
+    batch_col: ["donor_id", "assay"]
+    label_col: cell_type
+  - name: mouse_intestine
+    batch_col: ["sample_name", "condition", "location"]
+    label_col: cell_type
+integration:
+  - name: saucieoptuna
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
+    params: {}
+    metric_params: {}
+    memory: high
+seeds: [1]
+use_gpu: true
+n_trials: 100

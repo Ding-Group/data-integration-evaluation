@@ -1,3 +1,5 @@
+import groovy.json.JsonOutput
+
 process RUN_METRIC {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
@@ -66,6 +68,56 @@ process RUN_METRIC {
         """
 }
 
+
+process RUN_METRIC_FINAL {
+    conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
+
+    errorStrategy {
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
+    }
+
+    tag "RUN_METRIC_${integration}_${dataset}"
+
+    publishDir "$params.outdir/metrics/${dataset}/${integration}",
+        pattern: "*.csv",
+        saveAs: { filename -> "metrics.csv" }
+
+    memory {
+        get_memory(raw_file.size(), "4.GB", task.attempt, "16.GB")
+    }
+
+    input:
+        tuple val(dataset), val(integration), val(batch_col), val(label_col), path(integrated_file),
+            path(raw_file), val(metric_params)
+
+    output:
+        tuple val(dataset), val(integration), path("${dataset}-${integration}.csv")
+
+    script:
+        def json_str = JsonOutput.toJson(metric_params)
+        """
+        set +e
+        echo ${json_str}
+
+        python /ubc/cs/research/beaver/projects/Single-cell-integration-metrics/scripts/run_metrics_final.py \\
+            -b "${batch_col[0]}" \\
+            -c "${label_col}" \\
+            -d "${dataset}" \\
+            -m "${integration}" \\
+            -p '${json_str}' \\
+            ${raw_file} \\
+            ${integrated_file} \\
+            "${dataset}-${integration}.csv" \\
+
+        """
+
+    stub:
+        """
+        touch "${dataset}-${integration}.csv"
+        """
+}
+
+
 process COMBINE_METRICS {
     cache false
 
@@ -120,6 +172,24 @@ workflow METRICS {
             .map( it -> file(it[2]) )
 
 }
+
+workflow METRICS_FINAL {
+    take:
+        integrated_ch    
+    main:
+        RUN_METRIC_FINAL(integrated_ch)
+
+        collected_metrics_ch = RUN_METRIC_FINAL.out
+            .collect { it -> file(it[2])}
+            .view()
+
+        COMBINE_METRICS(collected_metrics_ch)
+    emit:
+        calculated_metric_sh = RUN_METRIC_FINAL.out
+            .map( it -> file(it[2]) )
+
+}
+
 
 
 /*

@@ -1,0 +1,306 @@
+experiment: label_ablation/human_lung_v1_orig
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/c9/1e81ab5673dc538ee222c5cbc55667
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: clear
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/06/9f9ecda4bea797aa4468a01408c561
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: cyclone
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/f8/a4634bde129913b30699e9ca502bfd
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: equidistant
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/1a/212017a731d6e8760140fdd9200754
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: gedi
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/2f/1c3c4dda79ca5251af58a2ffe18996
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: geneformer
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_llm_methods/61/e1c296135608caba51089c46272c51
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: geneptw
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_llm_methods/36/8f154ff83d3af079e739b40993d250
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: harmony
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/f8/8f0226ee25cc54bbb0c2d664907beb
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: imap
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/37/eba5b43fda7064108d9362c521982c
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: insct
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/42/cf3367a4c6b44bc694a014de8d809f
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: islander
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/6e/a5e05872ef237bb1d276abff662c82
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: langcell
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_llm_methods/f9/c21496b3c924816951782fcabd0c02
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: liger
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/9e/b5a76fb7307aba4a28ae2aa13bd582
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: mnn
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/aa/6c030a756b51fb64c3c79adc345a15
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: ocat
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/6a/20e7ccb0910eef9a0b138eb7cfe98c
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: oneBigBlob
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/3b/119df0c41bcc6272c497aa744af406
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: pca
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/cc/36f5c6e693edf0779fcd97aae11e15
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: portal
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/d1/68a82f7d4b233af89be142420b80f2
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: respan
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/4a/53578069392aea7ff0668ae498ee61
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: rpca
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/8f/8070448b517377edf2dfac2a881292
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: saucie
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/b4/5fb234f5b305809ee7b4da0850ef74
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scalex
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/d6/fed8baa2c7c72b8b3d196c913ed6cc
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scalign
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/69/b9c4bfabd5dcce3990f88191bbef8b
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scanorama
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/75/641bd04c75f1a271a4436554701f80
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scanvi
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/62/f845c71b2cf4beaa07cac395c8da2e
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: sccobra
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/2f/a8a2bfdedb75d1b36126c3bc8cfbed
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: sccraft
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/d0/96581a5604d61dc21a942b9ab463a5
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scdml
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/a1/a05815959334aecd109576cbbb535e
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scdreamer
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/ee/69dec5d5cc375e92559dcb1d0174bc
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scetm
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/c3/b0f683aac1a8d65daae59252465856
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scgpt
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_llm_methods/11/61896f2ca685765f8d6d6c0e4a89db
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scmerge
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_cpu_methods/94/45da7adb02d7001f05c6309d457fc1
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scmulan
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_llm_methods/5d/bf3b1fde573b97ba6606f150eb2d49
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scphere
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/b1/6af227352b687e357666295da365ab
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scprint
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_llm_methods/d0/434df4e9a56dc774c058e7d5cc3848
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: scvi
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/80/fdbf3afc567fd11bbdddec8dfffc30
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: simba
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/ee/fcea22f46c96fc8f3256ac02a59eed
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: sysvi
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_gpu_methods/fa/ba33240b56c17bb227e918c9eac1de
+    batch_col: ["batch"]
+    label_col: cell_type 
+
+  - integration: uce
+    dataset: human_lung
+    dir: ablation_work/final_benchmarking/re_llm_methods/25/441b379539684246cfc77cca5e02e2
+    batch_col: ["batch"]
+    label_col: cell_type 
+metrics:
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCH
+    params: {}
+  - name: SCGRAPHP
+    params: {}
+  - name: SCGRAPHM
+    params: {}
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  - name: ISOLISI
+    params: {}
+  

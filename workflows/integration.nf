@@ -3,6 +3,8 @@
     PROCESSES
 ========================================================================================
 */
+import groovy.json.JsonOutput
+
 
 process RUN_INTEGRATE {
     errorStrategy {
@@ -26,7 +28,7 @@ process RUN_INTEGRATE {
         memory_usage == 'high' ?
             get_memory(data.size(), "10.GB", task.attempt, "24.GB") :
             get_memory(data.size(), "16.GB", task.attempt, "48.GB")
-        println "[${task.process}] Memory requested: ${mem}"
+        // println "[${task.process}] Memory requested: ${mem}"
         return mem
     }
 
@@ -66,6 +68,134 @@ process RUN_INTEGRATE {
 }
 
 
+process RUN_INTEGRATE_FINAL {
+    errorStrategy {
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
+    }
+
+    tag "RUN_INTEGRATE_${integration}_${dataset}_${seed}"
+
+    publishDir "$params.outdir/integration-models/${dataset}/${integration}",
+        pattern: "save_dir",
+        saveAs: { pathname -> pathname + "-${seed}" }
+
+    label params.use_gpu ? 'gpu_process' : null
+
+    memory { 
+        def mem = memory_usage == 'low' ?
+            get_memory(data.size(), "2.GB", task.attempt, "8.GB") :
+        memory_usage == 'medium' ?
+            get_memory(data.size(), "4.GB", task.attempt, "12.GB") :
+        memory_usage == 'high' ?
+            get_memory(data.size(), "10.GB", task.attempt, "24.GB") :
+            get_memory(data.size(), "16.GB", task.attempt, "48.GB")
+        // println "[${task.process}] Memory requested: ${mem}"
+        return mem
+    }
+
+    resourceLimits memory: "256.GB"
+
+    input:
+        tuple val(dataset), val(batch_col), val(label_col), path(data), val(seed),
+            val(integration), val(conda_env), val(integration_params), val(metric_params), val(memory_usage), path(run_script)
+
+    output:
+        tuple val(dataset), val(integration), val(seed), val(batch_col), val(label_col), path(data), path("save_dir"), val(metric_params)
+
+    script:
+        def params_map = integration_params as Map
+        def param_str = params_map.collect { k, v -> "--${k}=${v}" }.join(' ')
+        """
+        source ${params.conda_location}
+        conda activate ${conda_env}
+        export LD_LIBRARY_PATH=\${CONDA_PREFIX}/lib/R/lib:\${CONDA_PREFIX}/lib:\$LD_LIBRARY_PATH
+        export PATH="\${CONDA_PREFIX}/bin:$PATH"
+        mkdir save_dir
+        echo ${param_str}
+
+        python ${run_script} \\
+            -o save_dir \\
+            -b ${batch_col.join(' -b ')} \\
+            -c ${label_col} \\
+            ${param_str} \\
+            --seed ${seed} \\
+            ${data}
+        """
+
+    stub:
+        """
+        mkdir save_dir
+        touch save_dir/adata.h5ad
+        """
+}
+
+
+process RUN_INT_F_OPT {
+    errorStrategy {
+        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
+    }
+
+    tag "OPTUNA_${integration}_${dataset}_${seed}"
+
+    publishDir "$params.outdir/integration-models/${dataset}/${integration}",
+        pattern: "save_dir",
+        saveAs: { pathname -> pathname + "-${seed}" }
+
+    label params.use_gpu ? 'gpu_process' : null
+
+    memory { 
+        def mem = memory_usage == 'low' ?
+            get_memory(data.size(), "2.GB", task.attempt, "8.GB") :
+        memory_usage == 'medium' ?
+            get_memory(data.size(), "4.GB", task.attempt, "12.GB") :
+        memory_usage == 'high' ?
+            get_memory(data.size(), "10.GB", task.attempt, "24.GB") :
+            get_memory(data.size(), "16.GB", task.attempt, "48.GB")
+        // println "[${task.process}] Memory requested: ${mem}"
+        return mem
+    }
+
+    resourceLimits memory: "256.GB"
+
+    input:
+        tuple val(dataset), val(batch_col), val(label_col), path(data), val(seed),
+            val(integration), val(conda_env), val(integration_params), val(metric_params), val(memory_usage), path(run_script)
+
+    output:
+        tuple val(dataset), val(integration), val(seed), val(batch_col), val(label_col), path(data), path("save_dir"), val(metric_params)
+
+    script:
+        def params_map = integration_params as Map
+        def param_str = params_map.collect { k, v -> "--${k}=${v}" }.join(' ')
+
+        def metric_param_str = JsonOutput.toJson(metric_params)
+        """
+        source ${params.conda_location}
+        set +u
+        conda activate ${conda_env}
+        set -u
+        export PATH="\${CONDA_PREFIX}/bin:$PATH"
+        mkdir save_dir
+        echo ${param_str}
+
+        python ${run_script} \\
+            -o save_dir \\
+            -b ${batch_col.join(' -b ')} \\
+            -c ${label_col} \\
+            -p '${metric_param_str}' \\
+            ${param_str} \\
+            --seed ${seed} \\
+            ${data}
+        """
+
+    stub:
+        """
+        mkdir save_dir
+        touch save_dir/adata.h5ad
+        """
+}
+
+
 process RUN_INTEGRATE_MULTIOME {
     errorStrategy {
         (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= params.maxRetries) ? 'retry' : 'ignore'
@@ -88,7 +218,7 @@ process RUN_INTEGRATE_MULTIOME {
             get_memory(atac_data.size(), "10.GB", task.attempt, "16.GB") :
             get_memory(atac_data.size(), "24.GB", task.attempt, "48.GB")
 
-        println "[${task.process}] Memory requested: ${mem}"
+        // println "[${task.process}] Memory requested: ${mem}"
         return mem
     }
 
@@ -159,6 +289,65 @@ workflow INTEGRATION {
                     file(it[6] + "/adata.h5ad"), // Path to integrated H5AD
                     it[5],                       // Path to reference expression H5AD
                     it[7]                        // Organism
+                )
+            }
+}
+
+
+workflow INTEGRATION_FINAL {
+
+    take:
+        datasets_ch
+        integrations_ch
+
+    main:
+
+        all_integrations_ch = datasets_ch
+            .combine(Channel.fromList(params.seeds))
+            .combine(integrations_ch)
+
+        RUN_INTEGRATE_FINAL(all_integrations_ch)
+
+    emit:
+        integrated_ch = RUN_INTEGRATE_FINAL.out
+            .map { it ->
+                tuple(
+                    it[0],                       // Dataset name
+                    it[1] + "-" + it[2],         // Integration name
+                    it[3],                       // Batch columns
+                    it[4],                       // Cell type label column
+                    file(it[6] + "/adata.h5ad"), // Path to integrated H5AD
+                    it[5],                       // Path to reference expression H5AD
+                    it[7]                        // Metric params
+                )
+            }
+}
+
+workflow INT_FINAL_OPT {
+
+    take:
+        datasets_ch
+        integrations_ch
+
+    main:
+
+        all_integrations_ch = datasets_ch
+            .combine(Channel.fromList(params.seeds))
+            .combine(integrations_ch)
+
+        RUN_INT_F_OPT(all_integrations_ch)
+
+    emit:
+        integrated_ch = RUN_INT_F_OPT.out
+            .map { it ->
+                tuple(
+                    it[0],                       // Dataset name
+                    it[1] + "-" + it[2],         // Integration name
+                    it[3],                       // Batch columns
+                    it[4],                       // Cell type label column
+                    file(it[6] + "/adata.h5ad"), // Path to integrated H5AD
+                    it[5],                       // Path to reference expression H5AD
+                    it[7]                        // Metric params
                 )
             }
 }

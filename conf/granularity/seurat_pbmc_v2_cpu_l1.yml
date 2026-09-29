@@ -1,0 +1,65 @@
+experiment: granularity_ablation/seurat_pbmc_final_metrics_cpu_l1
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: seurat_pbmc
+    batch_col: ["donor"]
+    label_col: "celltype.l2"
+integration:
+  - name: harmony
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: mnn
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: oneBigBlob
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: scanorama
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: equidistant
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: cca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: liger
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/benchmarking"
+    params: {}
+    metric_params:
+      - SCGRAPHM: {"metric": "cosine"}
+    memory: high
+  - name: rpca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    metric_params: {}
+    memory: massive
+  - name: pca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    metric_params: {}
+    memory: low
+  # - name: scmerge
+  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmerge-env"
+  #   params: {}
+  #   metric_params: {}
+  #   memory: high
+  - name: gedi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/gedi-env"
+    params: {}
+    metric_params: {}
+    memory: massive
+seeds: [1]
+use_gpu: false

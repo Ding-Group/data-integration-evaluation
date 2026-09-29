@@ -39,13 +39,16 @@ def run_sccobra(adata, batch_keys, use_hvg, hvg_method, max_iteration, seed):
         adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True, copy=True
     )
 
+    extension = os.urandom(2).hex()
+    os.makedirs(join(os.environ['TMPDIR'], extension), exist_ok=True)
+
     _, batch_key_final = combine_batch(adata_copy, batch_keys)
     adata_copy = scCobra(
         adata_copy,
         batch_name=batch_key_final,
         min_features=0,
         min_cells=3,
-        outdir=os.environ['TMPDIR'],
+        outdir=join(os.environ['TMPDIR'], extension),
         show=False,
         processed=True,
         max_iteration=max_iteration,

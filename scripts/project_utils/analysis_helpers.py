@@ -1,18 +1,33 @@
-import anndata as ad
-import matplotlib.cm as cm
 import matplotlib.pyplot as plt
+import colorcet as cc
 import numpy as np
-import pandas as pd
-import scanpy as sc
 from sklearn.metrics import silhouette_samples, silhouette_score
 from pathlib import Path
 
 from adata_utils import EMB_KEY
 
 
-def find_dir(h):
+NAME_MAP = {
+    'cca': "CCA", 'clear': "CLEAR", 'cyclone': "CYCLONE", 'equidistant': 'Equidistant',
+    'gedi': "GEDI", 'geneformer': 'GeneFormer', 'geneptw': 'GenePT-W', 'harmony': 'Harmony',
+    'imap': "iMAP", 'insct': 'INSCT',  'islander': 'Islander', 'langcell': "LangCell",
+    'liger': "LIGER", 'mnn': "MNN", 'ocat': "OCAT", 'oneBigBlob': 'oneBigBlob',
+    'pca': "PCA", 'portal': "Portal", 'respan': "ResPAN", 'rpca': "RPCA",
+    'saucie': "SAUCIE", 'scalex': "SCALEX", 'scalign': "scAlign", 'scanorama': "Scanorama", 
+    'scanvi': "scANVI", 'sccobra': "scCobra", 'sccraft': "scCRAFT", 'scdml': 'scDML',
+    'scdreamer': 'scDREAMER', 'scetm': 'scETM', 'scgpt': 'scGPT', 'scmerge': 'scMerge',
+    'scmulan': "scMulan", 'scphere': 'scPhere', 'scprint': 'scPRINT', 'scvi': "scVI", 
+    'simba': "SIMBA", 'sysvi': "sysVI", 'uce': "UCE"
+}
+
+integrations = sorted(NAME_MAP.values(), key=lambda k: k.lower())
+palette = cc.glasbey[:len(integrations)]
+INTEGRATION_COLOR_DICT = {key: palette[i] for i, key in enumerate(integrations)}
+
+
+def find_dir(h, base='/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/work/'):
     a,b = h.split('/')
-    base = Path(f"/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/work/{a}/")
+    base = Path(f"{base}/{a}/")
     prefix = Path(b)
     dirs = [
         p for p in base.glob("*")

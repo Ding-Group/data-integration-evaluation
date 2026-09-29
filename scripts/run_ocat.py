@@ -1,10 +1,8 @@
-#!/usr/bin/env python
-
 """
-Run scVI on a dataset
+Run OCAT on a dataset
 
 Usage:
-    run_scvi.py -o <path> (-b <batch>)...  -c <key> [options] <file>
+    run_ocat.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.
@@ -15,6 +13,7 @@ Options:
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
     --n-ghosts=<int>       Number of ghost cells to use. [Default: 65]
     --dim=<int>            Dimensions of representation. [Default: 60]
+    --p=<float>            p [Default: 0.3]
     --seed=<int>           Random seed. [Default: 0]
 """
 
@@ -29,7 +28,7 @@ from project_utils.adata_utils import EMB_KEY, add_umap, combine_batch, minimise
 from project_utils.hvg_utils import select_hvgs
 
 
-def run_ocat(adata, batch_keys, use_hvg, hvg_method, n_ghosts, dim, seed):
+def run_ocat(adata, batch_keys, use_hvg, hvg_method, n_ghosts, dim, p, seed):
     np.random.seed(seed)
     adata_copy = select_hvgs(adata, use_hvg=use_hvg, hvg_method=hvg_method, subset=True)
     _, batch_key_final = combine_batch(adata_copy, batch_keys)
@@ -40,7 +39,7 @@ def run_ocat(adata, batch_keys, use_hvg, hvg_method, n_ghosts, dim, seed):
     ]
     data_list = [i.layers["counts"] for i in ref_list]
     m_list = [n_ghosts] * len(data_list)
-    ZW = OCAT.run_OCAT(data_list, dim=dim, m_list=m_list, random_seed=seed)
+    ZW = OCAT.run_OCAT(data_list, dim=dim, m_list=m_list, p=p, random_seed=seed)
 
     query_latent = ad.AnnData(ZW)
     query_latent.obs = pd.concat([a.obs for a in ref_list])
@@ -59,13 +58,14 @@ def main():
     use_hvg = not args["--no-use-hvg"]
     hvg_method = args["--hvg-method"]
     n_ghosts = int(args["--n-ghosts"])
+    p = float(args['--p'])
     dim = int(args["--dim"])
     seed = int(args["--seed"])
 
     print("Loading data")
     adata = ad.read_h5ad(file)
     print("Running integration")
-    adata = run_ocat(adata, batch_keys, use_hvg, hvg_method, n_ghosts, dim, seed)
+    adata = run_ocat(adata, batch_keys, use_hvg, hvg_method, n_ghosts, dim, p, seed)
     print("Adding UMAP")
     add_umap(adata)
     print("Saving data")

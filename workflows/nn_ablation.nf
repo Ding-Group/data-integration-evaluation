@@ -16,8 +16,8 @@ process RUN_METRIC {
         (metric == "ALL_CLUSTER" || metric == 'CSMC') ? 
             get_memory(raw_file.size(), "4.GB", task.attempt, "8.GB") :
         metric == "KBET" ?
-            get_memory(raw_file.size(), "4.GB", task.attempt, "48.GB") :
-            get_memory(raw_file.size(), "2.GB", task.attempt, "4.GB")
+            get_memory(raw_file.size(), "4.GB", task.attempt, "10.GB") :
+            get_memory(raw_file.size(), "2.GB", task.attempt, "8.GB")
     }
 
     label "error_retry"
@@ -78,7 +78,7 @@ workflow NN_ABLATION {
                 integration.integration,
                 integration.batch_col,
                 integration.label_col,
-                file("work/" + integration.dir + "/save_dir/adata.h5ad"),
+                file(integration.dir + "/save_dir/adata.h5ad"),
                 file("/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/data/" + integration.dataset + ".h5ad")
             )
         }

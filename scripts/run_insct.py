@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 """
-Run scVI on a dataset
+Run INSCT on a dataset
 
 Usage:
-    run_scvi.py -o <path> (-b <batch>)...  -c <key> [options] <file>
+    run_insct.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help                   Show this screen.
@@ -17,6 +17,9 @@ Options:
     --epochs=<int>              Number of epochs to train. [Default: 1000]
     --k=<int>                   k to use. [Default: 150]
     --batch-size=<int>          Training batch size. [Default: 64]
+    --margin=<float>            Triplet loss margin. [Default: 1.0]
+    --k-to-m-ratio=<float>      Ratio of residual cells used for KNN triplets relative to MNN cells. [Default: 0.75]
+    --n-epochs-without-progress=<int>  Early stopping patience. [Default: 20]
     --seed=<int>                Random seed. [Default: 0]
 """
 
@@ -33,7 +36,18 @@ from project_utils.hvg_utils import select_hvgs
 
 
 def run_insct(
-    adata, batch_keys, use_hvg, hvg_method, embedding_dims, epochs, k, batch_size, seed
+    adata,
+    batch_keys,
+    use_hvg,
+    hvg_method,
+    embedding_dims,
+    epochs,
+    k,
+    batch_size,
+    margin,
+    k_to_m_ratio,
+    n_epochs_without_progress,
+    seed,
 ):
     np.random.seed(seed)
     random.seed(seed)
@@ -47,7 +61,13 @@ def run_insct(
         print(f"Setting k to size of smallest batch, {k}")
 
     model = TNN(
-        embedding_dims=embedding_dims, epochs=epochs, k=k, batch_size=batch_size
+        embedding_dims=embedding_dims,
+        epochs=epochs,
+        k=k,
+        batch_size=batch_size,
+        margin=margin,
+        k_to_m_ratio=k_to_m_ratio,
+        n_epochs_without_progress=n_epochs_without_progress,
     )
     model.fit(X=adata_copy, batch_name=final_batch_key)
     embs = model.transform(X=adata_copy)
@@ -68,6 +88,9 @@ def main():
     epochs = int(args["--epochs"])
     k = int(args["--k"])
     batch_size = int(args["--batch-size"])
+    margin = float(args["--margin"])
+    k_to_m_ratio = float(args["--k-to-m-ratio"])
+    n_epochs_without_progress = int(args["--n-epochs-without-progress"])
     seed = int(args["--seed"])
 
     print("Loading data")
@@ -82,6 +105,9 @@ def main():
         epochs,
         k,
         batch_size,
+        margin,
+        k_to_m_ratio,
+        n_epochs_without_progress,
         seed,
     )
     print("Adding UMAP")

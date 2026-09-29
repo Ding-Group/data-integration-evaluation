@@ -1,0 +1,171 @@
+experiment: dataset_ablation/batch_imbalance_cpu_methods
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: epitome_batch_imbalance_0
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_1
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_2
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_3
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_4
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_5
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_6
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_7
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_8
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: epitome_batch_imbalance_9
+    batch_col: ["sample"]
+    label_col: cell_type
+integration:
+  - name: harmony
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    memory: low
+  - name: mnn
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    memory: high
+  - name: oneBigBlob
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    memory: low
+  - name: scanorama
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    memory: low
+  - name: equidistant
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    memory: low
+  - name: cca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    memory: high
+  - name: liger
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/benchmarking"
+    params: {}
+    memory: high
+  - name: rpca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
+    params: {}
+    memory: massive
+  - name: pca
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    memory: low
+  - name: scmerge
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmerge-env"
+    params: {}
+    memory: high
+  - name: gedi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/gedi-env"
+    params: {}
+    memory: massive
+seeds: [1]
+metrics:
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: ISOLISI
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: AGREE
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: SCGRAPHP
+    params: {}
+  - name: SCGRAPHM
+    params: {}
+  - name: LDFDIFF
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: RKNN
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: ILISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: PCR
+    params: {}
+  - name: BNENTROPY
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: PROBE
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: CSMC
+    params: {}
+  - name: SV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: ADGBD
+    params: {}
+  - name: MIX
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCC
+    params: {}
+  - name: CORRMSE
+    params: {}
+  - name: CCH
+    params: {}
+use_gpu: false

@@ -55,7 +55,7 @@ def run_langcell(adata, cell_type_key):
         adata_copy = adata[:, mart.index.intersection(adata.var_names)].copy()
         adata_copy.var["ensembl_id"] = mart.loc[adata_copy.var_names]["Gene stable ID"]
     else:
-        adata_copy = adata.copy()
+        adata_copy = adata[:, ~adata.var['ensembl_id'].isna()].copy()
 
     adata_copy.X = adata_copy.layers['counts'].copy()
     adata_copy.obs['n_counts'] = adata_copy.X.sum(axis=1)

@@ -1,0 +1,47 @@
+# This experiment is for the label noise experiments; need to 0% noise.
+experiment: final_benchmark/re_llm_methods_3_5_pbmc
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: 3_5_pbmc
+    batch_col: ["batch"]
+    label_col: celltype
+  # - name: human_lung
+  #   batch_col: ["batch"]
+  #   label_col: cell_type
+integration:
+  - name: scgpt
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scgpt"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: geneformer
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: uce
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: geneptw
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: scprint
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scprint_env"
+    params: {}
+    memory: high
+  - name: scmulan
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmulan_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: langcell
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/langcell_env"
+    params: {}
+    metric_params: {}
+    memory: high
+seeds: [1]
+use_gpu: true

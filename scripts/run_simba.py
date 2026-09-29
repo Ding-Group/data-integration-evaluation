@@ -36,6 +36,7 @@ from project_utils.hvg_utils import select_hvgs
 
 def run_simba(adata, batch_keys, use_hvg, hvg_method, n_bins, n_components, k, seed):
     adata_copy = adata.copy()
+    adata_copy.var_names_make_unique()
     si.pp.filter_genes(adata_copy, min_n_cells=3)
     _, batch_key_final = combine_batch(adata_copy, batch_keys)
 

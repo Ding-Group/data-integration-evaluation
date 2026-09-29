@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 """
-Run scVI on a dataset
+Run scanVI on a dataset
 
 Usage:
-    run_scvi.py -o <path> (-b <batch>)...  -c <key> [options] <file>
+    run_scanvi.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.

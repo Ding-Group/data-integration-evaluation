@@ -46,7 +46,7 @@ process RUN_METRIC {
         
         exit_code=\$?
 
-        if [ -e "${dataset}-${integration}-${metric}.csv" ]; then
+        if [ -e "${dataset}-${integration}-${metric}-${hex}.csv" ]; then
             exit 0
         fi
 
@@ -78,7 +78,7 @@ workflow GRANULARITY {
                 integration.integration,
                 integration.batch_col,
                 integration.label_col,
-                file("work/" + integration.dir + "/save_dir/adata.h5ad"),
+                file("/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/" + integration.dir + "/save_dir/adata.h5ad"),
                 file("/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/data/" + integration.dataset + ".h5ad")
             )
         }

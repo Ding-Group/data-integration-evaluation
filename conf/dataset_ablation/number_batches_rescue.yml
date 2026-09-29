@@ -1,0 +1,1958 @@
+experiment: dataset_ablation/number_batches_rescue
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/a9/fec8a900c7b745136075fb852d39d7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/d6/ccef750233b7871dbf3eef55ad2cc1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/2d/cc14823d2d2348e03b59d09e31f00b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/9f/05ac0d9cf90b5f6c30342195e7755a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/38/7261b5a51b9582cfce1e9e72d7f7aa
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/c1/6407c9c28ef53e554e310116a4f828
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/8a/30eaaddb3065f16fed656b62b68233
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/df/a2c5a3403b8a702307cefd600bd89c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/af/490e76ffd58049f97a71a7df6ed0b9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/76/e36397a53fe4bb2778de6231d4281b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: cca-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/de/cd0ec41b0ab055954fd7b2b9537d8d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/a6/0834542d8325f855d33be5eedee510
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/c7/6cd3a4349ef51c1a6cfaedbac340b8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/d1/174ac87d69dedf99df54881e363314
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/15/00ce7b8847e00a52da2bd0e920aa87
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/17/bad3e3637323abd7db33b06e83b38c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/bb/2e54c19dcb4243e455c2e8d512cb80
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/cf/9be1be038c1184b826ae3b21d36044
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/c4/cef8d070f0e07a1565a2daaf6fb1cc
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/48/62b1b25d4668c37553906f208da317
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/ac/0417a1d365d10b316da97f0c00dfca
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: clear-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/db/4f1acd24271b0b28fab0f718eda877
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/17/9e868afb36df75e04b88618400a2c8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/06/6eea6d04549ff7a5fd84f8ae85a622
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/ef/8f80b12a735e58159404e65cec3e0f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/61/6b19b8d947da96a4d9d13d8fe5959a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/0b/5d15e21d6fbdc9ba1b0a781e66994e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/f8/bac5219c359e0bfcb1b529dcf6db3f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/04/1352e575dab5c98fa8ab7f12df2b74
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/7a/5323d3449b90d2be80add1ef9f5957
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/8d/0ca440fe05fa9cec033f00a3582f18
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/22/4524462336525e6d919fdb000410f2
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: equidistant-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/a3/70fc6008a58f3930517bd168e6e687
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/9c/11dfb6f91407dd6dce8c43388573ac
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/35/c3b37909ac28a18f4cda9538d81133
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/1a/1ef1158ff6dd2beba63661effff0c9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/6e/0618de4668fde01f5e26cac6faafb6
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/af/dd9b1790accee9f5afba769633c1c7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/fa/380e1b92f44240891ff3d5213cd864
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/42/76b1f5cdd02c2bd214743cfa10faa1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/c8/f9472476fbfa2c61c6a4877d49c13d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/c1/0cf34c363fdbaca0c857b089a6d84a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/b3/ab1c49405074b33cd2c8e8e95dc1c7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: gedi-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/d1/ac89c1142229c4439a95934a46b31e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/6c/fa6e8f282a91a7cb08238de0100684
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/4c/6d9565085b88942b8bfad56994fe7f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/71/3ba68615f4a884130601b4a98668ed
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/08/0ace3cccbec20bef75b441a20f5a1c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/45/af598122ca25946ffadd414e2a6722
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/93/62d4743ae5ac5fd7bed6a77650669c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/b2/2cdd769ba083bb53bdc445361d792b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/8c/19a230a28531a35230fb72b9208833
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/e3/ca4abe1a8a91a3fa1cbe48a6480748
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/f9/27dc84e55f3f795fc9602fd154d35c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: harmony-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/e9/5878d11f7d470a4d7ce5736c6a4f42
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/1c/ba461747a885a2d1f4fe58d0ecea62
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/e0/19c498269e83c9b11be0eeacf50fec
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/13/c53dbfcebb579f9eca150bd6bb952b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/bc/c9aa0a9a82a331df9d47cf7ab01cb0
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/ef/c10dcfdefb6e3d8d5577899a69b653
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/f1/8135bd384a71e95f5674f82b88a28c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/c4/d40ea23ef54c3218d50256a1ee7ebc
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/6d/2b649dcc181ba09c645470110b0185
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/b0/c01428c12bbaa79c781e3eb7bb27d3
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/1a/925016a971094925a7e452e49b12b6
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: imap-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/91/b3567d4436609fc779cc4b1594716a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: insct-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/bd/12955b3f3240208890c319ac79eac9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: insct-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/75/342fd8b00f738d0d88100dc67d895c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: insct-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/e6/304f3f9efe9c4400a9b15373ad67fc
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: insct-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/32/bf9d52fff1393b3187186db9d4c5fe
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: insct-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/22/d2602df3272f345e38196ce53f2d48
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: insct-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/47/196fd95680d9a10759d95cf1c5cc19
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: insct-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/ef/05007d8b4e6bcaa77bece25ffd65e0
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/1b/37afe2393904522a943ce0d502d784
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/ca/e79ee9eb09f8e5663c0e5706ddcf1c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/67/9f6babd376372c4a9ad0597f4dc9ce
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/bb/fd208ae7a675eff544584c5ec16aed
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/67/2ba724160642267dcca27719b655a9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/70/be542a7f524de8c7bd267b2d94f090
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/05/cce7b8004ed10b3fd1111df8af6b11
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/95/d9b60825cf7882e8ad4b3f7cbf17a8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/2b/398c9bd7e3ea31a3aab656af636a6b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/8e/0fa9886d933041000c027208ecbbe3
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: islander-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/58/82585336974533398e0bb3e76f06eb
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/e8/4e96655bad0f16cd73ea244aa39f1f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/42/1061115240e8a14f0bb180327ea8e3
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/70/de3b813cd665a43565a14581ebbf96
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/7e/82d2d0cdeee8a743d7a1b51fffa13e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/a8/3ab65083be1b091d129add271ef5a9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/ea/349deaeedb73abf7e74ab08aaae6da
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/cc/4575803ce2c39e0ecc9f30e1f1e0b5
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/b6/140dc8d88b5dee99b2414472e0cfdf
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/af/ed42f53b03e0620a2566fb8f788e1b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/9c/b54b83c1a1a9546bba8876cc170589
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: liger-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/9a/b6c7f605785867ca985969a55498a0
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/9b/361c362b12ced71b9f4bd6a873e8b7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/4c/b7bd429a7e73f0022ee24bce66d3dd
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/7c/a9fbe1e38385999e300d4ef0467ae1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/8a/7a17660a83df109e8afb7d346e542d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/2c/0bdcc800033972f7e957aa7a29b6e3
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/97/55dd1199c4525b8350c2d28f79f12c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/da/a2a3b2df99a1c8205a20f731de16a1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/74/3412fc41923fd514ccb89cdfb3523c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/42/1f682c2e25c7a96a45a2775f4fea10
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/86/9e5dbd61c8b6f46f7647b0a805c8d1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: mnn-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/66/806a8790c8c25238f3a29b3266339a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/46/cd158058f8b9c4b11fb986ef11777d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/65/075d76ccdcf4d49d2a1a0fb08bbfd7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/21/1e7bf25c93dc4d79432c75e5ce9480
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/38/9f9a680afcc8783a2bca1b537d01fd
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/00/064d71be468f525f7dd1361cc30031
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/03/7fc251a52dcf9d3e10ebe77194e1dd
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/a5/21b69d8213176d6c0e2f306ed7039f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/81/621a97298a1548b4e7a5588b26fd80
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/16/689a3452f46171614d92877dfef351
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/33/52165aa0cc2234b9e9858252ee1450
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: ocat-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/a0/6caf51aa7c330a51aff456ca8596a7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/23/53bd91344d0d5237973d0be3924d27
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/e3/89d3b8d4c941de58582f40616a90a0
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/8d/046c6eb65427ca7b44733370a3c547
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/44/4e875dbe826d3f12946c398849c35c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/8f/b42395f7a80a0cdf61e84f589198d8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/9a/979e97160dca494b0a70d6183cae8d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/1f/16de712b7803a30d62499b9a97d072
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/00/50539942d36d90f2fda538a4732a22
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/29/1c2be7a1e2eb352ed33e4c75fa5b90
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/a8/2d6a0072d8abb0a313c2eda9a2813d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: oneBigBlob-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/1c/82c81362fa201b4bcda74b4da508b4
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/e0/5b89bc7e491f59dc9197fc7df4cf39
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/ed/c7a904d28b052dea0fb61741d7900d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/8d/55cad30fe1847144550ad0a3bffd89
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/54/70c4d6c2603cc97460489590dcea52
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/f5/91b9f8a8f03cc4854387c023d1c075
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/c2/b420d7d3cc3eb2fd598545b285aa20
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/27/bdaf5a1c25c53bfd98fbd8162f0e29
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/bf/08e1fc31350ef7efbbd342b7c8089b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/8e/fcb58167c9e9d58cc1a92ef51d92c1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/14/a422d4e87587be4bf15b3e83002b84
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: pca-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/75/d1964768f461dbc749bd7052b9e981
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/60/e40b9a71132250741eb98f74e5d8f6
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/b9/be26f67c868ec2b1e28686525b6347
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/e9/31fc1951a2eec968580faf0d9ede3a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/90/92b443c5aed3084caeb6df5cee7848
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/8e/602c24aac78d9163c88033ae4cb86c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/a2/d3a83efaa40e55c1d5451fef728dee
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/cf/0a249f3e60bb59e565c180a8902494
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/95/31efed07d4f95f6edb82aa23c15654
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/24/222a9849a45419685737dd9d3e02b0
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/6d/6c73b7d20cab53007051463ae9b998
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: portal-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/a6/98835d6cbc0fb16de0c9dbed20b0a4
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/2f/ede11eff0c9374459277976d33d9b8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/85/ad58c5d8dd2552c3c8f941f3ef2abb
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/24/d72700680f43481e30d04eac1a3162
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/a6/07734555320f0c1caf0dee6b593467
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/7a/bd95ab1b8f06381af02672987c82c2
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/f3/836b01581f101511100d2fa668240e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/19/5a788cbe96e3cbc0210bcad33b665c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/03/b93baf057510f96411597ea31a1a78
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/71/57dbd28a5af30306c91b10aa14dbea
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/70/831d9064f1ee2dbca26749bb06624d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: respan-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/23/0e91cd283a2be8b8a45b1e27c4aced
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/d3/7b55a1617dc316580e39b0886f7206
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/c7/fdbff20967894ca7aad61221483af1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/d0/a556c55644580baa26821816c7fee2
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/b0/64367560979ce10b98ef66a09a476c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/0f/e519d19f6a69ff43a4159df97e130d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/5e/2cb55af5402f401d7fba68a717c966
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/3b/b56eddda62192d0cca5ec947a6d02e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/e7/0a72737516f4c06867cac1efe97b63
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/9a/310011a831193fd49f3e7d94201d9a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/87/2dc9565b96d7b40d22d1df579c95ce
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: rpca-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/75/4441cc590abb30be33d344c0733073
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/32/bef7eda20200e62af29a0c1ed48670
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/ae/48c8b9fb2518bb09b976030cd8cd61
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/26/8c8e36208e00f604caf1697bdef605
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/78/b2464cb6e4c357299c69e48f86aeff
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/be/72ed7420abe898abc09aa4d52153fd
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/46/3d0efc6c89cd2c206ef76fdf16b8dc
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/cd/09c643053e542e719c87f928a5807b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/df/2e166583d498336fa45801d77767ad
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/fd/c223fbf7de79da2319ef0b1d05bd11
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/ff/42c92844805761ea6ddc2f1153b5db
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: saucie-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/b0/74de943f4cf56e6ec6f10e785d24e8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/9e/2cf8c31cddbdd8ca9a82db3e96c623
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/01/3ed4c87b89fc0118cc560163411fb2
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/8a/d53d41a962fb3b3a8928e7f93e930c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/14/a68f47159f96cd0a9f2d599ad8c256
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/db/f1979f1a3dbe307c2b803075701eb1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/c8/6160e5994dc1375dc1bacde493c5e8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/31/d2f32c7c7acc7102fbeba45860e826
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/a7/b63498db53a1ddf1db3e83c9672d9c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/fc/bb6ee70bd93af59c90d9c72e7ea26d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/4f/ef729e70fade740b895b87c15a6c65
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scalex-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/2e/382f8789b30822fcfeec723f8e0cbe
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/ef/e13e0057481c017c633f1fd2d646e1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/b9/36234b754f9b1ea08caeb8d238a576
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/ef/b9880cc35b570cd9545cce936df616
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/bf/dbf50bd8afd9f3b0994422dd50097b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/32/be95ec221d64398526aaffa12db2d5
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/9e/f777f7a16b5244af99b28fbbc04375
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/55/73736dde6c7fe09b0d4ee3ee9624d2
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/1d/af894577e5eac511237e515c8835b3
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/88/6e10087f8d64fac41da6f0010157da
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/37/41ae4ed1c9d36547bcd856ee72f797
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanorama-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/60/9f694d6f11d130d14713e829702aeb
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/96/714e914aa3535f380746cb657cc48c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/c0/cbb0fbe7c27d11330b06663220d1ce
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/ee/cf0ec29bf41d0d70ee4cc4cc65f5f9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/2b/6eacabc607b1f95c0d7806bddcaca2
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/34/455433847d812b965c3473c544e13f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/65/b3628c92798e9698830004d688be9a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/b7/939762080ee2f4f8ba60f2d71e2dbc
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/fb/77a80bb7d8690f2973b3dcc4d51bfb
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/f0/edde0af1ce9312640e599abe745b99
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/16/502e9373a4b689c4e7b6f2cd3077eb
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scanvi-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/20/ba769422b9c808182ebc27bc67a7e6
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/81/9068ee693c7b2f328b9b46e883fee4
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/db/af8f0f2cd1278d78a74c75373b36c2
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/d5/8c5144be8d6140860eb770488f15ee
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/bf/2255c7d56716ec5d05d38541c633f5
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/72/35b5fd3fc6d06fe28ea4b4bf317f57
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/75/d678821c5078637f49c25c8b8fda5e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/f8/d859a8ec02dcac96c16aa113788844
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/94/af4b0618d6d91c1648de3d75f5c56f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/6e/686cbabed0ba655a4e84a8444e0168
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/a5/2ff2c7d8aff2618a6441234e9e83ad
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccobra-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/49/a1dc3c892b45c81bda0413a45a704c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/b6/d8626e3bbaef35c03fad77c50f8fee
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/5c/6a4d85086ced6fc813727900bb908c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/10/528b640c3e2f0cc76fb11decade211
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/3d/62c1e9fd303beb4fa6220fffab3944
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/50/987c8f3f89f417a7471b8ca8d607b5
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/76/acc9a9143f7ff38daa3a093ff76f5a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/19/4924c221831dbbca49364fb54be355
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/ba/54debeb71aef6ac76c476c2d64743c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/d3/96c5cd398e4970b8309127c3799e83
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/20/1fc186aa5edc6e79a1300cc8934867
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sccraft-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/42/68b2f2d0bdef4c8be73c2618592f8c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/2f/4af8d8052d3aa099978de219442a8c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/b7/ab5abf31ffd92193eddf1916094059
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/08/051b15de0c83316b669d9c9fa11a5e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/b6/daef6dabd9291b5d36b44ab4bdd495
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/7f/231323e3ff37bfd826ead482065c02
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/3e/a5bfb7ffe036076dc65382d3527ba8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/dc/08d9b52fd00966a6319b7a393aa569
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/08/9e672c5f130d48776910e3296eddac
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/ac/4e84b7fcfa7c7cd0ee28feaef2f2c7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/d3/5a7c8a842b57a09b245fc5feee8a6d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdml-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/9e/771b90718a545ec63a83047e66cf87
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/3c/a5c7024572ef46111c83e27eff655b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/f3/a5352ad038e505b399cea4b08a5f3a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/1f/b91f239cb05a2e50c6a0b09484fb74
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/8b/6d8ab4714d87e77ef25a91f5051795
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/87/3a07adce16c2fc36c818a0cafbda4c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/e2/147daf8dc1539995edc9ce4432cae1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/7e/64bcfac0ad89f877ba7c633519d40c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/bc/06e64b52876f1dfa0377a0c6fb0923
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/39/3b809ab44eb22ef0ebb8f378152926
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scdreamer-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/eb/5fb2ab4a9c7ff80d6ff6051607951c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/af/96a78908dd97274dc273885a1e26c8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/56/8f2748224f3608fc1329222d4d7a99
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/91/94067319112a8d7a571410d79d8bbb
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/b2/81bd3b2a8b0238f5cb92432d86c48b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/76/de52efabbe689eaba4dd7e9559f167
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/27/f394d9aaaebde93239381ae029a01e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/3c/fbb875fe6fa1e856181de3ce21f64c
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/b3/6f42f4d17f2392774484638f137d39
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/46/8dec7852ceed512abdc2825718fa40
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/e9/6c96bb833f7ee6c1d29355dace2fc5
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scetm-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/fa/d99aaa7e2a13890c8508087c21c328
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/b8/aad74acdd8d2be29fbfc7d512d55f1
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/25/5c6c9074c5f8df4b31f76adaeb5a72
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/77/475e32b6f81ae7c494f4021b2cbdc0
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/9f/f22ec7e8b56a4c6629c976fb5df047
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/58/ca6ef6f4e5b548521431a36502d3f9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/1a/adfa235f8fa5139c37434f12122b50
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/a5/9f299ff00fcd10f9c364f075c469c7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/aa/9711d23fae21d76ebffefa7d0c3ce5
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/93/d4cdc540e16f77fa26a57feaa2f5c0
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/99/bedde21fb9501ffbdc833299e103f7
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scmerge-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/b1/1d72390b58545002a1930633fd0cba
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/dd/3c041fc8757292a2ee7712f3510560
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/71/67647a9d9b97a89d09c3c2ca5f20a9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/ec/06358e75f668fdef3150d148c82957
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/4e/c40bcbeccfa564d772c363e6ea12eb
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/8e/b966b2896fa8707f899ce0beda64ac
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/d0/35b7f9ffe1a4a510d2f6aac2db1ccc
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/d1/0edfaeb0a7bf8b3517b1fad35c57cf
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/ae/d21f49271daca35a906fd5955cbe85
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/a1/40baffee9f8f29a59c56ffcdf2194b
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/db/db57fd261163f6a704b6056343731e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scphere-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/c5/e2f4eed508a674725a48426ad78bcd
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/f2/8623e11ccb47858a89ecf198ceb74f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/66/92949c5020a3c79225d7262c7dc956
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/c0/e1643c3186b4b2143dd374574bc648
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/10/6e7a1b5bae805ec48714ccd65ec3bd
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/09/dcc05eae81c298ba3794afbb3ad947
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/d0/c2b17e3b1241706bd192d517bfd0a5
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/37/fe37caa2bf2f940a897cef0244f62d
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/40/6099d72f0197139266168a18864d2e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/b7/ec5e9b5070c051bc27de05613dee9e
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/10/c189fdaaa0f8ff1be741415a505cf8
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: scvi-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/65/4237b05f6ce748ba703fe69a918b23
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/83/5cf41eb70dfd87554315877ac5fcf0
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/30/7a66de2756baa373e8ff4ce70f2b69
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/09/95bda91dafec1bb37e16ceab8d140a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/39/91eadba5117ecc385e6fea272d1286
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/0b/5c73cf72db89c9b725456c0f049fb9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/c8/ffe6477cea88825e9764d571ed06aa
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/e3/2d56716c6343e20cd1e1c47a5f364f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/4a/4981663602c13dc4bfdfa4927d5d2f
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/93/cccf1f367215e643a115fabeb3feb3
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/18/facd303f513858334074788bbdbe0a
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: simba-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/7a/f55e1877bd05afeeb0aae6d971cf92
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_13batches
+    dir: ablation_work/dataset_ablation/79/aa908632420c33761e93358b791546
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_2batches
+    dir: ablation_work/dataset_ablation/01/9777fa60a577cf8ddec190077ee325
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_4batches
+    dir: ablation_work/dataset_ablation/93/347586d40d3dea90b6c73ddeca2cd4
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_6batches
+    dir: ablation_work/dataset_ablation/76/66b657a2f3a603072372a1fc5f3abd
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_8batches
+    dir: ablation_work/dataset_ablation/00/d76736f16893ff59a21d7f4a1e05aa
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_28batches
+    dir: ablation_work/dataset_ablation/0b/9b4b4e5a8b68c48807b1066f7b2264
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_22batches
+    dir: ablation_work/dataset_ablation/e9/aa133b37a7b2841bb55315833100eb
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_19batches
+    dir: ablation_work/dataset_ablation/18/73bdaf1db4915e8be7989ea5f64db9
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_16batches
+    dir: ablation_work/dataset_ablation/8a/c485051248700f07d70fc961f54629
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_10batches
+    dir: ablation_work/dataset_ablation/68/8b29d144eb67c6e23b7cb0164d22a6
+    batch_col: ["sample"]
+    label_col: cell_type
+
+  - integration: sysvi-1
+    dataset: epitome_25batches
+    dir: ablation_work/dataset_ablation/1c/118d282e1bd20a615cb807fd0d2a6f
+    batch_col: ["sample"]
+    label_col: cell_type
+metrics:
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  

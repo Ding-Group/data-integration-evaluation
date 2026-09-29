@@ -1,0 +1,306 @@
+experiment: label_ablation/3_5_pbmc_v1_orig
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+integrations:
+  - integration: cca
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/3c/e6203d087f62811bacf7c801eb09a8
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: clear
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/90/35f8a5248236165a8f388a003bc636
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: cyclone
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/f5/640520394957da7c8724e3013baeb0
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: equidistant
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/d4/92f9db9cc8f10ae69439f106715599
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: gedi
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/91/588e80c11675a8b7a7fc2e46771302
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: geneformer
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_llm_methods_3_5_pbmc/4a/bfb56eb7decfb6b0d33a412c4a842d
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: geneptw
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_llm_methods_3_5_pbmc/7b/e7bf20db75beeb2cc0f76a9f36d099
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: harmony
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/6f/132e67e104704dc3789da600a9421b
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: imap
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/40/b62104bcc8839e379b3b2e27ae5e3a
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: insct
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/c7/44f0c80ae383384ec2ff6ff18b62c7
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: islander
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/5d/d37a7496e17ef41739107822a19d91
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: langcell
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_llm_methods_3_5_pbmc/c3/8245235140427e5d795ee455027ceb
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: liger
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/a6/524c496ef9110fc0597fc2c2d38650
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: mnn
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/22/6a1a91179a2d21acef83deaaa2292c
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: ocat
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/ea/bdf2924da1495b723e064391c72dfb
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: oneBigBlob
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/c7/2912eafb580fc78df153b89fc7eba5
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: pca
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/2c/661466c933eb4a8086f11ae1c0e001
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: portal
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/16/49ceb5cd012a0dc9291c434be46240
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: respan
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/c1/b9a270b3386fa6dfaf8e03049d6dfd
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: rpca
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/a2/fa53f69effe79d880612a7f8dd837d
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: saucie
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/1a/98ca1e288e6e8895b2cf837eca3a43
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scalex
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/6a/c3b2b151d8a9b40508172debf32ea4
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scalign
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/a0/bea3a5789d7da8f9ad87a74a4e09aa
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scanorama
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/dc/b2697eb0130bf9ef71914b0a88e17d
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scanvi
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/ce/33a9c7ea10e96f9aa5e926e9816ce2
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: sccobra
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/f9/00df340406e38e29d85bd35b08e6c0
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: sccraft
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/b3/e441d37ad31699d4f56697b6962e7c
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scdml
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/83/8804b4e32ad5959273a602ea694bcd
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scdreamer
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/a9/5cdd8f54e6284868c9a659145a314f
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scetm
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/34/28cc4ccc8c3f8c96d92c33124fc9e6
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scgpt
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_llm_methods_3_5_pbmc/bb/f0840ca8ccf19f52e6dab811a1e208
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scmerge
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_cpu_methods_3_5_pbmc/71/2a526e965f101d57a1844ff69df304
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scmulan
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_llm_methods_3_5_pbmc/e9/ee6471db761340cb4b23f3308f8c57
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scphere
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/0f/b5001052c1dafb3577eace8da8dc5f
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scprint
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_llm_methods_3_5_pbmc/f4/e3b596bfcd649a0cf6a1df819bae3e
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: scvi
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/17/7f5d6bec2a01cbeafbf612b7c70fd7
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: simba
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/26/33b17409d3e8cc9fd04b155605dc1a
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: sysvi
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_gpu_methods_3_5_pbmc/a1/fb0c5167110967745d9399c022813b
+    batch_col: ["batch"]
+    label_col: celltype 
+
+  - integration: uce
+    dataset: 3_5_pbmc
+    dir: ablation_work/final_benchmarking/re_llm_methods_3_5_pbmc/90/669df2e709b49cf249f43e8bbb294a
+    batch_col: ["batch"]
+    label_col: celltype 
+metrics:
+  - name: FKNN
+    params: {}
+  - name: FLOGREG
+    params: {}
+  - name: CASW
+    params: {}
+  - name: ISOASW
+    params: {}
+  - name: ISOF1
+    params: {}
+  - name: MORANI
+    params: {}
+  - name: CNENTROPY
+    params: {}
+  - name: OCS
+    params: {}
+  - name: SCGRAPH
+    params: {}
+  - name: BRAS
+    params: {}
+  - name: DBI
+    params: {}
+  - name: NMIF
+    params: {}
+  - name: ARIF
+    params: {}
+  - name: CLISI
+    params: {}
+  - name: KBET
+    params: {}
+  - name: GC
+    params: {}
+  - name: BKNN
+    params: {}
+  - name: BLOGREG
+    params: {}
+  - name: BASW
+    params: {}
+  - name: KLDIV
+    params: {}
+  - name: ALIGN
+    params: {}
+  - name: KNNDIV
+    params: {}
+  - name: PPTPC
+    params: {}
+  - name: CILISI
+    params: {}
+  - name: NNMAP
+    params: {}
+  - name: PSTDB
+    params: {}
+  - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCH
+    params: {}
+  - name: SCGRAPHP
+    params: {}
+  - name: SCGRAPHM
+    params: {}
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  - name: ISOLISI
+    params: {}
+  

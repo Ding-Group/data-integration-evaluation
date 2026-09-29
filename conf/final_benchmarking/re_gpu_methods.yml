@@ -1,0 +1,121 @@
+# This experimet is for the label noise experiments; need to 0% noise.
+experiment: final_benchmark/re_gpu_methods_3_5_pbmc
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: 3_5_pbmc
+    batch_col: ["batch"]
+    label_col: celltype
+  # - name: human_lung
+  #   batch_col: ["batch"]
+  #   label_col: cell_type
+  # - name: mouse_cortex_sequencing_techs
+  #   batch_col: ["Method", "Experiment"]
+  #   label_col: CellType
+integration:
+  - name: scanvi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: scphere
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: scvi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: clear
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/clear-env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: simba
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/simba-env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: insct # Failed
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: scetm
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scetm_env_py310/"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: scalex
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scalex"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: cyclone
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/cyclone-env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: sccraft
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sccraft-env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: portal
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/portal-env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: sccobra
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sccobra-env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: imap
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/imap-env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: scalign
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scalign-env"
+    params: {}
+    metric_params: {}
+    memory: massive
+  - name: ocat
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/ocat-env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: scdreamer
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/dreamer-env"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: islander
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: respan
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/respan_env_py38"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: scdml
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scDML"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: sysvi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sysvi-env"
+    params: {}
+    metric_params: {}
+    memory: low
+  - name: saucie
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
+    params: {}
+    metric_params: {}
+    memory: low
+seeds: [1]
+use_gpu: true

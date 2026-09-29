@@ -37,6 +37,8 @@ def main():
     batch, batch_key_final = combine_batch(adata, batch_keys)
     batch = batch.cat.codes
 
+    k_weight = min(100, adata.obs[batch_key_final].value_counts().min())
+
     import anndata2ri
     import rpy2.robjects as ro
     from rpy2.robjects import conversion, default_converter, numpy2ri
@@ -58,7 +60,7 @@ def main():
         r("obj <- ScaleData(obj)")
         r("obj <- RunPCA(obj)")
 
-        r('obj <- IntegrateLayers(object = obj, method = CCAIntegration, orig.reduction = "pca", new.reduction = "X_integration")')
+        r(f'obj <- IntegrateLayers(object = obj, method = CCAIntegration, orig.reduction = "pca", new.reduction = "X_integration", k.weight={k_weight})')
 
         emb = r('Embeddings(obj, "X_integration")')
 

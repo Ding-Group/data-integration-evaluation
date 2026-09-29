@@ -1,0 +1,72 @@
+## Wait until GPU is over to put in the gene names.
+
+experiment: dataset_ablation/number_batches_retina_v2_llm
+conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
+datasets:
+  - name: human_retina_2batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_4batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_6batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_8batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_10batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_14batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_18batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_22batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_26batches
+    batch_col: ["sample"]
+    label_col: cell_type
+  - name: human_retina_30batches
+    batch_col: ["sample"]
+    label_col: cell_type
+integration:
+  - name: scgpt
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scgpt"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: geneformer
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: uce
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: geneptw
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/geneformer_env"
+    params: {}
+    metric_params: {}
+    memory: medium
+  - name: scprint
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scprint_env"
+    params: {}
+    memory: high
+  - name: scmulan
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmulan_env"
+    params: {}
+    metric_params: {}
+    memory: high
+  - name: langcell
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/langcell_env"
+    params: {}
+    metric_params: {}
+    memory: high
+seeds: [1]
+use_gpu: true
