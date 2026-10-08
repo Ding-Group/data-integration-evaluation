@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-
 """
-Run Islander (supervised MLP with mixup) on a dataset.
+Run Islander (supervised MLP with mixup) on a dataset
 Source: https://github.com/Genentech/Islander/tree/main
 
 Usage:

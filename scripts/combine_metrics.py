@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Combine a set of metrics output files. If only one file is given it is assumed
 that is a directory to search for CSV metric output files.

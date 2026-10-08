@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run MOFA on a dataset
 
@@ -11,8 +9,8 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --n_factors=<int>      Number of factors. [Default: 20]
-    --seed=<int>           Random seed. [Default: 0]
+    --n_factors=<int>      Number of factors. [default: 20]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 from os.path import join

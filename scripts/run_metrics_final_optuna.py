@@ -1,5 +1,5 @@
 """
-Run a metric.
+Run a metric with metric parameters and report to an Optuna study
 
 Usage:
     run_metrics_final_optuna.py (-b <key> | --batch-key=<key>)

@@ -1,8 +1,8 @@
 """
-Run ResPAN on a dataset
+Run ResPAN on a dataset using Optuna trial hyperparameters
 
 Usage:
-    run_ResPAN.py -o <path> (-b <batch>)... -c <key> --params-json=<file> [options] <file>
+    run_respanoptuna.py -o <path> (-b <batch>)... -c <key> --params-json=<file> [options] <file>
 
 Options:
     -h --help               Show this screen.

@@ -1,8 +1,8 @@
 """
-Harmony multi-parameter Optuna optimization.
+Harmony multi-parameter Optuna optimization
 
 Usage:
-    optimize_harmonyoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
+    run_harmonyoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
 
 Options:
     -h --help              Show this screen.

@@ -1,8 +1,8 @@
 """
-Best hyperparams for scCRAFT-Optim
+Best hyperparams for scDREAMER-Optim
 
 Usage:
-    get_best_sccraftoptuna.py --study-dir=<dir> --out=<file> --best-metrics-out=<file>
+    get_best_scdreameroptuna.py --study-dir=<dir> --out=<file> --best-metrics-out=<file>
 """
 import json
 import os

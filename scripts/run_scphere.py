@@ -9,7 +9,7 @@ Options:
     -o <path>                   Path to output directory.
     -b <batch>                  One or more batch keys.
     -c <key>                    Cell type label key.
-    --no-use-hvg                Do not use HVG selection. [Default: False]
+    --no-use-hvg                Do not use HVG selection. [default: False]
     --hvg-method=<method>       HVG selection method. Default uses the pre-computed HVGs.
     --hvg-n=<int>               Number of HVGs if computing [default: 2000].
     --epochs=<int>              Training epochs [default: 100].

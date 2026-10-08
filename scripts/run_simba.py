@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run SIMBA on a dataset
 
@@ -11,12 +9,12 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
+    --no-use-hvg           Do not use HVG selection. [default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
-    --n-bins=<int>         Number of bins in descretization. [Default: 5]
-    --n-components=<int>   Number of components in inferring edges. [Default: 15]
-    --k=<int>              k in inferring edges. [Default: 15]
-    --seed=<int>           Random seed. [Default: 0]
+    --n-bins=<int>         Number of bins in descretization. [default: 5]
+    --n-components=<int>   Number of components in inferring edges. [default: 15]
+    --k=<int>              k in inferring edges. [default: 15]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 from os.path import join

@@ -1,8 +1,8 @@
 """
-LIGER multi-parameter Optuna optimization.
+LIGER multi-parameter Optuna optimization
 
 Usage:
-    optimize_ligeroptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
+    run_ligeroptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
 
 Options:
     -h --help              Show this screen.

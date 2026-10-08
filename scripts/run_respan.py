@@ -1,11 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """
 Run ResPAN on a dataset
 
 Usage:
-    run_ResPAN.py -o <path> (-b <batch>)... -c <key> [options] <file>
+    run_respan.py -o <path> (-b <batch>)... -c <key> [options] <file>
 
 Options:
     -h --help               Show this screen.

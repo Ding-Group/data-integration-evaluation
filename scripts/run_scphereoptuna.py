@@ -1,5 +1,5 @@
 """
-Run scPhere-Optim on a dataset
+Run scPhere on a dataset using Optuna trial hyperparameters
 
 Usage:
     run_scphereoptuna.py -o <path> (-b <batch>)... -c <key> --params-json=<file> [options] <file>
@@ -10,7 +10,7 @@ Options:
     -b <batch>                  One or more batch keys.
     -c <key>                    Cell type label key.
     --params-json=<file>        JSON file with hyperparameters
-    --no-use-hvg                 Do not use HVG selection. [Default: False]
+    --no-use-hvg                 Do not use HVG selection. [default: False]
     --hvg-method=<method>        HVG selection method. Default uses the pre-computed HVGs.
     --hvg-n=<int>                Number of HVGs if computing [default: 2000].
     --batch-size=<int>           Minibatch size [default: 128].

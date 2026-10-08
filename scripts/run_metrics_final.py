@@ -1,5 +1,5 @@
 """
-Run a metric.
+Run a metric with metric parameters
 
 Usage:
     run_metrics_final.py (-b <key> | --batch-key=<key>)

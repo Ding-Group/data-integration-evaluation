@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run CLEAR on a dataset
 
@@ -11,16 +9,16 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
+    --no-use-hvg           Do not use HVG selection. [default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
-    --epochs=<int>         Number of epochs to run. [Default: 100]
-    --batch-size=<int>     Training batch size. [Default: 256]
-    --low-dim=<int>        Dimension of low-dim representations. [Default: 128]
-    --pcl-r=<int>          Queue size; number of negative pairs. [Default: 16384]
-    --aug-prob=<float>     Augmentation probability. [Default: 0.5]
-    --cluster-name=<str>   Clustering method. [Default: kmeans]
-    --num-cluster=<int>    Number of clusters. [Default: -1]
-    --seed=<int>           Random seed. [Default: 0]
+    --epochs=<int>         Number of epochs to run. [default: 100]
+    --batch-size=<int>     Training batch size. [default: 256]
+    --low-dim=<int>        Dimension of low-dim representations. [default: 128]
+    --pcl-r=<int>          Queue size; number of negative pairs. [default: 16384]
+    --aug-prob=<float>     Augmentation probability. [default: 0.5]
+    --cluster-name=<str>   Clustering method. [default: kmeans]
+    --num-cluster=<int>    Number of clusters. [default: -1]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

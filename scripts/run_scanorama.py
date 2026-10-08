@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run Scanorama on a dataset
 
@@ -11,7 +9,7 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
+    --no-use-hvg           Do not use HVG selection. [default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
     --dimred=<int>         Latent dimension for Scanorama [default: 50].
     --seed=<int>           Random seed [default: 0].

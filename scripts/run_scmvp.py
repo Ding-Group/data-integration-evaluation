@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run scMVP on a dataset
 
@@ -11,9 +9,9 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --latent_dim=<int>     Latent dimension. [Default: 20]
-    --epochs=<int>         Number of epochs. [Default: 10]
-    --seed=<int>           Random seed. [Default: 0]
+    --latent_dim=<int>     Latent dimension. [default: 20]
+    --epochs=<int>         Number of epochs. [default: 10]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

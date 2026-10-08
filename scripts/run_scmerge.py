@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run scMerge on a dataset
 
@@ -11,11 +9,11 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
-    --ruvk=<int>           ruvK (number of unwanted variation factors removed). [Default: 20]
-    --k-pseudobulk=<int>   k_pseudoBulk. [Default: 30]
-    --k-celltype=<int>     k_celltype. [Default: 10]
-    --seed=<int>           Random seed. [Default: 0]
+    --no-use-hvg           Do not use HVG selection. [default: False]
+    --ruvk=<int>           ruvK (number of unwanted variation factors removed). [default: 20]
+    --k-pseudobulk=<int>   k_pseudoBulk. [default: 30]
+    --k-celltype=<int>     k_celltype. [default: 10]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

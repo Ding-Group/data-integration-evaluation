@@ -1,18 +1,18 @@
 """
-Run SIMBA on a dataset
+Run SIMBA on a dataset using Optuna trial hyperparameters
 
 Usage:
-    run_simba.py -o <path> (-b <batch>)...  -c <key> --params-json=<file> [options] <file>
+    run_simbaoptuna.py -o <path> (-b <batch>)...  -c <key> --params-json=<file> [options] <file>
 
 Options:
     -h --help               Show this screen.
     -o <path>               Path to output directory.
     -b <batch>              One or more batch keys.
     -c <key>                Cell type label key.
-    --no-use-hvg            Do not use HVG selection. [Default: False]
+    --no-use-hvg            Do not use HVG selection. [default: False]
     --hvg-method=<method>   HVG selection method. Default uses the pre-computed HVGs.
     --params-json=<file>    JSON file with hyperparameters
-    --seed=<int>            Random seed. [Default: 0]
+    --seed=<int>            Random seed. [default: 0]
 """
 
 import json

@@ -1,17 +1,15 @@
-#!/usr/bin/env python
-
 """
 Run LangCell on a dataset
 
 Usage:
-    run_geneformer.py -o <path> (-b <batch>)...  -c <key> [options] <file>
+    run_langcell.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --seed=<int>           Random seed. [Default: 0]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

@@ -1,8 +1,8 @@
 """
-Run Portal on a dataset
+Run Portal on a dataset using Optuna trial hyperparameters
 
 Usage:
-    run_portal.py -o <path> (-b <batch>)...  -c <key> --params-json=<file> [options] <file>
+    run_portaloptuna.py -o <path> (-b <batch>)...  -c <key> --params-json=<file> [options] <file>
 
 Options:
     -h --help               Show this screen.
@@ -10,7 +10,7 @@ Options:
     -b <batch>              One or more batch keys.
     -c <key>                Cell type label key.
     --params-json=<file>    JSON file with hyperparameters
-    --seed=<int>            Random seed. [Default: 0]
+    --seed=<int>            Random seed. [default: 0]
 """
 
 import json

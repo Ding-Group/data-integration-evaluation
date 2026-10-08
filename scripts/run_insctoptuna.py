@@ -1,21 +1,21 @@
 """
-Run INSCT on a dataset
+Run INSCT on a dataset using Optuna trial hyperparameters
 
 Usage:
-    run_insct.py -o <path> (-b <batch>)...  -c <key> --params-json=<file> [options] <file>
+    run_insctoptuna.py -o <path> (-b <batch>)...  -c <key> --params-json=<file> [options] <file>
 
 Options:
     -h --help                   Show this screen.
     -o <path>                   Path to output directory.
     -b <batch>                  One or more batch keys.
     -c <key>                    Cell type label key.
-    --no-use-hvg                Do not use HVG selection. [Default: False]
+    --no-use-hvg                Do not use HVG selection. [default: False]
     --hvg-method=<method>       HVG selection method. Default uses the pre-computed HVGs.
     --params-json=<file>        JSON file with hyperparameters
-    --epochs=<int>              Number of epochs to train. [Default: 1000]
-    --batch-size=<int>          Training batch size. [Default: 64]
-    --n-epochs-without-progress=<int>  Early stopping patience. [Default: 20]
-    --seed=<int>                Random seed. [Default: 0]
+    --epochs=<int>              Number of epochs to train. [default: 1000]
+    --batch-size=<int>          Training batch size. [default: 64]
+    --n-epochs-without-progress=<int>  Early stopping patience. [default: 20]
+    --seed=<int>                Random seed. [default: 0]
 """
 
 import json

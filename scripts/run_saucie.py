@@ -9,7 +9,7 @@ Options:
     -o <path>                      Path to output directory.
     -b <batch>                     One or more batch keys.
     -c <key>                       Cell type label key.
-    --no-use-hvg                   Do not use HVG selection. [Default: False]
+    --no-use-hvg                   Do not use HVG selection. [default: False]
     --hvg-method=<method>          HVG selection method. Default uses the pre-computed HVGs.
     --lambda-b=<float>             Lambda B. [default: 0.1]
     --learning-rate=<float>        Adam learning rate. [default: 0.001]

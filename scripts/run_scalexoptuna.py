@@ -1,8 +1,8 @@
 """
-Run SCALEX on a dataset
+Run SCALEX on a dataset using Optuna trial hyperparameters
 
 Usage:
-    run_scalex.py -o <path> (-b <batch>)...  -c <key> --params-json=<file> [options] <file>
+    run_scalexoptuna.py -o <path> (-b <batch>)...  -c <key> --params-json=<file> [options] <file>
 
 Options:
     -h --help               Show this screen.

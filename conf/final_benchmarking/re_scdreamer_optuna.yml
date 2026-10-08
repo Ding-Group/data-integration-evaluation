@@ -4,9 +4,9 @@ datasets:
   - name: human_pancreas
     batch_col: ["tech"]
     label_col: celltype
-  # - name: neurips_bmmc
-  #   batch_col: ["batch"]
-  #   label_col: cell_type
+  - name: neurips_bmmc
+    batch_col: ["batch"]
+    label_col: cell_type
   - name: human_lung
     batch_col: ["batch"]
     label_col: cell_type
@@ -16,27 +16,27 @@ datasets:
   - name: scib_sim2
     batch_col: ["Batch"]
     label_col: Group
-  # - name: human_fetal_gut
-  #   batch_col: ["Donor_id", "Organ", "Sample"]
-  #   label_col: cell_name_detailed
-  # - name: human_retina_organoid_tissue
-  #   batch_col: ["sample_id", "tissue"]
-  #   label_col: cell_type
+  - name: human_fetal_gut
+    batch_col: ["Donor_id", "Organ", "Sample"]
+    label_col: cell_name_detailed
+  - name: human_retina_organoid_tissue
+    batch_col: ["sample_id", "tissue"]
+    label_col: cell_type
   - name: mouse_regulatory_T
     batch_col: ["method", "orig.ident"]
     label_col: "cell.type"
-  # - name: human_adipose
-  #   batch_col: ["technology", "individual"]
-  #   label_col: cell_type
+  - name: human_adipose
+    batch_col: ["technology", "individual"]
+    label_col: cell_type
   - name: tian_multitech
     batch_col: ["tech"]
     label_col: cell_line
   - name: nph_liver
     batch_col: ["Sample"]
     label_col: Celltype
-  # - name: nph_cerebellum
-  #   batch_col: ["Sample"]
-  #   label_col: Celltype
+  - name: nph_cerebellum
+    batch_col: ["Sample"]
+    label_col: Celltype
   - name: tabula_muris_lung
     batch_col: ["mouse.id", "tech"]
     label_col: cell_ontology_id

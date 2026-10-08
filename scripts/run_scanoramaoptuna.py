@@ -1,8 +1,8 @@
 """
-Scanorama multi-parameter Optuna optimization.
+Scanorama multi-parameter Optuna optimization
 
 Usage:
-    optimize_scanoramoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
+    run_scanoramaoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
 
 Options:
     -h --help              Show this screen.

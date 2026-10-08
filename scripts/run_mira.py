@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run MIRA on a dataset
 
@@ -11,8 +9,8 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --n_topics=<int>       Number of topics. [Default: 10]
-    --seed=<int>           Random seed. [Default: 0]
+    --n_topics=<int>       Number of topics. [default: 10]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

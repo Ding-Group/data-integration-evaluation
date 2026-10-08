@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Make an equidistant-blobs baseline embedding
 

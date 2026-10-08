@@ -1,8 +1,8 @@
 """
-scVI multi-parameter Optuna optimization.
+scVI multi-parameter Optuna optimization
 
 Usage:
-    optimize_scvioptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
+    run_scvioptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
 
 Options:
     -h --help              Show this screen.

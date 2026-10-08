@@ -22,9 +22,9 @@ datasets:
   - name: haniffa_covid_imbalance
     batch_col: ["sample_id"]
     label_col: initial_clustering
-  # - name: human_liver
-  #   batch_col: ["donor_id"]
-  #   label_col: cell_type
+  - name: human_liver
+    batch_col: ["donor_id"]
+    label_col: cell_type
   # - name: human_bipolar
   #   batch_col: ["donor_id", "assay"]
   #   label_col: cell_type

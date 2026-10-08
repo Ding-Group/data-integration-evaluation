@@ -1,8 +1,8 @@
 """
-scETM multi-parameter Optuna optimization.
+scETM multi-parameter Optuna optimization
 
 Usage:
-    optimize_scetmoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
+    run_scetmoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
 
 Options:
     -h --help              Show this screen.

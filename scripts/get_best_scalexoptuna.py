@@ -1,8 +1,8 @@
 """
-Best hyperparams for SIMBA-Optim
+Best hyperparams for SCALEX-Optim
 
 Usage:
-    get_best_simbaoptuna.py --study-dir=<dir> --out=<file> --best-metrics-out=<file>
+    get_best_scalexoptuna.py --study-dir=<dir> --out=<file> --best-metrics-out=<file>
 """
 import json
 import os

@@ -9,16 +9,16 @@ Options:
     -o <path>                   Path to output directory.
     -b <batch>                  One or more batch keys.
     -c <key>                    Cell type label key.
-    --no-use-hvg                Do not use HVG selection. [Default: False]
+    --no-use-hvg                Do not use HVG selection. [default: False]
     --hvg-method=<method>       HVG selection method. Default uses the pre-computed HVGs.
-    --resolution1=<float>       Clustering resolution 1. [Default: 0.5]
-    --resolution2=<float>       Clustering resolution 2. [Default: 7]
-    --method=<str>              Clustering method. [Default: Leiden]
-    --epochs=<int>              Number of epochs. [Default: 150]
-    --z-dim=<int>               Embedding dimension. [Default: 256]
-    --d-coef=<float>            d_coef. [Default: 0.2]
-    --kl-coef=<float>           kl_coef. [Default: 0.005]
-    --seed=<int>                Random seed. [Default: 0]
+    --resolution1=<float>       Clustering resolution 1. [default: 0.5]
+    --resolution2=<float>       Clustering resolution 2. [default: 7]
+    --method=<str>              Clustering method. [default: Leiden]
+    --epochs=<int>              Number of epochs. [default: 150]
+    --z-dim=<int>               Embedding dimension. [default: 256]
+    --d-coef=<float>            d_coef. [default: 0.2]
+    --kl-coef=<float>           kl_coef. [default: 0.005]
+    --seed=<int>                Random seed. [default: 0]
 """
 
 from os.path import join

@@ -1,8 +1,8 @@
 """
-RPCA multi-parameter Optuna optimization.
+RPCA multi-parameter Optuna optimization
 
 Usage:
-    optimize_rpcaoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
+    run_rpcaoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
 
 Options:
     -h --help              Show this screen.

@@ -9,8 +9,8 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --epochs=<int>         Number of epochs. [Default: 250]
-    --seed=<int>           Random seed. [Default: 0]
+    --epochs=<int>         Number of epochs. [default: 250]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

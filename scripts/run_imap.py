@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run IMAP on a dataset
 
@@ -11,11 +9,11 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
+    --no-use-hvg           Do not use HVG selection. [default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
-    --n-epochs=<int>       Number of epochs. [Default: 150]
-    --latent-dim=<int>     Number of latent dimensions. [Default: 256]
-    --seed=<int>           Random seed. [Default: 0]
+    --n-epochs=<int>       Number of epochs. [default: 150]
+    --latent-dim=<int>     Number of latent dimensions. [default: 256]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 from os.path import join

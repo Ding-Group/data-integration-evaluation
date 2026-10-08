@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run scAlign on a dataset
 
@@ -11,12 +9,12 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --ccs=<int>            Number of CCs to use. [Default: 15]
-    --steps=<int>          Number of iterations. [Default: 15000]
-    --batch-size=<int>     Batch size. [Default: 300]
-    --perplexity=<int>     Perplexity. [Default: 30]
-    --num-dim=<int>        Number of dimensions. [Default: 32]
-    --seed=<int>           Random seed. [Default: 0]
+    --ccs=<int>            Number of CCs to use. [default: 15]
+    --steps=<int>          Number of iterations. [default: 15000]
+    --batch-size=<int>     Batch size. [default: 300]
+    --perplexity=<int>     Perplexity. [default: 30]
+    --num-dim=<int>        Number of dimensions. [default: 32]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

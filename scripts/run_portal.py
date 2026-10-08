@@ -9,11 +9,11 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --hvg-num=<int>        Number of highly variable genes to use. [Default: 4000]
-    --search-cos           Search for optimal lambdacos. [Default: True]
-    --lambda-cos=<float>   Lambdacos. [Default: 20.0]
-    --training-steps=<int> Number of training steps. [Default: 2000]
-    --seed=<int>           Random seed. [Default: 0]
+    --hvg-num=<int>        Number of highly variable genes to use. [default: 4000]
+    --search-cos           Search for optimal lambdacos. [default: True]
+    --lambda-cos=<float>   Lambdacos. [default: 20.0]
+    --training-steps=<int> Number of training steps. [default: 2000]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import random

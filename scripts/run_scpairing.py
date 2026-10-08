@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run scPairing on a dataset
 
@@ -11,9 +9,9 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --emb_dim=<int>        Embedding dimension. [Default: 10]
-    --epochs=<int>         Number of epochs. [Default: 300]
-    --seed=<int>           Random seed. [Default: 0]
+    --emb_dim=<int>        Embedding dimension. [default: 10]
+    --epochs=<int>         Number of epochs. [default: 300]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

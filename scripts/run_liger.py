@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run LIGER on a dataset
 

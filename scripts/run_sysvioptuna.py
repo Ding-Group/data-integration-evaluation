@@ -1,8 +1,8 @@
 """
-Run sysVI on a dataset
+Run sysVI on a dataset using Optuna trial hyperparameters
 
 Usage:
-  run_sysvioptuna.py -o <path> (-b <batch>)... -c <key> --params-json=<file> [options] <file>
+    run_sysvioptuna.py -o <path> (-b <batch>)... -c <key> --params-json=<file> [options] <file>
 
 Options:
     -h --help                      Show this screen.

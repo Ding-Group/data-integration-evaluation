@@ -2,7 +2,7 @@
 Run sysVI on a dataset
 
 Usage:
-  run_sysvi.py -o <path> (-b <batch>)... -c <key> [options] <file>
+    run_sysvi.py -o <path> (-b <batch>)... -c <key> [options] <file>
 
 Options:
     -h --help                      Show this screen.

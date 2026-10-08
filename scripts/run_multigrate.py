@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run Multigrate on a dataset
 
@@ -11,8 +9,8 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --z_dim=<int>          Latent dimension. [Default: 15]
-    --seed=<int>           Random seed. [Default: 0]
+    --z_dim=<int>          Latent dimension. [default: 15]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 from os.path import join

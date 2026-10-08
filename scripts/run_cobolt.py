@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run Cobolt on a dataset
 
@@ -11,9 +9,9 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --n_latent=<int>       Number of latent dimensions. [Default: 10]
-    --n_epochs=<int>       Number of epochs. [Default: 100]
-    --seed=<int>           Random seed. [Default: 0]
+    --n_latent=<int>       Number of latent dimensions. [default: 10]
+    --n_epochs=<int>       Number of epochs. [default: 100]
+    --seed=<int>           Random seed. [default: 0]
 """
 from os.path import join
 

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run Schema on a dataset
 
@@ -11,8 +9,8 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --min_corr=<float>     Min Corr. [Default: 0.9]
-    --seed=<int>           Random seed. [Default: 0]
+    --min_corr=<float>     Min Corr. [default: 0.9]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 from os.path import join

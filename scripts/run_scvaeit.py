@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run scVAEIT on a dataset
 
@@ -11,8 +9,8 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --n_latent=<int>       Latent dimension. [Default: 32]
-    --seed=<int>           Random seed. [Default: 0]
+    --n_latent=<int>       Latent dimension. [default: 32]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import os

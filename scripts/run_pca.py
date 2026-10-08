@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-
 """
-Run PCA on a dataset.
+Run PCA on a dataset
 
 Usage:
     run_pca.py -o <path> (-b <batch>)...  -c <key> [options] <file>
@@ -11,7 +9,7 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --seed=<int>           Random seed. [Default: 0]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 from os.path import join

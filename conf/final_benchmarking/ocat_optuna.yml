@@ -25,9 +25,9 @@ datasets:
   - name: human_liver
     batch_col: ["donor_id"]
     label_col: cell_type
-  # - name: human_bipolar
-  #   batch_col: ["donor_id", "assay"]
-  #   label_col: cell_type
+  - name: human_bipolar
+    batch_col: ["donor_id", "assay"]
+    label_col: cell_type
   - name: mouse_intestine
     batch_col: ["sample_name", "condition", "location"]
     label_col: cell_type
@@ -36,7 +36,7 @@ integration:
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/ocat-env"
     params: {}
     metric_params: {}
-    memory: high
+    memory: massive
 seeds: [1]
 use_gpu: true
 n_trials: 100

@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-
 """
-Run scETM on a dataset (notebook-style)
+Run scETM on a dataset
 
 Usage:
     run_scetm.py -o <path> (-b <batch>)...  -c <key> [options] <file>

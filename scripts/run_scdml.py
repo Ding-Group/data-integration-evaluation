@@ -9,9 +9,9 @@ Options:
     -o <path>                       Path to output directory.
     -b <batch>                      One or more batch keys (first is main).
     -c <key>                        Cell type label key.
-    --resolution=<float>            Louvain resolution. [Default: 3.0]
-    --merge-rule=<rule>             scDML merge rule: rule1 | rule2. [Default: rule2]
-    --seed=<int>                    Random seed. [Default: 0]
+    --resolution=<float>            Louvain resolution. [default: 3.0]
+    --merge-rule=<rule>             scDML merge rule: rule1 | rule2. [default: rule2]
+    --seed=<int>                    Random seed. [default: 0]
 """
 
 import os

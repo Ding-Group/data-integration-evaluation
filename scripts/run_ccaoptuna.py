@@ -1,8 +1,8 @@
 """
-CCA multi-parameter Optuna optimization.
+CCA multi-parameter Optuna optimization
 
 Usage:
-    optimize_ccaoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
+    run_ccaoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
 
 Options:
     -h --help              Show this screen.

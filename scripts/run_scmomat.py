@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run scMoMaT on a dataset
 
@@ -11,11 +9,11 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --K=<int>              Embedding dimension. [Default: 30]
-    --lamb=<float>         Regularization. [Default: 0.001]
-    --T=<int>              Number of iterations. [Default: 1000]
-    --batch_size=<float>   Batch size. [Default: 0.1]
-    --seed=<int>           Random seed. [Default: 0]
+    --K=<int>              Embedding dimension. [default: 30]
+    --lamb=<float>         Regularization. [default: 0.001]
+    --T=<int>              Number of iterations. [default: 1000]
+    --batch_size=<float>   Batch size. [default: 0.1]
+    --seed=<int>           Random seed. [default: 0]
 """
 import os
 import sys

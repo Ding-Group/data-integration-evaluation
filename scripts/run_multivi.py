@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run MultiVI on a dataset
 
@@ -11,8 +9,8 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --n_latent=<int>       Number of latent dimensions. [Default: 10]
-    --seed=<int>           Random seed. [Default: 0]
+    --n_latent=<int>       Number of latent dimensions. [default: 10]
+    --seed=<int>           Random seed. [default: 0]
 """
 import sys
 from os.path import join

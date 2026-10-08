@@ -9,12 +9,12 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
+    --no-use-hvg           Do not use HVG selection. [default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
-    --n-ghosts=<int>       Number of ghost cells to use. [Default: 65]
-    --dim=<int>            Dimensions of representation. [Default: 60]
-    --p=<float>            p [Default: 0.3]
-    --seed=<int>           Random seed. [Default: 0]
+    --n-ghosts=<int>       Number of ghost cells to use. [default: 65]
+    --dim=<int>            Dimensions of representation. [default: 60]
+    --p=<float>            p [default: 0.3]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 from os.path import join

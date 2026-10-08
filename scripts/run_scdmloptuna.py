@@ -1,8 +1,8 @@
 """
-Run scDML on a dataset
+Run scDML on a dataset using Optuna trial hyperparameters
 
 Usage:
-    run_scdml.py -o <path> (-b <batch>)... -c <key> --params-json=<file> [options] <file>
+    run_scdmloptuna.py -o <path> (-b <batch>)... -c <key> --params-json=<file> [options] <file>
 
 Options:
     -h --help              Show this screen.
@@ -10,8 +10,8 @@ Options:
     -b <batch>             One or more batch keys (first is main).
     -c <key>               Cell type label key.
     --params-json=<file>   JSON file with hyperparameters
-    --merge-rule=<rule>    scDML merge rule: rule1 | rule2. [Default: rule2]
-    --seed=<int>           Random seed. [Default: 0]
+    --merge-rule=<rule>    scDML merge rule: rule1 | rule2. [default: rule2]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 import json

@@ -1,8 +1,8 @@
 """
-MNN multi-parameter Optuna optimization.
+MNN multi-parameter Optuna optimization
 
 Usage:
-    optimize_mnnoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
+    run_mnnoptuna.py -o <path> (-b <batch>)... -c <key> (-p <str> | --params=<str>) [--seed=<int>] <file>
 
 Options:
     -h --help              Show this screen.

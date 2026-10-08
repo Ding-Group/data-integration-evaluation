@@ -1,10 +1,8 @@
-#!/usr/bin/env python
-
 """
 Make a "one big blob" baseline embedding
 
 Usage:
-    run_blob.py -o <path> (-b <batch>)...  -c <key> [options] <file>
+    run_oneBigBlob.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.

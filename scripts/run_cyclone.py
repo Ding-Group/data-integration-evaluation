@@ -1,22 +1,20 @@
-#!/usr/bin/env python
-
 """
-Run scVI on a dataset
+Run CYCLONE on a dataset
 
 Usage:
-    run_scvi.py -o <path> (-b <batch>)...  -c <key> [options] <file>
+    run_cyclone.py -o <path> (-b <batch>)...  -c <key> [options] <file>
 
 Options:
     -h --help              Show this screen.
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
+    --no-use-hvg           Do not use HVG selection. [default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
-    --vae-z-dim=<int>      VAE z dim. [Default: 32]
-    --h-dim=<int>          h dim. [Default: 16]
-    --epochs=<int>         Number of training epochs. [Default: 30]
-    --seed=<int>           Random seed. [Default: 0]
+    --vae-z-dim=<int>      VAE z dim. [default: 32]
+    --h-dim=<int>          h dim. [default: 16]
+    --epochs=<int>         Number of training epochs. [default: 30]
+    --seed=<int>           Random seed. [default: 0]
 """
 
 from os.path import join

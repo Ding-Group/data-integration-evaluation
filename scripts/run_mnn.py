@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Run MNN (Mutual Nearest Neighbors) correction on a dataset
 
@@ -11,7 +9,7 @@ Options:
     -o <path>              Path to output directory.
     -b <batch>             One or more batch keys.
     -c <key>               Cell type label key.
-    --no-use-hvg           Do not use HVG selection. [Default: False]
+    --no-use-hvg           Do not use HVG selection. [default: False]
     --hvg-method=<method>  HVG selection method. Default uses the pre-computed HVGs.
     --n-pcs=<int>          Number of PCs after MNN [default: 50].
     --k=<int>              Number of nearest neighbors for fastMNN [default: 20].
