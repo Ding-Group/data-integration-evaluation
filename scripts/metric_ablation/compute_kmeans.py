@@ -10,7 +10,7 @@ Options:
     -t <cell_type>         Cell type column.
     -s <seed>              Random state. [default: 0]
     -i <init>              Initialization method [default: k-means++]
-    -c <cluster_key>       Cluster key to add. [Default: cluster]
+    -c <cluster_key>       Cluster key to add. [default: cluster]
 """
 
 # cluster_key is "cluster" to be consistent with the scib metrics

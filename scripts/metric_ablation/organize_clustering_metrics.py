@@ -2,7 +2,7 @@
 Combine a set of metrics output files with the AnnDatas and the metric values.
 
 Usage:
-    combine-metrics.py --out-file=<path> [options] <file>...
+    organize_clustering_metrics.py --out-file=<path> [options] <file>...
 
 Options:
     -h --help                Show this screen.

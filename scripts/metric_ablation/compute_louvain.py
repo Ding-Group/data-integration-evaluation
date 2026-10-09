@@ -8,8 +8,8 @@ Options:
     -h --help              Show this screen.
     -o <path>              Output file.
     -s <seed>              Random state. [default: 0]
-    -f <flavor>            Which implementation to use. [Default: vtraag]
-    -c <cluster_key>       Cluster key to add. [Default: cluster]
+    -f <flavor>            Which implementation to use. [default: vtraag]
+    -c <cluster_key>       Cluster key to add. [default: cluster]
 """
 
 # cluster_key is "cluster" to be consistent with the scib metrics
