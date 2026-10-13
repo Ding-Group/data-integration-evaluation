@@ -118,7 +118,7 @@ def main():
         seed=seed,
     )
 
-    sc.pp.neighbors(adata)
+    sc.pp.neighbors(adata, use_rep=EMB_KEY)
 
     print("Saving data")
     output = minimise_anndata(

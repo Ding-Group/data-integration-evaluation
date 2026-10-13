@@ -23,6 +23,7 @@ import anndata as ad
 import numpy as np
 import scanpy as sc
 import scipy.sparse as sp
+import tensorflow as tf2
 from docopt import docopt
 from project_utils.adata_utils import EMB_KEY, combine_batch, minimise_anndata
 from project_utils.hvg_utils import select_hvgs
@@ -30,6 +31,9 @@ from project_utils.hvg_utils import select_hvgs
 sys.path.append(
     "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/libraries/",
 )
+
+for gpu in tf2.config.list_physical_devices('GPU'):
+    tf2.config.experimental.set_memory_growth(gpu, True)
 
 from SAUCIE.loader import Loader
 from SAUCIE.model import SAUCIE
@@ -148,7 +152,7 @@ def main():
         learning_rate=hyperparams["learning_rate"],
     )
 
-    sc.pp.neighbors(adata)
+    sc.pp.neighbors(adata, use_rep=EMB_KEY)
 
     print("Saving data")
     output = minimise_anndata(

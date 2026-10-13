@@ -1,37 +1,5 @@
 import groovy.json.JsonOutput
 
-
-// process ASK_TRIAL {
-//     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
-
-//     memory "4.GB"
-
-//     tag "ASK_${integration}_${dataset}_${seed}_t${trial_idx}"
-
-//     input:
-//         tuple val(dataset), val(integration), val(seed), val(trial_idx),
-//             val(batch_col), val(label_col), path(data), val(conda_env),
-//             val(metric_params), val(memory_usage), path(run_script), path(ask_script)
-
-//     output:
-//         tuple val(dataset), val(batch_col), val(label_col), path(data), val(seed),
-//             val(integration), val(conda_env), val(metric_params), val(memory_usage),
-//             path(run_script), path("params_${trial_idx}.json")
-
-//     script:
-//         def study_dir = file("${params.outdir}/integration-models/${dataset}/${integration}-${seed}").toAbsolutePath()
-//         """
-//         python ${ask_script} \\
-//             --study-dir "${study_dir}" \\
-//             --out params_${trial_idx}.json
-//         """
-
-//     stub:
-//         """
-//         echo '{"trial_number": ${trial_idx}}' > params_${trial_idx}.json
-//         """
-// }
-
 process RUN_INT_F_OPT {
     // errorStrategy {
     //     (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'

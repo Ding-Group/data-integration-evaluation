@@ -244,7 +244,7 @@ def main():
     current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print("ENDTRAIN", current_time_str)
 
-    sc.pp.neighbors(adata)
+    sc.pp.neighbors(adata, use_rep=EMB_KEY)
 
     print("Saving data")
     output = minimise_anndata(
