@@ -17,7 +17,8 @@ This repository is regrettably not super clean, but we explain the structure bel
   Instead of the full environments, we supply YAML files containing their configuration.
 * `scib/`: Directory containing the complete set of [metric implementations](https://github.com/Ding-Group/sc-complete-metrics).
 * `results`: Results from the NextFlow pipelines.
-  All results except for select spreadsheets are excluded from this repository.
+  All results except for source data spreadsheets are excluded from this repository.
+  These spreadsheets contain metric values to produce the results.
   The set of integrations used to analyze metrics ("Single-cell integration zoo") is available in [Zenodo](doi.org/10.5281/zenodo.21983919
 )
 * `work` and `ablation_work`: Intermediate work from the Nextflow piplines.
