@@ -53,7 +53,6 @@ def main():
         for p in params:
             for metric_name, metric_params in p.items():
                 metric_kwargs[f'{metric_name.lower()}_kwargs'] = metric_params
-    # print(metric_kwargs)
 
     try:
         adata = sc.read(file)

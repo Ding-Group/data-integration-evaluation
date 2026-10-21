@@ -18,7 +18,9 @@ Options:
     -m --method=<str>            Integration method name.
     -p --params=<str>            Params for metrics as a str
     --study-dir=<dir>            Optuna study directory (enables reporting back to study).
-    --params-json=<file>        JSON file with trial_number, produced by ask_trial.py.
+    --params-json=<file>         JSON file with trial_number, produced by ask_trial.py.
+    --final-attempt              Only report FAIL to the study if set (pass on the last Nextflow
+                                 attempt, since a trial told FAIL cannot be told again on retry).
 """
 
 import json
@@ -93,13 +95,13 @@ def main():
     params = json.loads(params)
     study_dir = args["--study-dir"]
     trial_params_path = args["--params-json"]
+    final_attempt = args["--final-attempt"]
 
     metric_kwargs = {}
     if params is not None:
         for p in params:
             for metric_name, metric_params in p.items():
                 metric_kwargs[f'{metric_name.lower()}_kwargs'] = metric_params
-    # print(metric_kwargs)
 
     try:
         adata = sc.read(file)
@@ -107,7 +109,8 @@ def main():
         sys.stderr.write(
             f"Metric computation failed on dataset {dataset} and integration {method}\n"
         )
-        report_to_optuna(study_dir, trial_params_path, None, failed=True)
+        if final_attempt:
+            report_to_optuna(study_dir, trial_params_path, None, failed=True)
         raise e
 
     try:
@@ -140,7 +143,8 @@ def main():
         sys.stderr.write(
             f"Metric computation failed on dataset {dataset} and integration {method}\n"
         )
-        report_to_optuna(study_dir, trial_params_path, None, failed=True)
+        if final_attempt:
+            report_to_optuna(study_dir, trial_params_path, None, failed=True)
         raise
 
     joint_score = joint_score_from_result(result)
