@@ -1,3 +1,8 @@
+/*
+ * This file contains the pipelines to run the experiments for changing the number
+ * of nearest neighbors for metrics that rely on nearest neighbors.
+ */
+
 import java.security.MessageDigest
 import java.math.BigInteger
 

@@ -1,13 +1,12 @@
+/*
+ * This file contains the pipelines to run the clustering experiments
+ * with Leiden/Louvain/K-means/GMM under different parameter settings.
+ */
+
 import java.security.MessageDigest
 import java.math.BigInteger
 
 include { INTEGRATION } from './integration'
-
-
-/*
- * Channel that streams in all the datasets from the 
- * YAML configuration file.
- */
 
 
 process RUN_DEFAULT_NEIGHBORS {

@@ -1,3 +1,10 @@
+/*
+ * This file contains the pipelines to run hyperparameter optimization experiments
+ * for the final benchmarking for data following the newer method for running optimization.
+ * Compared to the method used for the first hyperparameter optimziation results, the scripts
+ * used here run the metric and integration separately, allowing some parallelization.
+ */
+
 import groovy.json.JsonOutput
 
 process RUN_INT_F_OPT {
@@ -73,7 +80,7 @@ process RUN_METRIC_FINAL {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
     errorStrategy {
-        (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
+        (task.exitStatus in [135,143,137,104,134,139,140,1] && task.attempt <= 2) ? 'retry' : 'ignore'
     }
 
     tag "SCORE_${integration}_${dataset}_${seed}"
@@ -106,6 +113,7 @@ process RUN_METRIC_FINAL {
             -p '${json_str}' \\
             --study-dir "${study_dir}" \\
             --params-json ${params_json} \\
+            ${task.attempt > 2 ? '--final-attempt' : ''} \\
             ${raw_file} \\
             ${integrated_dir}/adata.h5ad \\
             "${dataset}-${integration}-${seed}.csv"

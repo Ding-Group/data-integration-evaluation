@@ -1,13 +1,3 @@
-#!/usr/bin/env nextflow
-/*
-========================================================================================
-    Single-cell integration metrics
-========================================================================================
-    GitHub : 
-    Website:
-----------------------------------------------------------------------------------------
-*/
-
 nextflow.enable.dsl = 2
 
 /*
@@ -20,7 +10,6 @@ include { INTEGRATION } from './workflows/integration'
 include { INTEGRATION_MULTIOME } from './workflows/integration'
 
 include { METRICS } from './workflows/metrics'
-// include { REPORTS } from './workflows/reports'
 
 /*
  * Channel that streams in all the datasets from the 

@@ -1,3 +1,8 @@
+/*
+ * This file contains the pipelines to run the distance metric experiments
+ * with various metrics that require distance computations.
+ */
+ 
 import java.security.MessageDigest
 import java.math.BigInteger
 

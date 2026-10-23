@@ -1,4 +1,4 @@
-// Using pre-computed integrations, perform the final benchmarking
+// Using pre-computed integrations, perform the final benchmarking using the eight core metrics
 import java.security.MessageDigest
 import java.math.BigInteger
 import groovy.json.JsonOutput

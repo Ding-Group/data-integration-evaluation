@@ -1,5 +1,8 @@
+// Processes for running metrics
+
 import groovy.json.JsonOutput
 
+// Default way to run metrics
 process RUN_METRIC {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
@@ -68,7 +71,7 @@ process RUN_METRIC {
         """
 }
 
-
+// Process to run the core final metrics
 process RUN_METRIC_FINAL {
     conda "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics/"
 
@@ -117,7 +120,7 @@ process RUN_METRIC_FINAL {
         """
 }
 
-
+// Process to collect all the CSV files containing metric values
 process COMBINE_METRICS {
     cache false
 

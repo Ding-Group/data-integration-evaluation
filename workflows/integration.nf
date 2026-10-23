@@ -1,11 +1,12 @@
 /*
 ========================================================================================
-    PROCESSES
+Various processes to run integration methods
 ========================================================================================
 */
 import groovy.json.JsonOutput
 
 
+// This is the default process for running an integration method on a dataset
 process RUN_INTEGRATE {
     errorStrategy {
         (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
@@ -67,7 +68,8 @@ process RUN_INTEGRATE {
         """
 }
 
-
+// This is to run an integration method for the final benchmarking. The key difference is the
+// addition of a metric_params, where metric parameters are passed per method, not per metric.
 process RUN_INTEGRATE_FINAL {
     errorStrategy {
         (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
@@ -129,7 +131,9 @@ process RUN_INTEGRATE_FINAL {
         """
 }
 
-
+// This process is for the Optuna hyperparameter optimization for the final benchmarking
+// for methods that use the same optimization script style as the first original
+// Optuna experiments.
 process RUN_INT_F_OPT {
     errorStrategy {
         (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= 2) ? 'retry' : 'ignore'
@@ -195,7 +199,7 @@ process RUN_INT_F_OPT {
         """
 }
 
-
+// Process for multiome data
 process RUN_INTEGRATE_MULTIOME {
     errorStrategy {
         (task.exitStatus in [135,143,137,104,134,139,140] && task.attempt <= params.maxRetries) ? 'retry' : 'ignore'

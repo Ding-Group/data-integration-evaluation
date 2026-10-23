@@ -1,3 +1,8 @@
+/*
+ * This file contains the pipelines to run the cell type annotation resolution experiments
+ */
+
+
 import java.security.MessageDigest
 import java.math.BigInteger
 

@@ -1,12 +1,6 @@
-#!/usr/bin/env nextflow
 /*
-========================================================================================
-    Single-cell integration metrics
-========================================================================================
-    GitHub : 
-    Website:
-----------------------------------------------------------------------------------------
-*/
+ * Alternative main NF file for the final benchmarking
+ */ 
 
 nextflow.enable.dsl = 2
 
@@ -20,7 +14,6 @@ include { INTEGRATION_FINAL } from './integration'
 include { INT_FINAL_OPT } from './integration'
 
 include { METRICS_FINAL } from './metrics'
-// include { REPORTS } from './workflows/reports'
 
 /*
  * Channel that streams in all the datasets from the 
