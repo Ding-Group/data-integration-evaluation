@@ -678,7 +678,7 @@ metrics:
     params: {}
   - name: MORANI
     params: {}
-  - name: CNENTROPY
+  - name: CNENT
     params: {}
   - name: AGREE
     params: {}
@@ -688,7 +688,7 @@ metrics:
     params: {}
   - name: BRAS
     params: {}
-  - name: DBI
+  - name: CDBI
     params: {}
   - name: NMIF
     params: {}
@@ -710,9 +710,9 @@ metrics:
     params: {}
   - name: ALIGN
     params: {}
-  - name: KNNDIV
+  - name: EMBDIV
     params: {}
-  - name: CSMC
+  - name: CSMS
     params: {}
   - name: SV
     params: {}

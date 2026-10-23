@@ -644,7 +644,7 @@ metrics:  # Removed ones that do not depend on cell type
     params: {}
   - name: MORANI
     params: {}
-  - name: CNENTROPY
+  - name: CNENT
     params: {}
   - name: OCS
     params: {}
@@ -652,7 +652,7 @@ metrics:  # Removed ones that do not depend on cell type
     params: {}
   - name: BRAS
     params: {}
-  - name: DBI
+  - name: CDBI
     params: {}
   - name: NMIF
     params: {}
@@ -670,7 +670,7 @@ metrics:  # Removed ones that do not depend on cell type
     params: {}
   - name: BASW
     params: {}
-  - name: KNNDIV
+  - name: EMBDIV
     params: {}
   - name: PPTPC
     params: {}

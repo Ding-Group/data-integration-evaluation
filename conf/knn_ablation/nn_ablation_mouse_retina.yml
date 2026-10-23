@@ -203,7 +203,7 @@ metrics:
   - name: FKNN
     params:
       - n_neighbors: [1, 11, 21, 31, 41, 51, 61, 71, 81, 91]
-  - name: CNENTROPY
+  - name: CNENT
     params:
       - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
   - name: LDFDIFF
@@ -221,7 +221,7 @@ metrics:
   - name: BKNN
     params:
       - n_neighbors: [1, 11, 21, 31, 41, 51, 61, 71, 81, 91]
-  - name: BNENTROPY
+  - name: BNENT
     params:
       - n_neighbors: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
   - name: KLDIV # CHANGE
@@ -230,7 +230,7 @@ metrics:
   - name: ALIGN # CHANGE
     params:
       - n_neighbors: [25, 50, 75, 100, 150, 216, 266, 316, 366, 416, 466, 516]
-  - name: CSMC
+  - name: CSMS
     params:
       - k: [20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140]
   - name: PPTPC

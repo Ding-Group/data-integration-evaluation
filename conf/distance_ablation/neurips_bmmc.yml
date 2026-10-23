@@ -238,7 +238,7 @@ metrics:
   - name: ISOLISI
     params:
       - metric: ["euclidean", "l1", "cosine"]
-  - name: CNENTROPY
+  - name: CNENT
     params:
       - metric: ["euclidean", "l1", "cosine"]
   - name: AGREE
@@ -286,7 +286,7 @@ metrics:
   - name: BASW
     params:
       - metric: ["euclidean", "l1", "cosine"]
-  - name: BNENTROPY
+  - name: BNENT
     params:
       - metric: ["euclidean", "l1", "cosine"]
   - name: KLDIV
