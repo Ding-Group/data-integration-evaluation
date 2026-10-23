@@ -5,7 +5,7 @@ datasets:
     batch_col: ["tech"]
     label_col: celltype
   - name: human_dkd
-    batch_col: ["batch", "assay"]  # Main batch column first
+    batch_col: ["batch", "assay"]
     label_col: cell_type
   - name: mouse_pancreatic_islet
     batch_col: ["batch", "disease", "assay"]
@@ -16,9 +16,9 @@ datasets:
   - name: gtex_v9  # exclude for cyclone
     batch_col: ["batch"]
     label_col: cell_type
-  # - name: tabula_sapiens
-  #   batch_col: ["batch", "assay"]
-  #   label_col: cell_type
+  - name: tabula_sapiens
+    batch_col: ["batch", "assay"]
+    label_col: cell_type
   - name: snpatho_liver
     batch_col: ["sample_id", "processing_method"]
     label_col: major_annotation
@@ -90,11 +90,11 @@ integration:
     params: {}
     metric_params: {}
     memory: high
-  # - name: cyclone
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/cyclone-env"
-  #   params: {}
-  #   metric_params: {}
-  #   memory: high
+  - name: cyclone
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/cyclone-env"
+    params: {}
+    metric_params: {}
+    memory: high
   - name: sccraft
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sccraft-env"
     params: {}
@@ -115,11 +115,11 @@ integration:
     params: {}
     metric_params: {}
     memory: high
-  # - name: scalign
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scalign-env"
-  #   params: {}
-  #   metric_params: {}
-  #   memory: high
+  - name: scalign
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scalign-env"
+    params: {}
+    metric_params: {}
+    memory: high
   - name: ocat
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/ocat-env"
     params: {}

@@ -16,9 +16,9 @@ datasets:
   - name: gtex_v9
     batch_col: ["batch"]
     label_col: cell_type
-  # - name: tabula_sapiens
-  #   batch_col: ["batch", "assay"]
-  #   label_col: cell_type
+  - name: tabula_sapiens
+    batch_col: ["batch", "assay"]
+    label_col: cell_type
   - name: snpatho_liver
     batch_col: ["sample_id", "processing_method"]
     label_col: major_annotation
@@ -101,10 +101,10 @@ integration:
     params: {}
     metric_params: {}
     memory: high
-  # - name: gedi
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/gedi-env"
-  #   params: {}
-  #   metric_params: {}
-  #   memory: massive
+  - name: gedi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/gedi-env"
+    params: {}
+    metric_params: {}
+    memory: massive
 seeds: [1]
 use_gpu: false

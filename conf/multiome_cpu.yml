@@ -1,60 +1,40 @@
-experiment: multiome_cpu_neurips
+experiment: multiome_cpu
 conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
 datasets:
-  - name: neurips_bmmc_multiome  # Screwed this one up, so re-run on this dataset only...
+  - name: neurips_bmmc_multiome
     batch_col: ["batch"]
     label_col: cell_type
-  # - name: mouse_cortex
-  #   batch_col: ["DonorID"]
-  #   label_col: "celltype"
-  # - name: human_pbmc_dogma
-  #   batch_col: ["stim"]
-  #   label_col: celltype
-  # - name: human_pbmc_tea
-  #   batch_col: ["batch"]
-  #   label_col: celltype
-  # - name: mouse_organogenesis
-  #   batch_col: ["sample"]
-  #   label_col: celltype
-  # - name: human_cortex
-  #   batch_col: ["dataset"]
-  #   label_col: type_updated
-  # - name: human_breast
-  #   batch_col: ["donor_id"]
-  #   label_col: cell_type
-  # - name: human_retina_35000
-  #   batch_col: ["donor_id"]
-  #   label_col: cell_type
-  # - name: human_retina_6donor
-  #   batch_col: ["donor_id"]
-  #   label_col: cell_type
-  # - name: human_renal_cortex
-  #   batch_col: ["donor_id"]
-  #   label_col: cell_type
-  # - name: mouse_kidney
-  #   batch_col: ["batch"]
-  #   label_col: celltype
+  - name: mouse_cortex
+    batch_col: ["DonorID"]
+    label_col: "celltype"
+  - name: human_pbmc_dogma
+    batch_col: ["stim"]
+    label_col: celltype
+  - name: human_pbmc_tea
+    batch_col: ["batch"]
+    label_col: celltype
+  - name: mouse_organogenesis
+    batch_col: ["sample"]
+    label_col: celltype
+  - name: human_cortex
+    batch_col: ["dataset"]
+    label_col: type_updated
+  - name: human_breast
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_35000
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_retina_6donor
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: human_renal_cortex
+    batch_col: ["donor_id"]
+    label_col: cell_type
+  - name: mouse_kidney
+    batch_col: ["batch"]
+    label_col: celltype
 integration:
-  # - name: moetm
-  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
-  #   params: {}
-  #   memory: high
-  # - name: cobolt
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/cobolt_env/"
-  #   params: {}
-  #   memory: high
-  # - name: scmomat
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmomat-env/"
-  #   params: {}
-  #   memory: high
-  # - name: scvaeit
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvaeit-env/"
-  #   params: {}
-  #   memory: high
-  # - name: mira
-  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
-  #   params: {}
-  #   memory: high
   - name: pca_concat
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
     params: {}
@@ -63,30 +43,10 @@ integration:
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
     params: {}
     memory: low
-  # - name: multigrate
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/multigrate-env"
-  #   params: {}
-  #   memory: high
   - name: mofa
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
     params: {}
     memory: massive
-  # - name: scmm
-  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
-  #   params: {}
-  #   memory: high
-  # - name: scmvp
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmvp-env"
-  #   params: {}
-  #   memory: high
-  # - name: unitednet
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/unitednet-env"
-  #   params: {}
-  #   memory: high
-  # - name: scpairing
-  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
-  #   params: {}
-  #   memory: medium
   - name: mojitoo
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/mojitoo-env"
     params: {}
@@ -172,5 +132,17 @@ metrics:
   - name: PSTDB
     params: {}
   - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCC
+    params: {}
+  - name: CORRMSE
+    params: {}
+  - name: CCH
+    params: {}
+  - name: TRAJ
+    params: {}
+  - name: CDBI
     params: {}
 use_gpu: false

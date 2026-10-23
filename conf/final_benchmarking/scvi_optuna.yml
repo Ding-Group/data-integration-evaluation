@@ -5,7 +5,7 @@ datasets:
     batch_col: ["tech"]
     label_col: celltype
   - name: human_dkd
-    batch_col: ["batch", "assay"]  # Main batch column first
+    batch_col: ["batch", "assay"]
     label_col: cell_type
   - name: snpatho_liver
     batch_col: ["sample_id", "processing_method"]

@@ -1,3 +1,4 @@
+# Recompute the final core metrics on the previous integrations.
 experiment: final_benchmark/recompute_old_data
 conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
 integrations:

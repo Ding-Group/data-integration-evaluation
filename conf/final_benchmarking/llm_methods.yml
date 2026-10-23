@@ -5,7 +5,7 @@ datasets:
     batch_col: ["tech"]
     label_col: celltype
   - name: human_dkd
-    batch_col: ["batch", "assay"]  # Main batch column first
+    batch_col: ["batch", "assay"]
     label_col: cell_type
   - name: immune_cell_atlas
     batch_col: ["batch", "assay"]
@@ -61,10 +61,10 @@ integration:
     params: {}
     metric_params: {}
     memory: massive
-  # - name: scprint  # Do not run on gtex v9
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scprint_env"
-  #   params: {}
-  #   memory: high
+  - name: scprint  # Do not run on gtex v9
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scprint_env"
+    params: {}
+    memory: high
   - name: scmulan
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scmulan_env"
     params: {}

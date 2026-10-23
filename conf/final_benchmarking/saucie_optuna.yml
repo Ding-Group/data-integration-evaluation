@@ -5,7 +5,7 @@ datasets:
     batch_col: ["tech"]
     label_col: celltype
   - name: human_dkd
-    batch_col: ["batch", "assay"]  # Main batch column first
+    batch_col: ["batch", "assay"]
     label_col: cell_type
   - name: snpatho_liver
     batch_col: ["sample_id", "processing_method"]
@@ -19,18 +19,18 @@ datasets:
   - name: haniffa_covid_2samples
     batch_col: ["sample_id"]
     label_col: initial_clustering
-  - name: haniffa_covid_imbalance
-    batch_col: ["sample_id"]
-    label_col: initial_clustering
+  # - name: haniffa_covid_imbalance
+  #   batch_col: ["sample_id"]
+  #   label_col: initial_clustering
   - name: human_liver
     batch_col: ["donor_id"]
     label_col: cell_type
-  - name: human_bipolar
-    batch_col: ["donor_id", "assay"]
-    label_col: cell_type
-  - name: mouse_intestine
-    batch_col: ["sample_name", "condition", "location"]
-    label_col: cell_type
+  # - name: human_bipolar
+  #   batch_col: ["donor_id", "assay"]
+  #   label_col: cell_type
+  # - name: mouse_intestine
+  #   batch_col: ["sample_name", "condition", "location"]
+  #   label_col: cell_type
 integration:
   - name: saucieoptuna
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
