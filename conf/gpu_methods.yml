@@ -1,14 +1,12 @@
-experiment: cyclone_rescue
+experiment: gpu_methods_2_new_data
 conda_location: "/ubc/cs/research/beaver/projects/yinian/miniconda3/etc/profile.d/conda.sh"
 datasets:
   # - name: human_pancreas
   #   batch_col: ["tech"]
   #   label_col: celltype
-  #   organism: human
   # - name: neurips_bmmc
   #   batch_col: ["batch"]
   #   label_col: cell_type
-  #   organism: human
   # - name: human_lung
   #   batch_col: ["batch"]
   #   label_col: cell_type
@@ -18,9 +16,9 @@ datasets:
   # - name: scib_sim2
   #   batch_col: ["Batch"]
   #   label_col: Group
-  - name: seurat_pbmc
-    batch_col: ["donor"]
-    label_col: "celltype.l2"
+  # - name: seurat_pbmc
+  #   batch_col: ["donor"]
+  #   label_col: "celltype.l2"
   # - name: human_fetal_gut
   #   batch_col: ["Donor_id", "Organ", "Sample"]
   #   label_col: cell_name_detailed
@@ -30,9 +28,9 @@ datasets:
   # - name: pan_cancer_dc
   #   batch_col: ["dataset_id", "cancer_type"]
   #   label_col: celltype
-  - name: human_eoe
-    batch_col: ["donor_id"]
-    label_col: cell_type_anno
+  # - name: human_eoe
+  #   batch_col: ["donor_id"]
+  #   label_col: cell_type_anno
   # - name: pan_cancer_b
   #   batch_col: ["study"]
   #   label_col: clusters
@@ -72,26 +70,106 @@ datasets:
   # - name: macaque_retina
   #   batch_col: ["BATCH"]
   #   label_col: celltype
-  - name: human_heart
-    batch_col: ["DonorID", "Tissue"]
-    label_col: celltype
+  # - name: human_heart
+  #   batch_col: ["DonorID", "Tissue"]
+  #   label_col: celltype
   - name: human_brain_cell_atlas
     batch_col: ["donor_id", "ROIGroup"]
     label_col: cell_type
-  # - name: jurkat_293t
-  #   batch_col: ["dataset"]
-  #   label_col: cell_type
-  # - name: 3_5_pbmc
-  #   batch_col: ["batch"]
-  #   label_col: celltype
-  # - name: cellranger_versions
-  #   batch_col: ["batch"]
-  #   label_col: cell_type
+  - name: jurkat_293t
+    batch_col: ["dataset"]
+    label_col: cell_type
+  - name: 3_5_pbmc
+    batch_col: ["batch"]
+    label_col: celltype
+  - name: cellranger_versions
+    batch_col: ["batch"]
+    label_col: cell_type
 integration:
+  - name: scanvi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+    params: {}
+    memory: low
+  - name: scphere
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    memory: low
+  - name: scvi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scvi_env"
+    params: {}
+    memory: low
+  - name: clear
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/clear-env"
+    params: {}
+    memory: low
+  - name: simba
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/simba-env"
+    params: {}
+    memory: medium
+  - name: insct
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
+    params: {}
+    memory: low
+  - name: scetm
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scetm_env_py310/"
+    params: {}
+    memory: low
+  - name: scalex
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scalex"
+    params: {}
+    memory: low
   - name: cyclone
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/cyclone-env"
     params: {}
-    memory: massive
+    memory: low
+  - name: sccraft
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sccraft-env"
+    params: {}
+    memory: low
+  - name: portal
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/portal-env"
+    params: {}
+    memory: low
+  - name: sccobra
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sccobra-env"
+    params: {}
+    memory: low
+  - name: imap
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/imap-env"
+    params: {}
+    memory: low
+  - name: scalign
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scalign-env"
+    params: {}
+    memory: low
+  - name: ocat
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/ocat-env"
+    params: {}
+    memory: low
+  - name: scdreamer
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/dreamer-env"
+    params: {}
+    memory: low
+  - name: islander
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/basic_env"
+    params: {}
+    memory: low
+  - name: respan
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/respan_env_py38"
+    params: {}
+    memory: low
+  - name: scdml
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/scDML"
+    params: {}
+    memory: low
+  - name: sysvi
+    conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/sysvi-env"
+    params: {}
+    memory: low
+  - name: saucie
+    conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/tensorflow-215"
+    params: {}
+    memory: low
 seeds: [1]
 metrics:
   - name: FKNN

@@ -55,22 +55,10 @@ integration:
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
     params: {}
     memory: high
-  # - name: pca_concat
-  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
-  #   params: {}
-  #   memory: low
-  # - name: harmony_concat
-  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scmetrics"
-  #   params: {}
-  #   memory: low
   - name: multigrate
     conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/multigrate-env"
     params: {}
     memory: high
-  # - name: mofa
-  #   conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
-  #   params: {}
-  #   memory: massive
   - name: scmm
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
     params: {}
@@ -87,14 +75,6 @@ integration:
     conda: "/ubc/cs/research/beaver/projects/yinian/miniconda3/envs/scPairing"
     params: {}
     memory: medium
-  # - name: mojitoo
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/mojitoo-env"
-  #   params: {}
-  #   memory: medium
-  # - name: schema
-  #   conda: "/ubc/cs/research/beaver/projects/Single-cell-integration-metrics/CondaEnv/schema-env"
-  #   params: {}
-  #   memory: medium
 seeds: [1]
 metrics:
   - name: FKNN
@@ -172,5 +152,17 @@ metrics:
   - name: PSTDB
     params: {}
   - name: ALL_CLUSTER
+    params: {}
+  - name: KSIM
+    params: {}
+  - name: CCC
+    params: {}
+  - name: CORRMSE
+    params: {}
+  - name: CCH
+    params: {}
+  - name: TRAJ
+    params: {}
+  - name: CDBI
     params: {}
 use_gpu: true

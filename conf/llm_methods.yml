@@ -196,4 +196,14 @@ metrics:
     params: {}
   - name: KSIM
     params: {}
+  - name: CCC
+    params: {}
+  - name: CORRMSE
+    params: {}
+  - name: CCH
+    params: {}
+  - name: TRAJ
+    params: {}
+  - name: CDBI
+    params: {}
 use_gpu: true
