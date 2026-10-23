@@ -686,3 +686,13 @@ metrics:  # Removed ones that do not depend on cell type
     params: {}
   - name: CCH
     params: {}
+  - name: SCGRAPHP
+    params: {}
+  - name: SCGRAPHM
+    params: {}
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
+  - name: ISOLISI
+    params: {}

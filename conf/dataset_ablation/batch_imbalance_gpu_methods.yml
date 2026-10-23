@@ -208,4 +208,8 @@ metrics:
     params: {}
   - name: CCH
     params: {}
+  - name: CPCR
+    params: {}
+  - name: CPROBE
+    params: {}
 use_gpu: true
